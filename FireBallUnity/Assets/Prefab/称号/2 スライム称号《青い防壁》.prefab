@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5855167156134022348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5855167156134022354}
+  - component: {fileID: 5855167156134022355}
+  m_Layer: 0
+  m_Name: "2 \u30B9\u30E9\u30A4\u30E0\u79F0\u53F7\u300A\u9752\u3044\u9632\u58C1\u300B"
+  m_TagString: Syougou
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5855167156134022354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855167156134022348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9532418, y: -1.6492536, z: 226.12724}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5855167156134022355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855167156134022348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d65bee91db9b3468694f65441e719b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syougouStatus:
+    no: 0
+    syougouName: "\u300A\u9752\u3044\u9632\u58C1\u300B"
+    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+100\uFF05\u300B"
+    rea: 0
+    superRea: 0
+    epikRea: 1
+    maxHpPlus: 100
+    maxMpPlus: 100
+    fireBallCostPlus: 0
+    kougekiryokuPlus: 100
+    maryokuPlus: 100
+    bouggyoryokuPlus: 100
+    meityuurituPlus: 0
+    kaihirituPlus: 0

@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4386842901894723738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4386842901894723739}
+  - component: {fileID: 4386842901894723718}
+  - component: {fileID: 4386842901894723717}
+  - component: {fileID: 1079680380435130588}
+  - component: {fileID: 5745374429676857918}
+  m_Layer: 0
+  m_Name: "\u6728\u5200\u65AC\u6483"
+  m_TagString: Srush
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4386842901894723739
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386842901894723738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2.85, y: 2.85}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!222 &4386842901894723718
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386842901894723738}
+  m_CullTransparentMesh: 1
+--- !u!114 &4386842901894723717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386842901894723738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8033481550631959378, guid: f82f8661a667c334eb4d5048401134f9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1079680380435130588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386842901894723738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c57a41172fa48140bb61693e00637ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxCollider2D: {fileID: 5745374429676857918}
+  rectTransform: {fileID: 4386842901894723739}
+  weponNo: 1
+  weponData:
+    srushEffect: {fileID: 0}
+    soubiIcon: {fileID: 0}
+    readoIcon: {fileID: 0}
+    no: 0
+    name: 
+    kinnkyoriWepon: 0
+    ennkyoriWepon: 0
+    yoroi: 0
+    sonota: 0
+    nomal: 0
+    rea: 0
+    superRea: 0
+    epik: 0
+    legendary: 0
+    god: 0
+    maxHp: 10
+    maxMp: 0
+    fireBallCost: 0
+    kougekiryoku: 0
+    kinnkyoriKaisinnritu: 0
+    maryoku: 0
+    ennkyoriKaisinnsitu: 0
+    bougyoryoiku: 0
+    kaisinnTaisei: 0
+    meityuuritu: 0
+    kaihiritu: 0
+    kougekiHinndo: 0
+    destroyTime: 0
+    srushSpeed: 0
+    nokkubakku: 0
+    kougekiHanni: 0
+    kyoukagoMaxHp: 0
+    kyoukagoMaxMp: 0
+    kyoukagoKougekiryoku: 0
+    kyoukagoMaryoku: 0
+    kyoukagoBougyoryoku: 0
+    kyoukagoMeityuuritu: 0
+    kyoukagoKaihiritu: 0
+    kyoukaLv: 0
+    kyoukaLvName: 
+    kyoukaBairitu: 0
+    sonotaKyoukaStatus: 0
+    baikyakuKinngaku: 0
+    syougouName: 
+    syougouRea: 0
+    syougouSuperRea: 0
+    syougouEpikRea: 0
+    syougouBairitu: 
+    syougouMaxHp: 0
+    syougouMaxMp: 0
+    syougouFireBallCost: 0
+    syougouKougekiryoku: 0
+    syougouMamryoku: 0
+    syougouKinnkyoriKaisinnritu: 0
+    syougouEnnkyoriKaisinnritu: 0
+    syougouBougyoryoku: 0
+    syougouKaisinnTaisei: 0
+    syougouMeityuuritu: 0
+    syougouKaihiritu: 0
+    giftName: 
+    giftBairituName: 
+    bairitu: 0
+    keyLock: 0
+--- !u!61 &5745374429676857918
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386842901894723738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.4265137, y: -0.0033569336}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.85, y: 1}
+  m_EdgeRadius: 0

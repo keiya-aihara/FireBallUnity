@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8038397c38fda4b44925ebb72c2fe959, type: 3}
+  m_Name: EnemyDataList
+  m_EditorClassIdentifier: 
+  enemyDatas:
+  - no: 1
+    lebel: 50
+    rea: 0
+    enemyName: "\u30D6\u30EB\u30FC\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 500
+    hp: 500000
+    kougekiryoku: 1
+    kaisinnritu: 0
+    bougyoryoku: 1
+    kaisinnTaisei: 0
+    mahouBougyoryoku: 1
+    meityuuritu: 100
+    kaihiritu: 5
+    kougekiHinndo: 3
+    kougekiHanni: 5
+    speed: 70
+    nokkubakkuBougyo: 0.1
+    exp: 1000000
+    gold: 1000
+    dropItemSuu: 5
+    dropItemNos: 0000000001000000020000000300000004000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: c163e2992854d2a4aafeda83875d320a, type: 3}
+    - {fileID: 5855167156134022348, guid: db615499b51132b41bb065217451991f, type: 3}
+    - {fileID: 5855167156134022348, guid: 7ae9f0d28b106174db8f84b712253d1f, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 4
+    superReaDropRitu: 3
+    epikDropRitu: 2
+    legendaryDropRitu: 1
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 10
+    superReaSyougouDropRitu: 5
+    epikSyougouDropRitu: 2.5
+    giftDropRitu: 10

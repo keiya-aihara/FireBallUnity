@@ -1,0 +1,1339 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 22000.493; Version 2009; 64bit' Language: 'ja' Physical Memory: 32702 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/KEIYA/Documents/GitHub/FireBall/FireBall!!
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56350
+Successfully changed project path to: C:/Users/KEIYA/Documents/GitHub/FireBall/FireBall!!
+C:/Users/KEIYA/Documents/GitHub/FireBall/FireBall!!
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 40.58 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/KEIYA/Documents/GitHub/FireBall/FireBall!!/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
+    Vendor:   
+    VRAM:     8079 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001550 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 37.28 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.570 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001603 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 37.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.800 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2083 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.6 MB.
+System memory in use after: 111.6 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2542.
+Total: 1.719400 ms (FindLiveObjects: 0.170300 ms CreateObjectMapping: 0.077300 ms MarkObjects: 1.391700 ms  DeleteObjects: 0.079500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/素材/スキルアイコン/ファイヤーウォール.png
+  artifactKey: Guid(383bb85c3876be041aeb9ef42415acfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/ファイヤーウォール.png using Guid(383bb85c3876be041aeb9ef42415acfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0b2e277b3a3cb57e5c9de6d378d7ee2') in 0.114516 seconds
+  Import took 0.118483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/素材/UIボタン、アイコン/anvil-impact (1).png
+  artifactKey: Guid(71e126cbbe675444fba76717a86be077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/anvil-impact (1).png using Guid(71e126cbbe675444fba76717a86be077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd21b491935621b9801c2d8467062fc14') in 0.024172 seconds
+  Import took 0.026966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/素材/スキルアイコン/ラピッドファイヤー.png
+  artifactKey: Guid(dfed09b860f8bbc4f97790d8f8e7c962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/ラピッドファイヤー.png using Guid(dfed09b860f8bbc4f97790d8f8e7c962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18812dcf65d8160d0168375fe7dcded') in 0.022240 seconds
+  Import took 0.024817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/素材/スキルアイコン/増殖数4.png
+  artifactKey: Guid(619a825c3e3ef9d4486deca15e08db26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/増殖数4.png using Guid(619a825c3e3ef9d4486deca15e08db26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42fcf186490c2bc05c6feff09dc3fb7f') in 0.022979 seconds
+  Import took 0.025709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/素材/スキルアイコン/無詠唱.png
+  artifactKey: Guid(96d06dd436830904b8875107b1f2e089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/無詠唱.png using Guid(96d06dd436830904b8875107b1f2e089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ac2c7a59c890f65d5a53b3f6ba6f16') in 0.022340 seconds
+  Import took 0.024983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/素材/UIボタン、アイコン/装備アイコンノーマル.png
+  artifactKey: Guid(b09c277ecc96444408b93415b7b2e771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/装備アイコンノーマル.png using Guid(b09c277ecc96444408b93415b7b2e771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a95472c412e2c2e54e38a2521b2823') in 0.022451 seconds
+  Import took 0.024975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/素材/UIボタン、アイコン/ボタンブルー.png
+  artifactKey: Guid(9da7886f0f0a264419fa87e8ced2fd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/ボタンブルー.png using Guid(9da7886f0f0a264419fa87e8ced2fd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd8f2b5e4ad105e485822211a7fb419') in 0.239248 seconds
+  Import took 0.241718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/素材/スキルアイコン/FBコストダウン.png
+  artifactKey: Guid(d4182ed35af65a547b3bd912ca3cb189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/FBコストダウン.png using Guid(d4182ed35af65a547b3bd912ca3cb189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021b645e114482d009de1d5f7d05535e') in 0.024622 seconds
+  Import took 0.027258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/素材/スキルアイコン/魔力アップ.png
+  artifactKey: Guid(a6fe8c9863d97774a934dde5875379c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/魔力アップ.png using Guid(a6fe8c9863d97774a934dde5875379c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04957d221a7d145e402af423f40da292') in 0.022196 seconds
+  Import took 0.024821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/素材/UIボタン、アイコン/swords-power.png
+  artifactKey: Guid(0bbad00868b6c414a885e6b893cd3323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/swords-power.png using Guid(0bbad00868b6c414a885e6b893cd3323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eef231eca3e8b173b3a701767d06d0f1') in 0.023023 seconds
+  Import took 0.025779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/素材/スキルアイコン/増殖数6.png
+  artifactKey: Guid(5fc5c2ed27c4a3d4ba4f5cd60a0a6291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/増殖数6.png using Guid(5fc5c2ed27c4a3d4ba4f5cd60a0a6291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cad33b412824efe602d6cdb3a319243d') in 0.023658 seconds
+  Import took 0.026258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/素材/UIボタン、アイコン/achievement (2).png
+  artifactKey: Guid(ecbcccfd2965130489e7dcede3a69624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/achievement (2).png using Guid(ecbcccfd2965130489e7dcede3a69624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27909804dae287d208eda770edfd6c6') in 0.023332 seconds
+  Import took 0.026001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/素材/UIボタン、アイコン/装備アイコンスーパーレア.png
+  artifactKey: Guid(244dbb04f36740e4a832211e513a908a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/装備アイコンスーパーレア.png using Guid(244dbb04f36740e4a832211e513a908a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46ac39c8f3ee78dd746aa9bc0b9173e5') in 0.022317 seconds
+  Import took 0.024858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/素材/UIボタン、アイコン/gem-necklace.png
+  artifactKey: Guid(120ce744df7d16c4fb732fd11941d69b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/gem-necklace.png using Guid(120ce744df7d16c4fb732fd11941d69b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '378cd5b86b629d22fb870c3a7f1f9a4f') in 0.021873 seconds
+  Import took 0.024380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/素材/UIボタン、アイコン/装備アイコンゴット.png
+  artifactKey: Guid(5f72d65ed40e678469fd7e29e945afe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/装備アイコンゴット.png using Guid(5f72d65ed40e678469fd7e29e945afe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b49ba94908c50125a525da866a8a9a60') in 0.022670 seconds
+  Import took 0.025258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/素材/スキルアイコン/詠唱短縮.png
+  artifactKey: Guid(b89aabad69c708b4091973557653d828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/詠唱短縮.png using Guid(b89aabad69c708b4091973557653d828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b30892e03dffcd17f5e8123b9fe3d974') in 0.022491 seconds
+  Import took 0.025236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/素材/UIボタン、アイコン/switch-weapon.png
+  artifactKey: Guid(f9b99d8403bf4ba47a3edef742638f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/switch-weapon.png using Guid(f9b99d8403bf4ba47a3edef742638f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65b3f46d98484d5e52ea76b21dcf8dd8') in 0.022984 seconds
+  Import took 0.025493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/素材/UIボタン、アイコン/fast-backward-button (1).png
+  artifactKey: Guid(87a354903e9a22e4f82a48c2fc39ac5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/fast-backward-button (1).png using Guid(87a354903e9a22e4f82a48c2fc39ac5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7d81acedb82c0af42ffdc0810c165d') in 0.022685 seconds
+  Import took 0.025204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/素材/UIボタン、アイコン/receive-money.png
+  artifactKey: Guid(674349b1179da4142bb185a025d570e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/receive-money.png using Guid(674349b1179da4142bb185a025d570e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14702f5f807991659be1e6ec2950351') in 0.022276 seconds
+  Import took 0.024884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/素材/UIボタン、アイコン/cog (1).png
+  artifactKey: Guid(5babb2b1c14338b47b86690a5f9d0e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/cog (1).png using Guid(5babb2b1c14338b47b86690a5f9d0e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d8e4b24af7c57b3b75115e0d976b56f') in 0.022962 seconds
+  Import took 0.026496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/素材/スキルアイコン/増殖数3.png
+  artifactKey: Guid(79edb854aea280d4b8a350410b97c07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/増殖数3.png using Guid(79edb854aea280d4b8a350410b97c07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0f2c1ebb2ac736c25459331b5a642c') in 0.022639 seconds
+  Import took 0.025349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/素材/UIボタン、アイコン/juggler (4).png
+  artifactKey: Guid(33f1ffa7cfdbb06449e271a722c2f462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/juggler (4).png using Guid(33f1ffa7cfdbb06449e271a722c2f462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '098a39e8d14dfdfb267a7e3fbee072e4') in 0.023684 seconds
+  Import took 0.026272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/素材/UIボタン、アイコン/blacksmith (2).png
+  artifactKey: Guid(2f97a44c1568a0846a8887b258968c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/blacksmith (2).png using Guid(2f97a44c1568a0846a8887b258968c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0b2b29c4a753fd5481c779f8f6d6a0b') in 0.022495 seconds
+  Import took 0.025138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/素材/UIボタン、アイコン/switch-weapon (1).png
+  artifactKey: Guid(431d901bd83f726499ff00b3a4e94fb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/switch-weapon (1).png using Guid(431d901bd83f726499ff00b3a4e94fb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '168d82f60028d9241a4ef4feb8bdd3cc') in 0.022177 seconds
+  Import took 0.024850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/素材/スキルアイコン/増殖数5.png
+  artifactKey: Guid(d46d879083840644b9ede1edab30c21f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/増殖数5.png using Guid(d46d879083840644b9ede1edab30c21f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6314f17cd747941b52c1ea9b63db9d57') in 0.022696 seconds
+  Import took 0.025230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/素材/UIボタン、アイコン/装備アイコンレア.png
+  artifactKey: Guid(cf6251377fbcf8f4182397b42f62bcc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/装備アイコンレア.png using Guid(cf6251377fbcf8f4182397b42f62bcc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18943f1c12aede8a2c6dfe1c5b636c85') in 0.021952 seconds
+  Import took 0.024517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/素材/UIボタン、アイコン/padlock.png
+  artifactKey: Guid(37926db410b54ea47b9a3ae4aabefe9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/padlock.png using Guid(37926db410b54ea47b9a3ae4aabefe9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '351a23d9471178f0875b6f4a6ed1cd47') in 0.023332 seconds
+  Import took 0.025853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/素材/UIボタン、アイコン/cape-armor.png
+  artifactKey: Guid(44eb77b2b87acc24daf1f3734a6a6fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/cape-armor.png using Guid(44eb77b2b87acc24daf1f3734a6a6fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14405e0e6a4d28cf44acf5914cdbddb6') in 0.021725 seconds
+  Import took 0.024283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/素材/UIボタン、アイコン/switch-weapon 1.png
+  artifactKey: Guid(f40b674162e497948a7d690a6c0a7a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/switch-weapon 1.png using Guid(f40b674162e497948a7d690a6c0a7a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d6614af6b3ed963fbc85d3917ffc312') in 0.022240 seconds
+  Import took 0.025660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/素材/スキルアイコン/爆発.png
+  artifactKey: Guid(190ce3af61775d6488670e12214a882f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/爆発.png using Guid(190ce3af61775d6488670e12214a882f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '035adc61ca79aec0f5fb826e5b538c5c') in 0.022494 seconds
+  Import took 0.025029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/素材/UIボタン、アイコン/crossed-swords.png
+  artifactKey: Guid(5890a677cde024d43b0d1907671bf4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/crossed-swords.png using Guid(5890a677cde024d43b0d1907671bf4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5393d575d425569d415176f0a011e4bd') in 0.022946 seconds
+  Import took 0.025525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/素材/UIボタン、アイコン/orb-wand.png
+  artifactKey: Guid(995533ee661495f41b81f396be3553d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/orb-wand.png using Guid(995533ee661495f41b81f396be3553d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f9d6d2b34c043eb5ea6d243603d62c') in 0.023079 seconds
+  Import took 0.025648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/素材/UIボタン、アイコン/装備アイコンレジェンダリー.png
+  artifactKey: Guid(ef70ecbed3da40b4bb7a6aa64402bb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/装備アイコンレジェンダリー.png using Guid(ef70ecbed3da40b4bb7a6aa64402bb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '468b4ffbc4e061776b58c208c2291132') in 0.022272 seconds
+  Import took 0.024946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/素材/スキルアイコン/ファイヤーチェイン.png
+  artifactKey: Guid(0fb3e5ccec89f204088ef93c006d5218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/ファイヤーチェイン.png using Guid(0fb3e5ccec89f204088ef93c006d5218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eaf955f228ebab992904a0f41574c41') in 0.022994 seconds
+  Import took 0.025826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/素材/UIボタン、アイコン/black-book (2).png
+  artifactKey: Guid(518ad56d58ae06e41a7a367d1a8a2932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/black-book (2).png using Guid(518ad56d58ae06e41a7a367d1a8a2932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '513980e23c70dd30bdbe283c963cf436') in 0.023169 seconds
+  Import took 0.025866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/素材/スキルアイコン/スタート.png
+  artifactKey: Guid(77a3404aa959e9f46bc8dfbbf610df32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/スタート.png using Guid(77a3404aa959e9f46bc8dfbbf610df32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe62520f1a138f2e4de65201a403d8df') in 0.022436 seconds
+  Import took 0.025042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/素材/スキルアイコン/ファイヤーグラビティ.png
+  artifactKey: Guid(d183f62cbda0b9947a5511ecc1ea51f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/ファイヤーグラビティ.png using Guid(d183f62cbda0b9947a5511ecc1ea51f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02a66e121b2d4236a3d615bd6044409') in 0.024046 seconds
+  Import took 0.026822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/素材/スキルアイコン/増殖数2.png
+  artifactKey: Guid(e411d8f786ba06046aee164922ef595f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/増殖数2.png using Guid(e411d8f786ba06046aee164922ef595f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '435e49d905c0ce70286d11a5ae2593a6') in 0.025518 seconds
+  Import took 0.028105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/素材/UIボタン、アイコン/ボタンレッド.png
+  artifactKey: Guid(4683345b149e9eb498140b5088cdebb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/ボタンレッド.png using Guid(4683345b149e9eb498140b5088cdebb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41243988ce084e60cbd1e4757d88b4aa') in 0.213500 seconds
+  Import took 0.216242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/素材/UIボタン、アイコン/key.png
+  artifactKey: Guid(6e7b524acfcdc034382f37a726087986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/key.png using Guid(6e7b524acfcdc034382f37a726087986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e781ad864b045a40a86da21423d6b811') in 0.023133 seconds
+  Import took 0.025985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/素材/UIボタン、アイコン/key (1).png
+  artifactKey: Guid(6627fe8f9ed5ec54482b0455c1331e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/key (1).png using Guid(6627fe8f9ed5ec54482b0455c1331e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3b8fb497abd64d64fe9b75d94fdaa5') in 0.021919 seconds
+  Import took 0.024591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/素材/スキルアイコン/ファイヤースピア.png
+  artifactKey: Guid(ce7372f8f2423be4ab6348a74208c3e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/ファイヤースピア.png using Guid(ce7372f8f2423be4ab6348a74208c3e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03e39cf869ec087ac9fe261028dffcf7') in 0.023026 seconds
+  Import took 0.025878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/素材/スキルアイコン/複数発射.png
+  artifactKey: Guid(2ba4b62f8f9a9e749bb253a08390441a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/複数発射.png using Guid(2ba4b62f8f9a9e749bb253a08390441a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8aa3817acc78c05a07a8ce344e07238') in 0.021791 seconds
+  Import took 0.024555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/素材/UIボタン、アイコン/装備アイコンエピック.png
+  artifactKey: Guid(c24538ab94fd2f443a97b10ea8ee4389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/装備アイコンエピック.png using Guid(c24538ab94fd2f443a97b10ea8ee4389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ec95c7ede940e22b4e81bf6bfbab0e3') in 0.022687 seconds
+  Import took 0.025464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/素材/UIボタン、アイコン/skills (1).png
+  artifactKey: Guid(afd89456e7306b648ad79097f15e003d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/UIボタン、アイコン/skills (1).png using Guid(afd89456e7306b648ad79097f15e003d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2ada760c26eaa729d06299f5d942f6') in 0.023666 seconds
+  Import took 0.026246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/素材/スキルアイコン/ウォールチェイン.png
+  artifactKey: Guid(d43adcd6b66892f47aa2ddaf3e353678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/スキルアイコン/ウォールチェイン.png using Guid(d43adcd6b66892f47aa2ddaf3e353678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '590c128074696135853a057048406024') in 0.022172 seconds
+  Import took 0.024732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.289077 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset
+  artifactKey: Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset using Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c145fb82099f395c1b4e46b56e8d8e14') in 1.041387 seconds
+  Import took 1.047433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/TextMesh Pro/Fonts/TextMeshProフォント SDF.asset
+  artifactKey: Guid(a2489b2117f781c418023d4d520bfc30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/TextMeshProフォント SDF.asset using Guid(a2489b2117f781c418023d4d520bfc30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5feef5a461ca5eac08d7722378db0db0') in 0.871629 seconds
+  Import took 0.877524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO.TTC
+  artifactKey: Guid(31aedb7d24728224ca4918b99333d970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO.TTC using Guid(31aedb7d24728224ca4918b99333d970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10466ffb642dcfb47618def82d428348') in 0.028770 seconds
+  Import took 0.032208 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001628 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.746 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.4 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2599.
+Total: 1.715900 ms (FindLiveObjects: 0.180700 ms CreateObjectMapping: 0.071500 ms MarkObjects: 1.390100 ms  DeleteObjects: 0.072600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 726.158230 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0993fc02711b3bbe6d995d41cc54c5cd') in 0.137800 seconds
+  Import took 0.141242 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001600 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.754 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.5 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2604.
+Total: 1.881300 ms (FindLiveObjects: 0.177200 ms CreateObjectMapping: 0.070400 ms MarkObjects: 1.559300 ms  DeleteObjects: 0.073300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 201.841524 seconds.
+  path: Assets/Circle.png
+  artifactKey: Guid(2844b84b989e12d4f84fb54529492ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Circle.png using Guid(2844b84b989e12d4f84fb54529492ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6afa6b0b4222937dcefb7bcbecf65596') in 0.058013 seconds
+  Import took 0.061573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/New Material 2.mat
+  artifactKey: Guid(5cbee9a58eb3c9646a3cd5fad238b5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material 2.mat using Guid(5cbee9a58eb3c9646a3cd5fad238b5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4284f405ffe4bc308c45bfaecb6441df') in 0.035518 seconds
+  Import took 0.038632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.636626 seconds.
+  path: Assets/素材/斬撃エフェクト画像（持ち手にピポット）/木刀 1.png
+  artifactKey: Guid(f82f8661a667c334eb4d5048401134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/斬撃エフェクト画像（持ち手にピポット）/木刀 1.png using Guid(f82f8661a667c334eb4d5048401134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f3fbefd8b6817fa2cd7e7f311511732') in 0.016621 seconds
+  Import took 0.019606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/素材/斬撃エフェクト画像（持ち手にピポット）/画像1.png
+  artifactKey: Guid(1a95d6ef0bc9f3a45b462e7cd494960e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/斬撃エフェクト画像（持ち手にピポット）/画像1.png using Guid(1a95d6ef0bc9f3a45b462e7cd494960e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f2ba830e014d8c8839ae88bbc31550') in 0.021011 seconds
+  Import took 0.023731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.898239 seconds.
+  path: Assets/素材/check-mark.png
+  artifactKey: Guid(e7b19da018a48214c8927a9fc15a7630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/check-mark.png using Guid(e7b19da018a48214c8927a9fc15a7630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88f1f7eb6075d4ddb9b4310583e3949b') in 0.022955 seconds
+  Import took 0.025736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/素材/強化石.png
+  artifactKey: Guid(11618556aea4f814c9c66506b55581cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/強化石.png using Guid(11618556aea4f814c9c66506b55581cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df4ba64fe7647e32466dbd03b2af718') in 0.038670 seconds
+  Import took 0.041531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/素材/trophy-cup.png
+  artifactKey: Guid(a34d5d32e217aa24f8f8c8f7a7b45d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/trophy-cup.png using Guid(a34d5d32e217aa24f8f8c8f7a7b45d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763d7e378833d3b761fe32119c0c7d84') in 0.023899 seconds
+  Import took 0.027196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/素材/強化石.asset
+  artifactKey: Guid(996b105c00cd4b54b8d1e30826e83924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/強化石.asset using Guid(996b105c00cd4b54b8d1e30826e83924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98952274f92db41dee21c7bc4b8be6ce') in 0.018808 seconds
+  Import took 0.021667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/素材/なし.png
+  artifactKey: Guid(fb0a036afd24079428131f8f53f069cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/なし.png using Guid(fb0a036afd24079428131f8f53f069cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b52fec397558dba80c42c7b872ef30c') in 0.014539 seconds
+  Import took 0.017186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/素材/チェック.png
+  artifactKey: Guid(10e6bb56643448e4d89bff31d5999070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/チェック.png using Guid(10e6bb56643448e4d89bff31d5999070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b24aef5a96c7f60f2698e87abb0b3365') in 0.017514 seconds
+  Import took 0.020119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/素材/すてステータスメニュー背景.png
+  artifactKey: Guid(1d5adc88df9577d4f8bee15a36d7acdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/すてステータスメニュー背景.png using Guid(1d5adc88df9577d4f8bee15a36d7acdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bce0ec7f7ac12dce973fae91d0bc324') in 0.022410 seconds
+  Import took 0.025009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/素材/upgrade.png
+  artifactKey: Guid(1da64c75e0908f44b834820270d37c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/素材/upgrade.png using Guid(1da64c75e0908f44b834820270d37c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036b66675d0daf0bcd9a870722a0827d') in 0.027891 seconds
+  Import took 0.030527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.881392 seconds.
+  path: Assets/Prefab/EpikReaCircle 1.prefab
+  artifactKey: Guid(efe8b7c1ca777d348ae6c8d18377e3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/EpikReaCircle 1.prefab using Guid(efe8b7c1ca777d348ae6c8d18377e3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23070284a25374617abdedc86ab4b9f8') in 0.019642 seconds
+  Import took 0.022360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Prefab/Player.prefab
+  artifactKey: Guid(d5cb55249b7b17144bcf06deb760580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Player.prefab using Guid(d5cb55249b7b17144bcf06deb760580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540b97237659cd0c64e854d28236442b') in 0.042821 seconds
+  Import took 0.045640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Prefab/ロック.prefab
+  artifactKey: Guid(3f1c16e0a90900949acb0a9528e1a44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/ロック.prefab using Guid(3f1c16e0a90900949acb0a9528e1a44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a495e621c118a877a3b5d5a64181e15e') in 0.008808 seconds
+  Import took 0.011848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Prefab/SuperReaCircle 1.prefab
+  artifactKey: Guid(2e0fd41b07b03e44cbcfeb414214cf57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/SuperReaCircle 1.prefab using Guid(2e0fd41b07b03e44cbcfeb414214cf57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edfc229499d79ff5ae4bdbb1ec9c7744') in 0.007829 seconds
+  Import took 0.011122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Prefab/入手アイテムText.prefab
+  artifactKey: Guid(219bddde4cf47f64f89c72467754fd27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/入手アイテムText.prefab using Guid(219bddde4cf47f64f89c72467754fd27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b27006f714579d8d59ed26733f9fa6b') in 0.008237 seconds
+  Import took 0.011780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Prefab/ギフト.prefab
+  artifactKey: Guid(913dfa1164e4ab64a9265cb67e756a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/ギフト.prefab using Guid(913dfa1164e4ab64a9265cb67e756a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7942fd2cbd0754c1e0a007c313a2d9b3') in 0.007311 seconds
+  Import took 0.010387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Prefab/ギフトLV.prefab
+  artifactKey: Guid(d197eeb249c93904cb89b3f900ea6569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/ギフトLV.prefab using Guid(d197eeb249c93904cb89b3f900ea6569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb1b903e608d5306e2f521730011f63') in 0.008743 seconds
+  Import took 0.011715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Prefab/選択中✔.prefab
+  artifactKey: Guid(676ae9150b5d83440b6fa4e2d434cfec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/選択中✔.prefab using Guid(676ae9150b5d83440b6fa4e2d434cfec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa9ff86ed9561cb09f49bd1749ffa64f') in 0.008259 seconds
+  Import took 0.011919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Prefab/売却Panel.prefab
+  artifactKey: Guid(defe40d2c00afdd4d9668291f64c696d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/売却Panel.prefab using Guid(defe40d2c00afdd4d9668291f64c696d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6188121f10e771b4acaea206994eb3') in 0.013239 seconds
+  Import took 0.016050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Prefab/FireBall.prefab
+  artifactKey: Guid(168080e25af0c914b9e25cdfb41e1274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/FireBall.prefab using Guid(168080e25af0c914b9e25cdfb41e1274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d815f0f16b82a76ed70fa0b4668c751') in 0.010961 seconds
+  Import took 0.013869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Prefab/ReaCircle 1.prefab
+  artifactKey: Guid(0cb8ff7c84103c94da8bda244a372bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/ReaCircle 1.prefab using Guid(0cb8ff7c84103c94da8bda244a372bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4840c3ab977b33af4e31efee1368e25f') in 0.007669 seconds
+  Import took 0.010560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Prefab/強化Panel.prefab
+  artifactKey: Guid(baf048c061a55ed479d4486ce001e2ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/強化Panel.prefab using Guid(baf048c061a55ed479d4486ce001e2ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aab4450d703f4e6d7dfd97aa00c56219') in 0.033539 seconds
+  Import took 0.036378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.690964 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Epikrea称号補正能力・倍率.prefab
+  artifactKey: Guid(b354c54ddec9b934c86dd540653e5d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Epikrea称号補正能力・倍率.prefab using Guid(b354c54ddec9b934c86dd540653e5d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be00224ced1c4b2a4e54cd77b95a77c7') in 0.007629 seconds
+  Import took 0.010707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Scroll View 装備ステータス ステータス2.prefab
+  artifactKey: Guid(40ab768ed02647f43aec2fa6ead2f0b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Scroll View 装備ステータス ステータス2.prefab using Guid(40ab768ed02647f43aec2fa6ead2f0b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9326c165ee4349da457cc50a7939ef5d') in 0.034367 seconds
+  Import took 0.037415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/衝撃力.prefab
+  artifactKey: Guid(48591fd090b2a39449056026ccfd79c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/衝撃力.prefab using Guid(48591fd090b2a39449056026ccfd79c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ab58c1c04d48bb7aa9739e1f8579e4d') in 0.007194 seconds
+  Import took 0.009821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/魔力.prefab
+  artifactKey: Guid(080164bc163562444aa3ac3b37151ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/魔力.prefab using Guid(080164bc163562444aa3ac3b37151ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ce941313879988a04610ff3f47488b1') in 0.007177 seconds
+  Import took 0.010269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/防御力.prefab
+  artifactKey: Guid(f87edbbdc1d70734b9c027abd6c1a467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/防御力.prefab using Guid(f87edbbdc1d70734b9c027abd6c1a467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f25b500126dcaedec9d0ffcbe95a87f4') in 0.007164 seconds
+  Import took 0.009925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/攻撃速度.prefab
+  artifactKey: Guid(1aa0dd1815b9fb44fb6c1ddea6935c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/攻撃速度.prefab using Guid(1aa0dd1815b9fb44fb6c1ddea6935c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2ee1bdfd981fab48860d18ef59a644d') in 0.007010 seconds
+  Import took 0.009699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/近接会心率.prefab
+  artifactKey: Guid(d33420f4afdb52e409e2f25c3efbffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/近接会心率.prefab using Guid(d33420f4afdb52e409e2f25c3efbffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b39dd000e83962383045ffb8358b8791') in 0.007317 seconds
+  Import took 0.010062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/称号・ギフト補正.prefab
+  artifactKey: Guid(aa38cdcda6389e746898cf5ccccabc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/称号・ギフト補正.prefab using Guid(aa38cdcda6389e746898cf5ccccabc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b8b35fb57138396bdbc4182e904632') in 0.007888 seconds
+  Import took 0.011055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/スキル.prefab
+  artifactKey: Guid(40a743c7426840f4ebd90a85f2e1112d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/スキル.prefab using Guid(40a743c7426840f4ebd90a85f2e1112d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de26b8554aa5b718e6cd8b89f8cafdc') in 0.007056 seconds
+  Import took 0.009901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/遠距離会心率.prefab
+  artifactKey: Guid(a683e9564bbca064cab41aff277835b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/遠距離会心率.prefab using Guid(a683e9564bbca064cab41aff277835b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72255adcc7e96517b84246a715a3ec69') in 0.008381 seconds
+  Import took 0.011151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Rea称号補正能力・倍率.prefab
+  artifactKey: Guid(09136af64838f6f46b87feee4631674e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Rea称号補正能力・倍率.prefab using Guid(09136af64838f6f46b87feee4631674e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b1123919f6aa778d4c1009eeb7425fe') in 0.007094 seconds
+  Import took 0.010477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Hp.prefab
+  artifactKey: Guid(caac2a903e17a6e42bba1cf77d6c90f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Hp.prefab using Guid(caac2a903e17a6e42bba1cf77d6c90f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae89634ba00ac9e254fc1f3a9db2ad4') in 0.007234 seconds
+  Import took 0.010034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/スキル名.prefab
+  artifactKey: Guid(adced890406bc304599975a27402fbc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/スキル名.prefab using Guid(adced890406bc304599975a27402fbc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2971c0dff014d4ebde62f269997dbf5b') in 0.007772 seconds
+  Import took 0.010928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/攻撃範囲.prefab
+  artifactKey: Guid(23e073f2133e9604c818f5ecf96a8fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/攻撃範囲.prefab using Guid(23e073f2133e9604c818f5ecf96a8fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd65a5146f4e075bf2b248450aa56e874') in 0.007684 seconds
+  Import took 0.010702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/SuperRea称号補正能力・倍率.prefab
+  artifactKey: Guid(e725f712dbb2ce642af77cb6d96ae97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/SuperRea称号補正能力・倍率.prefab using Guid(e725f712dbb2ce642af77cb6d96ae97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d34f84317d702a78a53512db6baf2d3') in 0.007290 seconds
+  Import took 0.010729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/能力値.prefab
+  artifactKey: Guid(e6660e00c682eeb41960dabdbbb4b51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/能力値.prefab using Guid(e6660e00c682eeb41960dabdbbb4b51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b1929b78afd1537a87e7cb87c9d8ba') in 0.007532 seconds
+  Import took 0.010696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/ファイヤーボールコスト.prefab
+  artifactKey: Guid(1b73782047ce35a439d770d244fdf504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/ファイヤーボールコスト.prefab using Guid(1b73782047ce35a439d770d244fdf504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd029da0c505b8619ad791c80529fc54d') in 0.008176 seconds
+  Import took 0.011669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/攻撃力.prefab
+  artifactKey: Guid(78f17a1901819524f9db771d30727b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/攻撃力.prefab using Guid(78f17a1901819524f9db771d30727b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e0ca91db5094e4a83d1dc66a6ad10b') in 0.007379 seconds
+  Import took 0.010341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/ギフト補正倍率.prefab
+  artifactKey: Guid(f63ed8d8efc2baa4796c913a0761a264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/ギフト補正倍率.prefab using Guid(f63ed8d8efc2baa4796c913a0761a264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a077190f7ca78ec3f6badeb2f9f8fdc') in 0.008829 seconds
+  Import took 0.013126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/会心耐性.prefab
+  artifactKey: Guid(c173c0e223babe448a0960c5a6969281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/会心耐性.prefab using Guid(c173c0e223babe448a0960c5a6969281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf58794a28ccd899d89500cae896345') in 0.007302 seconds
+  Import took 0.010212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/命中率.prefab
+  artifactKey: Guid(00f38df8dd5da2a43b1e800c8f3edebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/命中率.prefab using Guid(00f38df8dd5da2a43b1e800c8f3edebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0b400cbab6b5deb7817b976906a4bc') in 0.008190 seconds
+  Import took 0.010887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Mp.prefab
+  artifactKey: Guid(9d497aec36e63e046887317dcc4bdfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/Mp.prefab using Guid(9d497aec36e63e046887317dcc4bdfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d34a1e77aa65bc74694cb11fdf2061') in 0.007600 seconds
+  Import took 0.010221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/装備名.prefab
+  artifactKey: Guid(7db7d910fbfa4114a8a1e729e598910c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/装備名.prefab using Guid(7db7d910fbfa4114a8a1e729e598910c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84bc6cb9f039593022287ed1eb1e7e33') in 0.008174 seconds
+  Import took 0.011019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/回避率.prefab
+  artifactKey: Guid(5cb9195423cad364e88ec2fa3a729a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/回避率.prefab using Guid(5cb9195423cad364e88ec2fa3a729a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6a9cc60afae0e7d6774e349f963f3c') in 0.008012 seconds
+  Import took 0.010712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3208.166468 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO 1.TTC
+  artifactKey: Guid(128311a9255a6614d9e75353568bdc3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO 1.TTC using Guid(128311a9255a6614d9e75353568bdc3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1164ec6568eb17aad8845ca5df8c757') in 0.024257 seconds
+  Import took 0.028505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYOB.TTC
+  artifactKey: Guid(f5a70545efdd61b43b8cfcf8ff14dc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYOB.TTC using Guid(f5a70545efdd61b43b8cfcf8ff14dc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13adadfc1bb08dc8f1e658ede67d59df') in 0.021161 seconds
+  Import took 0.024730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYOB 1.TTC
+  artifactKey: Guid(747d1cc68705fcc4397fb85c7cd0195f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYOB 1.TTC using Guid(747d1cc68705fcc4397fb85c7cd0195f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13301444ec2b0d7e93ffeed98628c18a') in 0.021381 seconds
+  Import took 0.024761 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003760 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.750 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.8 MB.
+System memory in use after: 112.8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2613.
+Total: 2.704600 ms (FindLiveObjects: 0.340900 ms CreateObjectMapping: 0.153900 ms MarkObjects: 2.068000 ms  DeleteObjects: 0.141000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 174.704229 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset
+  artifactKey: Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset using Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570eb1700dbd9f3eb2ba42d8c35d87e2') in 0.999665 seconds
+  Import took 1.005759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.678092 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/装備名.prefab
+  artifactKey: Guid(7db7d910fbfa4114a8a1e729e598910c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel SoubiKYouka.Baikyaku/装備名.prefab using Guid(7db7d910fbfa4114a8a1e729e598910c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8c933c5756521c7a67500b7c42b3be') in 0.943482 seconds
+  Import took 0.949552 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001647 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.47 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.8 MB.
+System memory in use after: 112.8 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2618.
+Total: 1.703900 ms (FindLiveObjects: 0.184300 ms CreateObjectMapping: 0.066000 ms MarkObjects: 1.375700 ms  DeleteObjects: 0.077100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 266.398086 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/Epikrea称号補正能力・倍率.prefab
+  artifactKey: Guid(1350572cdf16cd44ca4af04f37c39bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/Epikrea称号補正能力・倍率.prefab using Guid(1350572cdf16cd44ca4af04f37c39bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22818f6e4f2cd3ac91fe6ae9f6b88088') in 0.033209 seconds
+  Import took 0.036398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/装備名.prefab
+  artifactKey: Guid(fbf679219767d8b4d95867ac68e0b751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/装備名.prefab using Guid(fbf679219767d8b4d95867ac68e0b751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f59ca0b148c6bfa44d3f9f1ec3434e90') in 0.966702 seconds
+  Import took 0.974311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/ファイヤーボールコスト.prefab
+  artifactKey: Guid(ced1631580e47ff409b478ca1b60bfda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/ファイヤーボールコスト.prefab using Guid(ced1631580e47ff409b478ca1b60bfda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbdb21dce65dc2aa953b8364867813b8') in 0.003693 seconds
+  Import took 0.006828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/衝撃力.prefab
+  artifactKey: Guid(81b72b9f9ae93844c9b926663516a747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/衝撃力.prefab using Guid(81b72b9f9ae93844c9b926663516a747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3abcf9509ad69e95d0c59683ae81079f') in 0.008182 seconds
+  Import took 0.011519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/スキル名.prefab
+  artifactKey: Guid(7d9dfd0c0ec258244a2e180486ca72f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/スキル名.prefab using Guid(7d9dfd0c0ec258244a2e180486ca72f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41209ba1c06965f88436b5e42c8c6d7a') in 0.008985 seconds
+  Import took 0.012154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/ギフト補正倍率.prefab
+  artifactKey: Guid(9d65e01e4f1728f40991ada1adcbc9b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/ギフト補正倍率.prefab using Guid(9d65e01e4f1728f40991ada1adcbc9b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad9c637eb87f132b995def8f296edc5') in 0.003512 seconds
+  Import took 0.006123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/SuperRea称号補正能力・倍率.prefab
+  artifactKey: Guid(9fb181378dc5d534b85b649102bdb520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/SuperRea称号補正能力・倍率.prefab using Guid(9fb181378dc5d534b85b649102bdb520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '001685103c365c89da42f30123e90012') in 0.007177 seconds
+  Import took 0.009932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/Mp.prefab
+  artifactKey: Guid(814160ca1944eab44b26acaacf63a718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/Mp.prefab using Guid(814160ca1944eab44b26acaacf63a718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b00cbad5f1282b750edff25f85caafa') in 0.003539 seconds
+  Import took 0.006399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/攻撃速度.prefab
+  artifactKey: Guid(d6b7b0b7a4602f346a7f34bb1cbc1ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/攻撃速度.prefab using Guid(d6b7b0b7a4602f346a7f34bb1cbc1ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3774531f2436bcabad1040a56b9fc55') in 0.004092 seconds
+  Import took 0.007318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/能力値.prefab
+  artifactKey: Guid(fa044a221117e664fa72940352c89015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/能力値.prefab using Guid(fa044a221117e664fa72940352c89015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41d4d2ffba8f33c918c8ef8c982899cc') in 0.006514 seconds
+  Import took 0.009229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/攻撃範囲.prefab
+  artifactKey: Guid(51d2f5ba886713141a895acee43c3a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/攻撃範囲.prefab using Guid(51d2f5ba886713141a895acee43c3a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b914f9367dfdcf933944ffca4c7008a') in 0.003531 seconds
+  Import took 0.006811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/攻撃力.prefab
+  artifactKey: Guid(6f1addbb778142a4ab1e2e9942fe1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/攻撃力.prefab using Guid(6f1addbb778142a4ab1e2e9942fe1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f392380b8d0f1809d57f30b1c4ecd7b5') in 0.004024 seconds
+  Import took 0.006821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/回避率.prefab
+  artifactKey: Guid(c9840a1d101c3544e8741f779289eba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/回避率.prefab using Guid(c9840a1d101c3544e8741f779289eba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49e581fa8a4f43e0224d540cae7ed59a') in 0.003484 seconds
+  Import took 0.006082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/Rea称号補正能力・倍率.prefab
+  artifactKey: Guid(480ce23653767ac4a8e1949fdbce32fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/Rea称号補正能力・倍率.prefab using Guid(480ce23653767ac4a8e1949fdbce32fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1180d4cb76ee40a3596403c4e60ddea') in 0.007204 seconds
+  Import took 0.009836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/称号・ギフト補正.prefab
+  artifactKey: Guid(99036429e799bf943b0b05405df69b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/称号・ギフト補正.prefab using Guid(99036429e799bf943b0b05405df69b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8431731e267b8ec6a9e22ce046c1a2d8') in 0.003521 seconds
+  Import took 0.006160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/防御力.prefab
+  artifactKey: Guid(077b6ffd41605d44791785cee662b625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/防御力.prefab using Guid(077b6ffd41605d44791785cee662b625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97c16afcbc7f5f91cd9a85675a7334ed') in 0.008310 seconds
+  Import took 0.011367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/魔力.prefab
+  artifactKey: Guid(21da4923f91214343a35457ba3c29e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/魔力.prefab using Guid(21da4923f91214343a35457ba3c29e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ad9258ad4353e3dd51407603b8d1e5') in 0.003522 seconds
+  Import took 0.006507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/近接会心率.prefab
+  artifactKey: Guid(e5be7b2103d4b7049b53af7efee17810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/近接会心率.prefab using Guid(e5be7b2103d4b7049b53af7efee17810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2839d23c1f9c211e2ae170661447867c') in 0.003524 seconds
+  Import took 0.006359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/会心耐性.prefab
+  artifactKey: Guid(b284aeead0adcb342a4026c9644a8544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/会心耐性.prefab using Guid(b284aeead0adcb342a4026c9644a8544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aaff25ecef5ce4c93b8c09e8acb4a82') in 0.007245 seconds
+  Import took 0.009919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/遠距離会心率.prefab
+  artifactKey: Guid(a09fa2ef1c7f6594399c9176004706a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/遠距離会心率.prefab using Guid(a09fa2ef1c7f6594399c9176004706a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1c7d6ae9bdb9dc4fbecf8a078f8da2') in 0.003591 seconds
+  Import took 0.006679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/命中率.prefab
+  artifactKey: Guid(5df0e8da7f3fe1e4a8fbc4ea15d47a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/命中率.prefab using Guid(5df0e8da7f3fe1e4a8fbc4ea15d47a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee654c21bc0e0327fc0f9f73298c48e0') in 0.003562 seconds
+  Import took 0.006267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/Scroll View 装備ステータス ステータス1.prefab
+  artifactKey: Guid(6cd7bfbb5ac0b314e98839de68be4bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/Scroll View 装備ステータス ステータス1.prefab using Guid(6cd7bfbb5ac0b314e98839de68be4bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f23554e3ae33d25264fa429b144cd6') in 0.020338 seconds
+  Import took 0.023141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/Hp.prefab
+  artifactKey: Guid(82f9c46839be6e0498059c62935e7f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/Hp.prefab using Guid(82f9c46839be6e0498059c62935e7f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5001d0b089aca5991d25a055cb892357') in 0.007226 seconds
+  Import took 0.009997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/スキル.prefab
+  artifactKey: Guid(b4d935c94d1136041985fa861ea8f4a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/スキル.prefab using Guid(b4d935c94d1136041985fa861ea8f4a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952c96237219bc6c990e88c94835c560') in 0.003828 seconds
+  Import took 0.006479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.042374 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset
+  artifactKey: Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset using Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b84f30ac3f779b22a301174f68c19f8') in 0.971273 seconds
+  Import took 0.977460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.400328 seconds.
+  path: Assets/Prefab/StatusPanel/statusPanel StatusMenu/装備名.prefab
+  artifactKey: Guid(fbf679219767d8b4d95867ac68e0b751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatusPanel/statusPanel StatusMenu/装備名.prefab using Guid(fbf679219767d8b4d95867ac68e0b751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00717fbeb16704a677f59c6d0c51127e') in 0.948359 seconds
+  Import took 0.954581 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001638 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.730 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.8 MB.
+System memory in use after: 112.9 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2623.
+Total: 1.916800 ms (FindLiveObjects: 0.193000 ms CreateObjectMapping: 0.069500 ms MarkObjects: 1.572700 ms  DeleteObjects: 0.080900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 4632.613222 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset
+  artifactKey: Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset using Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff7f395401d8f6a5e82c64290d8582f3') in 0.400569 seconds
+  Import took 0.405365 seconds .
+
+========================================================================
+Received Prepare
+The file 'UserSettings/EditorUserSettings.asset' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+
+Trying to reload asset but can't find object on disk
+
+Registering precompiled user dll's ...
+Registered in 0.000966 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.911 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1924 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.1 MB.
+System memory in use after: 110.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2625.
+Total: 1.763300 ms (FindLiveObjects: 0.208100 ms CreateObjectMapping: 0.071100 ms MarkObjects: 1.394700 ms  DeleteObjects: 0.088500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 3562.515308 seconds.
+  path: Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset
+  artifactKey: Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/MEIRYO SDF.asset using Guid(a08766a9edf44f54082076c64fcd1ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba2609fecbc6d702792bf8056fe5c1e4') in 0.392539 seconds
+  Import took 0.396868 seconds .
+
+========================================================================
+Received Prepare
+Trying to reload asset but can't find object on disk
+
+Registering precompiled user dll's ...
+Registered in 0.001012 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.859 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1924 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.2 MB.
+System memory in use after: 110.3 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2630.
+Total: 1.911700 ms (FindLiveObjects: 0.223500 ms CreateObjectMapping: 0.101900 ms MarkObjects: 1.498900 ms  DeleteObjects: 0.086600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Trying to reload asset but can't find object on disk
+
+Registering precompiled user dll's ...
+Registered in 0.001084 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1924 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.2 MB.
+System memory in use after: 110.2 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2633.
+Total: 1.978900 ms (FindLiveObjects: 0.196900 ms CreateObjectMapping: 0.079200 ms MarkObjects: 1.621000 ms  DeleteObjects: 0.081100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 16c592d8e85239d49806f5ba5a5462ce
+  - enabled: 1
+    path: Assets/Scenes/1-1GamaStage.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: e34e8b2770c04e64580c710be714c71e
+  - enabled: 1
+    path: Assets/Scenes/StatusMenu.unity
+    guid: a9e6e8fca8dd34e74ae6d728e7b89a2a
+  - enabled: 1
+    path: Assets/Scenes/Result.unity
+    guid: b9ab05bfac2d8413aaf372521a51755e
+  - enabled: 1
+    path: Assets/Scenes/SkillMenu.unity
+    guid: e44e9a47ebe183449ac1373ec86d929d
+  - enabled: 1
+    path: Assets/Scenes/Souko.unity
+    guid: 496327892df034a15959ddc4e942073e
+  - enabled: 1
+    path: Assets/Scenes/Kouseki.unity
+    guid: 49988c30947f7184ab64b2532418a4aa
+  m_configObjects: {}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d440cb1fefdbc8048995c340268638d1, type: 3}
+  m_Name: SyougouDataList
+  m_EditorClassIdentifier: 
+  syougyouDatas:
+  - no: 0
+    syougouName: 
+    nomal: 0
+    rea: 0
+    superRea: 0
+    maxHpPlus: 0
+    maxMpPlus: 0
+    fireBallCostPlus: 0
+    kougekiryokuPlus: 0
+    maryokuPlus: 0
+    bouggyoryokuPlus: 0
