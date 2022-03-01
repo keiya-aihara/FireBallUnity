@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,6 +38,6 @@ public class DontDestroyOnloadDataBaseManager : MonoBehaviour
 		ennkyoriWeponDataBaseManager.weponDataList.Nyuusyuzyunn();
 		yoroiDataBaseManager.weponDataList.Nyuusyuzyunn();
 		sonotaDataBaseManager.weponDataList.Nyuusyuzyunn();
-		Debug.Log("ƒ\[ƒg‰Šú‰»");
+		Debug.Log("ã‚½ãƒ¼ãƒˆåˆæœŸåŒ–");
 	}
 }

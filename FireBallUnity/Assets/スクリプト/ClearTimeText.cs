@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +12,7 @@ public class ClearTimeText : MonoBehaviour
 
         resultManager = GameObject.Find("ResultManager");
         resultManager.GetComponent<ResultSceneManager>().a = false;
-        gameObject.GetComponent<Text>().text = "ƒNƒŠƒAƒ^ƒCƒ€ "+resultManager.GetComponent<ResultSceneManager>().time.ToString("F2")+"•b";
+        gameObject.GetComponent<Text>().text = "ã‚¯ãƒªã‚¢ã‚¿ã‚¤ãƒ  "+resultManager.GetComponent<ResultSceneManager>().time.ToString("F2")+"ç§’";
     }
 
     // Update is called once per frame

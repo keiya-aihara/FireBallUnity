@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class KousekiDataBaseManager : MonoBehaviour
 {
     
     public static KousekiDataBaseManager instance;
-    [Header("“¢”°”ƒJƒEƒ“ƒg")]
+    [Header("è¨ä¼æ•°ã‚«ã‚¦ãƒ³ãƒˆ")]
     public int mazyuuToubatuSuu;
     public int ninngennToubatuSuu;
     public int mazinnToubatuSuu;
@@ -14,18 +14,18 @@ public class KousekiDataBaseManager : MonoBehaviour
     public int akumaToubatuSuu;
     public int ryuuTToubatuSuu;
     public int kamiToubatuSuu;
-    [Header("ƒŒƒA“x•Êæ“¾ƒAƒCƒeƒ€”ƒJƒEƒ“ƒg")]
+    [Header("ãƒ¬ã‚¢åº¦åˆ¥å–å¾—ã‚¢ã‚¤ãƒ†ãƒ æ•°ã‚«ã‚¦ãƒ³ãƒˆ")]
     public int nomalGetSuu;
     public int reaGetSuu;
     public int superReaGetSuu;
     public int epikReaGetSuu;
     public int legendaryReaGetSuu;
     public int godReaGetSuu;
-    [Header("‹­‰»‰ñ”ƒJƒEƒ“ƒg")]
+    [Header("å¼·åŒ–å›æ•°ã‚«ã‚¦ãƒ³ãƒˆ")]
     public int kyoukakaisuu;
-    [Header("ƒŒƒAíŒ‚”j”ƒJƒEƒ“ƒg")]
+    [Header("ãƒ¬ã‚¢ç¨®æ’ƒç ´æ•°ã‚«ã‚¦ãƒ³ãƒˆ")]
     public int reaEnemyToubatuSuu;
-    [Header("“ÁU”’l")]
+    [Header("ç‰¹æ”»æ•°å€¤")]
     public int mazyuuTokkou;
     public int ninngennTokkou;
     public int mazinnTokkou;
@@ -33,33 +33,33 @@ public class KousekiDataBaseManager : MonoBehaviour
     public int akumaTokkou;
     public int RyuuTokkou;
     public int KamiTokkou;
-    [Header("ƒŒƒA“x•Êƒhƒƒbƒv—¦ƒ{[ƒiƒX")]
+    [Header("ãƒ¬ã‚¢åº¦åˆ¥ãƒ‰ãƒ­ãƒƒãƒ—ç‡ãƒœãƒ¼ãƒŠã‚¹")]
     public int nomalDropRitu;
     public int reaDropRitu;
     public int superReaDropRitu;
     public int epikReaDropRitu;
     public int legendaryReaDropRitu;
     public int godReaDropRitu;
-    [Header("‹­‰»‘Î‰¿Œ¸­—¦")]
+    [Header("å¼·åŒ–å¯¾ä¾¡æ¸›å°‘ç‡")]
     public int kyoukataikaGennsyouritu;
-    [Header("ƒMƒtƒg•t—^‘•”õƒhƒƒbƒv—¦")]
+    [Header("ã‚®ãƒ•ãƒˆä»˜ä¸è£…å‚™ãƒ‰ãƒ­ãƒƒãƒ—ç‡")]
     public int giftHuyoSoubiDropritu;
-    [Header("Œ‚”j”ƒgƒƒtƒB[Š”")]
+    [Header("æ’ƒç ´æ•°ãƒˆãƒ­ãƒ•ã‚£ãƒ¼æ‰€æŒæ•°")]
     public int buronzuTorophy;
     public int sirubaaTorophy;
     public int goorudoTorophy;
     public int puratinaTorophy;
     public int daiamonndoTorophy;
-    [Header("ƒŒƒA“x•ÊƒAƒCƒeƒ€ƒgƒƒtƒB[Š”")]
+    [Header("ãƒ¬ã‚¢åº¦åˆ¥ã‚¢ã‚¤ãƒ†ãƒ ãƒˆãƒ­ãƒ•ã‚£ãƒ¼æ‰€æŒæ•°")]
     public int whiteTorophy;
     public int greenTorophy;
     public int buleeTorophy;
     public int redTorophy;
     public int purpleTorophy;
     public int godTorophy;
-    [Header("‹­‰»”ƒgƒƒtƒB[Š”")]
+    [Header("å¼·åŒ–æ•°ãƒˆãƒ­ãƒ•ã‚£ãƒ¼æ‰€æŒæ•°")]
     public int kyoukasekiTorophy;
-    [Header("ƒŒƒAíŒ‚”jƒgƒƒtƒB[Š”")]
+    [Header("ãƒ¬ã‚¢ç¨®æ’ƒç ´ãƒˆãƒ­ãƒ•ã‚£ãƒ¼æ‰€æŒæ•°")]
     public int reaTorophy;
     // Update is called once per frame
     void Update()

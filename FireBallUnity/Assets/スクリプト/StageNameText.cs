@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,11 +12,11 @@ public class StageNameText : MonoBehaviour
         resultManager = GameObject.Find("ResultManager");
         if (SceneManager.GetActiveScene().name == "Result")
         {
-            gameObject.GetComponent<Text>().text = "–`Œ¯‚©‚ç‚Ì‹AŠÒ\n" + resultManager.GetComponent<ResultSceneManager>().stageName;
+            gameObject.GetComponent<Text>().text = "å†’é™ºã‹ã‚‰ã®å¸°é‚„\n" + resultManager.GetComponent<ResultSceneManager>().stageName;
         }
         if (SceneManager.GetActiveScene().name == "GameOver")
         {
-            gameObject.GetComponent<Text>().text = "”s‘–‚µ‚½EEE\n" + resultManager.GetComponent<ResultSceneManager>().stageName;
+            gameObject.GetComponent<Text>().text = "æ•—èµ°ã—ãŸãƒ»ãƒ»ãƒ»\n" + resultManager.GetComponent<ResultSceneManager>().stageName;
         }
     }
 

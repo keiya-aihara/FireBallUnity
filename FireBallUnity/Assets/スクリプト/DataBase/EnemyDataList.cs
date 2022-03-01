@@ -1,28 +1,28 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// “G‚Ìî•ñ‚ÌƒXƒNƒŠƒvƒ^ƒuƒ‹EƒIƒuƒWƒFƒNƒg
+/// æ•µã®æƒ…å ±ã®ã‚¹ã‚¯ãƒªãƒ—ã‚¿ãƒ–ãƒ«ãƒ»ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 /// </summary>
-[CreateAssetMenu(menuName = "MyScriptable/Create EnemyData", fileName = "EnemyDataList")]   // ‚±‚Ì‘®«î•ñ‚ğİ’è‚·‚é‚ÆUnity‚ÉƒAƒZƒbƒg‚Æ‚µ‚ÄƒXƒNƒŠƒvƒ^ƒuƒ‹EƒIƒuƒWƒFƒNƒg‚ğì¬‚Å‚«‚Ü‚·B
+[CreateAssetMenu(menuName = "MyScriptable/Create EnemyData", fileName = "EnemyDataList")]   // ã“ã®å±æ€§æƒ…å ±ã‚’è¨­å®šã™ã‚‹ã¨Unityã«ã‚¢ã‚»ãƒƒãƒˆã¨ã—ã¦ã‚¹ã‚¯ãƒªãƒ—ã‚¿ãƒ–ãƒ«ãƒ»ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã§ãã¾ã™ã€‚
 public class EnemyDataList : ScriptableObject
-{   // MonoBehaviourƒNƒ‰ƒX‚Ì‘ã‚í‚è‚ÉAScriptableObjectƒNƒ‰ƒX‚ğŒp³‚µ‚Ä‚¢‚Ü‚·B
+{   // MonoBehaviourã‚¯ãƒ©ã‚¹ã®ä»£ã‚ã‚Šã«ã€ScriptableObjectã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ã—ã¦ã„ã¾ã™ã€‚
 
-	// “G‚Ìî•ñ(EnemyData)‚ğ‚Ü‚Æ‚ß‚½ƒŠƒXƒg
+	// æ•µã®æƒ…å ±(EnemyData)ã‚’ã¾ã¨ã‚ãŸãƒªã‚¹ãƒˆ
 	public List<EnemyData> enemyDatas = new List<EnemyData>();
 
-	/// “G‚Ìî•ñ(1‘Ì‚¸‚Â‚Ìî•ñ)
-	[Serializable]// ‚±‚Ì‘®«î•ñ‚ğ–Y‚ê‚È‚¢‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢Bİ’è‚µ‚È‚¢‚ÆƒCƒ“ƒXƒyƒNƒ^[‚É•\¦‚³‚ê‚Ü‚¹‚ñB
+	/// æ•µã®æƒ…å ±(1ä½“ãšã¤ã®æƒ…å ±)
+	[Serializable]// ã“ã®å±æ€§æƒ…å ±ã‚’å¿˜ã‚Œãªã„ã‚ˆã†ã«ã—ã¦ãã ã•ã„ã€‚è¨­å®šã—ãªã„ã¨ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼ã«è¡¨ç¤ºã•ã‚Œã¾ã›ã‚“ã€‚
 	public class EnemyData
 	{
-		[Header("“GƒXƒe[ƒ^ƒX")]
+		[Header("æ•µã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")]
 		public int no;
 		public int lebel;
 		public bool rea;
 		public string enemyName;
-		[Header("í‘°")]
+		[Header("ç¨®æ—")]
 		public bool mazyuu;
 		public bool ninngenn;
 		public bool mazinn;
@@ -30,7 +30,7 @@ public class EnemyDataList : ScriptableObject
 		public bool akuma;
 		public bool ryuu;
 		public bool kami;
-		[Header("ƒXƒe[ƒ^ƒX")]
+		[Header("ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")]
 		public int maxHp;
 		public int hp;
 		public int kougekiryoku;
@@ -44,24 +44,24 @@ public class EnemyDataList : ScriptableObject
 		public float kougekiHanni;
 		public float speed;
 		public float nokkubakkuBougyo;
-		[Header("ƒhƒƒbƒv")]
+		[Header("ãƒ‰ãƒ­ãƒƒãƒ—")]
 		public int exp;
 		public int gold;
 		public int dropItemSuu;
 		public int[] dropItemNos;
 		public GameObject[] dropSyougou;
-		[Header("‘•”õƒhƒƒbƒv—¦")]
+		[Header("è£…å‚™ãƒ‰ãƒ­ãƒƒãƒ—ç‡")]
 		public float nomalDropRitu;
 		public float reaDropRitu;
 		public float superReaDropRitu;
 		public float epikDropRitu;
 		public float legendaryDropRitu;
 		public float godDropRitu;
-		[Header("Ì†ƒhƒƒbƒv—¦")]
+		[Header("ç§°å·ãƒ‰ãƒ­ãƒƒãƒ—ç‡")]
 		public float reaSyougouDropRitu;
 		public float superReaSyougouDropRitu;
 		public float epikSyougouDropRitu;
-		[Header("ƒMƒtƒgƒhƒƒbƒv—¦")]
+		[Header("ã‚®ãƒ•ãƒˆãƒ‰ãƒ­ãƒƒãƒ—ç‡")]
 		public float giftDropRitu;
 	}
 	void Start()

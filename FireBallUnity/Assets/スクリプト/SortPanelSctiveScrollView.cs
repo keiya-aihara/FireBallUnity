@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +25,7 @@ public class SortPanelSctiveScrollView : MonoBehaviour
             {
                 if(Input.mousePosition.y <= 750)
                 {
-                    if (GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX1(Clone)") ==null)
+                    if (GameObject.Find("Scroll View è£…å‚™ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹1(Clone)") ==null)
                     {
                         sortPanel.SetActive(false);
                         gameObject.SetActive(false);

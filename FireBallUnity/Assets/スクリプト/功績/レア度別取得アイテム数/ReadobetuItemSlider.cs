@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -85,50 +85,50 @@ public class ReadobetuItemSlider : MonoBehaviour
         {
             kousekiDataBaseManager.nomalDropRitu += 50;
             kousekiDataBaseManager.whiteTorophy ++;
-            reado = "ƒm[ƒ}ƒ‹";
-            torophy = "ƒzƒƒCƒgƒgƒƒtƒB[";
+            reado = "ãƒãƒ¼ãƒãƒ«";
+            torophy = "ãƒ›ãƒ¯ã‚¤ãƒˆãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
         }
         else if(rea)
         {
             kousekiDataBaseManager.reaDropRitu += 50;
             kousekiDataBaseManager.greenTorophy++;
-            reado = "ƒŒƒA";
-            torophy = "ƒOƒŠ[ƒ“ƒgƒƒtƒB[";
+            reado = "ãƒ¬ã‚¢";
+            torophy = "ã‚°ãƒªãƒ¼ãƒ³ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
         }
         else if(superRea)
         {
             kousekiDataBaseManager.superReaDropRitu += 50;
             kousekiDataBaseManager.buleeTorophy++;
-            reado = "ƒX[ƒp[ƒŒƒA";
-            torophy = "ƒuƒ‹[ƒgƒƒtƒB[";
+            reado = "ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒ¬ã‚¢";
+            torophy = "ãƒ–ãƒ«ãƒ¼ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
         }
         else if(epikRea)
         {
             kousekiDataBaseManager.epikReaDropRitu += 50;
             kousekiDataBaseManager.redTorophy++;
-            reado = "ƒGƒsƒbƒNƒŒƒA";
-            torophy = "ƒŒƒbƒhƒgƒƒtƒB[";
+            reado = "ã‚¨ãƒ”ãƒƒã‚¯ãƒ¬ã‚¢";
+            torophy = "ãƒ¬ãƒƒãƒ‰ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
         }
         else if(legendaryRea)
         {
             kousekiDataBaseManager.legendaryReaDropRitu += 50;
             kousekiDataBaseManager.purpleTorophy++;
-            reado = "ƒŒƒWƒFƒ“ƒ_ƒŠ[ƒŒƒA";
-            torophy = "ƒp[ƒvƒ‹ƒgƒƒtƒB[";
+            reado = "ãƒ¬ã‚¸ã‚§ãƒ³ãƒ€ãƒªãƒ¼ãƒ¬ã‚¢";
+            torophy = "ãƒ‘ãƒ¼ãƒ—ãƒ«ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
         }
         else if(godRea)
         {
             kousekiDataBaseManager.godReaDropRitu += 50;
             kousekiDataBaseManager.godTorophy++;
-            reado = "ƒSƒbƒgƒŒƒA";
-            torophy = "ƒSƒbƒgƒgƒƒtƒB[";
+            reado = "ã‚´ãƒƒãƒˆãƒ¬ã‚¢";
+            torophy = "ã‚´ãƒƒãƒˆãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
         }
     }
     public void KakutokuTorophyPanel()
     {
         torophyKakutokuPanel.SetActive(true);
-        torophyKakutokuText.GetComponent<Text>().text = "u" + reado + "ƒAƒCƒeƒ€‚ğ" + slider.maxValue.ToString("N0") + "‰ñæ“¾‚·‚év\n"+torophy+"‚ğŠl“¾‚µ‚Ü‚µ‚½";
-        dropBonusText.GetComponent<Text>().text = reado + "ƒAƒCƒeƒ€‚Ìƒhƒƒbƒv—¦‚ª50%ã¸‚µ‚Ü‚·";
+        torophyKakutokuText.GetComponent<Text>().text = "ã€Œ" + reado + "ã‚¢ã‚¤ãƒ†ãƒ ã‚’" + slider.maxValue.ToString("N0") + "å›å–å¾—ã™ã‚‹ã€\n"+torophy+"ã‚’ç²å¾—ã—ã¾ã—ãŸ";
+        dropBonusText.GetComponent<Text>().text = reado + "ã‚¢ã‚¤ãƒ†ãƒ ã®ãƒ‰ãƒ­ãƒƒãƒ—ç‡ãŒ50%ä¸Šæ˜‡ã—ã¾ã™";
         if (nomal) Instantiate(whiteTorophy, transform.position, transform.rotation, kinnwakuImage.transform);
         else if (rea) Instantiate(greenTorophy, transform.position, transform.rotation, kinnwakuImage.transform);
         else if (superRea) Instantiate(buleeTorophy, transform.position, transform.rotation, kinnwakuImage.transform);

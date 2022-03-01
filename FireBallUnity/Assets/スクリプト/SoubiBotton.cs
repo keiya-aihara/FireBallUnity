@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,39 +29,39 @@ public class SoubiBotton : MonoBehaviour
 
     public void SoubiHennkou()
     {
-        if(GameObject.Find("Scroll View ‹ß‹——£•Ší ƒXƒe[ƒ^ƒX"))
+        if(GameObject.Find("Scroll View è¿‘è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹"))
         {
             playerStatusDataBase.kinnkyoriWeponNo = number;
             playerStatusDataBase.StatusUpdate();
-            contentSelectSoubiStatus = GameObject.Find("Content Select Soubi@ƒXƒe[ƒ^ƒX").GetComponent<SoubityuuIcon>();
+            contentSelectSoubiStatus = GameObject.Find("Content Select Soubiã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
         }
-        if (GameObject.Find("Scroll View ‰“‹——£•Ší ƒXƒe[ƒ^ƒX"))
+        if (GameObject.Find("Scroll View é è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹"))
         {
             playerStatusDataBase.ennkyoriWeponNo = number;
             playerStatusDataBase.StatusUpdate();
-            contentSelectSoubiStatus = GameObject.Find("Content Select Soubi@ƒXƒe[ƒ^ƒX").GetComponent<SoubityuuIcon>();
+            contentSelectSoubiStatus = GameObject.Find("Content Select Soubiã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
         }
-        if (GameObject.Find("Scroll View ŠZ‘•”õ ƒXƒe[ƒ^ƒX"))
+        if (GameObject.Find("Scroll View é§è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹"))
         {
             playerStatusDataBase.yoroiNo = number;
             playerStatusDataBase.StatusUpdate();
-            contentSelectSoubiStatus = GameObject.Find("Content Select Soubi@ƒXƒe[ƒ^ƒX").GetComponent<SoubityuuIcon>();
+            contentSelectSoubiStatus = GameObject.Find("Content Select Soubiã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
         }
-        if (GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX1"))
+        if (GameObject.Find("Scroll View ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹1"))
         {
             playerStatusDataBase.sonota1No = number;
             playerStatusDataBase.StatusUpdate();
-            contentSelectSoubiStatus = GameObject.Find("Content Select Soubi@ƒXƒe[ƒ^ƒX").GetComponent<SoubityuuIcon>();
+            contentSelectSoubiStatus = GameObject.Find("Content Select Soubiã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
         }
-        if (GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX2"))
+        if (GameObject.Find("Scroll View ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹2"))
         {
             playerStatusDataBase.sonota2No = number;
             playerStatusDataBase.StatusUpdate();
-            contentSelectSoubiStatus = GameObject.Find("Content Select Soubi@ƒXƒe[ƒ^ƒX").GetComponent<SoubityuuIcon>();
+            contentSelectSoubiStatus = GameObject.Find("Content Select Soubiã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
         }
     }
