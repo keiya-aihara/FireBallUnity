@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using TMPro;
 
 public class TMP_UGUI_FontSizeFitter : MonoBehaviour
@@ -30,11 +30,11 @@ public class TMP_UGUI_FontSizeFitter : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒtƒHƒ“ƒgƒTƒCƒY‚ğXV
+    /// ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºã‚’æ›´æ–°
     /// </summary>
-    /// <param name="rect">Text‚ğ•\¦‚·‚éRectBnull‚Å‚à‰Â</param>
+    /// <param name="rect">Textã‚’è¡¨ç¤ºã™ã‚‹Rectã€‚nullã§ã‚‚å¯</param>
     /// <param name="text">Text</param>
-    /// <param name="baseSize">•¶š‚ª•\¦‚³‚ê‚éÅ‘å‚ÌƒtƒHƒ“ƒgƒTƒCƒY‚æ‚è­‚µ¬‚³‚¢’l‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B¸“x‚É‰e‹¿‚µ‚Ü‚·</param>
+    /// <param name="baseSize">æ–‡å­—ãŒè¡¨ç¤ºã•ã‚Œã‚‹æœ€å¤§ã®ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºã‚ˆã‚Šå°‘ã—å°ã•ã„å€¤ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚ç²¾åº¦ã«å½±éŸ¿ã—ã¾ã™</param>
     public static void UpdateFontSize(Rect rect, TextMeshProUGUI text, float baseSize = 300f)
     {
         text.fontSize = baseSize;

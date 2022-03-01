@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ public class LockBotton : MonoBehaviour
     }
     public void KeyLock()
     {
-        if (GameObject.Find("Scroll View ‹ß‹——£•Ší ƒXƒe[ƒ^ƒX") || GameObject.Find("Scroll View ‹ß‹——£•Ší ‘qŒÉ"))
+        if (GameObject.Find("Scroll View è¿‘è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹") || GameObject.Find("Scroll View è¿‘è·é›¢æ­¦å™¨ å€‰åº«"))
         {
             weponDateBaseManager = dataBasaManager.GetComponent<WeponDateBaseManager>();
             if (weponDateBaseManager.GetWeponData(number).keyLock == false)
@@ -36,7 +36,7 @@ public class LockBotton : MonoBehaviour
                 weponDateBaseManager.GetWeponData(number).keyLock = false;
             }
         }
-        if (GameObject.Find("Scroll View ‰“‹——£•Ší ƒXƒe[ƒ^ƒX")||GameObject.Find("Scroll View ‰“‹——£•Ší ‘qŒÉ"))
+        if (GameObject.Find("Scroll View é è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")||GameObject.Find("Scroll View é è·é›¢æ­¦å™¨ å€‰åº«"))
         {
             ennkyoriWeponDataBaseManager = dataBasaManager.GetComponent<EnnkyoriWeponDataBaseManager>();
             if (ennkyoriWeponDataBaseManager.GetWeponData(number).keyLock == false)
@@ -48,7 +48,7 @@ public class LockBotton : MonoBehaviour
                 ennkyoriWeponDataBaseManager.GetWeponData(number).keyLock = false;
             }
         }
-        if (GameObject.Find("Scroll View ŠZ‘•”õ ƒXƒe[ƒ^ƒX") || GameObject.Find("Scroll View ŠZ‘•”õ ‘qŒÉ"))
+        if (GameObject.Find("Scroll View é§è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹") || GameObject.Find("Scroll View é§è£…å‚™ å€‰åº«"))
         {
             yoroiDataBaseManager = dataBasaManager.GetComponent<YoroiDataBaseManager>();
             if (yoroiDataBaseManager.GetWeponData(number).keyLock == false)
@@ -60,7 +60,7 @@ public class LockBotton : MonoBehaviour
                yoroiDataBaseManager.GetWeponData(number).keyLock = false;
             }
         }
-        if (GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX1")||GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ‘qŒÉ"))
+        if (GameObject.Find("Scroll View ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹1")||GameObject.Find("Scroll View ãã®ä»–è£…å‚™ å€‰åº«"))
         {
             sonotaDataBaseManager = dataBasaManager.GetComponent<SonotaDataBaseManager>();
             if (sonotaDataBaseManager.GetWeponData(number).keyLock == false)
@@ -72,7 +72,7 @@ public class LockBotton : MonoBehaviour
                 sonotaDataBaseManager.GetWeponData(number).keyLock = false;
             }
         }
-        if (GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX2"))
+        if (GameObject.Find("Scroll View ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹2"))
         {
             sonotaDataBaseManager = dataBasaManager.GetComponent<SonotaDataBaseManager>();
             if (sonotaDataBaseManager.GetWeponData(number).keyLock == false)

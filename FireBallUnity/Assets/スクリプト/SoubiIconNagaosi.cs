@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -79,7 +79,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     {
         if (SceneManager.GetActiveScene().name == "StatusMenu")
         {
-            panel = GameObject.Find("ƒXƒe[ƒ^ƒXƒpƒlƒ‹ Scroll View");
+            panel = GameObject.Find("ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ‘ãƒãƒ« Scroll View");
         }
         if(SceneManager.GetActiveScene().name =="Souko")
         {
@@ -106,8 +106,8 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                     soubiData = weponDateBaseManager.GetWeponData(number);
 
-                    soubiBotton = GameObject.Find("‘•”õ‚·‚éƒ{ƒ^ƒ“");
-                    lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                    soubiBotton = GameObject.Find("è£…å‚™ã™ã‚‹ãƒœã‚¿ãƒ³");
+                    lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
@@ -127,8 +127,8 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
                     soubiData = ennkyoriWeponDataBaseManager.GetWeponData(number);
 
-                    soubiBotton = GameObject.Find("‘•”õ‚·‚éƒ{ƒ^ƒ“");
-                    lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                    soubiBotton = GameObject.Find("è£…å‚™ã™ã‚‹ãƒœã‚¿ãƒ³");
+                    lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
@@ -147,8 +147,8 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
                     soubiData = yoroiDataBaseManager.GetWeponData(number);
 
-                    soubiBotton = GameObject.Find("‘•”õ‚·‚éƒ{ƒ^ƒ“");
-                    lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                    soubiBotton = GameObject.Find("è£…å‚™ã™ã‚‹ãƒœã‚¿ãƒ³");
+                    lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
@@ -167,8 +167,8 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
                     soubiData = sonotaDataBaseManager.GetWeponData(number);
 
-                    soubiBotton = GameObject.Find("‘•”õ‚·‚éƒ{ƒ^ƒ“");
-                    lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                    soubiBotton = GameObject.Find("è£…å‚™ã™ã‚‹ãƒœã‚¿ãƒ³");
+                    lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
@@ -205,7 +205,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                 soubiData = weponDateBaseManager.GetWeponData(number);
 
-                lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                 lockBottonScript = lockBotton.GetComponent<LockBotton>();
                 lockBottonScript.number = number;
 
@@ -222,7 +222,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
                 soubiData = ennkyoriWeponDataBaseManager.GetWeponData(number);
 
-                lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                 lockBottonScript = lockBotton.GetComponent<LockBotton>();
                 lockBottonScript.number = number;
 
@@ -240,7 +240,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
 
                 b = true;
 
-                lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                 lockBottonScript = lockBotton.GetComponent<LockBotton>();
                 lockBottonScript.number = number;
 
@@ -256,7 +256,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
 
                 b = true;
 
-                lockBotton = GameObject.Find("•ÛŒì‚·‚éƒ{ƒ^ƒ“");
+                lockBotton = GameObject.Find("ä¿è­·ã™ã‚‹ãƒœã‚¿ãƒ³");
                 lockBottonScript = lockBotton.GetComponent<LockBotton>();
                 lockBottonScript.number = number;
 
@@ -272,7 +272,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     {
         if (SceneManager.GetActiveScene().name == "StatusMenu")
         {
-            statusPanelContent = GameObject.Find("Content ‘•”õ Ì†EƒMƒtƒg•â³");
+            statusPanelContent = GameObject.Find("Content è£…å‚™ ç§°å·ãƒ»ã‚®ãƒ•ãƒˆè£œæ­£");
 
             SoubiNameUpdata();
             Instantiate(soubiName, transform.position, transform.rotation, statusPanelContent.transform);
@@ -281,7 +281,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             {
                 Debug.Log("A");
                 text = syougouGiftHosei.GetComponent<Text>();
-                text.text = "sÌ†tqƒMƒtƒgr•â³’l";
+                text.text = "ã€Šç§°å·ã€‹ã€ˆã‚®ãƒ•ãƒˆã€‰è£œæ­£å€¤";
                 Instantiate(syougouGiftHosei, transform.position, transform.rotation, statusPanelContent.transform);
 
                 if (soubiData.syougouName != "")
@@ -318,107 +318,107 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 }
             }
             text = nouryokuti.GetComponent<Text>();
-            text.text = "”\—Í’l";
+            text.text = "èƒ½åŠ›å€¤";
             Instantiate(nouryokuti, transform.position, transform.rotation, statusPanelContent.transform);
 
             if (soubiData.maxHp != 0)
             {
                 text = hp.GetComponent<Text>();
-                text.text = " - HP@" + soubiData.kyoukagoMaxHp + "s" + soubiData.syougouMaxHp + "t";
+                text.text = " - HPã€€" + soubiData.kyoukagoMaxHp + "ã€Š" + soubiData.syougouMaxHp + "ã€‹";
                 Instantiate(hp, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.maxMp != 0)
             {
                 text = mp.GetComponent<Text>();
-                text.text = " - MP@" + soubiData.kyoukagoMaxMp + "s" + soubiData.syougouMaxMp + "t";
+                text.text = " - MPã€€" + soubiData.kyoukagoMaxMp + "ã€Š" + soubiData.syougouMaxMp + "ã€‹";
                 Instantiate(mp, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.fireBallCost != 0)
             {
                 text = fireBallCost.GetComponent<Text>();
-                text.text = " - FBƒRƒXƒg@" + soubiData.fireBallCost + "s" + soubiData.fireBallCost + "t";
+                text.text = " - FBã‚³ã‚¹ãƒˆã€€" + soubiData.fireBallCost + "ã€Š" + soubiData.fireBallCost + "ã€‹";
                 Instantiate(fireBallCost, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kougekiryoku != 0)
             {
                 text = kougekiryoku.GetComponent<Text>();
-                text.text = " - UŒ‚—Í@" + soubiData.kyoukagoKougekiryoku + "s" + soubiData.syougouKougekiryoku + "t";
+                text.text = " - æ”»æ’ƒåŠ›ã€€" + soubiData.kyoukagoKougekiryoku + "ã€Š" + soubiData.syougouKougekiryoku + "ã€‹";
                 Instantiate(kougekiryoku, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.maryoku != 0)
             {
                 text = maryoku.GetComponent<Text>();
-                text.text = " - –‚—Í@" + soubiData.kyoukagoMaryoku + "s" + soubiData.syougouMamryoku + "t";
+                text.text = " - é­”åŠ›ã€€" + soubiData.kyoukagoMaryoku + "ã€Š" + soubiData.syougouMamryoku + "ã€‹";
                 Instantiate(maryoku, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kinnkyoriKaisinnritu != 0)
             {
                 text = kinnkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - ‹ß‹——£‰ïS—¦@" + soubiData.kinnkyoriKaisinnritu + "s" + soubiData.syougouKinnkyoriKaisinnritu + "t";
+                text.text = " - è¿‘è·é›¢ä¼šå¿ƒç‡ã€€" + soubiData.kinnkyoriKaisinnritu + "ã€Š" + soubiData.syougouKinnkyoriKaisinnritu + "ã€‹";
                 Instantiate(kinnkyoriKaisinnritu, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.ennkyoriKaisinnsitu != 0)
             {
                 text = ennkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - ‰“‹——£‰ïS—¦@" + soubiData.ennkyoriKaisinnsitu + "s" + soubiData.syougouEnnkyoriKaisinnritu + "t";
+                text.text = " - é è·é›¢ä¼šå¿ƒç‡ã€€" + soubiData.ennkyoriKaisinnsitu + "ã€Š" + soubiData.syougouEnnkyoriKaisinnritu + "ã€‹";
                 Instantiate(ennkyoriKaisinnritu, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.bougyoryoiku != 0)
             {
                 text = bougyoryoku.GetComponent<Text>();
-                text.text = " - –hŒä—Í@" + soubiData.kyoukagoBougyoryoku + "s" + soubiData.syougouBougyoryoku + "t";
+                text.text = " - é˜²å¾¡åŠ›ã€€" + soubiData.kyoukagoBougyoryoku + "ã€Š" + soubiData.syougouBougyoryoku + "ã€‹";
                 Instantiate(bougyoryoku, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kaisinnTaisei != 0)
             {
                 text = kaisinnTaisei.GetComponent<Text>();
-                text.text = " - ‰ïS‘Ï«@" + soubiData.kaisinnTaisei + "s" + soubiData.syougouKaisinnTaisei + "t";
+                text.text = " - ä¼šå¿ƒè€æ€§ã€€" + soubiData.kaisinnTaisei + "ã€Š" + soubiData.syougouKaisinnTaisei + "ã€‹";
                 Instantiate(kaisinnTaisei, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.meityuuritu != 0)
             {
                 text = meityuuritu.GetComponent<Text>();
-                text.text = " - –½’†—¦@" + soubiData.kyoukagoMeityuuritu + "s" + soubiData.syougouMeityuuritu + "t";
+                text.text = " - å‘½ä¸­ç‡ã€€" + soubiData.kyoukagoMeityuuritu + "ã€Š" + soubiData.syougouMeityuuritu + "ã€‹";
                 Instantiate(meityuuritu, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kaihiritu != 0)
             {
                 text = kaihiritu.GetComponent<Text>();
-                text.text = " - ‰ñ”ğ—¦@" + soubiData.kyoukagoKaihiritu + "s" + soubiData.syougouKaihiritu + "t";
+                text.text = " - å›é¿ç‡ã€€" + soubiData.kyoukagoKaihiritu + "ã€Š" + soubiData.syougouKaihiritu + "ã€‹";
                 Instantiate(kaihiritu, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.nokkubakku != 0)
             {
                 text = syougekiryoku.GetComponent<Text>();
-                text.text = " - ÕŒ‚—Í@" + soubiData.nokkubakku + "m";
+                text.text = " - è¡æ’ƒåŠ›ã€€" + soubiData.nokkubakku + "m";
                 Instantiate(syougekiryoku, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kougekiHinndo != 0)
             {
                 text = kougekisokudo.GetComponent<Text>();
-                text.text = " - UŒ‚‘¬“x@" + soubiData.kougekiHinndo + "•b";
+                text.text = " - æ”»æ’ƒé€Ÿåº¦ã€€" + soubiData.kougekiHinndo + "ç§’";
                 Instantiate(kougekisokudo, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kougekiHanni != 0)
             {
                 text = kougekihanni.GetComponent<Text>();
-                text.text = " - UŒ‚”ÍˆÍ@”¼Œa" + soubiData.kougekiHanni + "m";
+                text.text = " - æ”»æ’ƒç¯„å›²ã€€åŠå¾„" + soubiData.kougekiHanni + "m";
                 Instantiate(kougekihanni, transform.position, transform.rotation, statusPanelContent.transform);
             }
             text = sukiru.GetComponent<Text>();
-            text.text = "ƒXƒLƒ‹";
+            text.text = "ã‚¹ã‚­ãƒ«";
             Instantiate(sukiru, transform.position, transform.rotation, statusPanelContent.transform);
         }
         if (SceneManager.GetActiveScene().name == "Souko")
         {
-            statusPanel2Content = GameObject.Find("Content ‘•”õ Ì†EƒMƒtƒg•â³");
+            statusPanel2Content = GameObject.Find("Content è£…å‚™ ç§°å·ãƒ»ã‚®ãƒ•ãƒˆè£œæ­£");
 
             SoubiNameUpdata();
             Instantiate(soubiName, transform.position, transform.rotation, statusPanel2Content.transform);
             if (soubiData.syougouName != "" || soubiData.giftBairituName != "")
             {
                 text = syougouGiftHosei.GetComponent<Text>();
-                text.text = "sÌ†tqƒMƒtƒgr•â³’l";
+                text.text = "ã€Šç§°å·ã€‹ã€ˆã‚®ãƒ•ãƒˆã€‰è£œæ­£å€¤";
                 Instantiate(syougouGiftHosei, transform.position, transform.rotation, statusPanel2Content.transform);
 
                 if (soubiData.syougouName != "")
@@ -453,95 +453,95 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 }
             }
             text = nouryokuti.GetComponent<Text>();
-            text.text = "”\—Í’l";
+            text.text = "èƒ½åŠ›å€¤";
             Instantiate(nouryokuti, transform.position, transform.rotation, statusPanel2Content.transform);
 
             if (soubiData.maxHp != 0)
             {
                 text = hp.GetComponent<Text>();
-                text.text = " - HP@" + soubiData.kyoukagoMaxHp + "s" + soubiData.syougouMaxHp + "t";
+                text.text = " - HPã€€" + soubiData.kyoukagoMaxHp + "ã€Š" + soubiData.syougouMaxHp + "ã€‹";
                 Instantiate(hp, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.maxMp != 0)
             {
                 text = mp.GetComponent<Text>();
-                text.text = " - MP@" + soubiData.kyoukagoMaxMp + "s" + soubiData.syougouMaxMp + "t";
+                text.text = " - MPã€€" + soubiData.kyoukagoMaxMp + "ã€Š" + soubiData.syougouMaxMp + "ã€‹";
                 Instantiate(mp, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.fireBallCost != 0)
             {
                 text = fireBallCost.GetComponent<Text>();
-                text.text = " - FBƒRƒXƒg@" + soubiData.fireBallCost + "s" + soubiData.fireBallCost + "t";
+                text.text = " - FBã‚³ã‚¹ãƒˆã€€" + soubiData.fireBallCost + "ã€Š" + soubiData.fireBallCost + "ã€‹";
                 Instantiate(fireBallCost, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kougekiryoku != 0)
             {
                 text = kougekiryoku.GetComponent<Text>();
-                text.text = " - UŒ‚—Í@" + soubiData.kyoukagoKougekiryoku + "s" + soubiData.syougouKougekiryoku + "t";
+                text.text = " - æ”»æ’ƒåŠ›ã€€" + soubiData.kyoukagoKougekiryoku + "ã€Š" + soubiData.syougouKougekiryoku + "ã€‹";
                 Instantiate(kougekiryoku, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.maryoku != 0)
             {
                 text = maryoku.GetComponent<Text>();
-                text.text = " - –‚—Í@" + soubiData.kyoukagoMaryoku + "s" + soubiData.syougouMamryoku + "t";
+                text.text = " - é­”åŠ›ã€€" + soubiData.kyoukagoMaryoku + "ã€Š" + soubiData.syougouMamryoku + "ã€‹";
                 Instantiate(maryoku, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kinnkyoriKaisinnritu != 0)
             {
                 text = kinnkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - ‹ß‹——£‰ïS—¦@" + soubiData.kinnkyoriKaisinnritu + "s" + soubiData.syougouKinnkyoriKaisinnritu + "t";
+                text.text = " - è¿‘è·é›¢ä¼šå¿ƒç‡ã€€" + soubiData.kinnkyoriKaisinnritu + "ã€Š" + soubiData.syougouKinnkyoriKaisinnritu + "ã€‹";
                 Instantiate(kinnkyoriKaisinnritu, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.ennkyoriKaisinnsitu != 0)
             {
                 text = ennkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - ‰“‹——£‰ïS—¦@" + soubiData.ennkyoriKaisinnsitu + "s" + soubiData.syougouEnnkyoriKaisinnritu + "t";
+                text.text = " - é è·é›¢ä¼šå¿ƒç‡ã€€" + soubiData.ennkyoriKaisinnsitu + "ã€Š" + soubiData.syougouEnnkyoriKaisinnritu + "ã€‹";
                 Instantiate(ennkyoriKaisinnritu, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.bougyoryoiku != 0)
             {
                 text = bougyoryoku.GetComponent<Text>();
-                text.text = " - –hŒä—Í@" + soubiData.kyoukagoBougyoryoku + "s" + soubiData.syougouBougyoryoku + "t";
+                text.text = " - é˜²å¾¡åŠ›ã€€" + soubiData.kyoukagoBougyoryoku + "ã€Š" + soubiData.syougouBougyoryoku + "ã€‹";
                 Instantiate(bougyoryoku, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kaisinnTaisei != 0)
             {
                 text = kaisinnTaisei.GetComponent<Text>();
-                text.text = " - ‰ïS‘Ï«@" + soubiData.kaisinnTaisei + "s" + soubiData.syougouKaisinnTaisei + "t";
+                text.text = " - ä¼šå¿ƒè€æ€§ã€€" + soubiData.kaisinnTaisei + "ã€Š" + soubiData.syougouKaisinnTaisei + "ã€‹";
                 Instantiate(kaisinnTaisei, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.meityuuritu != 0)
             {
                 text = meityuuritu.GetComponent<Text>();
-                text.text = " - –½’†—¦@" + soubiData.kyoukagoMeityuuritu + "s" + soubiData.syougouMeityuuritu + "t";
+                text.text = " - å‘½ä¸­ç‡ã€€" + soubiData.kyoukagoMeityuuritu + "ã€Š" + soubiData.syougouMeityuuritu + "ã€‹";
                 Instantiate(meityuuritu, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kaihiritu != 0)
             {
                 text = kaihiritu.GetComponent<Text>();
-                text.text = " - ‰ñ”ğ—¦@" + soubiData.kyoukagoKaihiritu + "s" + soubiData.syougouKaihiritu + "t";
+                text.text = " - å›é¿ç‡ã€€" + soubiData.kyoukagoKaihiritu + "ã€Š" + soubiData.syougouKaihiritu + "ã€‹";
                 Instantiate(kaihiritu, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.nokkubakku != 0)
             {
                 text = syougekiryoku.GetComponent<Text>();
-                text.text = " - ÕŒ‚—Í@" + soubiData.nokkubakku + "m";
+                text.text = " - è¡æ’ƒåŠ›ã€€" + soubiData.nokkubakku + "m";
                 Instantiate(syougekiryoku, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kougekiHinndo != 0)
             {
                 text = kougekisokudo.GetComponent<Text>();
-                text.text = " - UŒ‚‘¬“x@" + soubiData.kougekiHinndo + "•b";
+                text.text = " - æ”»æ’ƒé€Ÿåº¦ã€€" + soubiData.kougekiHinndo + "ç§’";
                 Instantiate(kougekisokudo, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kougekiHanni != 0)
             {
                 text = kougekihanni.GetComponent<Text>();
-                text.text = " - UŒ‚”ÍˆÍ@”¼Œa" + soubiData.kougekiHanni + "m";
+                text.text = " - æ”»æ’ƒç¯„å›²ã€€åŠå¾„" + soubiData.kougekiHanni + "m";
                 Instantiate(kougekihanni, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             text = sukiru.GetComponent<Text>();
-            text.text = "ƒXƒLƒ‹";
+            text.text = "ã‚¹ã‚­ãƒ«";
             Instantiate(sukiru, transform.position, transform.rotation, statusPanel2Content.transform);
 
         }
@@ -554,7 +554,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
        
         if (soubi.tag == "KinnkyoriWeponSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content ‹ß‹——£•Ší@ƒXƒe[ƒ^ƒX")
+            if (soubi.transform.parent.name == "Content è¿‘è·é›¢æ­¦å™¨ã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 kinnkyoriWeponSoubiIcon = soubi.GetComponent<KinnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
@@ -562,7 +562,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 a = true;
                 kinnkyoriWepon = true;
             }
-            else if(soubi.transform.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if(soubi.transform.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 kinnkyoriWeponSoubiIcon = soubi.GetComponent<KinnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
@@ -573,7 +573,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if(soubi.tag == "KinnkyoriWeponSoubiIcon")
         {
-            if(soubi.transform.parent.parent.name == "Content ‹ß‹——£•Ší@ƒXƒe[ƒ^ƒX")
+            if(soubi.transform.parent.parent.name == "Content è¿‘è·é›¢æ­¦å™¨ã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 kinnkyoriWeponSoubiIcon = soubi.transform.parent.GetComponent<KinnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
@@ -581,7 +581,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 a = true;
                 kinnkyoriWepon = true;
             }
-            else if (soubi.transform.parent.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 kinnkyoriWeponSoubiIcon = soubi.GetComponent<KinnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
@@ -592,7 +592,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "EnnkyoriWeponSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content ‰“‹——£•Ší ƒXƒe[ƒ^ƒX")
+            if (soubi.transform.parent.name == "Content é è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
@@ -600,7 +600,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 a = true;
                 ennkyoriWepon = true;
             }
-            else if (soubi.transform.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
@@ -611,7 +611,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "EnnkyoriWeponSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content ‰“‹——£•Ší ƒXƒe[ƒ^ƒX")
+            if (soubi.transform.parent.parent.name == "Content é è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 ennkyoriWeponSoubiIcon = soubi.transform.parent.GetComponent<EnnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
@@ -620,7 +620,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 ennkyoriWepon = true;
                 Debug.Log(ennkyoriWeponSoubiIcon.a);
             }
-            else if (soubi.transform.parent.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
@@ -631,7 +631,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "YoroiSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content ŠZ‘•”õ ƒXƒe[ƒ^ƒX")
+            if (soubi.transform.parent.name == "Content é§è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
                 number = soubi.GetComponent<YoroiSoubiIcon>().number;
@@ -640,7 +640,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 yoroi = true;
                 Debug.Log(yoroiSoubiIcon.a);
             }
-            else if (soubi.transform.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
                 number = soubi.GetComponent<YoroiSoubiIcon>().number;
@@ -651,7 +651,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "YoroiSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content ŠZ‘•”õ ƒXƒe[ƒ^ƒX")
+            if (soubi.transform.parent.parent.name == "Content é§è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 yoroiSoubiIcon = soubi.transform.parent.GetComponent<YoroiSoubiIcon>();
                 number = soubi.GetComponent<YoroiSoubiIcon>().number;
@@ -660,7 +660,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 yoroi = true;
                 Debug.Log(yoroiSoubiIcon.a);
             }
-            else if (soubi.transform.parent.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
                 number = soubi.GetComponent<YoroiSoubiIcon>().number;
@@ -671,7 +671,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "SonotaSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX 1")
+            if (soubi.transform.parent.parent.name == "Content ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ 1")
             {
                 sonotaSoubiIcon = soubi.transform.parent.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
@@ -680,7 +680,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 sonota = true;
                 Debug.Log(sonotaSoubiIcon.a);
             }
-            else if (soubi.transform.parent.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
@@ -691,7 +691,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if(soubi.tag == "SonotaSoubiReadoIcon")
             {
-            if (soubi.transform.parent.name == "Content ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX 1")
+            if (soubi.transform.parent.name == "Content ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ 1")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
@@ -700,7 +700,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 sonota = true;
                 Debug.Log(sonotaSoubiIcon.a);
             }
-            else if (soubi.transform.parent.name == "Content Select Soubi@‘•”õ‹­‰»E”„‹p")
+            else if (soubi.transform.parent.name == "Content Select Soubiã€€è£…å‚™å¼·åŒ–ãƒ»å£²å´")
             {
                 Debug.Log("aaaaa");
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
@@ -713,7 +713,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "SonotaSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX2")
+            if (soubi.transform.parent.parent.name == "Content ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹2")
             {
                 sonotaSoubiIcon = soubi.transform.parent.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
@@ -725,7 +725,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         }
         if (soubi.tag == "SonotaSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX2")
+            if (soubi.transform.parent.name == "Content ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹2")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;

@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +10,7 @@ public class KakutokuCoinText : MonoBehaviour
     void Start()
     {
         resultManager = GameObject.Find("ResultManager");
-        gameObject.GetComponent<Text>().text = "älìæÉRÉCÉì "+resultManager.GetComponent<ResultSceneManager>().kakutokuCoin.ToString("N0");
+        gameObject.GetComponent<Text>().text = "Áç≤Âæó„Ç≥„Ç§„É≥ "+resultManager.GetComponent<ResultSceneManager>().kakutokuCoin.ToString("N0");
     }
 
     // Update is called once per frame

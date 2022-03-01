@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +12,7 @@ public class kakutokuKeikenntiText : MonoBehaviour
     {
         resultManager = GameObject.Find("ResultManager");
         resultSceneManagerScript = resultManager.GetComponent<ResultSceneManager>();
-        gameObject.GetComponent<Text>().text = "Šl“¾ŒoŒ±’l " + resultSceneManagerScript.kakutokuKeikennti.ToString("N0") + "\nLV " + resultSceneManagerScript.boukennmaeLv.ToString() + " ¨ LV" + GameObject.Find("DataBaseManager").GetComponent<EXPManager>().lv.ToString();
+        gameObject.GetComponent<Text>().text = "ç²å¾—çµŒé¨“å€¤ " + resultSceneManagerScript.kakutokuKeikennti.ToString("N0") + "\nLV " + resultSceneManagerScript.boukennmaeLv.ToString() + " â†’ LV" + GameObject.Find("DataBaseManager").GetComponent<EXPManager>().lv.ToString();
 
     }
 

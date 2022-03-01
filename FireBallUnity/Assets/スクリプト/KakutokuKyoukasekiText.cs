@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +11,7 @@ public class KakutokuKyoukasekiText : MonoBehaviour
     {
         resultManager = GameObject.Find("ResultManager");
         resultSceneManagerScript = resultManager.GetComponent<ResultSceneManager>();
-        gameObject.GetComponent<TextMeshProUGUI>().text = "Šl“¾‹­‰»Î  <sprite=0>" + resultSceneManagerScript.kakutokuKyoukasekiSyou.ToString("N0") + "  <sprite=2>" + resultSceneManagerScript.kakutokuKyoukasekiTyuu.ToString("N0") + "  <sprite=1>" + resultSceneManagerScript.kakutokuKyoukasekiDai.ToString("N0");
+        gameObject.GetComponent<TextMeshProUGUI>().text = "ç²å¾—å¼·åŒ–çŸ³  <sprite=0>" + resultSceneManagerScript.kakutokuKyoukasekiSyou.ToString("N0") + "  <sprite=2>" + resultSceneManagerScript.kakutokuKyoukasekiTyuu.ToString("N0") + "  <sprite=1>" + resultSceneManagerScript.kakutokuKyoukasekiDai.ToString("N0");
 
     }
 

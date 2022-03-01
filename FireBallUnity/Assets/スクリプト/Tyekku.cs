@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,19 +8,19 @@ public class Tyekku : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameObject.Find("Scroll View ‹ß‹——£•Ší ‘qŒÉ"))
+        if (GameObject.Find("Scroll View è¿‘è·é›¢æ­¦å™¨ å€‰åº«"))
         {
             number = gameObject.transform.parent.GetComponent<KinnkyoriWeponSoubiIcon>().number;
         }
-        if(GameObject.Find("Scroll View ‰“‹——£•Ší ‘qŒÉ"))
+        if(GameObject.Find("Scroll View é è·é›¢æ­¦å™¨ å€‰åº«"))
         {
             number = gameObject.transform.parent.GetComponent<EnnkyoriWeponSoubiIcon>().number;
         }
-        if(GameObject.Find("Scroll View ŠZ‘•”õ ‘qŒÉ"))
+        if(GameObject.Find("Scroll View é§è£…å‚™ å€‰åº«"))
         {
             number = gameObject.transform.parent.GetComponent<YoroiSoubiIcon>().number;
         }
-        if(GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ‘qŒÉ"))
+        if(GameObject.Find("Scroll View ãã®ä»–è£…å‚™ å€‰åº«"))
         {
             number = gameObject.transform.parent.GetComponent<SonotaSoubiIcon>().number;
         }
