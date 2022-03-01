@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -69,7 +69,7 @@ public class PlayerStatusDataBase : MonoBehaviour
     public float nokkubakku;
     public float destroyTime;
     [Space(1)]
-    [Header("•Ší‚Ìî•ñB”Ô†‚ÅŒŸõ‚µ‚ÄAƒXƒNƒŠƒvƒ^ƒuƒ‹EƒIƒuƒWƒFƒNƒg‚©‚çæ“¾‚·‚é")]
+    [Header("æ­¦å™¨ã®æƒ…å ±ã€‚ç•ªå·ã§æ¤œç´¢ã—ã¦ã€ã‚¹ã‚¯ãƒªãƒ—ã‚¿ãƒ–ãƒ«ãƒ»ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰å–å¾—ã™ã‚‹")]
     public WeponDataList.WeponData kinnkyoriWeponData;
     public WeponDataList.WeponData ennkyoriWeponData;
     public WeponDataList.WeponData yoroiData;

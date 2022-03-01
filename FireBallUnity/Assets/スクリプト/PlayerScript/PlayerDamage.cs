@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,13 +81,13 @@ public class PlayerDamage : MonoBehaviour
                 {
                     playerDamage = saiteihosyouDamage;
                     playerStatus.hp -= playerDamage;
-                    Debug.Log(enemyStatus.enemyData.enemyName + "‚©‚çÅ’á•ÛØ" + saiteihosyouDamage + "‚Ìƒ_ƒ[ƒW‚ğ‚¤‚¯‚½");
+                    Debug.Log(enemyStatus.enemyData.enemyName + "ã‹ã‚‰æœ€ä½ä¿è¨¼" + saiteihosyouDamage + "ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ã†ã‘ãŸ");
                 }
                 else
                 {
                     playerDamage = Mathf.CeilToInt(damageKeisann);
                     playerStatus.hp -= playerDamage;
-                    Debug.Log(enemyStatus.enemyData.enemyName + "‚©‚ç" + playerDamage + "‚Ìƒ_ƒ[ƒW‚ğó‚¯‚½");
+                    Debug.Log(enemyStatus.enemyData.enemyName + "ã‹ã‚‰" + playerDamage + "ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’å—ã‘ãŸ");
                 }
                 if (playerStatus.hp <= 0)
                 {

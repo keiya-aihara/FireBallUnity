@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +7,7 @@ public class KakutokuTorophyPanelText : MonoBehaviour
 {
     public KousekiCopy kousekiCopy;
     public Text text;
-    [Header("ƒgƒƒtƒB[”")]
+    [Header("ãƒˆãƒ­ãƒ•ã‚£ãƒ¼æ•°")]
     public bool buronnzuTorophy;
     public bool sirubaaTorophy;
     public bool goorudoTorophy;
@@ -21,7 +21,7 @@ public class KakutokuTorophyPanelText : MonoBehaviour
     public bool godTorophy;
     public bool kyoukasekiTorophy;
     public bool reaTorophy;
-    [Header("‰¶Œb”’l")]
+    [Header("æ©æµæ•°å€¤")]
     public bool mazyuutokkou;
     public bool husitokkou;
     public bool akumatokkou;
@@ -52,34 +52,34 @@ public class KakutokuTorophyPanelText : MonoBehaviour
     }
     void TextUpdata()
     {
-        if (buronnzuTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.buronzuTorophy;
-        else if (sirubaaTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.sirubaaTorophy;
-        else if (goorudoTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.goorudoTorophy;
-        else if (puratinaTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.puratinaTorophy;
-        else if (daiamonndoTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.daiamonndoTorophy;
-        else if (whiteTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.whiteTorophy;
-        else if (greenTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.greenTorophy;
-        else if (buleeTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.buleeTorophy;
-        else if (redTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.redTorophy;
-        else if (purpleTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.purpleTorophy;
-        else if (godTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.godTorophy;
-        else if (kyoukasekiTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.kyoukasekiTorophy;
-        else if (reaTorophy) text.text = "~" + kousekiCopy.kousekiDataBaseManager.reaTorophy;
+        if (buronnzuTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.buronzuTorophy;
+        else if (sirubaaTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.sirubaaTorophy;
+        else if (goorudoTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.goorudoTorophy;
+        else if (puratinaTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.puratinaTorophy;
+        else if (daiamonndoTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.daiamonndoTorophy;
+        else if (whiteTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.whiteTorophy;
+        else if (greenTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.greenTorophy;
+        else if (buleeTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.buleeTorophy;
+        else if (redTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.redTorophy;
+        else if (purpleTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.purpleTorophy;
+        else if (godTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.godTorophy;
+        else if (kyoukasekiTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.kyoukasekiTorophy;
+        else if (reaTorophy) text.text = "Ã—" + kousekiCopy.kousekiDataBaseManager.reaTorophy;
 
-        else if (mazyuutokkou) text.text = "–‚b“ÁU+" + kousekiCopy.kousekiDataBaseManager.mazyuuTokkou + "%";
-        else if (husitokkou) text.text = "•s€“ÁU+" + kousekiCopy.kousekiDataBaseManager.husiTokkou + "%";
-        else if (akumatokkou) text.text = "ˆ«–‚“ÁU+" + kousekiCopy.kousekiDataBaseManager.akumaTokkou + "%";
-        else if (mazinntokkou) text.text = "–‚l“ÁU+" + kousekiCopy.kousekiDataBaseManager.mazinnTokkou + "%";
-        else if (ninngenntokkou) text.text = "lŠÔ“ÁU+" + kousekiCopy.kousekiDataBaseManager.ninngennTokkou + "%";
-        else if (ryuutokkkou) text.text = "—³  “ÁU+" + kousekiCopy.kousekiDataBaseManager.RyuuTokkou + "%";
-        else if (gottokkou) text.text = "_  “ÁU+" + kousekiCopy.kousekiDataBaseManager.KamiTokkou + "%";
-        else if (nomalItemDrop) text.text = "NƒAƒCƒeƒ€ƒhƒƒbƒv—¦+" + kousekiCopy.kousekiDataBaseManager.nomalDropRitu + "%";
-        else if (reaItemDrop) text.text = "RƒAƒCƒeƒ€ƒhƒƒbƒv—¦+" + kousekiCopy.kousekiDataBaseManager.reaDropRitu + "%";
-        else if (superReaItemDrop) text.text = "SRƒAƒCƒeƒ€ƒhƒƒbƒv—¦+" + kousekiCopy.kousekiDataBaseManager.superReaDropRitu + "%";
-        else if (epikReaItemDrop) text.text = "ERƒAƒCƒeƒ€ƒhƒƒbƒv—¦+" + kousekiCopy.kousekiDataBaseManager.epikReaDropRitu + "%";
-        else if (legendaryReaItemDrop) text.text = "LRƒAƒCƒeƒ€ƒhƒƒbƒv—¦+" + kousekiCopy.kousekiDataBaseManager.legendaryReaDropRitu + "%";
-        else if (godReaITemDrop) text.text = "GRƒAƒCƒeƒ€ƒhƒƒbƒv—¦+" + kousekiCopy.kousekiDataBaseManager.godReaDropRitu + "%";
-        else if (kyoukazitaikasyouhiryou) text.text = "‹­‰»‘Î‰¿Á”ï—Ê-" + kousekiCopy.kousekiDataBaseManager.kyoukataikaGennsyouritu + "%";
-        else if (giftHuyoritu) text.text = "ƒMƒtƒg•t—^—¦+" + kousekiCopy.kousekiDataBaseManager.giftHuyoSoubiDropritu + "%";
+        else if (mazyuutokkou) text.text = "é­”ç£ç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.mazyuuTokkou + "%";
+        else if (husitokkou) text.text = "ä¸æ­»ç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.husiTokkou + "%";
+        else if (akumatokkou) text.text = "æ‚ªé­”ç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.akumaTokkou + "%";
+        else if (mazinntokkou) text.text = "é­”äººç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.mazinnTokkou + "%";
+        else if (ninngenntokkou) text.text = "äººé–“ç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.ninngennTokkou + "%";
+        else if (ryuutokkkou) text.text = "ç«œ  ç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.RyuuTokkou + "%";
+        else if (gottokkou) text.text = "ç¥  ç‰¹æ”»+" + kousekiCopy.kousekiDataBaseManager.KamiTokkou + "%";
+        else if (nomalItemDrop) text.text = "Nã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ç‡+" + kousekiCopy.kousekiDataBaseManager.nomalDropRitu + "%";
+        else if (reaItemDrop) text.text = "Rã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ç‡+" + kousekiCopy.kousekiDataBaseManager.reaDropRitu + "%";
+        else if (superReaItemDrop) text.text = "SRã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ç‡+" + kousekiCopy.kousekiDataBaseManager.superReaDropRitu + "%";
+        else if (epikReaItemDrop) text.text = "ERã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ç‡+" + kousekiCopy.kousekiDataBaseManager.epikReaDropRitu + "%";
+        else if (legendaryReaItemDrop) text.text = "LRã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ç‡+" + kousekiCopy.kousekiDataBaseManager.legendaryReaDropRitu + "%";
+        else if (godReaITemDrop) text.text = "GRã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ç‡+" + kousekiCopy.kousekiDataBaseManager.godReaDropRitu + "%";
+        else if (kyoukazitaikasyouhiryou) text.text = "å¼·åŒ–æ™‚å¯¾ä¾¡æ¶ˆè²»é‡-" + kousekiCopy.kousekiDataBaseManager.kyoukataikaGennsyouritu + "%";
+        else if (giftHuyoritu) text.text = "ã‚®ãƒ•ãƒˆä»˜ä¸ç‡+" + kousekiCopy.kousekiDataBaseManager.giftHuyoSoubiDropritu + "%";
     }
 }

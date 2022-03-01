@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,10 +13,10 @@ public class Atack : MonoBehaviour
     private int attack;
     private SrashEffect effectTime;
 
-    [Header("•Ší‚Ì”Ô†BƒCƒ“ƒXƒyƒNƒ^[‚Åw’è‚·‚é")]
+    [Header("æ­¦å™¨ã®ç•ªå·ã€‚ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼ã§æŒ‡å®šã™ã‚‹")]
     public int weponNo;
 
-    [Header("•Ší‚Ìî•ñB”Ô†‚ÅŒŸõ‚µ‚ÄAƒXƒNƒŠƒvƒ^ƒuƒ‹EƒIƒuƒWƒFƒNƒg‚©‚çæ“¾‚·‚é")]
+    [Header("æ­¦å™¨ã®æƒ…å ±ã€‚ç•ªå·ã§æ¤œç´¢ã—ã¦ã€ã‚¹ã‚¯ãƒªãƒ—ã‚¿ãƒ–ãƒ«ãƒ»ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰å–å¾—ã™ã‚‹")]
     public WeponDataList.WeponData weponData;
     void Start()
     {
@@ -44,9 +44,9 @@ public class Atack : MonoBehaviour
         playerAtackTime();
     }
 
-    private void playerAtackTime()//Player‚ÌUŒ‚•p“x‚âUŒ‚s“®‚ÌŠÔ‚ğŠÇ—‚·‚éƒƒ\ƒbƒh
+    private void playerAtackTime()//Playerã®æ”»æ’ƒé »åº¦ã‚„æ”»æ’ƒè¡Œå‹•ã®æ™‚é–“ã‚’ç®¡ç†ã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰
     {
-        if (player.transform.position.y <= 4)//player‚ªŒ»‚ê‚½‚ç
+        if (player.transform.position.y <= 4)//playerãŒç¾ã‚ŒãŸã‚‰
         {
             playerKougeki += Time.deltaTime;
             atackMotion += Time.deltaTime;
@@ -71,7 +71,7 @@ public class Atack : MonoBehaviour
         }
     }
 
-    private void playerAtack()//ƒAƒ^ƒbƒN‚ÌƒGƒtƒFƒNƒg‚Ì•\¦‚â‘O•ûˆÚ“®‚Ìƒƒ\ƒbƒh
+    private void playerAtack()//ã‚¢ã‚¿ãƒƒã‚¯æ™‚ã®ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã®è¡¨ç¤ºã‚„å‰æ–¹ç§»å‹•ã®ãƒ¡ã‚½ãƒƒãƒ‰
     {
         if (playerKougeki > playerStatus.kougekiHinndo)
         {

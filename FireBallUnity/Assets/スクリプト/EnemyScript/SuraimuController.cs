@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SuraimuController : MonoBehaviour
 {
     
-    Vector2 force = new Vector2(1f, 1f);    // �͂�ݒ�
+    Vector2 force = new Vector2(1f, 1f);    // 力を設定
     private Rigidbody2D myRigid;
     EnemyBase enemyStatus;
     private GameObject player;

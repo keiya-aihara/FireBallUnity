@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +28,7 @@ public class StatusText : MonoBehaviour
     {
         text = gameObject.GetComponent<Text>();
 
-        if (gameObject.name == "ƒŒƒxƒ‹")
+        if (gameObject.name == "ãƒ¬ãƒ™ãƒ«")
         {
             text.text = expManagerScript.lv.ToString("N0");
         }
@@ -40,53 +40,53 @@ public class StatusText : MonoBehaviour
         {
             text.text = playerStatusDataBase.maxMp.ToString("N0");
         }
-        else if (gameObject.name == "FBƒRƒXƒg")
+        else if (gameObject.name == "FBã‚³ã‚¹ãƒˆ")
         {
             text.text = playerStatusDataBase.fireBallCost.ToString("N0");
         }
-        else if (gameObject.name == "UŒ‚—Í")
+        else if (gameObject.name == "æ”»æ’ƒåŠ›")
         {
             text.text = playerStatusDataBase.kougekiryoku.ToString("N0");
         }
-        else if (gameObject.name == "–‚—Í")
+        else if (gameObject.name == "é­”åŠ›")
         {
             text.text = playerStatusDataBase.maryoku.ToString("N0");
         }
-        else if (gameObject.name == "‹ß‹——£‰ïS—¦")
+        else if (gameObject.name == "è¿‘è·é›¢ä¼šå¿ƒç‡")
         {
             text.text = playerStatusDataBase.kinnkyoriKaisinnritu.ToString("N2")+"%";
         }
-        else if (gameObject.name == "‰“‹——£‰ïS—¦")
+        else if (gameObject.name == "é è·é›¢ä¼šå¿ƒç‡")
         {
             text.text = playerStatusDataBase.ennkyoriKaisinnritu.ToString("N2")+"%";
         }
-        else if (gameObject.name == "–hŒä—Í")
+        else if (gameObject.name == "é˜²å¾¡åŠ›")
         {
             text.text = playerStatusDataBase.bougyoryoku.ToString("N0");
         }
-        else if (gameObject.name == "‰ïS‘Ï«")
+        else if (gameObject.name == "ä¼šå¿ƒè€æ€§")
         {
             text.text = playerStatusDataBase.kaisinnTaisei.ToString("N2")+"%";
         }
-        else if (gameObject.name == "–½’†—¦")
+        else if (gameObject.name == "å‘½ä¸­ç‡")
         {
             text.text = playerStatusDataBase.meityuuritu.ToString("N2")+"%";
         }
-        else if (gameObject.name == "‰ñ”ğ—¦")
+        else if (gameObject.name == "å›é¿ç‡")
         {
             text.text = playerStatusDataBase.kaihiritu.ToString("N2")+"%";
         }
-        else if (gameObject.name == "ÕŒ‚—Í")
+        else if (gameObject.name == "è¡æ’ƒåŠ›")
         {
-            text.text = playerStatusDataBase.nokkubakku.ToString() + "‚";
+            text.text = playerStatusDataBase.nokkubakku.ToString() + "ï½";
         }
-        else if (gameObject.name == "UŒ‚‘¬“x")
+        else if (gameObject.name == "æ”»æ’ƒé€Ÿåº¦")
         {
-            text.text = playerStatusDataBase.kougekiHinndo.ToString() + "•b";
+            text.text = playerStatusDataBase.kougekiHinndo.ToString() + "ç§’";
         }
-        else if (gameObject.name == "UŒ‚”ÍˆÍ")
+        else if (gameObject.name == "æ”»æ’ƒç¯„å›²")
         {
-            text.text = "”¼Œa" + playerStatusDataBase.kougekiHanni.ToString() + "‚";
+            text.text = "åŠå¾„" + playerStatusDataBase.kougekiHanni.ToString() + "ï½";
         }
     }
 }

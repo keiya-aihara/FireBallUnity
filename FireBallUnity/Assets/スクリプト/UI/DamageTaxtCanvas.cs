@@ -1,23 +1,23 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DamageTaxtCanvas : MonoBehaviour
 {
-    public Text damageText; //ƒ_[ƒ[ƒWƒeƒLƒXƒg‚ğŠi”[
+    public Text damageText; //ãƒ€ãƒ¼ãƒ¡ãƒ¼ã‚¸ãƒ†ã‚­ã‚¹ãƒˆã‚’æ ¼ç´
     public Text missText;
     public int damage;
-    public GameObject enemy; //“GƒLƒƒƒ‰‚ğŠi”[
+    public GameObject enemy; //æ•µã‚­ãƒ£ãƒ©ã‚’æ ¼ç´
     private EnemyBase enemyBase;
-    private GameObject canvas;//e‚É‚·‚éƒLƒƒƒ“ƒoƒX‚ğŠi”[
+    private GameObject canvas;//è¦ªã«ã™ã‚‹ã‚­ãƒ£ãƒ³ãƒã‚¹ã‚’æ ¼ç´
 
 
     // Start is called before the first frame update
     void Start()
     {
         enemyBase = enemy.GetComponent<EnemyBase>();
-        //e‚É‚·‚éƒLƒƒƒ“ƒoƒX‚ğæ“¾
+        //è¦ªã«ã™ã‚‹ã‚­ãƒ£ãƒ³ãƒã‚¹ã‚’å–å¾—
         canvas = GameObject.Find("MainCameraCanvas");
     }
 
@@ -31,7 +31,7 @@ public class DamageTaxtCanvas : MonoBehaviour
             if (enemyBase.l)
             {
                 damage = enemyBase.enemyDamage;
-                damageText.GetComponent<Text>().text = "‰ïSII\r\n" + damage.ToString("N0");
+                damageText.GetComponent<Text>().text = "ä¼šå¿ƒï¼ï¼\r\n" + damage.ToString("N0");
                 Instantiate(damageText, enemyBase.damagePosition, transform.rotation, canvas.transform);
                 enemyBase.e = false;
                 enemyBase.l = false;

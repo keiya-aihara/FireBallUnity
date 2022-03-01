@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -63,8 +63,8 @@ public class KyoukakaisuuKousekiSlider : MonoBehaviour
     public void KakutokuTorophyPanel()
     {
         torophyKakutokuPanel.SetActive(true);
-        torophyKakutokuText.GetComponent<Text>().text = "uƒAƒCƒeƒ€‹­‰»‚ğ"+slider.maxValue.ToString("N0")+"‰ñs‚¤v\n‹­‰»ÎƒgƒƒtƒB[‚ğŠl“¾‚µ‚Ü‚µ‚½";
-        kyoukaHiyouBonusText.GetComponent<Text>().text = "ƒAƒCƒeƒ€‹­‰»‚Ì‘Î‰¿Á”ï—Ê‚ª5%Œ¸­‚µ‚Ü‚·";
+        torophyKakutokuText.GetComponent<Text>().text = "ã€Œã‚¢ã‚¤ãƒ†ãƒ å¼·åŒ–ã‚’"+slider.maxValue.ToString("N0")+"å›è¡Œã†ã€\nå¼·åŒ–çŸ³ãƒˆãƒ­ãƒ•ã‚£ãƒ¼ã‚’ç²å¾—ã—ã¾ã—ãŸ";
+        kyoukaHiyouBonusText.GetComponent<Text>().text = "ã‚¢ã‚¤ãƒ†ãƒ å¼·åŒ–æ™‚ã®å¯¾ä¾¡æ¶ˆè²»é‡ãŒ5%æ¸›å°‘ã—ã¾ã™";
         Instantiate(torophy, transform.position, transform.rotation, kinnwakuImage.transform);
     }
 }

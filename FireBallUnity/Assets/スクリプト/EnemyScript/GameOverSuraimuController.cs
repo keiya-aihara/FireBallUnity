@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,7 +38,7 @@ public class GameOverSuraimuController : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //“G“¯m‚ª‚Ô‚Â‚©‚Á‚½‚Ìi˜H•ÏX
+        //æ•µåŒå£«ãŒã¶ã¤ã‹ã£ãŸæ™‚ã®é€²è·¯å¤‰æ›´
         sinnkouHoukou = Random.Range(1, 5);
         if (collision.gameObject.tag == "Enemy")
         {
@@ -61,30 +61,30 @@ public class GameOverSuraimuController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Tawn")
         {
-            //ƒtƒ@ƒCƒ„[ƒ{[ƒ‹‚ÌƒGƒtƒFƒNƒgˆ—
+            //ãƒ•ã‚¡ã‚¤ãƒ¤ãƒ¼ãƒœãƒ¼ãƒ«ã®ã‚¨ãƒ•ã‚§ã‚¯ãƒˆå‡¦ç†
             Instantiate(fireBallEffect, transform.position, transform.rotation);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //•Ç‚É“–‚½‚Á‚½‚Ìi˜H•ÏX
+        //å£ã«å½“ãŸã£ãŸæ™‚ã®é€²è·¯å¤‰æ›´
         sinnkouHoukou = Random.Range(1, 4);
         if (collision.gameObject.tag == "UpWall")
         {
 
-            //‰º•ûŒü‚ÉˆÚ“®
+            //ä¸‹æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 1)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(0, -enemyIdoukyori) * enemySpeed, ForceMode2D.Force);
             }
-            //‰E‰º•ûŒü‚ÉˆÚ“®
+            //å³ä¸‹æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 2)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(enemyIdoukyori, -enemyIdoukyori) * enemySpeed, ForceMode2D.Force);
             }
-            //¶‰º•ûŒü‚ÉˆÚ“®
+            //å·¦ä¸‹æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 3)
             {
                 myRigid.velocity = Vector2.zero;
@@ -94,19 +94,19 @@ public class GameOverSuraimuController : MonoBehaviour
         }
         if (collision.gameObject.tag == "LowWall")
         {
-            //ã•ûŒü‚ÉˆÚ“®
+            //ä¸Šæ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 1)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(0, enemyIdoukyori) * enemySpeed, ForceMode2D.Force);
             }
-            //‰Eã•ûŒü‚ÉˆÚ“®
+            //å³ä¸Šæ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 2)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(enemyIdoukyori, enemyIdoukyori) * enemySpeed, ForceMode2D.Force);
             }
-            //¶ã•ûŒü‚ÉˆÚ“®
+            //å·¦ä¸Šæ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 3)
             {
                 myRigid.velocity = Vector2.zero;
@@ -115,19 +115,19 @@ public class GameOverSuraimuController : MonoBehaviour
         }
         if (collision.gameObject.tag == "RightWall")
         {
-            //¶•ûŒü‚ÉˆÚ“®
+            //å·¦æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 1)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(-enemyIdoukyori, 0) * enemySpeed, ForceMode2D.Force);
             }
-            //¶ã•ûŒü‚ÉˆÚ“®
+            //å·¦ä¸Šæ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 2)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(-enemyIdoukyori, enemyIdoukyori) * enemySpeed, ForceMode2D.Force);
             }
-            //¶‰º•ûŒü‚ÉˆÚ“®
+            //å·¦ä¸‹æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 3)
             {
                 myRigid.velocity = Vector2.zero;
@@ -136,19 +136,19 @@ public class GameOverSuraimuController : MonoBehaviour
         }
         if (collision.gameObject.tag == "LeftWall")
         {
-            //‰E•ûŒü‚ÉˆÚ“®
+            //å³æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 1)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(enemyIdoukyori, 0) * enemySpeed, ForceMode2D.Force);
             }
-            //‰Eã•ûŒü‚ÉˆÚ“®
+            //å³ä¸Šæ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 2)
             {
                 myRigid.velocity = Vector2.zero;
                 myRigid.AddForce(new Vector2(enemyIdoukyori, enemyIdoukyori) * enemySpeed, ForceMode2D.Force);
             }
-            //‰E‰º•ûŒü‚ÉˆÚ“®
+            //å³ä¸‹æ–¹å‘ã«ç§»å‹•
             if (sinnkouHoukou == 3)
             {
                 myRigid.velocity = Vector2.zero;

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,23 +23,23 @@ public class CloseInventory : MonoBehaviour
 
         foreach (var a in gameObjectList)
         {
-            if (a.name == "Scroll View ‹ß‹——£•Ší ƒXƒe[ƒ^ƒX")
+            if (a.name == "Scroll View è¿‘è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 scrollViewKinnKyoriWeponStatus = a;
             }
-            if (a.name == "Scroll View ‰“‹——£•Ší ƒXƒe[ƒ^ƒX")
+            if (a.name == "Scroll View é è·é›¢æ­¦å™¨ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 scrollViewEnnkyoriWeponStatus = a;
             }
-            if (a.name == "Scroll View ŠZ‘•”õ ƒXƒe[ƒ^ƒX")
+            if (a.name == "Scroll View é§è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹")
             {
                 scrollViewYoroiStatus = a;
             }
-            if (a.name == "Scroll View ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX1")
+            if (a.name == "Scroll View ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹1")
             {
                 scrollViewSonotaStatus1 = a;
             }
-            if (a.name == "Scroll View ‚»‚Ì‘¼‘•”õ ƒXƒe[ƒ^ƒX2")
+            if (a.name == "Scroll View ãã®ä»–è£…å‚™ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹2")
             {
                 scrollViewSonotaStatus2 = a;
             }
@@ -54,7 +54,7 @@ public class CloseInventory : MonoBehaviour
             clickPosition = Input.mousePosition;
             if (Camera.main.ScreenToWorldPoint(clickPosition).y <= -2)
             {
-                if (GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX1(Clone)"))
+                if (GameObject.Find("Scroll View è£…å‚™ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹1(Clone)"))
                 {
                     return;
                 }

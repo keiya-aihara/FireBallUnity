@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +13,7 @@ public class ZousyokukabeUI : MonoBehaviour
     void Start()
     {
         zousyokukabeStatus = zousyokukabe.GetComponent<ZousyokukabeStatus>();
-        bairitu.GetComponentInChildren<Text>().text = "�{" + (zousyokukabeStatus.bairitu).ToString("N0");
+        bairitu.GetComponentInChildren<Text>().text = "＋" + (zousyokukabeStatus.bairitu).ToString("N0");
     }
 
     // Update is called once per frame

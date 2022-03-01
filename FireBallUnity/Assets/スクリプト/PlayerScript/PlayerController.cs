@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             kougekiHanniCanvas.SetActive(true);
             if (enemys.Length == 0)
             {
-                Debug.Log("�ߐڐ퓬�Ɉڍs�I�I");
+                Debug.Log("近接戦闘に移行！！");
             }
             if (b)
             {

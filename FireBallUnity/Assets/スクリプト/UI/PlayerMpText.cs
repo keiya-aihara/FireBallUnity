@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +18,6 @@ public class PlayerMpText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "–‚—Í" + playerStatus.maryoku + ":" + "MP" + playerStatus.mp + "/" + playerStatus.maxMp;
+        text.text = "é­”åŠ›" + playerStatus.maryoku + ":" + "MP" + playerStatus.mp + "/" + playerStatus.maxMp;
     }
 }

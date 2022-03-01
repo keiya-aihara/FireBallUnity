@@ -1,10 +1,10 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(menuName = "MyScriptable/Create SyougouData", fileName = "SyougouDataList")]   // ‚±‚Ì‘®«î•ñ‚ğİ’è‚·‚é‚ÆUnity‚ÉƒAƒZƒbƒg‚Æ‚µ‚ÄƒXƒNƒŠƒvƒ^ƒuƒ‹EƒIƒuƒWƒFƒNƒg‚ğì¬‚Å‚«‚Ü‚·B
+[CreateAssetMenu(menuName = "MyScriptable/Create SyougouData", fileName = "SyougouDataList")]   // ã“ã®å±æ€§æƒ…å ±ã‚’è¨­å®šã™ã‚‹ã¨Unityã«ã‚¢ã‚»ãƒƒãƒˆã¨ã—ã¦ã‚¹ã‚¯ãƒªãƒ—ã‚¿ãƒ–ãƒ«ãƒ»ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã§ãã¾ã™ã€‚
 public class SyougouDataList : ScriptableObject
 {
 		public List<SyougouData> syougyouDatas = new List<SyougouData>();

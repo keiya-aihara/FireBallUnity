@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -142,8 +142,8 @@ public class ItemController : MonoBehaviour
             if (giftBairitu > 0)
             {
                 giftBairitu *= 100;
-                itemStatus.giftName = "qUŒ‚—Í+" + giftBairitu + "%r";
-                itemStatus.giftBairituName = "qUŒ‚—Í+" + giftBairitu + "%r";
+                itemStatus.giftName = "ã€ˆæ”»æ’ƒåŠ›+" + giftBairitu + "%ã€‰";
+                itemStatus.giftBairituName = "ã€ˆæ”»æ’ƒåŠ›+" + giftBairitu + "%ã€‰";
             }
             KousekiAdd();
             resultSceneManager.GetComponent<ResultSceneManager>().kakutokuItemName.Add(itemStatus.syougouName + itemStatus.name + itemStatus.giftName);
@@ -178,8 +178,8 @@ public class ItemController : MonoBehaviour
             if (giftBairitu > 0)
             {
                 giftBairitu *= 100;
-                itemStatus.giftName = "q–‚—Í+" + giftBairitu + "%r";
-                itemStatus.giftBairituName = "q–‚—Í+" + giftBairitu + "%r";
+                itemStatus.giftName = "ã€ˆé­”åŠ›+" + giftBairitu + "%ã€‰";
+                itemStatus.giftBairituName = "ã€ˆé­”åŠ›+" + giftBairitu + "%ã€‰";
             }
             KousekiAdd();
             resultSceneManager.GetComponent<ResultSceneManager>().kakutokuItemName.Add(itemStatus.syougouName + itemStatus.name + itemStatus.giftName);
@@ -214,8 +214,8 @@ public class ItemController : MonoBehaviour
             if (giftBairitu > 0)
             {
                 giftBairitu *= 100;
-                itemStatus.giftName = "q–hŒä—Í+" + giftBairitu + "%r";
-                itemStatus.giftBairituName = "q–hŒä—Í+" + giftBairitu + "%r";
+                itemStatus.giftName = "ã€ˆé˜²å¾¡åŠ›+" + giftBairitu + "%ã€‰";
+                itemStatus.giftBairituName = "ã€ˆé˜²å¾¡åŠ›+" + giftBairitu + "%ã€‰";
             }
             KousekiAdd();
             resultSceneManager.GetComponent<ResultSceneManager>().kakutokuItemName.Add(itemStatus.syougouName + itemStatus.name + itemStatus.giftName);
@@ -271,8 +271,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "qHP+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "qHP+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆHP+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆHP+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
@@ -305,8 +305,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "qMP+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "qMP+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆMP+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆMP+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
@@ -339,8 +339,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "qUŒ‚—Í+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "qUŒ‚—Í+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆæ”»æ’ƒåŠ›+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆæ”»æ’ƒåŠ›+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
@@ -373,8 +373,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "q–‚—Í+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "q–‚—Í+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆé­”åŠ›+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆé­”åŠ›+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
@@ -407,8 +407,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "q–hŒä—Í+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "q–hŒä—Í+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆé˜²å¾¡åŠ›+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆé˜²å¾¡åŠ›+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
@@ -441,8 +441,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "q–½’†—¦+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "q–½’†—¦+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆå‘½ä¸­ç‡+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆå‘½ä¸­ç‡+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
@@ -475,8 +475,8 @@ public class ItemController : MonoBehaviour
                     if (giftBairitu > 0)
                     {
                         giftBairitu *= 100;
-                        itemStatus.giftName = "q‰ñ”ğ—¦+" + giftBairitu + "%r";
-                        itemStatus.giftBairituName = "q‰ñ”ğ—¦+" + giftBairitu + "%r";
+                        itemStatus.giftName = "ã€ˆå›é¿ç‡+" + giftBairitu + "%ã€‰";
+                        itemStatus.giftBairituName = "ã€ˆå›é¿ç‡+" + giftBairitu + "%ã€‰";
                     }
                     else
                     {
