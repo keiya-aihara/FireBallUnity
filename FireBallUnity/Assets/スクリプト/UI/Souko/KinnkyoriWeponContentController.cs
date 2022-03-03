@@ -12,7 +12,7 @@ public class KinnkyoriWeponContentController : MonoBehaviour
     public int weponCount;
     void Start()
     {
-        databaseManager = GameObject.Find("DataBaseManager");
+        databaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
         weponDateBaseManagerScript = databaseManager.GetComponent<WeponDateBaseManager>();
 
         weponCount = weponDateBaseManagerScript.weponDataList.weponDatas.Count;

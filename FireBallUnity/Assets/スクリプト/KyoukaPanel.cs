@@ -51,20 +51,6 @@ public class KyoukaPanel : MonoBehaviour
     }
     void Start()
     {
-        dataBaseManager = GameObject.Find("DataBaseManager");
-        moneyManagerScript = dataBaseManager.GetComponent<MoneyManager>();
-        kyoukasekiManager = dataBaseManager.GetComponent<KyoukasekiManager>();
-        kousekiDataBaseManager = dataBaseManager.GetComponent<KousekiDataBaseManager>();
-        transform.localPosition = new Vector2(0, -88f);
-        syoziMoney.text = "所持品 " + moneyManagerScript.money.ToString("N0") + "コイン";
-        syoziKyoukaseki.text = "  <sprite=0>×" + kyoukasekiManager.kyoukasekiSyou + "  <sprite=2>×" + kyoukasekiManager.kyoukasekiTyuu + "  <sprite=1>×" + kyoukasekiManager.kyoukasekiDai;
-        getSoubi();
-        if(moneyManagerScript.money<kyoukaKinngaku || kyoukasekiManager.kyoukasekiSyou<kyoukasekiSyou || kyoukasekiManager.kyoukasekiTyuu<kyoukasekiTyuu || kyoukasekiManager.kyoukasekiDai < kyoukasekiDai)
-        {
-            taikagatarimasennPanel.SetActive(true);
-        }
-        Saidaikyouka();
-        KyoukazenngoNouryokutiGet();
         
     }
 
@@ -72,6 +58,23 @@ public class KyoukaPanel : MonoBehaviour
     void Update()
     {
         
+    }
+    public void ActiveSelfGameObject()
+    {
+        dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
+        moneyManagerScript = dataBaseManager.GetComponent<MoneyManager>();
+        kyoukasekiManager = dataBaseManager.GetComponent<KyoukasekiManager>();
+        kousekiDataBaseManager = dataBaseManager.GetComponent<KousekiDataBaseManager>();
+        syoziMoney.text = "所持品 " + moneyManagerScript.money.ToString("N0") + "コイン";
+        syoziKyoukaseki.text = "  <sprite=0>×" + kyoukasekiManager.kyoukasekiSyou + "  <sprite=2>×" + kyoukasekiManager.kyoukasekiTyuu + "  <sprite=1>×" + kyoukasekiManager.kyoukasekiDai;
+        getSoubi();
+        if (moneyManagerScript.money < kyoukaKinngaku || kyoukasekiManager.kyoukasekiSyou < kyoukasekiSyou || kyoukasekiManager.kyoukasekiTyuu < kyoukasekiTyuu || kyoukasekiManager.kyoukasekiDai < kyoukasekiDai)
+        {
+            taikagatarimasennPanel.SetActive(true);
+        }
+        Saidaikyouka();
+        KyoukazenngoNouryokutiGet();
+
     }
     private void getSoubi()
     {
@@ -123,23 +126,23 @@ public class KyoukaPanel : MonoBehaviour
             {
                 reado = 1;
             }
-            if (soubi.rea)
+            else if (soubi.rea)
             {
                 reado = 2;
             }
-            if (soubi.superRea)
+            else if (soubi.superRea)
             {
                 reado = 3;
             }
-            if (soubi.epik)
+            else if (soubi.epik)
             {
                 reado = 4;
             }
-            if (soubi.legendary)
+            else if (soubi.legendary)
             {
                 reado = 5;
             }
-            if (soubi.god)
+            else if (soubi.god)
             {
                 reado = 6;
             }
@@ -193,23 +196,23 @@ public class KyoukaPanel : MonoBehaviour
             {
                 reado = 1;
             }
-            if (soubi.rea)
+            else if (soubi.rea)
             {
                 reado = 2;
             }
-            if (soubi.superRea)
+            else if (soubi.superRea)
             {
                 reado = 3;
             }
-            if (soubi.epik)
+            else if (soubi.epik)
             {
                 reado = 4;
             }
-            if (soubi.legendary)
+            else if (soubi.legendary)
             {
                 reado = 5;
             }
-            if (soubi.god)
+            else if (soubi.god)
             {
                 reado = 6;
             }
@@ -257,36 +260,36 @@ public class KyoukaPanel : MonoBehaviour
                     kyoukakakuninnText.text = soubi.name + soubi.giftName + "\nを強化しますか？";
                 }
             }
-                    if (soubi.nomal)
-                    {
-                        reado = 1;
-                    }
-                    if (soubi.rea)
-                    {
-                        reado = 2;
-                    }
-                    if (soubi.superRea)
-                    {
-                        reado = 3;
-                    }
-                    if (soubi.epik)
-                    {
-                        reado = 4;
-                    }
-                    if (soubi.legendary)
-                    {
-                        reado = 5;
-                    }
-                    if (soubi.god)
-                    {
-                        reado = 6;
-                    }
-                    kyoukaHiyou(soubi.kyoukaLv, reado);
-                }
-                if (sonota)
-                {
-                    sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
-                    soubi = sonotaDataBaseManager.GetWeponData(number);
+            if (soubi.nomal)
+            {
+                reado = 1;
+            }
+            else if (soubi.rea)
+            {
+                reado = 2;
+            }
+            else if (soubi.superRea)
+            {
+                reado = 3;
+            }
+            else if (soubi.epik)
+            {
+                reado = 4;
+            }
+            else if (soubi.legendary)
+            {
+                reado = 5;
+            }
+            else if (soubi.god)
+            {
+                reado = 6;
+            }
+            kyoukaHiyou(soubi.kyoukaLv, reado);
+        }
+        if (sonota)
+        {
+            sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
+            soubi = sonotaDataBaseManager.GetWeponData(number);
             if (soubi.kyoukaLv >= 1)
             {
                 if (soubi.syougouRea)
@@ -326,32 +329,31 @@ public class KyoukaPanel : MonoBehaviour
                 }
             }
             if (soubi.nomal)
-                    {
-                        reado = 1;
-                    }
-                    if (soubi.rea)
-                    {
-                        reado = 2;
-                    }
-                    if (soubi.superRea)
-                    {
-                        reado = 3;
-                    }
-                    if (soubi.epik)
-                    {
-                        reado = 4;
-                    }
-                    if (soubi.legendary)
-                    {
-                        reado = 5;
-                    }
-                    if (soubi.god)
-                    {
-                        reado = 6;
-                    }
-                    kyoukaHiyou(soubi.kyoukaLv, reado);
-                }
-
+            {
+                reado = 1;
+            }
+            else if (soubi.rea)
+            {
+                reado = 2;
+            }
+            else if (soubi.superRea)
+            {
+                reado = 3;
+            }
+            else if (soubi.epik)
+            {
+                reado = 4;
+            }
+            else if (soubi.legendary)
+            {
+                reado = 5;
+            }
+            else if (soubi.god)
+            {
+                reado = 6;
+            }
+            kyoukaHiyou(soubi.kyoukaLv, reado);
+        }
             
     }
     private void kyoukaHiyou(int lv,int reado)//readoは１ならnormal２ならレア。。。６ならゴットレア
@@ -406,7 +408,16 @@ public class KyoukaPanel : MonoBehaviour
                 GameObject.Find("装備名(Clone)").GetComponent<TextMeshProUGUI>().text = soubi.name + soubi.giftBairituName + "Lv" + soubi.kyoukaLvName;
             }
         }
-        Destroy(gameObject);
+        kinngakukakuninnText.gameObject.SetActive(true);
+        kyoukasekiTextMeshPro.gameObject.SetActive(true);
+        yesBotton.SetActive(true);
+        noBotton.SetActive(true);
+        taikagatarimasennPanel.SetActive(true);
+        migiYazirusiText.gameObject.SetActive(true);
+        kyoukagoText.gameObject.SetActive(true);
+        lv100OkBotton.SetActive(false);
+        taikagatarimasennPanel.SetActive(false);
+        gameObject.SetActive(false);
     }
     public void HaiBottonDown()
     {
@@ -463,43 +474,43 @@ public class KyoukaPanel : MonoBehaviour
     }
     public void NouryokutiUpdata()
     {
-        if(kinnkyoriWepon)
+        if (kinnkyoriWepon)
         {
-            soubi.kyoukagoKougekiryoku =  Mathf.FloorToInt( soubi.kougekiryoku *(1+ soubi.kyoukaBairitu/100));
+            soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku * (1 + soubi.kyoukaBairitu / 100));
         }
-        if (ennkyoriWepon)
+        else if (ennkyoriWepon)
         {
-            soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1+soubi.kyoukaBairitu/100));
+            soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1 + soubi.kyoukaBairitu / 100));
         }
-        if (yoroi)
+        else if (yoroi)
         {
-            soubi.kyoukagoBougyoryoku= Mathf.FloorToInt(soubi.bougyoryoiku * (1+soubi.kyoukaBairitu/100));
+            soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + soubi.kyoukaBairitu / 100));
         }
-        if (sonota)
+        else if (sonota)
         {
-            if(soubi.sonotaKyoukaStatus == 1)
+            if (soubi.sonotaKyoukaStatus == 1)
             {
-                soubi.kyoukagoMaxHp = Mathf.FloorToInt(soubi.maxHp * (1+soubi.kyoukaBairitu/100));
+                soubi.kyoukagoMaxHp = Mathf.FloorToInt(soubi.maxHp * (1 + soubi.kyoukaBairitu / 100));
             }
 
-            if (soubi.sonotaKyoukaStatus == 2)
+            else if (soubi.sonotaKyoukaStatus == 2)
             {
-                soubi.kyoukagoMaxMp = Mathf.FloorToInt(soubi.maxMp * (1+soubi.kyoukaBairitu/100));
+                soubi.kyoukagoMaxMp = Mathf.FloorToInt(soubi.maxMp * (1 + soubi.kyoukaBairitu / 100));
             }
 
-            if (soubi.sonotaKyoukaStatus == 3)
+            else if (soubi.sonotaKyoukaStatus == 3)
             {
-                soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku *(1+soubi.kyoukaBairitu/100));
+                soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku * (1 + soubi.kyoukaBairitu / 100));
             }
 
-            if (soubi.sonotaKyoukaStatus == 4)
+            else if (soubi.sonotaKyoukaStatus == 4)
             {
-                soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1+soubi.kyoukaBairitu/100));
+                soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1 + soubi.kyoukaBairitu / 100));
             }
 
-            if (soubi.sonotaKyoukaStatus == 5)
+            else if (soubi.sonotaKyoukaStatus == 5)
             {
-                soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku *(1+soubi.kyoukaBairitu/100));
+                soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + soubi.kyoukaBairitu / 100));
             }
         }
     }
@@ -530,7 +541,7 @@ public class KyoukaPanel : MonoBehaviour
             }
             kyoukagoText.text = "攻撃力\n" + kyoukagoNouryokuti;
         }
-        if (ennkyoriWepon)
+        else if (ennkyoriWepon)
         {
             kyoukamaeText.text = "魔力\n" + soubi.kyoukagoMaryoku;
             if (soubi.kyoukaLv < 10)
@@ -555,7 +566,7 @@ public class KyoukaPanel : MonoBehaviour
             }
             kyoukagoText.text = "魔力\n" + kyoukagoNouryokuti;
         }
-        if (yoroi)
+        else if (yoroi)
         {
             kyoukamaeText.text = "防御力\n" + soubi.kyoukagoBougyoryoku;
             if (soubi.kyoukaLv < 10)
@@ -580,7 +591,7 @@ public class KyoukaPanel : MonoBehaviour
             }
             kyoukagoText.text = "防御力\n" + kyoukagoNouryokuti;
         }
-        if (sonota)
+        else if (sonota)
         {
             if (soubi.sonotaKyoukaStatus == 1)
             {
@@ -607,7 +618,7 @@ public class KyoukaPanel : MonoBehaviour
                 }
                 kyoukagoText.text = "HP\n" + kyoukagoNouryokuti;
             }
-            if (soubi.sonotaKyoukaStatus == 2)
+            else if (soubi.sonotaKyoukaStatus == 2)
             {
                 kyoukamaeText.text = "MP\n" + soubi.kyoukagoMaxMp;
                 if (soubi.kyoukaLv < 10)
@@ -632,7 +643,7 @@ public class KyoukaPanel : MonoBehaviour
                 }
                 kyoukagoText.text = "MP\n" + kyoukagoNouryokuti;
             }
-            if (soubi.sonotaKyoukaStatus == 3)
+            else if (soubi.sonotaKyoukaStatus == 3)
             {
                 kyoukamaeText.text = "攻撃力\n" + soubi.kyoukagoKougekiryoku;
                 if (soubi.kyoukaLv < 10)
@@ -657,7 +668,7 @@ public class KyoukaPanel : MonoBehaviour
                 }
                 kyoukagoText.text = "攻撃力\n" + kyoukagoNouryokuti;
             }
-            if (soubi.sonotaKyoukaStatus == 4)
+            else if (soubi.sonotaKyoukaStatus == 4)
             {
                 kyoukamaeText.text = "魔力\n" + soubi.kyoukagoMaryoku;
                 if (soubi.kyoukaLv < 10)
@@ -682,7 +693,7 @@ public class KyoukaPanel : MonoBehaviour
                 }
                 kyoukagoText.text = "魔力\n" + kyoukagoNouryokuti;
             }
-            if (soubi.sonotaKyoukaStatus == 5)
+            else if (soubi.sonotaKyoukaStatus == 5)
             {
                 kyoukamaeText.text = "防御力\n" + soubi.kyoukagoBougyoryoku;
                 if (soubi.kyoukaLv < 10)
@@ -729,13 +740,13 @@ public class KyoukaPanel : MonoBehaviour
             {
                 kyoukakakuninnText.text = soubi.name + soubi.giftName + "LV" + soubi.kyoukaLvName + "\nは最大強化済みです";
             }
-            Destroy(kinngakukakuninnText);
-            Destroy(kyoukasekiTextMeshPro);
-            Destroy(yesBotton);
-            Destroy(noBotton);
-            Destroy(taikagatarimasennPanel);
-            Destroy(migiYazirusiText);
-            Destroy(kyoukagoText);
+            kinngakukakuninnText.gameObject.SetActive(false);
+            kyoukasekiTextMeshPro.gameObject.SetActive(false);
+            yesBotton.SetActive(false);
+            noBotton.SetActive(false);
+            taikagatarimasennPanel.SetActive(false);
+            migiYazirusiText.gameObject.SetActive(false);
+            kyoukagoText.gameObject.SetActive(false);
             lv100OkBotton.SetActive(true);
         }
     }

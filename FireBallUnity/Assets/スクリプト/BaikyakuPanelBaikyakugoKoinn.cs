@@ -1,19 +1,24 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BaikyakuPanelBaikyakugoKoinn : MonoBehaviour
 {
-    public GameObject baikyakuZikkouPanel;
+    public BaikyakuZikkouPanel baikyakuZikkouPanel;
+    public Text text;
     void Start()
     {
-        gameObject.GetComponent<Text>().text = "îÑãpå„ÉRÉCÉì\n" + (GameObject.Find("DataBaseManager").GetComponent<MoneyManager>().money + baikyakuZikkouPanel.GetComponent<BaikyakuZikkouPanel>().baikyakuKinngaku).ToString("N0");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+   public void BaikyakuZenngoKinngakuText()
+    {
+        text.text = "Â£≤Âç¥Âæå„Ç≥„Ç§„É≥\n" + (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MoneyManager>().money + baikyakuZikkouPanel.baikyakuKinngaku).ToString("N0");
     }
 }

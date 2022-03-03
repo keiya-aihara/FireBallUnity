@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +6,10 @@ public class BaikyakuBotton : MonoBehaviour
 {
     private GameObject uiPanel;
     public GameObject baikyakuPanel;
+    public BaikyakuZikkouPanel baikyakuZikkouPanelScript;
     void Start()
     {
-        uiPanel = GameObject.Find("UIPanel");
+
     }
 
     // Update is called once per frame
@@ -18,7 +19,8 @@ public class BaikyakuBotton : MonoBehaviour
     }
     public void BaikyakuBottonDown()
     {
-        baikyakuPanel.GetComponent<BaikyakuZikkouPanel>().a = false;
-        Instantiate(baikyakuPanel, transform.position, transform.rotation, uiPanel.transform) ;
+        baikyakuPanel.SetActive(true);
+        baikyakuZikkouPanelScript.a = false;
+        baikyakuZikkouPanelScript.SetActiveTrue();
     }
 }

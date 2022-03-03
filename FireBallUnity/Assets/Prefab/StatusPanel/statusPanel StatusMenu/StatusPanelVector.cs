@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,36 +11,39 @@ public class StatusPanelVector : MonoBehaviour
     public bool sonota;
     public GameObject kyoukaPanel;
     public KyoukaPanel kyoukaPanelScript;
+    public bool a;
+    public GameObject content;
     // Start is called before the first frame update
     void Start()
     {
-        if (gameObject.name == "Scroll View ëïîıÉXÉeÅ[É^ÉX ÉXÉeÅ[É^ÉX1(Clone)")
-        {
-            transform.localPosition = new Vector2(0, -72);
-        }
-        if (gameObject.name == "Scroll View ëïîıÉXÉeÅ[É^ÉX ÉXÉeÅ[É^ÉX2(Clone)")
-        {
-            transform.localPosition = new Vector2(0, 642);
-        }
-
-
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(a)
+        {
+            gameObject.SetActive(false);
+        }
     }
     public void kyoukaBottonDown()
     {
-        kyoukaPanelScript = kyoukaPanel.GetComponent<KyoukaPanel>();
         kyoukaPanelScript.number = number;
         kyoukaPanelScript.kinnkyoriWepon = kinnkyoriWepon;
         kyoukaPanelScript.ennkyoriWepon = ennkyoriWepon;
         kyoukaPanelScript.yoroi = yoroi;
         kyoukaPanelScript.sonota = sonota;
-        Instantiate(kyoukaPanel,transform.position,transform.rotation,gameObject.transform);
+        kyoukaPanel.SetActive(true);
 
+    }
+    public void CloseStatusPanel()
+    {
+        foreach (Transform n in content.transform)
+        {
+            GameObject.Destroy(n.gameObject);
+        }
+        gameObject.SetActive(false);
+        kyoukaPanel.SetActive(false);
     }
 }

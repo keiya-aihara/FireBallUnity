@@ -144,7 +144,7 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
             else
             {
                 gameObject.GetComponent<SoubiIconNagaosi>().SoukoStatusPanel();
-                statusPanelVector = GameObject.Find("Scroll View 装備ステータス ステータス2(Clone)").GetComponent<StatusPanelVector>();
+                statusPanelVector = GameObject.Find("Scroll View 装備ステータス ステータス2").GetComponent<StatusPanelVector>();
                 statusPanelVector.number = number;
                 statusPanelVector.kinnkyoriWepon = true;
                 statusPanelVector.ennkyoriWepon = false;

@@ -2701,9 +2701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e737c0e5dc8be2c4ca0e5ef1180d09d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kyoukasekiSyou: 0
-  kyoukasekiTyuu: 0
-  kyoukasekiDai: 0
+  kyoukasekiSyou: 5000000
+  kyoukasekiTyuu: 5000000
+  kyoukasekiDai: 5000000
 --- !u!114 &1999672077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c660d5f8fa50742aad679efa94817f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  money: 5000000
 --- !u!114 &1999672078
 MonoBehaviour:
   m_ObjectHideFlags: 0

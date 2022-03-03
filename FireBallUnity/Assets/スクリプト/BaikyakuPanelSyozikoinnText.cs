@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,14 +6,19 @@ using UnityEngine.UI;
 public class BaikyakuPanelSyozikoinnText : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Text text;
     void Start()
     {
-       gameObject.GetComponent<Text>().text = "ŠƒRƒCƒ“\n" + GameObject.Find("DataBaseManager").GetComponent<MoneyManager>().money.ToString("N0");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void BaikyakumaeSyoziCoinText()
+    {
+        text.text = "æ‰€æŒã‚³ã‚¤ãƒ³\n" + DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MoneyManager>().money.ToString("N0");
     }
 }

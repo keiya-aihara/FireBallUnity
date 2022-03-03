@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,91 +9,33 @@ public class BaikyakuZikkouPanel : MonoBehaviour
     private int tyekkuLangth;
     public int baikyakuKinngaku;
     private GameObject dataBaseManager;
-    private StatusPanelVector statusPanel;
+    public GameObject statusPanel;
+    public StatusPanelVector statusPanelVector;
     private WeponDateBaseManager weponDateBaseManager;
     private EnnkyoriWeponDataBaseManager ennkyoriWeponDataBaseManager;
     private YoroiDataBaseManager yoroiDataBaseManager;
     private SonotaDataBaseManager sonotaDataBaseManager;
 
-    public GameObject kosuukakuninn;
-    public GameObject baikyakukinngakukakuninn;
+    public GameObject kinnkyoriWeponScrollView;
+    public GameObject ennkyoriWeponScrollView;
+    public GameObject yoroiScrollView;
+    public GameObject sonotaScrollView;
+
+    public KinnkyoriWeponContentController kinnkyoriWeponContentController;
+    public EnnkyoriWeponContentContoroller ennkyoriWeponContentContoroller;
+    public YoroiContentContoroller yoroiContentContoroller;
+    public SonotaSoubiContentController sonotaSoubiContentController;
+
+    public Text kosuukakuninn;
+    public Text baikyakukinngakukakuninn;
+    public BaikyakuPanelBaikyakugoKoinn baikyakuPanelBaikyakugoKoinn;
+    public BaikyakuPanelSyozikoinnText baikyakuPanelSyozikoinnText;
 
     public bool a;
     // Start is called before the first frame update
     void Start()
     {
-        dataBaseManager = GameObject.Find("DataBaseManager");
-        tyekku = GameObject.FindGameObjectsWithTag("Tyekku");
-        tyekkuLangth = tyekku.Length;
-        transform.localPosition = new Vector2(0, 486.9f);
-        baikyakuKinngaku = 0;
-        if (a)
-        {
-            if (GameObject.Find("Scroll View ‹ß‹——£•Ší ‘qŒÉ"))
-            {
-                weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
-                for (int a = 0; a < tyekkuLangth; a++)
-                {
-                    baikyakuKinngaku += weponDateBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
-                }
-                Debug.Log(baikyakuKinngaku);
-            }
-            if (GameObject.Find("Scroll View ‰“‹——£•Ší ‘qŒÉ"))
-            {
-                ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
-                for (int a = 0; a < tyekkuLangth; a++)
-                {
-                    baikyakuKinngaku += ennkyoriWeponDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
-                }
-                Debug.Log(baikyakuKinngaku);
-            }
-            if (GameObject.Find("Scroll View ŠZ‘•”õ ‘qŒÉ"))
-            {
-                yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
-                for (int a = 0; a < tyekkuLangth; a++)
-                {
-                    baikyakuKinngaku += yoroiDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
-                }
-                Debug.Log(baikyakuKinngaku);
-            }
-            if (GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ‘qŒÉ"))
-            {
-                sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
-                for (int a = 0; a < tyekkuLangth; a++)
-                {
-                    baikyakuKinngaku += sonotaDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
-                }
-                Debug.Log(baikyakuKinngaku);
-            }
-            kosuukakuninn.GetComponent<Text>().text = tyekkuLangth + "ŒÂ‚ÌƒAƒCƒeƒ€‚ğ‘I‘ğ’†\n”„‹p‚µ‚Ü‚·‚©H";
-            baikyakukinngakukakuninn.GetComponent<Text>().text = "”„‹p‹àŠz@" + baikyakuKinngaku.ToString("N0") + "@ƒRƒCƒ“";
-        }
-        else
-        {
-            statusPanel = GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX2(Clone)").GetComponent<StatusPanelVector>();
-            if (statusPanel.kinnkyoriWepon)
-            {
-                weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
-                baikyakuKinngaku += weponDateBaseManager.GetWeponData(statusPanel.number).baikyakuKinngaku;
-            }
-            else if(statusPanel.ennkyoriWepon)
-            {
-                ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
-                baikyakuKinngaku += ennkyoriWeponDataBaseManager.GetWeponData(statusPanel.number).baikyakuKinngaku;
-            }
-            else if(statusPanel.yoroi)
-            {
-                yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
-                baikyakuKinngaku += yoroiDataBaseManager.GetWeponData(statusPanel.number).baikyakuKinngaku;
-            }
-            else if(statusPanel.sonota)
-            {
-                sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
-                baikyakuKinngaku += sonotaDataBaseManager.GetWeponData(statusPanel.number).baikyakuKinngaku;
-            }
-            kosuukakuninn.GetComponent<Text>().text = tyekkuLangth + "1ŒÂ‚ÌƒAƒCƒeƒ€‚ğ‘I‘ğ’†\n”„‹p‚µ‚Ü‚·‚©H";
-            baikyakukinngakukakuninn.GetComponent<Text>().text = "”„‹p‹àŠz@" + baikyakuKinngaku.ToString("N0") + "@ƒRƒCƒ“";
-        }
+
     }
 
     // Update is called once per frame
@@ -104,79 +46,155 @@ public class BaikyakuZikkouPanel : MonoBehaviour
     public void IieBotonDown()
     {
         a = false;
-        Destroy(gameObject);
+        gameObject.SetActive(false) ;
     }
     public void HaiBottonDown()
     {
         if (a)
         {
-            if (GameObject.Find("Scroll View ‹ß‹——£•Ší ‘qŒÉ"))
+            if (kinnkyoriWeponScrollView.activeSelf)
             {
                 weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                 for (int a = 0; a < tyekkuLangth; a++)
                 {
                     weponDateBaseManager.weponDataList.weponDatas.Remove(weponDateBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number));
-                    GameObject.FindGameObjectWithTag("SoukoKinnkyoriWeponContent").GetComponent<KinnkyoriWeponContentController>().kinnkyoriWeponContentUpdata();
+                    kinnkyoriWeponContentController.kinnkyoriWeponContentUpdata();
                 }
             }
-            if (GameObject.Find("Scroll View ‰“‹——£•Ší ‘qŒÉ"))
+            else if (ennkyoriWeponScrollView.activeSelf)
             {
                 ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
                 for (int a = 0; a < tyekkuLangth; a++)
                 {
                     ennkyoriWeponDataBaseManager.weponDataList.weponDatas.Remove(ennkyoriWeponDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number));
-                    GameObject.FindGameObjectWithTag("SoukoEnnkyoriWeponContent").GetComponent<EnnkyoriWeponContentContoroller>().EnnkyoriWeponContentUpdata();
+                    ennkyoriWeponContentContoroller.EnnkyoriWeponContentUpdata();
                 }
             }
-            if (GameObject.Find("Scroll View ŠZ‘•”õ ‘qŒÉ"))
+            else if (yoroiScrollView.activeSelf)
             {
                 yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
                 for (int a = 0; a < tyekkuLangth; a++)
                 {
                     yoroiDataBaseManager.weponDataList.weponDatas.Remove(yoroiDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number));
-                    GameObject.FindGameObjectWithTag("SoukoYoroiContent").GetComponent<YoroiContentContoroller>().YoroiContentUpdata();
+                    yoroiContentContoroller.YoroiContentUpdata();
                 }
             }
-            if (GameObject.Find("Scroll View ‚»‚Ì‘¼‘•”õ ‘qŒÉ"))
+            else if (sonotaScrollView.activeSelf)
             {
                 sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
                 for (int a = 0; a < tyekkuLangth; a++)
                 {
                     sonotaDataBaseManager.weponDataList.weponDatas.Remove(sonotaDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number));
-                    GameObject.FindGameObjectWithTag("SoukoSonotaContent").GetComponent<SonotaSoubiContentController>().SonotaContentUpdata();
+                    sonotaSoubiContentController.SonotaContentUpdata();
                 }
             }
         }
         else
         {
-            if (statusPanel.kinnkyoriWepon)
+            if (statusPanelVector.kinnkyoriWepon)
             {
-                weponDateBaseManager.weponDataList.weponDatas.Remove(weponDateBaseManager.GetWeponData(statusPanel.number));
+                weponDateBaseManager.weponDataList.weponDatas.Remove(weponDateBaseManager.GetWeponData(statusPanelVector.number));
                 GameObject.FindGameObjectWithTag("SoukoKinnkyoriWeponContent").GetComponent<KinnkyoriWeponContentController>().kinnkyoriWeponContentUpdata();
-                Destroy(GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX2(Clone)"));
+                statusPanel.SetActive(false);
             }
-            else if(statusPanel.ennkyoriWepon)
+            else if(statusPanelVector.ennkyoriWepon)
             {
-                ennkyoriWeponDataBaseManager.weponDataList.weponDatas.Remove(ennkyoriWeponDataBaseManager.GetWeponData(statusPanel.number));
+                ennkyoriWeponDataBaseManager.weponDataList.weponDatas.Remove(ennkyoriWeponDataBaseManager.GetWeponData(statusPanelVector.number));
                 GameObject.FindGameObjectWithTag("SoukoEnnkyoriWeponContent").GetComponent<EnnkyoriWeponContentContoroller>().EnnkyoriWeponContentUpdata();
-                Destroy(GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX2(Clone)"));
+                statusPanel.SetActive(false);
             }
-            else if(statusPanel.yoroi)
+            else if(statusPanelVector.yoroi)
             {
-                yoroiDataBaseManager.weponDataList.weponDatas.Remove(yoroiDataBaseManager.GetWeponData(statusPanel.number));
+                yoroiDataBaseManager.weponDataList.weponDatas.Remove(yoroiDataBaseManager.GetWeponData(statusPanelVector.number));
                 GameObject.FindGameObjectWithTag("SoukoYoroiContent").GetComponent<YoroiContentContoroller>().YoroiContentUpdata();
-                Destroy(GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX2(Clone)"));
+                statusPanel.SetActive(false);
             }
-            else if(statusPanel.sonota)
+            else if(statusPanelVector.sonota)
             {
-                sonotaDataBaseManager.weponDataList.weponDatas.Remove(sonotaDataBaseManager.GetWeponData(statusPanel.number));
+                sonotaDataBaseManager.weponDataList.weponDatas.Remove(sonotaDataBaseManager.GetWeponData(statusPanelVector.number));
                 GameObject.FindGameObjectWithTag("SoukoSonotaContent").GetComponent<SonotaSoubiContentController>().SonotaContentUpdata();
-                Destroy(GameObject.Find("Scroll View ‘•”õƒXƒe[ƒ^ƒX ƒXƒe[ƒ^ƒX2(Clone)"));
+                statusPanel.SetActive(false);
             }
             a = false;
         }
         dataBaseManager.GetComponent<MoneyManager>().money += baikyakuKinngaku;
-        Destroy(gameObject);
+        gameObject.SetActive(false);
 
+    }
+    public void SetActiveTrue()
+    {
+        dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
+        baikyakuKinngaku = 0;
+        if (a)
+        {
+            tyekku = GameObject.FindGameObjectsWithTag("Tyekku");
+            tyekkuLangth = tyekku.Length;
+ 
+            if (kinnkyoriWeponScrollView.activeSelf)
+            {
+                weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
+                for (int a = 0; a < tyekkuLangth; a++)
+                {
+                    baikyakuKinngaku += weponDateBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
+                }
+                Debug.Log(baikyakuKinngaku);
+            }
+            else if (ennkyoriWeponScrollView.activeSelf)
+            {
+                ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
+                for (int a = 0; a < tyekkuLangth; a++)
+                {
+                    baikyakuKinngaku += ennkyoriWeponDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
+                }
+                Debug.Log(baikyakuKinngaku);
+            }
+            else if (yoroiScrollView.activeSelf)
+            {
+                yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
+                for (int a = 0; a < tyekkuLangth; a++)
+                {
+                    baikyakuKinngaku += yoroiDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
+                }
+                Debug.Log(baikyakuKinngaku);
+            }
+            else if (sonotaScrollView.activeSelf)
+            {
+                sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
+                for (int a = 0; a < tyekkuLangth; a++)
+                {
+                    baikyakuKinngaku += sonotaDataBaseManager.GetWeponData(tyekku[a].GetComponent<Tyekku>().number).baikyakuKinngaku;
+                }
+                Debug.Log(baikyakuKinngaku);
+            }
+            kosuukakuninn.text = tyekkuLangth + "å€‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’é¸æŠä¸­\nå£²å´ã—ã¾ã™ã‹ï¼Ÿ";
+            baikyakukinngakukakuninn.text = "å£²å´é‡‘é¡ã€€" + baikyakuKinngaku.ToString("N0") + "ã€€ã‚³ã‚¤ãƒ³";
+        }
+        else
+        {
+            if (statusPanelVector.kinnkyoriWepon)
+            {
+                weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
+                baikyakuKinngaku += weponDateBaseManager.GetWeponData(statusPanelVector.number).baikyakuKinngaku;
+            }
+            else if (statusPanelVector.ennkyoriWepon)
+            {
+                ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
+                baikyakuKinngaku += ennkyoriWeponDataBaseManager.GetWeponData(statusPanelVector.number).baikyakuKinngaku;
+            }
+            else if (statusPanelVector.yoroi)
+            {
+                yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
+                baikyakuKinngaku += yoroiDataBaseManager.GetWeponData(statusPanelVector.number).baikyakuKinngaku;
+            }
+            else if (statusPanelVector.sonota)
+            {
+                sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
+                baikyakuKinngaku += sonotaDataBaseManager.GetWeponData(statusPanelVector.number).baikyakuKinngaku;
+            }
+            kosuukakuninn.text = "1å€‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’é¸æŠä¸­\nå£²å´ã—ã¾ã™ã‹ï¼Ÿ";
+            baikyakukinngakukakuninn.text = "å£²å´é‡‘é¡ã€€" + baikyakuKinngaku.ToString("N0") + "ã€€ã‚³ã‚¤ãƒ³";
+        }
+        baikyakuPanelSyozikoinnText.BaikyakumaeSyoziCoinText();
+        baikyakuPanelBaikyakugoKoinn.BaikyakuZenngoKinngakuText();
     }
 }

@@ -14,8 +14,8 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     private GameObject panel;
     public GameObject statusPanel;
     public GameObject statusPanelContent;
-    public GameObject statusPanel2;
-    public GameObject statusPanel2Content;
+    private GameObject statusPanel2;
+    private GameObject statusPanel2Content;
 
     public float e=1;
 
@@ -198,9 +198,10 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     {
         if (SceneManager.GetActiveScene().name == "Souko")
         {
+            statusPanel2 = GameObject.Find("ステータスパネル専用Canvas").GetComponent<StatusPanelSetActive>().statusPanelSouko;
             if (kinnkyoriWepon)
             {
-                Instantiate(statusPanel2, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                statusPanel2.SetActive(true);
 
                 weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                 soubiData = weponDateBaseManager.GetWeponData(number);
@@ -215,9 +216,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 kinnkyoriWepon = false;
             }
 
-            if (ennkyoriWepon)
+            else if (ennkyoriWepon)
             {
-                Instantiate(statusPanel2, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                statusPanel2.SetActive(true);
 
                 ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
                 soubiData = ennkyoriWeponDataBaseManager.GetWeponData(number);
@@ -231,9 +232,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 ennkyoriWeponSoubiIcon.a = false;
                 ennkyoriWepon = false;
             }
-            if (yoroi)
+            else if (yoroi)
             {
-                Instantiate(statusPanel2, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                statusPanel2.SetActive(true);
 
                 yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
                 soubiData = yoroiDataBaseManager.GetWeponData(number);
@@ -247,9 +248,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 yoroiSoubiIcon.a = false;
                 yoroi = false;
             }
-            if (sonota)
+            else if (sonota)
             {
-                Instantiate(statusPanel2, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                statusPanel2.SetActive(true);
 
                 sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
                 soubiData = sonotaDataBaseManager.GetWeponData(number);

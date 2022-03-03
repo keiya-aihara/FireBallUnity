@@ -1,10 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BaikyakuZikkou : MonoBehaviour
 {
-    public GameObject menuPanel;
     public GameObject baikyakuKakuninnMenu;
     public BaikyakuZikkouPanel baikyakuZikkouPanel;
     // Start is called before the first frame update
@@ -20,7 +19,8 @@ public class BaikyakuZikkou : MonoBehaviour
     }
     public void BaikyakuZikkouBottonDown()
     {
+        baikyakuKakuninnMenu.SetActive(true);
         baikyakuZikkouPanel.a = true;
-        Instantiate(baikyakuKakuninnMenu,transform.position,transform.rotation,menuPanel.transform);
+        baikyakuZikkouPanel.SetActiveTrue();
     }
 }
