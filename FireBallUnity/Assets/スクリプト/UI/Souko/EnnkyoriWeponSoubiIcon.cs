@@ -35,7 +35,7 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
     public bool a;
     void Start()
     {
-        databaseManager = GameObject.Find("DataBaseManager");
+        databaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
         ennkyoriWeponDateBaseManagerScript = databaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
         playerStatusDataBase = databaseManager.GetComponent<PlayerStatusDataBase>();
 

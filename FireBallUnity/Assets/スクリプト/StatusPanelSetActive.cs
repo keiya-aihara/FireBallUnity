@@ -5,6 +5,7 @@ using UnityEngine;
 public class StatusPanelSetActive : MonoBehaviour
 {
     public GameObject statusPanelSouko;
+    public GameObject statusPanelStatusMenu;
     void Start()
     {
         

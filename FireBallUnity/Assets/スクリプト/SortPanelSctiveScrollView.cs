@@ -21,18 +21,6 @@ public class SortPanelSctiveScrollView : MonoBehaviour
             {
                 sortPanel.SetActive(true);
             }
-            if (Input.GetMouseButtonDown(0))
-            {
-                if(Input.mousePosition.y <= 750)
-                {
-                    if (GameObject.Find("Scroll View 装備ステータス ステータス1(Clone)") ==null)
-                    {
-                        sortPanel.SetActive(false);
-                        gameObject.SetActive(false);
-                    }
-                }
-
-            }
             
         }
     }

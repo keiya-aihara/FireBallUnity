@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyStatusPanel : MonoBehaviour
 {
     public GameObject statusPanel;
+    public GameObject content;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,10 @@ public class DestroyStatusPanel : MonoBehaviour
     }
     public void DeleteStatusPanel()
     {
-        Destroy(statusPanel);
+        foreach (Transform n in content.transform)
+        {
+            GameObject.Destroy(n.gameObject);
+        }
+        statusPanel.SetActive(false);
     }
 }

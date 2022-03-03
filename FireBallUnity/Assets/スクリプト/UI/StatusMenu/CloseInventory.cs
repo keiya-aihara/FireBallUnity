@@ -49,26 +49,6 @@ public class CloseInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            clickPosition = Input.mousePosition;
-            if (Camera.main.ScreenToWorldPoint(clickPosition).y <= -2)
-            {
-                if (GameObject.Find("Scroll View 装備ステータス ステータス1(Clone)"))
-                {
-                    return;
-                }
-                else
-                {
-                    scrollViewKinnKyoriWeponStatus.gameObject.SetActive(false);
-                    scrollViewEnnkyoriWeponStatus.gameObject.SetActive(false);
-                    scrollViewYoroiStatus.gameObject.SetActive(false);
-                    scrollViewSonotaStatus1.gameObject.SetActive(false);
-                    scrollViewSonotaStatus2.gameObject.SetActive(false);
-                    sortPanel.gameObject.SetActive(false);
-                    
-                }
-            }
-        }
+        
     }
 }

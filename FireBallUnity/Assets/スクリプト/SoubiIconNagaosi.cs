@@ -98,10 +98,11 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         if(nagaosiTime >= 1)
         {
             if (SceneManager.GetActiveScene().name == "StatusMenu")
-            {
+            {            
+                statusPanel = GameObject.Find("スタータスパネル専用Canvas").GetComponent<StatusPanelSetActive>().statusPanelStatusMenu;
                 if (kinnkyoriWepon)
                 {
-                    Instantiate(statusPanel, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                    statusPanel.SetActive(true);
 
                     weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                     soubiData = weponDateBaseManager.GetWeponData(number);
@@ -122,7 +123,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
 
                 if (ennkyoriWepon)
                 {
-                    Instantiate(statusPanel, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                    statusPanel.SetActive(true);
 
                     ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
                     soubiData = ennkyoriWeponDataBaseManager.GetWeponData(number);
@@ -142,7 +143,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 }
                 if (yoroi)
                 {
-                    Instantiate(statusPanel, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                    statusPanel.SetActive(true);
 
                     yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
                     soubiData = yoroiDataBaseManager.GetWeponData(number);
@@ -162,7 +163,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 }
                 if (sonota)
                 {
-                    Instantiate(statusPanel, panel.transform.position + new Vector3(0, e, 0), transform.rotation, panel.transform);
+                    statusPanel.SetActive(true);
 
                     sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
                     soubiData = sonotaDataBaseManager.GetWeponData(number);
