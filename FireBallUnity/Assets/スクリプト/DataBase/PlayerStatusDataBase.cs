@@ -68,6 +68,8 @@ public class PlayerStatusDataBase : MonoBehaviour
 
     public float nokkubakku;
     public float destroyTime;
+
+    public int syoziSp;
     [Space(1)]
     [Header("武器の情報。番号で検索して、スクリプタブル・オブジェクトから取得する")]
     public WeponDataList.WeponData kinnkyoriWeponData;

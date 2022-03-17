@@ -792,6 +792,7 @@ GameObject:
   - component: {fileID: 56427401}
   - component: {fileID: 56427400}
   - component: {fileID: 56427399}
+  - component: {fileID: 56427402}
   m_Layer: 5
   m_Name: "\u5897\u6B96\u6570Button5"
   m_TagString: Untagged
@@ -863,7 +864,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 56427400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 56427402}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &56427400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,6 +915,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56427397}
   m_CullTransparentMesh: 1
+--- !u!114 &56427402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56427397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 56427400}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &62718408
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +1022,7 @@ GameObject:
   - component: {fileID: 64284390}
   - component: {fileID: 64284389}
   - component: {fileID: 64284388}
+  - component: {fileID: 64284391}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B3\u30F3\u30DCButton4"
   m_TagString: Untagged
@@ -1065,7 +1095,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64284389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 64284391}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64284389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1146,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64284386}
   m_CullTransparentMesh: 1
+--- !u!114 &64284391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64284386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 64284389}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &73952666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1795,7 @@ GameObject:
   - component: {fileID: 159538005}
   - component: {fileID: 159538004}
   - component: {fileID: 159538003}
+  - component: {fileID: 159538006}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30DC\u30E0Button4"
   m_TagString: Untagged
@@ -1759,7 +1818,7 @@ RectTransform:
   - {fileID: 737392088}
   - {fileID: 855319122}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 35
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1809,7 +1868,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 159538004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 159538006}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &159538004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,6 +1919,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159538001}
   m_CullTransparentMesh: 1
+--- !u!114 &159538006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159538001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 159538004}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &162581555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1947,7 @@ GameObject:
   - component: {fileID: 162581559}
   - component: {fileID: 162581558}
   - component: {fileID: 162581557}
+  - component: {fileID: 162581560}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button12"
   m_TagString: Untagged
@@ -1883,7 +1971,7 @@ RectTransform:
   - {fileID: 1927231718}
   - {fileID: 367034606}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 61
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1933,7 +2021,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 162581558}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162581560}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &162581558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1972,6 +2072,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162581555}
   m_CullTransparentMesh: 1
+--- !u!114 &162581560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162581555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 162581558}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &167243692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,6 +2322,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179765976}
   m_CullTransparentMesh: 1
+--- !u!1 &211516911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211516912}
+  - component: {fileID: 211516914}
+  - component: {fileID: 211516913}
+  m_Layer: 5
+  m_Name: "\u77E2\u5370Image"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &211516912
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211516911}
+  m_LocalRotation: {x: -0, y: -0, z: 0.49999997, w: -0.86602545}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.001196, y: 1.001196, z: 1.001196}
+  m_Children: []
+  m_Father: {fileID: 2094342778}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 73, y: 48}
+  m_SizeDelta: {x: 11.099998, y: 45.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &211516913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211516911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b1c9c731b18c50243bfe38c4612087d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &211516914
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211516911}
+  m_CullTransparentMesh: 1
 --- !u!1 &212265985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2467,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 8
 --- !u!222 &212265988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2434,7 +2625,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 7
 --- !u!222 &214792835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3054,6 +3245,7 @@ GameObject:
   - component: {fileID: 258818899}
   - component: {fileID: 258818898}
   - component: {fileID: 258818897}
+  - component: {fileID: 258818900}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button8"
   m_TagString: Untagged
@@ -3076,7 +3268,7 @@ RectTransform:
   - {fileID: 1475677782}
   - {fileID: 1128469548}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 57
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3126,7 +3318,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 258818898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 258818900}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &258818898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3165,6 +3369,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258818895}
   m_CullTransparentMesh: 1
+--- !u!114 &258818900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258818895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 258818898}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &260103964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,7 +3684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 3
 --- !u!222 &281570893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3485,6 +3705,7 @@ GameObject:
   - component: {fileID: 292914971}
   - component: {fileID: 292914970}
   - component: {fileID: 292914969}
+  - component: {fileID: 292914972}
   m_Layer: 5
   m_Name: "\u7121\u8A60\u5531Button1"
   m_TagString: Untagged
@@ -3556,7 +3777,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 292914970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 292914972}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &292914970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,6 +3828,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292914967}
   m_CullTransparentMesh: 1
+--- !u!114 &292914972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292914967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 292914970}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &295712290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +3935,7 @@ GameObject:
   - component: {fileID: 295746603}
   - component: {fileID: 295746602}
   - component: {fileID: 295746601}
+  - component: {fileID: 295746604}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button10"
   m_TagString: Untagged
@@ -3708,7 +3958,7 @@ RectTransform:
   - {fileID: 474191769}
   - {fileID: 1904048165}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 59
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3758,7 +4008,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 295746602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295746604}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &295746602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3797,6 +4059,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295746599}
   m_CullTransparentMesh: 1
+--- !u!114 &295746604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295746599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 295746602}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &298145303
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4475,7 @@ GameObject:
   - component: {fileID: 333384665}
   - component: {fileID: 333384664}
   - component: {fileID: 333384663}
+  - component: {fileID: 333384666}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button3"
   m_TagString: Untagged
@@ -4219,7 +4498,7 @@ RectTransform:
   - {fileID: 1097866318}
   - {fileID: 1812768345}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 39
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4269,7 +4548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 333384664}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 333384666}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &333384664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4308,6 +4599,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333384661}
   m_CullTransparentMesh: 1
+--- !u!114 &333384666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333384661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 333384664}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &334928387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,6 +4627,7 @@ GameObject:
   - component: {fileID: 334928391}
   - component: {fileID: 334928390}
   - component: {fileID: 334928389}
+  - component: {fileID: 334928392}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B9\u30D4\u30A2Button1"
   m_TagString: Untagged
@@ -4343,7 +4651,7 @@ RectTransform:
   - {fileID: 2135505236}
   - {fileID: 534930318}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 17
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4393,7 +4701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 334928390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 334928392}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &334928390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4432,6 +4752,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334928387}
   m_CullTransparentMesh: 1
+--- !u!114 &334928392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334928387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 334928390}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &335143377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,6 +4859,7 @@ GameObject:
   - component: {fileID: 339516646}
   - component: {fileID: 339516645}
   - component: {fileID: 339516644}
+  - component: {fileID: 339516647}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button4"
   m_TagString: Untagged
@@ -4545,7 +4882,7 @@ RectTransform:
   - {fileID: 808499417}
   - {fileID: 53847141}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 53
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4595,7 +4932,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 339516645}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 339516647}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &339516645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4633,6 +4982,101 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339516642}
+  m_CullTransparentMesh: 1
+--- !u!114 &339516647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339516642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 339516645}
+  skillBottonColor: {fileID: 1265940241}
+--- !u!1 &341535814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341535815}
+  - component: {fileID: 341535817}
+  - component: {fileID: 341535816}
+  m_Layer: 5
+  m_Name: "\u6240\u6301SP\u304C\u8DB3\u308A\u307E\u305B\u3093Text"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &341535815
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341535814}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456200557}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &341535816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341535814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3301887, g: 0.25452048, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u6240\u6301SP\u304C\u8DB3\u308A\u307E\u305B\u3093\u3002"
+--- !u!222 &341535817
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341535814}
   m_CullTransparentMesh: 1
 --- !u!1 &349178237
 GameObject:
@@ -5344,6 +5788,7 @@ GameObject:
   - component: {fileID: 411786998}
   - component: {fileID: 411786997}
   - component: {fileID: 411786996}
+  - component: {fileID: 411786999}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button3"
   m_TagString: Untagged
@@ -5366,7 +5811,7 @@ RectTransform:
   - {fileID: 335143378}
   - {fileID: 1362075814}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 52
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5416,7 +5861,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 411786997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411786999}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &411786997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5455,6 +5912,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411786994}
   m_CullTransparentMesh: 1
+--- !u!114 &411786999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411786994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 411786997}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &423002115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,6 +5940,7 @@ GameObject:
   - component: {fileID: 423002119}
   - component: {fileID: 423002118}
   - component: {fileID: 423002117}
+  - component: {fileID: 423002120}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B9\u30D4\u30A2Button3"
   m_TagString: Untagged
@@ -5489,7 +5963,7 @@ RectTransform:
   - {fileID: 1560365174}
   - {fileID: 883987162}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 19
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5539,7 +6013,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 423002118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 423002120}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &423002118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5578,6 +6064,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423002115}
   m_CullTransparentMesh: 1
+--- !u!114 &423002120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423002115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 423002118}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &430271696
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,6 +6171,7 @@ GameObject:
   - component: {fileID: 433750996}
   - component: {fileID: 433750995}
   - component: {fileID: 433750994}
+  - component: {fileID: 433750997}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button6"
   m_TagString: Untagged
@@ -5691,7 +6194,7 @@ RectTransform:
   - {fileID: 62718409}
   - {fileID: 1153326530}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 55
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5741,7 +6244,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 433750995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 433750997}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &433750995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5780,6 +6295,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433750992}
   m_CullTransparentMesh: 1
+--- !u!114 &433750997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433750992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 433750995}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &435379704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6088,6 +6619,151 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442580969}
+  m_CullTransparentMesh: 1
+--- !u!1 &456200556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456200557}
+  - component: {fileID: 456200560}
+  - component: {fileID: 456200559}
+  - component: {fileID: 456200558}
+  m_Layer: 5
+  m_Name: "\u6240\u6301SP\u304C\u8DB3\u308A\u307E\u305B\u3093Button"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &456200557
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456200556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 341535815}
+  m_Father: {fileID: 1456274831}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 2.29, y: 80}
+  m_SizeDelta: {x: 694.58, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &456200558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456200556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 456200559}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1265940241}
+        m_TargetAssemblyTypeName: SkillBottonColor, Assembly-CSharp
+        m_MethodName: IieButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 456200556}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &456200559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456200556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ac59c45f2e0a29649ab18aa94860d2a1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &456200560
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456200556}
   m_CullTransparentMesh: 1
 --- !u!1 &466437207
 GameObject:
@@ -6528,7 +7204,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4
+  m_Text: 6
 --- !u!222 &498852876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6549,6 +7225,7 @@ GameObject:
   - component: {fileID: 511235266}
   - component: {fileID: 511235265}
   - component: {fileID: 511235264}
+  - component: {fileID: 511235267}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B9\u30D4\u30A2Button4"
   m_TagString: Untagged
@@ -6571,7 +7248,7 @@ RectTransform:
   - {fileID: 328781873}
   - {fileID: 618516375}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 20
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6621,7 +7298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 511235265}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 511235267}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &511235265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6660,6 +7349,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511235262}
   m_CullTransparentMesh: 1
+--- !u!114 &511235267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511235262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 511235265}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &527804991
 GameObject:
   m_ObjectHideFlags: 0
@@ -6981,6 +7686,7 @@ GameObject:
   - component: {fileID: 545874932}
   - component: {fileID: 545874931}
   - component: {fileID: 545874930}
+  - component: {fileID: 545874933}
   m_Layer: 5
   m_Name: "\u591A\u91CD\u8A60\u5531Button2"
   m_TagString: Untagged
@@ -7003,7 +7709,7 @@ RectTransform:
   - {fileID: 1323107970}
   - {fileID: 238567420}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 64
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7053,7 +7759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 545874931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 545874933}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &545874931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7092,6 +7810,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545874928}
   m_CullTransparentMesh: 1
+--- !u!114 &545874933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545874928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 545874931}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &551776511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7548,6 +8282,7 @@ GameObject:
   - component: {fileID: 585912618}
   - component: {fileID: 585912617}
   - component: {fileID: 585912616}
+  - component: {fileID: 585912619}
   m_Layer: 5
   m_Name: "\u30E9\u30D4\u30C3\u30C8\u30D5\u30A1\u30A4\u30E4Button5"
   m_TagString: Untagged
@@ -7569,7 +8304,7 @@ RectTransform:
   - {fileID: 608888783}
   - {fileID: 631066321}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 26
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7619,7 +8354,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 585912617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 585912619}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &585912617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7658,6 +8405,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585912614}
   m_CullTransparentMesh: 1
+--- !u!114 &585912619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585912614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 585912617}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &586085950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,7 +9267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 7
 --- !u!222 &631066323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8604,6 +9367,7 @@ GameObject:
   - component: {fileID: 636905772}
   - component: {fileID: 636905771}
   - component: {fileID: 636905770}
+  - component: {fileID: 636905773}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30DC\u30E0Button2"
   m_TagString: Untagged
@@ -8626,7 +9390,7 @@ RectTransform:
   - {fileID: 1843341032}
   - {fileID: 1120635560}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 33
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8676,7 +9440,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636905771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 636905773}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636905771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8715,6 +9491,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636905768}
   m_CullTransparentMesh: 1
+--- !u!114 &636905773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636905768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 636905771}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &659814576
 GameObject:
   m_ObjectHideFlags: 0
@@ -8806,6 +9598,7 @@ GameObject:
   - component: {fileID: 666538465}
   - component: {fileID: 666538464}
   - component: {fileID: 666538463}
+  - component: {fileID: 666538466}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B0\u30E9\u30D3\u30C6\u30A3Button4"
   m_TagString: Untagged
@@ -8828,7 +9621,7 @@ RectTransform:
   - {fileID: 498852874}
   - {fileID: 121115979}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 30
+  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8878,7 +9671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666538464}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 666538466}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &666538464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8917,6 +9722,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666538461}
   m_CullTransparentMesh: 1
+--- !u!114 &666538466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666538461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 666538464}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &669414856
 GameObject:
   m_ObjectHideFlags: 0
@@ -9290,6 +10111,7 @@ GameObject:
   - component: {fileID: 701014534}
   - component: {fileID: 701014533}
   - component: {fileID: 701014532}
+  - component: {fileID: 701014535}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B3\u30F3\u30DCButton5"
   m_TagString: Untagged
@@ -9311,6 +10133,7 @@ RectTransform:
   - {fileID: 554588392}
   - {fileID: 1540306213}
   - {fileID: 675969938}
+  - {fileID: 1992887826}
   m_Father: {fileID: 1745927165}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9362,7 +10185,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 701014533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 701014535}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &701014533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9401,6 +10236,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701014530}
   m_CullTransparentMesh: 1
+--- !u!114 &701014535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701014530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 701014533}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &704671057
 GameObject:
   m_ObjectHideFlags: 0
@@ -9488,6 +10339,7 @@ GameObject:
   - component: {fileID: 708944226}
   - component: {fileID: 708944225}
   - component: {fileID: 708944224}
+  - component: {fileID: 708944227}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B0\u30E9\u30D3\u30C6\u30A3Button3"
   m_TagString: Untagged
@@ -9510,7 +10362,7 @@ RectTransform:
   - {fileID: 1366586512}
   - {fileID: 998544829}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 29
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9560,7 +10412,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 708944225}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 708944227}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &708944225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9599,6 +10463,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708944222}
   m_CullTransparentMesh: 1
+--- !u!114 &708944227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708944222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 708944225}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &711130850
 GameObject:
   m_ObjectHideFlags: 0
@@ -9823,7 +10703,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4
+  m_Text: 6
 --- !u!222 &737392090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9844,6 +10724,7 @@ GameObject:
   - component: {fileID: 742906687}
   - component: {fileID: 742906686}
   - component: {fileID: 742906685}
+  - component: {fileID: 742906688}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B0\u30E9\u30D3\u30C6\u30A3Button5"
   m_TagString: Untagged
@@ -9865,7 +10746,7 @@ RectTransform:
   - {fileID: 1415256419}
   - {fileID: 212265986}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 31
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9915,7 +10796,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 742906686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 742906688}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &742906686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9954,6 +10847,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742906683}
   m_CullTransparentMesh: 1
+--- !u!114 &742906688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742906683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 742906686}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &749733961
 GameObject:
   m_ObjectHideFlags: 0
@@ -9966,6 +10875,7 @@ GameObject:
   - component: {fileID: 749733965}
   - component: {fileID: 749733964}
   - component: {fileID: 749733963}
+  - component: {fileID: 749733966}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button8"
   m_TagString: Untagged
@@ -9988,7 +10898,7 @@ RectTransform:
   - {fileID: 1009271575}
   - {fileID: 850466109}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 44
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10038,7 +10948,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749733964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 749733966}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &749733964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10077,6 +10999,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749733961}
   m_CullTransparentMesh: 1
+--- !u!114 &749733966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749733961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 749733964}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &749904479
 GameObject:
   m_ObjectHideFlags: 0
@@ -10168,6 +11106,7 @@ GameObject:
   - component: {fileID: 762147154}
   - component: {fileID: 762147153}
   - component: {fileID: 762147152}
+  - component: {fileID: 762147155}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B0\u30E9\u30D3\u30C6\u30A3Button1"
   m_TagString: Untagged
@@ -10190,7 +11129,7 @@ RectTransform:
   - {fileID: 281570891}
   - {fileID: 984623631}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 27
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10240,7 +11179,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 762147153}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 762147155}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &762147153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10279,6 +11230,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762147150}
   m_CullTransparentMesh: 1
+--- !u!114 &762147155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762147150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 762147153}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &762288772
 GameObject:
   m_ObjectHideFlags: 0
@@ -10291,6 +11258,7 @@ GameObject:
   - component: {fileID: 762288776}
   - component: {fileID: 762288775}
   - component: {fileID: 762288774}
+  - component: {fileID: 762288777}
   m_Layer: 5
   m_Name: "\u591A\u91CD\u8A60\u5531Button1"
   m_TagString: Untagged
@@ -10313,7 +11281,7 @@ RectTransform:
   - {fileID: 1795257092}
   - {fileID: 540972761}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 63
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10363,7 +11331,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 762288775}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 762288777}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &762288775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10402,6 +11382,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762288772}
   m_CullTransparentMesh: 1
+--- !u!114 &762288777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762288772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 762288775}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &765867589
 GameObject:
   m_ObjectHideFlags: 0
@@ -10809,6 +11805,7 @@ GameObject:
   - component: {fileID: 814520902}
   - component: {fileID: 814520901}
   - component: {fileID: 814520900}
+  - component: {fileID: 814520903}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button2"
   m_TagString: Untagged
@@ -10832,7 +11829,7 @@ RectTransform:
   - {fileID: 930066169}
   - {fileID: 435379705}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 38
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10882,7 +11879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 814520901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 814520903}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &814520901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10921,6 +11930,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814520898}
   m_CullTransparentMesh: 1
+--- !u!114 &814520903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814520898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 814520901}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &842430779
 GameObject:
   m_ObjectHideFlags: 0
@@ -10933,6 +11958,7 @@ GameObject:
   - component: {fileID: 842430783}
   - component: {fileID: 842430782}
   - component: {fileID: 842430781}
+  - component: {fileID: 842430784}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30A6\u30A9\u30FC\u30EBButton1"
   m_TagString: Untagged
@@ -11007,9 +12033,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1265940241}
-        m_TargetAssemblyTypeName: SkillBottonColor, Assembly-CSharp
-        m_MethodName: SkillButtonDown
+      - m_Target: {fileID: 842430784}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11057,6 +12083,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842430779}
   m_CullTransparentMesh: 1
+--- !u!114 &842430784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842430779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 842430782}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &847946079
 GameObject:
   m_ObjectHideFlags: 0
@@ -11431,7 +12473,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 5
 --- !u!222 &860077834
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11452,6 +12494,7 @@ GameObject:
   - component: {fileID: 861365616}
   - component: {fileID: 861365615}
   - component: {fileID: 861365614}
+  - component: {fileID: 861365617}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button11"
   m_TagString: Untagged
@@ -11474,7 +12517,7 @@ RectTransform:
   - {fileID: 1627365032}
   - {fileID: 1030716044}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 60
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11524,7 +12567,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861365615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 861365617}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &861365615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11563,6 +12618,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861365612}
   m_CullTransparentMesh: 1
+--- !u!114 &861365617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861365612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 861365615}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &867052563
 GameObject:
   m_ObjectHideFlags: 0
@@ -11725,6 +12796,7 @@ GameObject:
   - component: {fileID: 874429525}
   - component: {fileID: 874429524}
   - component: {fileID: 874429523}
+  - component: {fileID: 874429526}
   m_Layer: 5
   m_Name: "\u5897\u6B96\u6570Button2"
   m_TagString: Untagged
@@ -11797,7 +12869,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 874429524}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 874429526}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &874429524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11836,6 +12920,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874429521}
   m_CullTransparentMesh: 1
+--- !u!114 &874429526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874429521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 874429524}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &883987161
 GameObject:
   m_ObjectHideFlags: 0
@@ -11923,6 +13023,7 @@ GameObject:
   - component: {fileID: 885349964}
   - component: {fileID: 885349963}
   - component: {fileID: 885349962}
+  - component: {fileID: 885349965}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button6"
   m_TagString: Untagged
@@ -11945,7 +13046,7 @@ RectTransform:
   - {fileID: 586085951}
   - {fileID: 319231214}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 42
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11995,7 +13096,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 885349963}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885349965}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &885349963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12034,6 +13147,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885349960}
   m_CullTransparentMesh: 1
+--- !u!114 &885349965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885349960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 885349963}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &887840096
 GameObject:
   m_ObjectHideFlags: 0
@@ -12046,6 +13175,7 @@ GameObject:
   - component: {fileID: 887840100}
   - component: {fileID: 887840099}
   - component: {fileID: 887840098}
+  - component: {fileID: 887840101}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30DC\u30E0Button1"
   m_TagString: Untagged
@@ -12068,7 +13198,7 @@ RectTransform:
   - {fileID: 2125163206}
   - {fileID: 2121661368}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 32
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12118,7 +13248,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 887840099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 887840101}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &887840099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12157,6 +13299,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887840096}
   m_CullTransparentMesh: 1
+--- !u!114 &887840101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887840096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 887840099}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &917768922
 GameObject:
   m_ObjectHideFlags: 0
@@ -12787,6 +13945,7 @@ GameObject:
   - component: {fileID: 956917206}
   - component: {fileID: 956917205}
   - component: {fileID: 956917204}
+  - component: {fileID: 956917207}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button9"
   m_TagString: Untagged
@@ -12809,7 +13968,7 @@ RectTransform:
   - {fileID: 1732146467}
   - {fileID: 1358888168}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 58
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12859,7 +14018,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 956917205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 956917207}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &956917205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12898,6 +14069,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956917202}
   m_CullTransparentMesh: 1
+--- !u!114 &956917207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956917202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 956917205}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &968509367
 GameObject:
   m_ObjectHideFlags: 0
@@ -13557,6 +14744,7 @@ GameObject:
   - component: {fileID: 994551749}
   - component: {fileID: 994551748}
   - component: {fileID: 994551747}
+  - component: {fileID: 994551750}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B3\u30F3\u30DCButton3"
   m_TagString: Untagged
@@ -13629,7 +14817,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 994551748}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 994551750}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &994551748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13668,6 +14868,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994551745}
   m_CullTransparentMesh: 1
+--- !u!114 &994551750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994551745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 994551748}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &998544828
 GameObject:
   m_ObjectHideFlags: 0
@@ -14045,6 +15261,7 @@ GameObject:
   - component: {fileID: 1014807405}
   - component: {fileID: 1014807404}
   - component: {fileID: 1014807403}
+  - component: {fileID: 1014807406}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button7"
   m_TagString: Untagged
@@ -14067,7 +15284,7 @@ RectTransform:
   - {fileID: 1298884709}
   - {fileID: 1313623094}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 43
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14117,7 +15334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1014807404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1014807406}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014807404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14156,6 +15385,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014807401}
   m_CullTransparentMesh: 1
+--- !u!114 &1014807406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014807401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1014807404}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1023326288
 GameObject:
   m_ObjectHideFlags: 0
@@ -15645,6 +16890,7 @@ GameObject:
   - component: {fileID: 1169680301}
   - component: {fileID: 1169680300}
   - component: {fileID: 1169680299}
+  - component: {fileID: 1169680302}
   m_Layer: 5
   m_Name: "\u30E9\u30D4\u30C3\u30C8\u30D5\u30A1\u30A4\u30E4Button2"
   m_TagString: Untagged
@@ -15667,7 +16913,7 @@ RectTransform:
   - {fileID: 1575557500}
   - {fileID: 1188628667}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 23
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15717,7 +16963,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1169680300}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1169680302}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1169680300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15756,6 +17014,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169680297}
   m_CullTransparentMesh: 1
+--- !u!114 &1169680302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169680297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1169680300}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1179596723
 GameObject:
   m_ObjectHideFlags: 0
@@ -15843,6 +17117,7 @@ GameObject:
   - component: {fileID: 1183975886}
   - component: {fileID: 1183975885}
   - component: {fileID: 1183975884}
+  - component: {fileID: 1183975887}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B3\u30F3\u30DCButton1"
   m_TagString: Untagged
@@ -15916,7 +17191,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1183975885}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1183975887}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1183975885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15955,6 +17242,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183975882}
   m_CullTransparentMesh: 1
+--- !u!114 &1183975887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183975882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1183975885}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1185855105
 GameObject:
   m_ObjectHideFlags: 0
@@ -16117,6 +17420,7 @@ GameObject:
   - component: {fileID: 1203005378}
   - component: {fileID: 1203005377}
   - component: {fileID: 1203005376}
+  - component: {fileID: 1203005379}
   m_Layer: 5
   m_Name: "\u30E9\u30D4\u30C3\u30C8\u30D5\u30A1\u30A4\u30E4Button3"
   m_TagString: Untagged
@@ -16139,7 +17443,7 @@ RectTransform:
   - {fileID: 1857274438}
   - {fileID: 2114964404}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 24
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16189,7 +17493,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1203005377}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203005379}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1203005377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16228,6 +17544,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203005374}
   m_CullTransparentMesh: 1
+--- !u!114 &1203005379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203005374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1203005377}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1212110984
 GameObject:
   m_ObjectHideFlags: 0
@@ -16553,6 +17885,7 @@ GameObject:
   - component: {fileID: 1240548311}
   - component: {fileID: 1240548310}
   - component: {fileID: 1240548309}
+  - component: {fileID: 1240548312}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button13"
   m_TagString: Untagged
@@ -16574,7 +17907,7 @@ RectTransform:
   - {fileID: 167243693}
   - {fileID: 1956827363}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 49
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16624,7 +17957,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1240548310}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1240548312}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1240548310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16663,6 +18008,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240548307}
   m_CullTransparentMesh: 1
+--- !u!114 &1240548312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240548307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1240548310}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1245654486
 GameObject:
   m_ObjectHideFlags: 0
@@ -16754,6 +18115,7 @@ GameObject:
   - component: {fileID: 1247579367}
   - component: {fileID: 1247579366}
   - component: {fileID: 1247579365}
+  - component: {fileID: 1247579368}
   m_Layer: 5
   m_Name: "\u5897\u6B96\u6570Button4"
   m_TagString: Untagged
@@ -16827,7 +18189,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1247579366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247579368}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1247579366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16866,6 +18240,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247579363}
   m_CullTransparentMesh: 1
+--- !u!114 &1247579368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247579363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1247579366}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1251470399
 GameObject:
   m_ObjectHideFlags: 0
@@ -17130,6 +18520,10 @@ MonoBehaviour:
   - {fileID: 162581557}
   - {fileID: 2024833038}
   fireBallConstDownLevel: 0
+  tazyuuEisyouButtonImage:
+  - {fileID: 762288774}
+  - {fileID: 545874930}
+  tazyuuEisyouLevel: 0
   fireSpireButtonImage:
   - {fileID: 334928389}
   - {fileID: 1550139980}
@@ -17160,25 +18554,23 @@ MonoBehaviour:
   fireBomLevel: 0
   wallChainButtonImage: {fileID: 1739265377}
   wallChainLevel: 0
-  tazyuuEisyouButtonImage:
-  - {fileID: 762288774}
-  - {fileID: 545874930}
-  tazyuuEisyouLevel: 0
   eisyouTannsyukuButtonImage: {fileID: 1466483225}
   eisyouTannsyukuLevel: 0
   mueisyouButtonImage: {fileID: 292914969}
   mueisyouLevel: 0
   kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
   haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
-  fireWallTennkaisuu: 0
-  fireWallHannizoukakakuritu: 0
-  fireWall: 0
+  siro: {r: 1, g: 1, b: 1, a: 1}
   syouhiSp: 0
   skillSyutokuPanel: {fileID: 1566715991}
   skillMeiText: {fileID: 212495640}
   skillSetumeiText: {fileID: 1119392698}
   skillKoukaText: {fileID: 765867591}
   skillSyutokuText: {fileID: 382450379}
+  syutokuzumiSkill: 0
+  syoziSPgatarimasennButton: {fileID: 456200556}
+  syutokuzumiButton: {fileID: 1748517751}
+  syoziSp: {fileID: 390379881}
 --- !u!1 &1271876672
 GameObject:
   m_ObjectHideFlags: 0
@@ -18192,6 +19584,7 @@ GameObject:
   - component: {fileID: 1332891915}
   - component: {fileID: 1332891914}
   - component: {fileID: 1332891913}
+  - component: {fileID: 1332891916}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button5"
   m_TagString: Untagged
@@ -18214,7 +19607,7 @@ RectTransform:
   - {fileID: 1629258747}
   - {fileID: 360112227}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 54
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18264,7 +19657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332891914}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1332891916}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332891914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18303,6 +19708,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332891911}
   m_CullTransparentMesh: 1
+--- !u!114 &1332891916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332891911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1332891914}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1335144895
 GameObject:
   m_ObjectHideFlags: 0
@@ -18394,6 +19815,7 @@ GameObject:
   - component: {fileID: 1338650019}
   - component: {fileID: 1338650018}
   - component: {fileID: 1338650017}
+  - component: {fileID: 1338650020}
   m_Layer: 5
   m_Name: "\u30E9\u30D4\u30C3\u30C8\u30D5\u30A1\u30A4\u30E4Button4"
   m_TagString: Untagged
@@ -18416,7 +19838,7 @@ RectTransform:
   - {fileID: 1829401743}
   - {fileID: 1406610443}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 25
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18466,7 +19888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1338650018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1338650020}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1338650018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18505,6 +19939,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338650015}
   m_CullTransparentMesh: 1
+--- !u!114 &1338650020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338650015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1338650018}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1344153561
 GameObject:
   m_ObjectHideFlags: 0
@@ -18904,6 +20354,7 @@ GameObject:
   - component: {fileID: 1363024043}
   - component: {fileID: 1363024042}
   - component: {fileID: 1363024041}
+  - component: {fileID: 1363024044}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30A6\u30A9\u30FC\u30EBButton2"
   m_TagString: Untagged
@@ -18976,7 +20427,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1363024042}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1363024044}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1363024042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19015,6 +20478,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363024039}
   m_CullTransparentMesh: 1
+--- !u!114 &1363024044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363024039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1363024042}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1366424797
 GameObject:
   m_ObjectHideFlags: 0
@@ -19164,7 +20643,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 5
 --- !u!222 &1366586514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19185,6 +20664,7 @@ GameObject:
   - component: {fileID: 1396897888}
   - component: {fileID: 1396897887}
   - component: {fileID: 1396897886}
+  - component: {fileID: 1396897889}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button1"
   m_TagString: Untagged
@@ -19208,7 +20688,7 @@ RectTransform:
   - {fileID: 969679488}
   - {fileID: 179765977}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 37
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19258,7 +20738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1396897887}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1396897889}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1396897887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19297,6 +20789,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396897884}
   m_CullTransparentMesh: 1
+--- !u!114 &1396897889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396897884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1396897887}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1397501643
 GameObject:
   m_ObjectHideFlags: 0
@@ -19384,6 +20892,7 @@ GameObject:
   - component: {fileID: 1402822680}
   - component: {fileID: 1402822679}
   - component: {fileID: 1402822678}
+  - component: {fileID: 1402822681}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30A6\u30A9\u30FC\u30EBButton3"
   m_TagString: Untagged
@@ -19456,7 +20965,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1402822679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1402822681}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1402822679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19495,6 +21016,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402822676}
   m_CullTransparentMesh: 1
+--- !u!114 &1402822681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402822676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1402822679}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1405048313
 GameObject:
   m_ObjectHideFlags: 0
@@ -19507,6 +21044,7 @@ GameObject:
   - component: {fileID: 1405048317}
   - component: {fileID: 1405048316}
   - component: {fileID: 1405048315}
+  - component: {fileID: 1405048318}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button10"
   m_TagString: Untagged
@@ -19529,7 +21067,7 @@ RectTransform:
   - {fileID: 94673983}
   - {fileID: 52311341}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 46
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19579,7 +21117,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1405048316}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1405048318}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1405048316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19618,6 +21168,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405048313}
   m_CullTransparentMesh: 1
+--- !u!114 &1405048318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405048313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1405048316}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1406610442
 GameObject:
   m_ObjectHideFlags: 0
@@ -20115,6 +21681,8 @@ RectTransform:
   - {fileID: 2048158421}
   - {fileID: 256155755}
   - {fileID: 1572388974}
+  - {fileID: 456200557}
+  - {fileID: 1748517752}
   m_Father: {fileID: 1566715995}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20248,6 +21816,7 @@ GameObject:
   - component: {fileID: 1460868463}
   - component: {fileID: 1460868462}
   - component: {fileID: 1460868461}
+  - component: {fileID: 1460868464}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B0\u30E9\u30D3\u30C6\u30A3Button2"
   m_TagString: Untagged
@@ -20270,7 +21839,7 @@ RectTransform:
   - {fileID: 1670114920}
   - {fileID: 618842152}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 28
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20320,7 +21889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1460868462}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460868464}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1460868462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20359,6 +21940,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460868459}
   m_CullTransparentMesh: 1
+--- !u!114 &1460868464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460868459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1460868462}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1465268720
 GameObject:
   m_ObjectHideFlags: 0
@@ -20447,6 +22044,7 @@ GameObject:
   - component: {fileID: 1466483227}
   - component: {fileID: 1466483226}
   - component: {fileID: 1466483225}
+  - component: {fileID: 1466483228}
   m_Layer: 5
   m_Name: "\u8A60\u5531\u77ED\u7E2EButton1"
   m_TagString: Untagged
@@ -20519,7 +22117,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1466483226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1466483228}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1466483226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20558,6 +22168,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466483223}
   m_CullTransparentMesh: 1
+--- !u!114 &1466483228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466483223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1466483226}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1472956697
 GameObject:
   m_ObjectHideFlags: 0
@@ -20805,6 +22431,7 @@ GameObject:
   - component: {fileID: 1508552191}
   - component: {fileID: 1508552190}
   - component: {fileID: 1508552189}
+  - component: {fileID: 1508552192}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button9"
   m_TagString: Untagged
@@ -20827,7 +22454,7 @@ RectTransform:
   - {fileID: 981315993}
   - {fileID: 1397501644}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 45
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20877,7 +22504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1508552190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1508552192}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1508552190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20916,6 +22555,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508552187}
   m_CullTransparentMesh: 1
+--- !u!114 &1508552192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508552187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1508552190}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1517524884
 GameObject:
   m_ObjectHideFlags: 0
@@ -21165,6 +22820,7 @@ GameObject:
   - component: {fileID: 1549658105}
   - component: {fileID: 1549658104}
   - component: {fileID: 1549658103}
+  - component: {fileID: 1549658106}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30DC\u30E0Button5"
   m_TagString: Untagged
@@ -21186,7 +22842,7 @@ RectTransform:
   - {fileID: 1212110985}
   - {fileID: 2143615362}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 36
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21236,7 +22892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1549658104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1549658106}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1549658104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21275,6 +22943,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549658101}
   m_CullTransparentMesh: 1
+--- !u!114 &1549658106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549658101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1549658104}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1550139978
 GameObject:
   m_ObjectHideFlags: 0
@@ -21287,6 +22971,7 @@ GameObject:
   - component: {fileID: 1550139982}
   - component: {fileID: 1550139981}
   - component: {fileID: 1550139980}
+  - component: {fileID: 1550139983}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B9\u30D4\u30A2Button2"
   m_TagString: Untagged
@@ -21309,7 +22994,7 @@ RectTransform:
   - {fileID: 273532551}
   - {fileID: 674732599}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 18
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21359,7 +23044,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1550139981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1550139983}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1550139981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21398,6 +23095,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550139978}
   m_CullTransparentMesh: 1
+--- !u!114 &1550139983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550139978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1550139981}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1560365173
 GameObject:
   m_ObjectHideFlags: 0
@@ -21759,10 +23472,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1566715991}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1265940241}
+        m_TargetAssemblyTypeName: SkillBottonColor, Assembly-CSharp
+        m_MethodName: IieButtonDown
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21975,6 +23688,7 @@ GameObject:
   - component: {fileID: 1597309473}
   - component: {fileID: 1597309472}
   - component: {fileID: 1597309471}
+  - component: {fileID: 1597309474}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B9\u30D4\u30A2Button5"
   m_TagString: Untagged
@@ -21996,7 +23710,7 @@ RectTransform:
   - {fileID: 1133261609}
   - {fileID: 214792833}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 21
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22046,7 +23760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1597309472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1597309474}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1597309472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22085,6 +23811,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597309469}
   m_CullTransparentMesh: 1
+--- !u!114 &1597309474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597309469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1597309472}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1602126060
 GameObject:
   m_ObjectHideFlags: 0
@@ -22255,6 +23997,7 @@ GameObject:
   - component: {fileID: 1612643999}
   - component: {fileID: 1612643998}
   - component: {fileID: 1612643997}
+  - component: {fileID: 1612644000}
   m_Layer: 5
   m_Name: "\u5897\u6B96\u6570Button3"
   m_TagString: Untagged
@@ -22327,7 +24070,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1612643998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1612644000}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1612643998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22366,6 +24121,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612643995}
   m_CullTransparentMesh: 1
+--- !u!114 &1612644000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612643995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1612643998}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1627365031
 GameObject:
   m_ObjectHideFlags: 0
@@ -22694,6 +24465,7 @@ GameObject:
   - component: {fileID: 1660389982}
   - component: {fileID: 1660389981}
   - component: {fileID: 1660389980}
+  - component: {fileID: 1660389983}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button5"
   m_TagString: Untagged
@@ -22716,7 +24488,7 @@ RectTransform:
   - {fileID: 1366424798}
   - {fileID: 1676043568}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 41
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22766,7 +24538,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1660389981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660389983}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1660389981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22805,6 +24589,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660389978}
   m_CullTransparentMesh: 1
+--- !u!114 &1660389983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660389978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1660389981}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1670114919
 GameObject:
   m_ObjectHideFlags: 0
@@ -22875,7 +24675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: 4
 --- !u!222 &1670114922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23208,6 +25008,7 @@ GameObject:
   - component: {fileID: 1738444191}
   - component: {fileID: 1738444190}
   - component: {fileID: 1738444189}
+  - component: {fileID: 1738444192}
   m_Layer: 5
   m_Name: "\u30E9\u30D4\u30C3\u30C8\u30D5\u30A1\u30A4\u30E4Button1"
   m_TagString: Untagged
@@ -23231,7 +25032,7 @@ RectTransform:
   - {fileID: 552803034}
   - {fileID: 1185855106}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 22
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23281,7 +25082,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1738444190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1738444192}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1738444190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23320,6 +25133,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738444187}
   m_CullTransparentMesh: 1
+--- !u!114 &1738444192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738444187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1738444190}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1739265375
 GameObject:
   m_ObjectHideFlags: 0
@@ -23332,6 +25161,7 @@ GameObject:
   - component: {fileID: 1739265379}
   - component: {fileID: 1739265378}
   - component: {fileID: 1739265377}
+  - component: {fileID: 1739265380}
   m_Layer: 5
   m_Name: "\u30A6\u30A9\u30FC\u30EB\u30B3\u30F3\u30DCButton1"
   m_TagString: Untagged
@@ -23353,7 +25183,7 @@ RectTransform:
   - {fileID: 636467250}
   - {fileID: 1999829290}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 16
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23403,7 +25233,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1739265378}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1739265380}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1739265378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23442,6 +25284,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739265375}
   m_CullTransparentMesh: 1
+--- !u!114 &1739265380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739265375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1739265378}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1745927161
 GameObject:
   m_ObjectHideFlags: 0
@@ -23549,27 +25407,6 @@ RectTransform:
   - {fileID: 1612643996}
   - {fileID: 1247579364}
   - {fileID: 56427398}
-  - {fileID: 1739265376}
-  - {fileID: 334928388}
-  - {fileID: 1550139979}
-  - {fileID: 423002116}
-  - {fileID: 511235263}
-  - {fileID: 1597309470}
-  - {fileID: 1738444188}
-  - {fileID: 1169680298}
-  - {fileID: 1203005375}
-  - {fileID: 1338650016}
-  - {fileID: 585912615}
-  - {fileID: 762147151}
-  - {fileID: 1460868460}
-  - {fileID: 708944223}
-  - {fileID: 666538462}
-  - {fileID: 742906684}
-  - {fileID: 887840097}
-  - {fileID: 636905769}
-  - {fileID: 1786986712}
-  - {fileID: 159538002}
-  - {fileID: 1549658102}
   - {fileID: 1396897885}
   - {fileID: 814520899}
   - {fileID: 333384662}
@@ -23598,6 +25435,27 @@ RectTransform:
   - {fileID: 2024833037}
   - {fileID: 762288773}
   - {fileID: 545874929}
+  - {fileID: 334928388}
+  - {fileID: 1550139979}
+  - {fileID: 423002116}
+  - {fileID: 511235263}
+  - {fileID: 1597309470}
+  - {fileID: 1738444188}
+  - {fileID: 1169680298}
+  - {fileID: 1203005375}
+  - {fileID: 1338650016}
+  - {fileID: 585912615}
+  - {fileID: 762147151}
+  - {fileID: 1460868460}
+  - {fileID: 708944223}
+  - {fileID: 666538462}
+  - {fileID: 742906684}
+  - {fileID: 887840097}
+  - {fileID: 636905769}
+  - {fileID: 1786986712}
+  - {fileID: 159538002}
+  - {fileID: 1549658102}
+  - {fileID: 1739265376}
   - {fileID: 1466483224}
   - {fileID: 292914968}
   m_Father: {fileID: 0}
@@ -23841,6 +25699,151 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747984275}
   m_CullTransparentMesh: 1
+--- !u!1 &1748517751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1748517752}
+  - component: {fileID: 1748517755}
+  - component: {fileID: 1748517754}
+  - component: {fileID: 1748517753}
+  m_Layer: 5
+  m_Name: "\u3053\u306E\u30B9\u30AD\u30EB\u306F\u53D6\u5F97\u6E08\u307F\u3067\u3059Button"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1748517752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748517751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1855952398}
+  m_Father: {fileID: 1456274831}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 2.29, y: 80}
+  m_SizeDelta: {x: 694.58, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1748517753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748517751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1748517754}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1265940241}
+        m_TargetAssemblyTypeName: SkillBottonColor, Assembly-CSharp
+        m_MethodName: IieButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1748517751}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1748517754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748517751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ac59c45f2e0a29649ab18aa94860d2a1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1748517755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748517751}
+  m_CullTransparentMesh: 1
 --- !u!1 &1757224885
 GameObject:
   m_ObjectHideFlags: 0
@@ -23932,6 +25935,7 @@ GameObject:
   - component: {fileID: 1763818589}
   - component: {fileID: 1763818588}
   - component: {fileID: 1763818587}
+  - component: {fileID: 1763818590}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button4"
   m_TagString: Untagged
@@ -23954,7 +25958,7 @@ RectTransform:
   - {fileID: 551776512}
   - {fileID: 1320059035}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 40
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24004,7 +26008,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1763818588}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1763818590}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1763818588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24043,6 +26059,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763818585}
   m_CullTransparentMesh: 1
+--- !u!114 &1763818590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763818585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1763818588}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1766809767
 GameObject:
   m_ObjectHideFlags: 0
@@ -24130,6 +26162,7 @@ GameObject:
   - component: {fileID: 1769675115}
   - component: {fileID: 1769675114}
   - component: {fileID: 1769675113}
+  - component: {fileID: 1769675116}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button2"
   m_TagString: Untagged
@@ -24153,7 +26186,7 @@ RectTransform:
   - {fileID: 1228981421}
   - {fileID: 1465268721}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 51
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24203,7 +26236,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1769675114}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1769675116}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1769675114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24242,6 +26287,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769675111}
   m_CullTransparentMesh: 1
+--- !u!114 &1769675116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769675111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1769675114}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1770170922
 GameObject:
   m_ObjectHideFlags: 0
@@ -24488,6 +26549,7 @@ GameObject:
   - component: {fileID: 1786986715}
   - component: {fileID: 1786986714}
   - component: {fileID: 1786986713}
+  - component: {fileID: 1786986716}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30DC\u30E0Button3"
   m_TagString: Untagged
@@ -24510,7 +26572,7 @@ RectTransform:
   - {fileID: 860077832}
   - {fileID: 593406}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 34
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24560,7 +26622,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1786986714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1786986716}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1786986714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24599,6 +26673,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786986711}
   m_CullTransparentMesh: 1
+--- !u!114 &1786986716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786986711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1786986714}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1795257091
 GameObject:
   m_ObjectHideFlags: 0
@@ -25069,6 +27159,7 @@ GameObject:
   - component: {fileID: 1825381877}
   - component: {fileID: 1825381876}
   - component: {fileID: 1825381875}
+  - component: {fileID: 1825381878}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button1"
   m_TagString: Untagged
@@ -25092,7 +27183,7 @@ RectTransform:
   - {fileID: 974592216}
   - {fileID: 603743757}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 50
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25142,7 +27233,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1825381876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1825381878}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1825381876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25181,6 +27284,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825381873}
   m_CullTransparentMesh: 1
+--- !u!114 &1825381878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825381873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1825381876}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1829401742
 GameObject:
   m_ObjectHideFlags: 0
@@ -25330,7 +27449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: 4
 --- !u!222 &1843341034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25338,6 +27457,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843341031}
+  m_CullTransparentMesh: 1
+--- !u!1 &1855952397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855952398}
+  - component: {fileID: 1855952400}
+  - component: {fileID: 1855952399}
+  m_Layer: 5
+  m_Name: "\u3053\u306E\u30B9\u30AD\u30EB\u306F\u53D6\u5F97\u6E08\u307F\u3067\u3059Text"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1855952398
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855952397}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1748517752}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1855952399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855952397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3301887, g: 0.25452048, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 54
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u3053\u306E\u30B9\u30AD\u30EB\u306F\u53D6\u5F97\u6E08\u307F\u3067\u3059\u3002"
+--- !u!222 &1855952400
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855952397}
   m_CullTransparentMesh: 1
 --- !u!1 &1857274437
 GameObject:
@@ -25663,6 +27861,7 @@ GameObject:
   - component: {fileID: 1899013869}
   - component: {fileID: 1899013868}
   - component: {fileID: 1899013867}
+  - component: {fileID: 1899013870}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30A6\u30A9\u30FC\u30EBButton4"
   m_TagString: Untagged
@@ -25735,7 +27934,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1899013868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1899013870}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1899013868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25774,6 +27985,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899013865}
   m_CullTransparentMesh: 1
+--- !u!114 &1899013870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899013865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1899013868}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1903720197
 GameObject:
   m_ObjectHideFlags: 0
@@ -26703,6 +28930,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964270899}
   m_CullTransparentMesh: 1
+--- !u!1 &1992887825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992887826}
+  - component: {fileID: 1992887828}
+  - component: {fileID: 1992887827}
+  m_Layer: 5
+  m_Name: "\u77E2\u5370Image"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1992887826
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992887825}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5, w: 0.8660254}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.001196, y: 1.001196, z: 1.001196}
+  m_Children: []
+  m_Father: {fileID: 701014531}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -73, y: 48}
+  m_SizeDelta: {x: 11.099998, y: 45.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1992887827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992887825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b1c9c731b18c50243bfe38c4612087d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1992887828
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992887825}
+  m_CullTransparentMesh: 1
 --- !u!1 &1994030668
 GameObject:
   m_ObjectHideFlags: 0
@@ -26715,6 +29017,7 @@ GameObject:
   - component: {fileID: 1994030672}
   - component: {fileID: 1994030671}
   - component: {fileID: 1994030670}
+  - component: {fileID: 1994030673}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30B3\u30F3\u30DCButton2"
   m_TagString: Untagged
@@ -26787,7 +29090,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1994030671}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1994030673}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1994030671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26826,6 +29141,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994030668}
   m_CullTransparentMesh: 1
+--- !u!114 &1994030673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994030668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 1994030671}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &1999829289
 GameObject:
   m_ObjectHideFlags: 0
@@ -26917,6 +29248,7 @@ GameObject:
   - component: {fileID: 2024833040}
   - component: {fileID: 2024833039}
   - component: {fileID: 2024833038}
+  - component: {fileID: 2024833041}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button13"
   m_TagString: Untagged
@@ -26938,7 +29270,7 @@ RectTransform:
   - {fileID: 775311221}
   - {fileID: 1932417319}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 62
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26988,7 +29320,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2024833039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024833041}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2024833039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27027,6 +29371,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024833036}
   m_CullTransparentMesh: 1
+--- !u!114 &2024833041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024833036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 2024833039}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &2040738764
 GameObject:
   m_ObjectHideFlags: 0
@@ -27194,6 +29554,7 @@ GameObject:
   - component: {fileID: 2049592563}
   - component: {fileID: 2049592562}
   - component: {fileID: 2049592561}
+  - component: {fileID: 2049592564}
   m_Layer: 5
   m_Name: "FB\u30B3\u30B9\u30C8\u30C0\u30A6\u30F3Button7"
   m_TagString: Untagged
@@ -27216,7 +29577,7 @@ RectTransform:
   - {fileID: 382893590}
   - {fileID: 1766809768}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 56
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27266,7 +29627,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2049592562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2049592564}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2049592562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27305,6 +29678,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049592559}
   m_CullTransparentMesh: 1
+--- !u!114 &2049592564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049592559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 2049592562}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &2051998616
 GameObject:
   m_ObjectHideFlags: 0
@@ -27396,6 +29785,7 @@ GameObject:
   - component: {fileID: 2082319424}
   - component: {fileID: 2082319423}
   - component: {fileID: 2082319422}
+  - component: {fileID: 2082319425}
   m_Layer: 5
   m_Name: "\u5897\u6B96\u6570Button1"
   m_TagString: Untagged
@@ -27468,7 +29858,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2082319423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2082319425}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2082319423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27507,6 +29909,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082319420}
   m_CullTransparentMesh: 1
+--- !u!114 &2082319425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082319420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 2082319423}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &2088980512
 GameObject:
   m_ObjectHideFlags: 0
@@ -27594,6 +30012,7 @@ GameObject:
   - component: {fileID: 2094342781}
   - component: {fileID: 2094342780}
   - component: {fileID: 2094342779}
+  - component: {fileID: 2094342782}
   m_Layer: 5
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30A6\u30A9\u30FC\u30EBButton5"
   m_TagString: Untagged
@@ -27615,6 +30034,7 @@ RectTransform:
   - {fileID: 719187053}
   - {fileID: 1357384300}
   - {fileID: 1581467966}
+  - {fileID: 211516912}
   m_Father: {fileID: 1745927165}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27666,7 +30086,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2094342780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2094342782}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2094342780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27705,6 +30137,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094342777}
   m_CullTransparentMesh: 1
+--- !u!114 &2094342782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094342777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 2094342780}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &2109002818
 GameObject:
   m_ObjectHideFlags: 0
@@ -27717,6 +30165,7 @@ GameObject:
   - component: {fileID: 2109002822}
   - component: {fileID: 2109002821}
   - component: {fileID: 2109002820}
+  - component: {fileID: 2109002823}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button12"
   m_TagString: Untagged
@@ -27740,7 +30189,7 @@ RectTransform:
   - {fileID: 1023326289}
   - {fileID: 623954876}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 48
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27790,7 +30239,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2109002821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2109002823}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2109002821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27829,6 +30290,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109002818}
   m_CullTransparentMesh: 1
+--- !u!114 &2109002823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109002818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 2109002821}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &2111859493
 GameObject:
   m_ObjectHideFlags: 0
@@ -28066,6 +30543,7 @@ GameObject:
   - component: {fileID: 2117702040}
   - component: {fileID: 2117702039}
   - component: {fileID: 2117702038}
+  - component: {fileID: 2117702041}
   m_Layer: 5
   m_Name: "\u9B54\u529B\u30A2\u30C3\u30D7Button11"
   m_TagString: Untagged
@@ -28088,7 +30566,7 @@ RectTransform:
   - {fileID: 1517524885}
   - {fileID: 442580970}
   m_Father: {fileID: 1745927165}
-  m_RootOrder: 47
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -28138,7 +30616,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2117702039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2117702041}
+        m_TargetAssemblyTypeName: SkillButtonColorHanntei, Assembly-CSharp
+        m_MethodName: SkillAdd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2117702039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28177,6 +30667,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117702036}
   m_CullTransparentMesh: 1
+--- !u!114 &2117702041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117702036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ec7c9f72479439164ada0fa46991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiiro: {r: 1, g: 0.9607843, b: 0, a: 1}
+  haiiro: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  image: {fileID: 2117702039}
+  skillBottonColor: {fileID: 1265940241}
 --- !u!1 &2121661367
 GameObject:
   m_ObjectHideFlags: 0
@@ -28322,7 +30828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 3
 --- !u!222 &2125163208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28687,7 +31193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 8
 --- !u!222 &2143615364
 CanvasRenderer:
   m_ObjectHideFlags: 0
