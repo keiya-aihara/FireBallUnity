@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 			{
 				weitTime += Time.deltaTime;
 
-				if (weitTime >= 3f)
+				if (weitTime >= 1.5f)
 				{
 					if (b)
 					{

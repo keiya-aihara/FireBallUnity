@@ -15,6 +15,24 @@ TagManager:
   - Srush
   - EnemyAttack
   - DamageHanni
+  - KinnkyoriWeponSoubiReadoIcon
+  - KinnkyoriWeponSoubiIcon
+  - EnnkyoriWeponSoubiIcon
+  - YoroiSoubiReadoIcon
+  - YoroiSoubiIcon
+  - SonotaSoubiIcon
+  - SonotaSoubiReadoIcon
+  - EnnkyoriWeponSoubiReadoIcon
+  - DropSobi
+  - Syougou
+  - Gift
+  - Kyoukaseki
+  - Tyekku
+  - FireWall
+  - NomalBall
+  - SpireBall
+  - RapidBall
+  - BomBall
   layers:
   - Default
   - TransparentFX

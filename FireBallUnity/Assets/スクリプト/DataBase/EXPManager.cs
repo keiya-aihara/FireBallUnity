@@ -21,7 +21,7 @@ public class EXPManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        lvUpExp = GetLvupExp(lv);
+        
     }
     void Start()
     {
@@ -45,14 +45,17 @@ public class EXPManager : MonoBehaviour
             playerStatusDataBase.statusBougyoryoku += 1;
             playerStatusDataBase.statusMeityuuritu += 0.5f;
             playerStatusDataBase.statusKaihiritu += 0.2f;
-            if(lv % 5 == 0 )
+            if(lv % 10 == 0 )
             {
                 playerStatusDataBase.statusFireBallCost += 1;
             }
+            playerStatusDataBase.syoziSp++;
         }
+        playerStatusDataBase.statusSaveData.lv = lv;
+
         playerStatusDataBase.StatusUpdate();
     }
-    private int GetLvupExp(int lv)
+    public int GetLvupExp(int lv)
     {
         return ((lv + 1) * (lv * 100) / 2);
     }

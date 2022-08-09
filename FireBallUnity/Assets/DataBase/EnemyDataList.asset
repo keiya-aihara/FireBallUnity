@@ -25,7 +25,7 @@ MonoBehaviour:
     ryuu: 0
     kami: 0
     maxHp: 500
-    hp: 500000
+    hp: 500
     kougekiryoku: 1
     kaisinnritu: 0
     bougyoryoku: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
     kougekiHanni: 5
     speed: 70
     nokkubakkuBougyo: 0.1
-    exp: 1000000
+    exp: 900000
     gold: 1000
     dropItemSuu: 5
     dropItemNos: 0000000001000000020000000300000004000000

@@ -13,6 +13,7 @@ public class ReadobetuItemSlider : MonoBehaviour
     public GameObject tyekkuBotton;
     public GameObject kakutokuBotton;
     private KousekiDataBaseManager kousekiDataBaseManager;
+    private PlayerStatusDataBase playerStatusDataBase;
     private bool kakutokuzumi;
 
     public GameObject torophyKakutokuPanel;
@@ -42,6 +43,8 @@ public class ReadobetuItemSlider : MonoBehaviour
         
         slider = gameObject.GetComponent<Slider>();
         kousekiCopyScript = kousekiCopy.GetComponent<KousekiCopy>();
+        kousekiDataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KousekiDataBaseManager>();
+        playerStatusDataBase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>();
 
         if (nomal) slider.value = kousekiCopyScript.kousekiDataBaseManager.nomalGetSuu;
         else if (rea) slider.value = kousekiCopyScript.kousekiDataBaseManager.reaGetSuu;
@@ -72,7 +75,6 @@ public class ReadobetuItemSlider : MonoBehaviour
     }
     public void ToroPhyKakutoku()
     {
-        kousekiDataBaseManager = GameObject.Find("KousekiDataBaseManager").GetComponent<KousekiDataBaseManager>();
         kakutokuzumi = true;
         kakutokuBotton.SetActive(false);
         DropRituBonasAdd();
@@ -83,42 +85,42 @@ public class ReadobetuItemSlider : MonoBehaviour
     {
         if(nomal)
         {
-            kousekiDataBaseManager.nomalDropRitu += 50;
+            playerStatusDataBase.nomalDropRitu += 50;
             kousekiDataBaseManager.whiteTorophy ++;
             reado = "ノーマル";
             torophy = "ホワイトトロフィー";
         }
         else if(rea)
         {
-            kousekiDataBaseManager.reaDropRitu += 50;
+            playerStatusDataBase.reaDropRitu += 50;
             kousekiDataBaseManager.greenTorophy++;
             reado = "レア";
             torophy = "グリーントロフィー";
         }
         else if(superRea)
         {
-            kousekiDataBaseManager.superReaDropRitu += 50;
+            playerStatusDataBase.superReaDropRitu += 50;
             kousekiDataBaseManager.buleeTorophy++;
             reado = "スーパーレア";
             torophy = "ブルートロフィー";
         }
         else if(epikRea)
         {
-            kousekiDataBaseManager.epikReaDropRitu += 50;
+            playerStatusDataBase.epikReaDropRitu += 50;
             kousekiDataBaseManager.redTorophy++;
             reado = "エピックレア";
             torophy = "レッドトロフィー";
         }
         else if(legendaryRea)
         {
-            kousekiDataBaseManager.legendaryReaDropRitu += 50;
+            playerStatusDataBase.legendaryReaDropRitu += 50;
             kousekiDataBaseManager.purpleTorophy++;
             reado = "レジェンダリーレア";
             torophy = "パープルトロフィー";
         }
         else if(godRea)
         {
-            kousekiDataBaseManager.godReaDropRitu += 50;
+            playerStatusDataBase.godReaDropRitu += 50;
             kousekiDataBaseManager.godTorophy++;
             reado = "ゴットレア";
             torophy = "ゴットトロフィー";

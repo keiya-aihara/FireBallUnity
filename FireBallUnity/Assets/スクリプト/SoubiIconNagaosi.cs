@@ -95,7 +95,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         {
             nagaosiTime += Time.deltaTime;
         }
-        if(nagaosiTime >= 1)
+        if(nagaosiTime >= 0.4f)
         {
             if (SceneManager.GetActiveScene().name == "StatusMenu")
             {            
@@ -270,7 +270,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             nagaosiTime = 0;
         }
     }
-    private void StatusPanel()
+    public void StatusPanel()
     {
         if (SceneManager.GetActiveScene().name == "StatusMenu")
         {
@@ -281,15 +281,12 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
 
             if (soubiData.syougouName != "" || soubiData.giftBairituName != "")
             {
-                Debug.Log("A");
                 text = syougouGiftHosei.GetComponent<Text>();
                 text.text = "《称号》〈ギフト〉補正値";
                 Instantiate(syougouGiftHosei, transform.position, transform.rotation, statusPanelContent.transform);
 
                 if (soubiData.syougouName != "")
                 {
-
-
                     if (soubiData.syougouRea)
                     {
                         text = nomalSyougouhoseinouryoku.GetComponent<Text>();
@@ -308,8 +305,6 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                         text.text = " -" + soubiData.syougouBairitu;
                         Instantiate(superReaSyougouhoseinouryoku, transform.position, transform.rotation, statusPanelContent.transform);
                     }
-
-
                 }
 
                 if (soubiData.giftBairituName != "")
@@ -553,10 +548,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     {
         
         soubi = pointerEventData.selectedObject;
-       
         if (soubi.tag == "KinnkyoriWeponSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content 近距離武器　ステータス")
+            if (soubi.transform.parent.name == "Content 近距離武器　ステータス"|| soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 kinnkyoriWeponSoubiIcon = soubi.GetComponent<KinnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
@@ -573,9 +567,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 kinnkyoriWepon = true;
             }
         }
-        if(soubi.tag == "KinnkyoriWeponSoubiIcon")
+        else if(soubi.tag == "KinnkyoriWeponSoubiIcon")
         {
-            if(soubi.transform.parent.parent.name == "Content 近距離武器　ステータス")
+            if(soubi.transform.parent.parent.name == "Content 近距離武器　ステータス"|| soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 kinnkyoriWeponSoubiIcon = soubi.transform.parent.GetComponent<KinnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
@@ -592,9 +586,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 kinnkyoriWepon = true;
             }
         }
-        if (soubi.tag == "EnnkyoriWeponSoubiReadoIcon")
+        else if (soubi.tag == "EnnkyoriWeponSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content 遠距離武器 ステータス")
+            if (soubi.transform.parent.name == "Content 遠距離武器 ステータス" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
@@ -611,9 +605,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 ennkyoriWepon = true;
             }
         }
-        if (soubi.tag == "EnnkyoriWeponSoubiIcon")
+        else if (soubi.tag == "EnnkyoriWeponSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content 遠距離武器 ステータス")
+            if (soubi.transform.parent.parent.name == "Content 遠距離武器 ステータス" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 ennkyoriWeponSoubiIcon = soubi.transform.parent.GetComponent<EnnkyoriWeponSoubiIcon>();
                 number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
@@ -631,16 +625,15 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 ennkyoriWepon = true;
             }
         }
-        if (soubi.tag == "YoroiSoubiReadoIcon")
+        else if (soubi.tag == "YoroiSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content 鎧装備 ステータス")
+            if (soubi.transform.parent.name == "Content 鎧装備 ステータス" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
                 number = soubi.GetComponent<YoroiSoubiIcon>().number;
                 yoroiSoubiIcon.a = true;
                 a = true;
                 yoroi = true;
-                Debug.Log(yoroiSoubiIcon.a);
             }
             else if (soubi.transform.parent.name == "Content Select Soubi　装備強化・売却")
             {
@@ -651,9 +644,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 yoroi = true;
             }
         }
-        if (soubi.tag == "YoroiSoubiIcon")
+        else if (soubi.tag == "YoroiSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content 鎧装備 ステータス")
+            if (soubi.transform.parent.parent.name == "Content 鎧装備 ステータス" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 yoroiSoubiIcon = soubi.transform.parent.GetComponent<YoroiSoubiIcon>();
                 number = soubi.GetComponent<YoroiSoubiIcon>().number;
@@ -671,9 +664,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 yoroi = true;
             }
         }
-        if (soubi.tag == "SonotaSoubiIcon")
+        else if (soubi.tag == "SonotaSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content その他装備 ステータス 1")
+            if (soubi.transform.parent.parent.name == "Content その他装備 ステータス 1" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.transform.parent.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
@@ -691,20 +684,18 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 sonota = true;
             }
         }
-        if(soubi.tag == "SonotaSoubiReadoIcon")
+        else if(soubi.tag == "SonotaSoubiReadoIcon")
             {
-            if (soubi.transform.parent.name == "Content その他装備 ステータス 1")
+            if (soubi.transform.parent.name == "Content その他装備 ステータス 1" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;
-                Debug.Log(sonotaSoubiIcon.a);
             }
             else if (soubi.transform.parent.name == "Content Select Soubi　装備強化・売却")
             {
-                Debug.Log("aaaaa");
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
                 sonotaSoubiIcon.a = true;
@@ -713,9 +704,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             }
 
         }
-        if (soubi.tag == "SonotaSoubiIcon")
+        else if (soubi.tag == "SonotaSoubiIcon")
         {
-            if (soubi.transform.parent.parent.name == "Content その他装備 ステータス2")
+            if (soubi.transform.parent.parent.name == "Content その他装備 ステータス2" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.transform.parent.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;
@@ -725,9 +716,9 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 Debug.Log(sonotaSoubiIcon.a);
             }
         }
-        if (soubi.tag == "SonotaSoubiReadoIcon")
+        else if (soubi.tag == "SonotaSoubiReadoIcon")
         {
-            if (soubi.transform.parent.name == "Content その他装備 ステータス2")
+            if (soubi.transform.parent.name == "Content その他装備 ステータス2" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
                 number = soubi.GetComponent<SonotaSoubiIcon>().number;

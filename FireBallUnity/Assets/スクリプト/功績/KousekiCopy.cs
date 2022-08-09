@@ -5,12 +5,13 @@ using UnityEngine;
 public class KousekiCopy : MonoBehaviour
 {
     public KousekiDataBaseManager kousekiDataBaseManager;
+    public PlayerStatusDataBase playerStatusDataBase;
     public bool a;
     // Start is called before the first frame update
     private void Awake()
     {
-        kousekiDataBaseManager = GameObject.Find("DataBaseManager").GetComponent<KousekiDataBaseManager>();
-
+        kousekiDataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KousekiDataBaseManager>();
+        playerStatusDataBase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>();
     }
     void Start()
     {

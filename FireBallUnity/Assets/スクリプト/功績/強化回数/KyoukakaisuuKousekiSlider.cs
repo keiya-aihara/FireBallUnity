@@ -12,6 +12,7 @@ public class KyoukakaisuuKousekiSlider : MonoBehaviour
     public GameObject tyekkuBotton;
     public GameObject kakutokuBotton;
     private KousekiDataBaseManager kousekiDataBaseManager;
+    private PlayerStatusDataBase playerStatusDataBase;
     private bool kakutokuzumi;
 
     public GameObject torophyKakutokuPanel;
@@ -22,6 +23,8 @@ public class KyoukakaisuuKousekiSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        kousekiDataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KousekiDataBaseManager>();
+        playerStatusDataBase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>();
         slider = gameObject.GetComponent<Slider>();
         kousekiCopyScript = kousekiCopy.GetComponent<KousekiCopy>();
 
@@ -49,7 +52,6 @@ public class KyoukakaisuuKousekiSlider : MonoBehaviour
     }
     public void TorophyKakutoku()
     {
-        kousekiDataBaseManager = GameObject.Find("KousekiDataBaseManager").GetComponent<KousekiDataBaseManager>();
         kakutokuzumi = true;
         kakutokuBotton.SetActive(false);
         KyoukaTaikaBonusAdd();
@@ -57,7 +59,7 @@ public class KyoukakaisuuKousekiSlider : MonoBehaviour
     }
     public void KyoukaTaikaBonusAdd()
     {
-        kousekiDataBaseManager.kyoukataikaGennsyouritu += 5;
+        playerStatusDataBase.kyoukataikaGennsyouritu += 5;
         kousekiDataBaseManager.kyoukasekiTorophy++;
     }
     public void KakutokuTorophyPanel()

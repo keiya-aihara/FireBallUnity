@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +11,7 @@ public class ToubatusuuSlider : MonoBehaviour
     public GameObject tyekkuBotton;
     public GameObject kakutokuBotton;
     private KousekiDataBaseManager kousekiDataBaseManager;
+    private PlayerStatusDataBase playerStatusDataBase;
 
     public GameObject torophyKakutokuPanel;
     public GameObject torophyKakutokuText;
@@ -43,7 +44,8 @@ public class ToubatusuuSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        kousekiDataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KousekiDataBaseManager>();
+        playerStatusDataBase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>();
         kousekiCopyScript = kousekiCopy.GetComponent<KousekiCopy>();
         slider = gameObject.GetComponent<Slider>();
         if(mazyuu)
@@ -98,7 +100,6 @@ public class ToubatusuuSlider : MonoBehaviour
     }
     public void TorophyKakutoku()
     {
-        kousekiDataBaseManager = GameObject.Find("DataBaseManager").GetComponent<KousekiDataBaseManager>();
         kakutokuZumi = true;
         kakutokuBotton.SetActive(false);
         TokkouAdd();
@@ -110,213 +111,213 @@ public class ToubatusuuSlider : MonoBehaviour
         {
             if (mazyuu)
             {
-                kousekiDataBaseManager.mazyuuTokkou += 10;
-                syuzoku = "–‚b";
+                playerStatusDataBase.kousekiMazyuuTokkou += 10;
+                syuzoku = "é­”ç£";
             }
             else if (ninngenn)
             {
-                kousekiDataBaseManager.ninngennTokkou += 10;
-                syuzoku = "lŠÔ";
+                playerStatusDataBase.kousekiNinngennTokkou += 10;
+                syuzoku = "äººé–“";
             }
             else if (mazinn)
             {
-                kousekiDataBaseManager.mazinnTokkou += 10;
-                syuzoku = "–‚l";
+                playerStatusDataBase.kousekiMazinnTokkou += 10;
+                syuzoku = "é­”äºº";
             }
             else if (husi)
             {
-                kousekiDataBaseManager.husiTokkou += 10;
-                syuzoku = "•s€";
+                playerStatusDataBase.kousekiHusiTokkou += 10;
+                syuzoku = "ä¸æ­»";
             }
             else if (akuma)
             {
-                kousekiDataBaseManager.akumaTokkou += 10;
-                syuzoku = "ˆ«–‚";
+                playerStatusDataBase.kousekiAkumaTokkou += 10;
+                syuzoku = "æ‚ªé­”";
             }
             else if (ryuu)
             {
-                kousekiDataBaseManager.RyuuTokkou += 10;
-                syuzoku = "—³";
+                playerStatusDataBase.kousekiRyuuTokkou += 10;
+                syuzoku = "ç«œ";
             }
             else if (kami)
             {
-                kousekiDataBaseManager.KamiTokkou += 10;
-                syuzoku = "_";
+                playerStatusDataBase.kousekiKamiTokkou += 10;
+                syuzoku = "ç¥";
             }
             tokkou = 10;
-            torophy = "ƒuƒƒ“ƒYƒgƒƒtƒB[";
+            torophy = "ãƒ–ãƒ­ãƒ³ã‚ºãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
             kousekiDataBaseManager.buronzuTorophy++;
         }
         else if (tokkou15)
         {
             if (mazyuu)
             {
-                kousekiDataBaseManager.mazyuuTokkou += 15;
-                syuzoku = "–‚b";
+                playerStatusDataBase.kousekiMazyuuTokkou += 15;
+                syuzoku = "é­”ç£";
             }
             else if (ninngenn)
             {
-                kousekiDataBaseManager.ninngennTokkou += 15;
-                syuzoku = "lŠÔ";
+                playerStatusDataBase.kousekiNinngennTokkou += 15;
+                syuzoku = "äººé–“";
             }
             else if (mazinn)
             {
-                kousekiDataBaseManager.mazinnTokkou += 15;
-                syuzoku = "–‚l";
+                playerStatusDataBase.kousekiMazinnTokkou += 15;
+                syuzoku = "é­”äºº";
             }
             else if (husi)
             {
-                kousekiDataBaseManager.husiTokkou += 15;
-                syuzoku = "•s€";
+                playerStatusDataBase.kousekiHusiTokkou += 15;
+                syuzoku = "ä¸æ­»";
             }
             else if (akuma)
             {
-                kousekiDataBaseManager.akumaTokkou += 15;
-                syuzoku = "ˆ«–‚";
+                playerStatusDataBase.kousekiAkumaTokkou += 15;
+                syuzoku = "æ‚ªé­”";
             }
             else if (ryuu)
             {
-                kousekiDataBaseManager.RyuuTokkou += 15;
-                syuzoku = "—³";
+                playerStatusDataBase.kousekiRyuuTokkou += 15;
+                syuzoku = "ç«œ";
             }
             else if (kami)
             {
-                kousekiDataBaseManager.KamiTokkou += 15;
-                syuzoku = "_";
+                playerStatusDataBase.kousekiKamiTokkou += 15;
+                syuzoku = "ç¥";
             }
             tokkou = 15;
-            torophy = "ƒVƒ‹ƒo[ƒgƒƒtƒB[";
+            torophy = "ã‚·ãƒ«ãƒãƒ¼ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
             kousekiDataBaseManager.sirubaaTorophy++;
         }
         else if (tokkou20)
         {
             if (mazyuu)
             {
-                kousekiDataBaseManager.mazyuuTokkou += 20;
-                syuzoku = "–‚b";
+                playerStatusDataBase.kousekiMazyuuTokkou += 20;
+                syuzoku = "é­”ç£";
             }
             else if (ninngenn)
             {
-                kousekiDataBaseManager.ninngennTokkou += 20;
-                syuzoku = "lŠÔ";
+                playerStatusDataBase.kousekiNinngennTokkou += 20;
+                syuzoku = "äººé–“";
             }
             else if (mazinn)
             {
-                kousekiDataBaseManager.mazinnTokkou += 20;
-                syuzoku = "–‚l";
+                playerStatusDataBase.kousekiMazinnTokkou += 20;
+                syuzoku = "é­”äºº";
             }
             else if (husi)
             {
-                kousekiDataBaseManager.husiTokkou += 20;
-                syuzoku = "•s€";
+                playerStatusDataBase.kousekiHusiTokkou += 20;
+                syuzoku = "ä¸æ­»";
             }
             else if (akuma)
             {
-                kousekiDataBaseManager.akumaTokkou += 20;
-                syuzoku = "ˆ«–‚";
+                playerStatusDataBase.kousekiAkumaTokkou += 20;
+                syuzoku = "æ‚ªé­”";
             }
             else if (ryuu)
             {
-                kousekiDataBaseManager.RyuuTokkou += 20;
-                syuzoku = "—³";
+                playerStatusDataBase.kousekiRyuuTokkou += 20;
+                syuzoku = "ç«œ";
             }
             else if (kami)
             {
-                kousekiDataBaseManager.KamiTokkou += 20;
-                syuzoku = "_";
+                playerStatusDataBase.kousekiKamiTokkou += 20;
+                syuzoku = "ç¥";
             }
             tokkou = 20;
-            torophy = "ƒS[ƒ‹ƒhƒgƒƒtƒB[";
+            torophy = "ã‚´ãƒ¼ãƒ«ãƒ‰ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
             kousekiDataBaseManager.goorudoTorophy++;
         }
         else if (tokkou25)
         {
             if (mazyuu)
             {
-                kousekiDataBaseManager.mazyuuTokkou += 25;
-                syuzoku = "–‚b";
+                playerStatusDataBase.kousekiMazyuuTokkou += 25;
+                syuzoku = "é­”ç£";
             }
             else if (ninngenn)
             {
-                kousekiDataBaseManager.ninngennTokkou += 25;
-                syuzoku = "lŠÔ";
+                playerStatusDataBase.kousekiNinngennTokkou += 25;
+                syuzoku = "äººé–“";
             }
             else if (mazinn)
             {
-                kousekiDataBaseManager.mazinnTokkou += 25;
-                syuzoku = "–‚l";
+                playerStatusDataBase.kousekiMazinnTokkou += 25;
+                syuzoku = "é­”äºº";
             }
             else if (husi)
             {
-                kousekiDataBaseManager.husiTokkou += 25;
-                syuzoku = "•s€";
+                playerStatusDataBase.kousekiHusiTokkou += 25;
+                syuzoku = "ä¸æ­»";
             }
             else if (akuma)
             {
-                kousekiDataBaseManager.akumaTokkou += 25;
-                syuzoku = "ˆ«–‚";
+                playerStatusDataBase.kousekiAkumaTokkou += 25;
+                syuzoku = "æ‚ªé­”";
             }
             else if (ryuu)
             {
-                kousekiDataBaseManager.RyuuTokkou += 25;
-                syuzoku = "—³";
+                playerStatusDataBase.kousekiRyuuTokkou += 25;
+                syuzoku = "ç«œ";
             }
             else if (kami)
             {
-                kousekiDataBaseManager.KamiTokkou += 25;
-                syuzoku = "_";
+                playerStatusDataBase.kousekiKamiTokkou += 25;
+                syuzoku = "ç¥";
             }
             tokkou = 25;
-            torophy = "ƒvƒ‰ƒ`ƒiƒgƒƒtƒB[";
+            torophy = "ãƒ—ãƒ©ãƒãƒŠãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
             kousekiDataBaseManager.puratinaTorophy++;
         }
         else if (tokkou30)
         {
             if (mazyuu)
             {
-                kousekiDataBaseManager.mazyuuTokkou += 30;
-                syuzoku = "–‚b";
+                playerStatusDataBase.kousekiMazyuuTokkou += 30;
+                syuzoku = "é­”ç£";
             }
             else if (ninngenn)
             {
-                kousekiDataBaseManager.ninngennTokkou += 30;
-                syuzoku = "lŠÔ";
+                playerStatusDataBase.kousekiNinngennTokkou += 30;
+                syuzoku = "äººé–“";
             }
             else if (mazinn)
             {
-                kousekiDataBaseManager.mazinnTokkou += 30;
-                syuzoku = "–‚l";
+                playerStatusDataBase.kousekiMazinnTokkou += 30;
+                syuzoku = "é­”äºº";
             }
             else if (husi)
             {
-                kousekiDataBaseManager.husiTokkou += 30;
-                syuzoku = "•s€";
+                playerStatusDataBase.kousekiHusiTokkou += 30;
+                syuzoku = "ä¸æ­»";
             }
             else if (akuma)
             {
-                kousekiDataBaseManager.akumaTokkou += 30;
-                syuzoku = "ˆ«–‚";
+                playerStatusDataBase.kousekiAkumaTokkou += 30;
+                syuzoku = "æ‚ªé­”";
             }
             else if (ryuu)
             {
-                kousekiDataBaseManager.RyuuTokkou += 30;
-                syuzoku = "—³";
+                playerStatusDataBase.kousekiRyuuTokkou += 30;
+                syuzoku = "ç«œ";
             }
             else if (kami)
             {
-                kousekiDataBaseManager.KamiTokkou += 30;
-                syuzoku = "_";
+                playerStatusDataBase.kousekiKamiTokkou += 30;
+                syuzoku = "ç¥";
             }
             tokkou = 30;
-            torophy = "ƒ_ƒCƒAƒ‚ƒ“ƒhƒgƒƒtƒB[";
+            torophy = "ãƒ€ã‚¤ã‚¢ãƒ¢ãƒ³ãƒ‰ãƒˆãƒ­ãƒ•ã‚£ãƒ¼";
             kousekiDataBaseManager.daiamonndoTorophy++;
         }
     }
     public void KakutokuTorophyPanel()
     {
         torophyKakutokuPanel.SetActive(true);
-        torophyKakutokuText.GetComponent<Text>().text = "uí‘°E" + syuzoku + "‚ğ"+slider.maxValue.ToString("N0")+"‘Ì“¢”°‚·‚év\n" + torophy + "‚ğŠl“¾‚µ‚Ü‚µ‚½";
-        tokkouText.GetComponent<Text>().text = syuzoku + "‚É‘Î‚·‚é—^ƒ_ƒ[ƒW‚ª" + tokkou + "%ã¸‚µ‚Ü‚·";
+        torophyKakutokuText.GetComponent<Text>().text = "ã€Œç¨®æ—ãƒ»" + syuzoku + "ã‚’"+slider.maxValue.ToString("N0")+"ä½“è¨ä¼ã™ã‚‹ã€\n" + torophy + "ã‚’ç²å¾—ã—ã¾ã—ãŸ";
+        tokkouText.GetComponent<Text>().text = syuzoku + "ã«å¯¾ã™ã‚‹ä¸ãƒ€ãƒ¡ãƒ¼ã‚¸ãŒ" + tokkou + "%ä¸Šæ˜‡ã—ã¾ã™";
         if (tokkou10) Instantiate(buronzuTorophy, transform.localPosition, transform.rotation, kinnwakuImage.transform);
         else if (tokkou15) Instantiate(sirubaaTorophy, transform.position, transform.rotation, kinnwakuImage.transform);
         else if (tokkou20) Instantiate(goorudoTorophy, transform.position, transform.rotation, kinnwakuImage.transform);

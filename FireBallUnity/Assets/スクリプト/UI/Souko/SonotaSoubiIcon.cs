@@ -13,6 +13,7 @@ public class SonotaSoubiIcon : MonoBehaviour
     private GameObject scrollViewYoroiStatus;
     private GameObject scrollViewSonotaStatus1;
     private GameObject scrollViewSonotaStatus2;
+    private GameObject scrollViewSoubiItirann;
     private GameObject[] gameObjectList;
 
     public GameObject reaCircle;
@@ -31,8 +32,13 @@ public class SonotaSoubiIcon : MonoBehaviour
     private StatusPanelVector statusPanelVector;
 
     public GameObject tyekku;
+    public GameObject soubityuuTyekku;
+    public GameObject soubityuuTyekk2;
+
 
     public bool a;
+    private bool c1;
+    private bool c2;
     void Start()
     {
         databaseManager = GameObject.Find("DataBaseManager");
@@ -79,22 +85,38 @@ public class SonotaSoubiIcon : MonoBehaviour
                 {
                     scrollViewKinnKyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 遠距離武器 ステータス")
+                else if (a.name == "Scroll View 遠距離武器 ステータス")
                 {
                     scrollViewEnnkyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 鎧装備 ステータス")
+                else if (a.name == "Scroll View 鎧装備 ステータス")
                 {
                     scrollViewYoroiStatus = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス1")
+                else if (a.name == "Scroll View その他装備 ステータス1")
                 {
                     scrollViewSonotaStatus1 = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス2")
+                else if (a.name == "Scroll View その他装備 ステータス2")
                 {
                     scrollViewSonotaStatus2 = a;
                 }
+                else if (a.name == "装備一覧 Scroll View")
+                {
+                    scrollViewSoubiItirann = a;
+                }
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Souko")
+        {
+            if (playerStatusDataBase.sonota1No == number)
+            {
+                Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+            }
+            else if (playerStatusDataBase.sonota2No == number)
+            {
+                Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
             }
         }
     }
@@ -117,6 +139,74 @@ public class SonotaSoubiIcon : MonoBehaviour
                 Destroy(lockKeyDelete.gameObject);
             }
         }
+
+            if (transform.parent.gameObject.name == "Content その他装備 ステータス 1")
+            {
+                if (playerStatusDataBase.sonota1No == number)
+                {
+                    if (!transform.Find("装備中チェック(Clone)"))
+                    {
+                        Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+                    }
+                }
+                else
+                {
+                    if (transform.Find("装備中チェック(Clone)"))
+                    {
+                        Destroy(GameObject.Find("装備中チェック(Clone)"));
+                    }
+                }
+                if (playerStatusDataBase.sonota2No == number)
+                {
+                    if (!transform.Find("装備中チェック2(Clone)"))
+                    {
+                        Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
+
+                    }
+                }
+                else
+                {
+                    if (transform.Find("装備中チェック2(Clone)"))
+                    {
+                        Destroy(GameObject.Find("装備中チェック2(Clone)"));
+                    }
+                }
+            }
+
+            else if (transform.parent.gameObject.name == "Content その他装備 ステータス2")
+            {
+                if (playerStatusDataBase.sonota1No == number)
+                {
+                    if (!transform.Find("装備中チェック(Clone)"))
+                    {
+                        Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+
+                    }
+                }
+                else
+                {
+                    if (transform.Find("装備中チェック(Clone)"))
+                    {
+                        Destroy(GameObject.Find("装備中チェック(Clone)"));
+                    }
+                }
+                if (playerStatusDataBase.sonota2No == number)
+                {
+                    if (!transform.Find("装備中チェック2(Clone)"))
+                    {
+                        Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
+
+                    }
+                }
+                else
+                {
+                    if (transform.Find("装備中チェック2(Clone)"))
+                    {
+                        Destroy(GameObject.Find("装備中チェック2(Clone)"));
+                    }
+                }
+            }
+        
     }
     public void selectSonotaSoubi()
     {
@@ -132,7 +222,10 @@ public class SonotaSoubiIcon : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        if (number != playerStatusDataBase.sonota1No&&number!=playerStatusDataBase.sonota2No)
+                        {
+                            Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        }
                     }
                 }
             }
@@ -147,7 +240,7 @@ public class SonotaSoubiIcon : MonoBehaviour
                 statusPanelVector.sonota = true;
             }
         }
-        if (SceneManager.GetActiveScene().name == "StatusMenu")
+        else if (SceneManager.GetActiveScene().name == "StatusMenu")
         {
             if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
             {
@@ -158,37 +251,37 @@ public class SonotaSoubiIcon : MonoBehaviour
                     scrollViewYoroiStatus.gameObject.SetActive(false);
                     scrollViewSonotaStatus1.gameObject.SetActive(true);
                     scrollViewSonotaStatus2.gameObject.SetActive(false);
+                    scrollViewSoubiItirann.gameObject.SetActive(true);
                 }
-                if (number == playerStatusDataBase.sonota2No)
+                else if (number == playerStatusDataBase.sonota2No)
                 {
                     scrollViewKinnKyoriWeponStatus.gameObject.SetActive(false);
                     scrollViewEnnkyoriWeponStatus.gameObject.SetActive(false);
                     scrollViewYoroiStatus.gameObject.SetActive(false);
                     scrollViewSonotaStatus1.gameObject.SetActive(false);
                     scrollViewSonotaStatus2.gameObject.SetActive(true);
-
+                    scrollViewSoubiItirann.gameObject.SetActive(true);
                 }
+
             }
 
             if (transform.parent.gameObject.name == "Content その他装備 ステータス 1")
             {
-                if (a)
-                {
-                    Debug.Log("a");
-                    playerStatusDataBase.sonota1No = number;
-                    soubityuuIcon.SoubiHennkou();
-                    soubityuuIcon.StatusTextUpdata();
-                }
+                    if(playerStatusDataBase.sonota2No!=number)
+                    {
+                        playerStatusDataBase.sonota1No = number;
+                        soubityuuIcon.SoubiHennkou();
+                        soubityuuIcon.StatusTextUpdata();
+                    }
             }
             if (transform.parent.gameObject.name == "Content その他装備 ステータス2")
             {
-                if (a)
-                {
-                    Debug.Log("a");
-                    playerStatusDataBase.sonota2No = number;
-                    soubityuuIcon.SoubiHennkou();
-                    soubityuuIcon.StatusTextUpdata();
-                }
+                    if (playerStatusDataBase.sonota1No != number)
+                    {
+                        playerStatusDataBase.sonota2No = number;
+                        soubityuuIcon.SoubiHennkou();
+                        soubityuuIcon.StatusTextUpdata();
+                    }
             }
         }
     }

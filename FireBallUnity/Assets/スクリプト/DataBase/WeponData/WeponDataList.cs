@@ -99,6 +99,8 @@ public class WeponDataList : ScriptableObject
 		[Space(1)]
 		[Header("ロック")]
 		public bool keyLock;
+        [Header("装備中")]
+        public bool soubiTyuu;
 	}
 	public void Hpzyunn()
     {

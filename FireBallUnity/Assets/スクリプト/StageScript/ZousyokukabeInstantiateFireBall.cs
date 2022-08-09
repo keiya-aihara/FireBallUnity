@@ -23,7 +23,7 @@ public class ZousyokukabeInstantiateFireBall : MonoBehaviour
     {
         if (collision.gameObject.tag == "FireBall")
         {
-            for (float n = 0; zousyokuBairitu.bairitu > n; n += 1)
+            for (float n = 0; zousyokuBairitu.zousyokusuu > n; n += 1)
             {
                 Instantiate(fireBall, new Vector3(collision.transform.position.x + Random.Range(-0.2f,0.2f),collision.transform.position.y - 0.5f,transform.position.z), transform.rotation);
             }

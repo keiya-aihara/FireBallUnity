@@ -12,13 +12,16 @@ public class ZousyokukabeUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        zousyokukabeStatus = zousyokukabe.GetComponent<ZousyokukabeStatus>();
-        bairitu.GetComponentInChildren<Text>().text = "＋" + (zousyokukabeStatus.bairitu).ToString("N0");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void ZousyokukabeUiUpdata()
+    {
+        bairitu.text = "＋" + (zousyokukabeStatus.zousyokusuu).ToString("N0");
     }
 }

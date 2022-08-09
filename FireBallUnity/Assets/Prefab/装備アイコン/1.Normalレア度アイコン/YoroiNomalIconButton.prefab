@@ -153,8 +153,8 @@ MonoBehaviour:
   lockKey: {fileID: 5797165785139480725, guid: 3f1c16e0a90900949acb0a9528e1a44f, type: 3}
   lockKeyDelete: {fileID: 0}
   giftLv: {fileID: 5719670829623212709, guid: d197eeb249c93904cb89b3f900ea6569, type: 3}
-  kyoukaPanel: {fileID: 233633936509131666, guid: baf048c061a55ed479d4486ce001e2ae, type: 3}
   tyekku: {fileID: 7846834902461028862, guid: 676ae9150b5d83440b6fa4e2d434cfec, type: 3}
+  soubityuuTyekku: {fileID: 5743383964962091380, guid: a1388633fb1327144842111df0dde80d, type: 3}
   a: 0
 --- !u!114 &-3479356100526547180
 MonoBehaviour:
@@ -170,8 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusPanel: {fileID: 8219322973130115789, guid: 6cd7bfbb5ac0b314e98839de68be4bd6, type: 3}
   statusPanelContent: {fileID: 0}
-  statusPanel2: {fileID: 8219322973130115789, guid: 40ab768ed02647f43aec2fa6ead2f0b3, type: 3}
-  statusPanel2Content: {fileID: 0}
   e: 1
   soubiName: {fileID: 9089962629167439525, guid: fbf679219767d8b4d95867ac68e0b751, type: 3}
   syougouGiftHosei: {fileID: 1133304194577301587, guid: 99036429e799bf943b0b05405df69b69, type: 3}

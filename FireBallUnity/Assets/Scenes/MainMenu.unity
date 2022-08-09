@@ -123,6 +123,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &67720466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67720467}
+  - component: {fileID: 67720469}
+  - component: {fileID: 67720468}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &67720467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67720466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 373514126}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &67720468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67720466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 23
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u30B9\u30C6\u30FC\u30BF\u30B9\u521D\u671F\u5316"
+--- !u!222 &67720469
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67720466}
+  m_CullTransparentMesh: 1
 --- !u!1 &178082966
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +834,139 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &373514125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373514126}
+  - component: {fileID: 373514129}
+  - component: {fileID: 373514128}
+  - component: {fileID: 373514127}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &373514126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373514125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 67720467}
+  m_Father: {fileID: 1261679711}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -284.71, y: -62.36}
+  m_SizeDelta: {x: 190.58, y: 79.27}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &373514127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373514125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 373514128}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1999672074}
+        m_TargetAssemblyTypeName: PlayerStatusDataBase, Assembly-CSharp
+        m_MethodName: StatusSyokika
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &373514128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373514125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &373514129
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373514125}
+  m_CullTransparentMesh: 1
 --- !u!1 &413700025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0011153, y: -57.099976}
+  m_AnchoredPosition: {x: 0.0011153, y: -57.100098}
   m_SizeDelta: {x: 828.57, y: 139.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698334950
@@ -1194,7 +1406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 713251698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1261679712}
+        m_TargetAssemblyTypeName: BottonSceneCange, Assembly-CSharp
+        m_MethodName: BoukennnoSyo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &713251698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1315,7 +1539,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 931013093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1261679712}
+        m_TargetAssemblyTypeName: BottonSceneCange, Assembly-CSharp
+        m_MethodName: start1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &931013093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,6 +1926,7 @@ RectTransform:
   - {fileID: 931013091}
   - {fileID: 1115504815}
   - {fileID: 698334949}
+  - {fileID: 373514126}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2263,6 +2500,10 @@ MonoBehaviour:
   ennkyoriWeponDataBaseManager: {fileID: 1999672071}
   yoroiDataBaseManager: {fileID: 1999672072}
   sonotaDataBaseManager: {fileID: 1999672073}
+  kinnkyoriWeponDatas: {fileID: 11400000, guid: 69b101913c83c954ca44f635cc837004, type: 2}
+  ennkyoriWeponDatas: {fileID: 11400000, guid: 4b719497a04d444a2afde31c5e668014, type: 2}
+  yoroiDatas: {fileID: 11400000, guid: 6637887cfacf54e4e88f42d0b5f56664, type: 2}
+  sonotaDatas: {fileID: 11400000, guid: eb9bf542edc5a114d8449e1314596082, type: 2}
   expManagerScript: {fileID: 1999672078}
   kinnkyoriWeponNo: 1
   ennkyoriWeponNo: 1
@@ -2273,8 +2514,8 @@ MonoBehaviour:
   statusMaxMp: 10
   statusFireBallCost: 3
   statusKougekiryoku: 1
-  statusKinnkyoriKaisinnritu: 0
   statusMaryoku: 1
+  statusKinnkyoriKaisinnritu: 0
   statusEnnkyoriKaisinnritu: 0
   statusBougyoryoku: 1
   statusKaisinnTaisei: 0
@@ -2284,8 +2525,8 @@ MonoBehaviour:
   soubiMaxMp: 0
   soubiFireBallCost: 0
   soubiKougekiryoku: 0
-  soubiKinnkyoriKaisinnritu: 0
   soubiMaryoku: 0
+  soubiKinnkyoriKaisinnritu: 0
   soubiEnnkyoriKaisinnritu: 0
   soubiBougyoryoiku: 0
   soubiKaisinnTisei: 0
@@ -2302,8 +2543,8 @@ MonoBehaviour:
   mp: 0
   fireBallCost: 0
   kougekiryoku: 0
-  kinnkyoriKaisinnritu: 0
   maryoku: 0
+  kinnkyoriKaisinnritu: 0
   ennkyoriKaisinnritu: 0
   bougyoryoku: 0
   kaisinnTaisei: 0
@@ -2314,7 +2555,58 @@ MonoBehaviour:
   kougekiHanni: 0
   nokkubakku: 0
   destroyTime: 0
-  syoziSp: 1000
+  kousekiMazyuuTokkou: 0
+  kousekiNinngennTokkou: 0
+  kousekiMazinnTokkou: 0
+  kousekiHusiTokkou: 0
+  kousekiAkumaTokkou: 0
+  kousekiRyuuTokkou: 0
+  kousekiKamiTokkou: 0
+  soubiMazyuuTokkou: 0
+  soubiNinngennTokkou: 0
+  soubiMazinnTokkou: 0
+  soubiHusiTokkou: 0
+  soubiAkumaTokkou: 0
+  soubiRyuuTokkou: 0
+  soubiKamiTokkou: 0
+  nomalDropRitu: 0
+  reaDropRitu: 0
+  superReaDropRitu: 0
+  epikReaDropRitu: 0
+  legendaryReaDropRitu: 0
+  godReaDropRitu: 0
+  kyoukataikaGennsyouritu: 0
+  giftHuyoSoubiDropritu: 0
+  syoziSp: 0
+  fireSpireLv: 0
+  kanntuuKakuritu: 0
+  kanntuuGennsuiritu: 0
+  rapidGireLv: 0
+  rapidKakuritu: 0
+  rapidGennsuiritu: 0
+  fireBomLv: 0
+  bakuhatuKakuritu: 0
+  bakuhatuGennsuiBairitu: 0
+  firewallLv: 0
+  fireWallTennkaisuu: 0
+  fireWallHannizoukakakuritu: 0
+  zousyokusuuLv: 0
+  saisyouZousyokusuu: 0
+  saidaiZousyokusuu: 0
+  fireComboLv: 0
+  wallChainLv: 0
+  fireComboZyousyouritu: 0
+  tazyuuEisyouLv: 0
+  tazyuuEisyouSaisyouhassyasuu: 0
+  tazyuuEisyouSaidaihassyasuu: 0
+  fireGrabityLv: 0
+  zyuuryouBairitu: 0
+  eisyouTannsyukuLv: 0
+  mueisyouLv: 0
+  maryokuUpLv: 0
+  maryokuZyousyouritu: 0
+  fbCostDownLv: 0
+  fireBallCostDownRitu: 0
   kinnkyoriWeponData:
     srushEffect: {fileID: 0}
     soubiIcon: {fileID: 0}
@@ -2379,6 +2671,7 @@ MonoBehaviour:
     giftBairituName: 
     bairitu: 0
     keyLock: 0
+    soubiTyuu: 0
   ennkyoriWeponData:
     srushEffect: {fileID: 0}
     soubiIcon: {fileID: 0}
@@ -2443,6 +2736,7 @@ MonoBehaviour:
     giftBairituName: 
     bairitu: 0
     keyLock: 0
+    soubiTyuu: 0
   yoroiData:
     srushEffect: {fileID: 0}
     soubiIcon: {fileID: 0}
@@ -2507,6 +2801,7 @@ MonoBehaviour:
     giftBairituName: 
     bairitu: 0
     keyLock: 0
+    soubiTyuu: 0
   sonota1Data:
     srushEffect: {fileID: 0}
     soubiIcon: {fileID: 0}
@@ -2571,6 +2866,7 @@ MonoBehaviour:
     giftBairituName: 
     bairitu: 0
     keyLock: 0
+    soubiTyuu: 0
   sonota2Data:
     srushEffect: {fileID: 0}
     soubiIcon: {fileID: 0}
@@ -2635,6 +2931,41 @@ MonoBehaviour:
     giftBairituName: 
     bairitu: 0
     keyLock: 0
+    soubiTyuu: 0
+  statusSaveData:
+    lv: 0
+    exp_stock: 0
+    sp: 0
+    statusMaxHp: 0
+    statusMaxMp: 0
+    statusFireBallCost: 0
+    statusKougekiryoku: 0
+    statusMaryoku: 0
+    statusKinnkyoriKaisinnritu: 0
+    statusEnnkyoriKaisinnritu: 0
+    statusBougyoryoku: 0
+    statusKaisinnTaisei: 0
+    statusMeityuuritu: 0
+    statusKaihiritu: 0
+  skillSaveData:
+    fireSpireLv: 0
+    rapidFireLv: 0
+    fireBomLv: 0
+    firewallLv: 0
+    zousyokusuuLv: 0
+    fireComboLv: 0
+    wallChainLv: 0
+    tazyuuEisyouLv: 0
+    fireGrabityLv: 0
+    eisyouTannsyukuLv: 0
+    mueisyouLv: 0
+    maryokuUpLv: 0
+    fbCostDownLv: 0
+  soubiSaveData:
+    kinnkyoriWeponDatas: {fileID: 0}
+    ennkyoriWeponDatas: {fileID: 0}
+    yoroiDatas: {fileID: 0}
+    sonotaDatas: {fileID: 0}
 --- !u!114 &1999672075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,21 +2993,6 @@ MonoBehaviour:
   godReaGetSuu: 0
   kyoukakaisuu: 0
   reaEnemyToubatuSuu: 0
-  mazyuuTokkou: 0
-  ninngennTokkou: 0
-  mazinnTokkou: 0
-  husiTokkou: 0
-  akumaTokkou: 0
-  RyuuTokkou: 0
-  KamiTokkou: 0
-  nomalDropRitu: 0
-  reaDropRitu: 0
-  superReaDropRitu: 0
-  epikReaDropRitu: 0
-  legendaryReaDropRitu: 0
-  godReaDropRitu: 0
-  kyoukataikaGennsyouritu: 0
-  giftHuyoSoubiDropritu: 0
   buronzuTorophy: 0
   sirubaaTorophy: 0
   goorudoTorophy: 0

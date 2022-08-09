@@ -17,6 +17,7 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
     private GameObject scrollViewYoroiStatus;
     private GameObject scrollViewSonotaStatus1;
     private GameObject scrollViewSonotaStatus2;
+    private GameObject scrollViewSoubiItirann;
 
     private GameObject sortBoton;
 
@@ -30,12 +31,14 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
     public int number;
     public bool a;
     public bool b;
+    private bool c;
 
     public GameObject reaCircle;
     public GameObject superReaCircle;
     public GameObject epikReaCircle;
 
     public GameObject tyekku;
+    public GameObject soubityuuTyekku;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +55,7 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
         {
             contentSelectSoubi = GameObject.Find("Content Select Soubi　装備強化・売却");
         }
+        
 
         Instantiate(weponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).soubiIcon, transform.position, transform.rotation, gameObject.transform);
 
@@ -74,7 +78,7 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
             Instantiate(giftLv, transform.position, transform.rotation, gameObject.transform);
         }
 
-            if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
+        if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
         {
             gameObjectList = Resources.FindObjectsOfTypeAll<GameObject>();
             foreach (var a in gameObjectList)
@@ -83,25 +87,39 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
                 {
                     scrollViewKinnKyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 遠距離武器 ステータス")
+                else if (a.name == "Scroll View 遠距離武器 ステータス")
                 {
                     scrollViewEnnkyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 鎧装備 ステータス")
+                else if (a.name == "Scroll View 鎧装備 ステータス")
                 {
                     scrollViewYoroiStatus = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス1")
+                else if (a.name == "Scroll View その他装備 ステータス1")
                 {
                     scrollViewSonotaStatus1 = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス2")
+                else if (a.name == "Scroll View その他装備 ステータス2")
                 {
                     scrollViewSonotaStatus2 = a;
                 }
+                else if(a.name== "装備一覧 Scroll View")
+                {
+                    scrollViewSoubiItirann = a;
+                }
+            }
+           
+        }
+        if (transform.parent.gameObject.name == "Content 近距離武器　ステータス" || transform.parent.gameObject.name == "Content Select Soubi　装備強化・売却")
+        {
+            if (number == playerStatusDataBase.kinnkyoriWeponNo)
+            {
+                soubiTyuu();
             }
         }
-            
+
+
+
     }
 
     // Update is called once per frame
@@ -137,7 +155,10 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        if (number != playerStatusDataBase.kinnkyoriWeponNo)
+                        {
+                            Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        }
                     }
                 }
             }
@@ -152,7 +173,7 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
                 statusPanelVector.sonota = false;
             }
         }
-        if (SceneManager.GetActiveScene().name == "StatusMenu")
+        else if (SceneManager.GetActiveScene().name == "StatusMenu")
         {
             if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
             {
@@ -162,18 +183,56 @@ public class KinnkyoriWeponSoubiIcon : MonoBehaviour
                 scrollViewYoroiStatus.gameObject.SetActive(false);
                 scrollViewSonotaStatus1.gameObject.SetActive(false);
                 scrollViewSonotaStatus2.gameObject.SetActive(false);
+                scrollViewSoubiItirann.gameObject.SetActive(true);
             }
-            if (transform.parent.gameObject.name == "Content 近距離武器　ステータス")
+            else if (transform.parent.gameObject.name == "Content 近距離武器　ステータス")
             {
-                if (a)
-                {
-    
+                
+                    if (playerStatusDataBase.kinnkyoriWeponNo != number)
+                    {
+                        c = false;
+                    }
+                    else
+                    {
+                        c=true;
+                    }
                     playerStatusDataBase.kinnkyoriWeponNo = number;
                     soubityuuIcon.SoubiHennkou();
                     soubityuuIcon.StatusTextUpdata();
-                }
+                    soubiTyuu();
+                
+                
             }
         }
+        
+    }
+    private void soubiTyuu()
+    {
+        if (c == false)
+        {
+            if (GameObject.Find("装備中チェック(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック(Clone)"));
+            }
+            
+        }
+        if (playerStatusDataBase.kinnkyoriWeponNo == number)
+        {
+                if (transform.Find("装備中チェック(Clone)"))
+                {
 
+                }
+                else
+                {
+                    Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+                }
+            
+
+        }
+        c = false;
+    }
+    public void soubiTyuu2()
+    {
+        
     }
 }

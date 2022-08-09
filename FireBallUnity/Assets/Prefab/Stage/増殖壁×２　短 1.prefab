@@ -32,7 +32,7 @@ GameObject:
   - component: {fileID: 5790958793323615228}
   m_Layer: 0
   m_Name: "\u5897\u6B96\u58C1\xD7\uFF12\u3000\u77ED 1"
-  m_TagString: Untagged
+  m_TagString: FireWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.01}
+  m_Size: {x: 1, y: 0.3}
   m_EdgeRadius: 0
 --- !u!114 &4659321571048206254
 MonoBehaviour:
@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5469274ac162034699d37b0889508e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bairitu: 1
+  zousyokusuu: 0
+  zousyokukabeUI: {fileID: 2103845350324248554}
 --- !u!114 &4659321571048206289
 MonoBehaviour:
   m_ObjectHideFlags: 0

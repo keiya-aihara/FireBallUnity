@@ -11,15 +11,15 @@ public class SoubiNo : MonoBehaviour
         {
             number = transform.parent.gameObject.GetComponent<KinnkyoriWeponSoubiIcon>().number;
         }
-        if (transform.parent.gameObject.tag == "EnnkyoriWeponSoubiReadoIcon")
+        else if (transform.parent.gameObject.tag == "EnnkyoriWeponSoubiReadoIcon")
         {
             number = transform.parent.gameObject.GetComponent<EnnkyoriWeponSoubiIcon>().number;
         }
-        if (transform.parent.gameObject.tag == "YoroiSoubiReadoIcon")
+        else if (transform.parent.gameObject.tag == "YoroiSoubiReadoIcon")
         {
             number = transform.parent.gameObject.GetComponent<YoroiSoubiIcon>().number;
         }
-        if (transform.parent.gameObject.tag == "SonotaSoubiReadoIcon")
+        else if (transform.parent.gameObject.tag == "SonotaSoubiReadoIcon")
         {
             number = transform.parent.gameObject.GetComponent<SonotaSoubiIcon>().number;
         }

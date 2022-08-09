@@ -12,6 +12,7 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     public GameObject tyekkuBotton;
     public GameObject kakutokuBotton;
     private KousekiDataBaseManager kousekiDataBaseManager;
+    private PlayerStatusDataBase playerStatusDataBase;
     private bool kakutokuzumi;
 
     public GameObject torophyKakutokuPanel;
@@ -22,6 +23,8 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        kousekiDataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KousekiDataBaseManager>();
+        playerStatusDataBase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>();
         slider = gameObject.GetComponent<Slider>();
         kousekiCopyScript = kousekiCopy.GetComponent<KousekiCopy>();
         slider.value = kousekiCopyScript.kousekiDataBaseManager.reaEnemyToubatuSuu;
@@ -48,7 +51,6 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     }
     public void TorophyKakutoku()
     {
-        kousekiDataBaseManager = GameObject.Find("KousekiDataBaseManager").GetComponent<KousekiDataBaseManager>();
         kakutokuzumi = true;
         kakutokuBotton.SetActive(false);
         GiftDoropRituBonusAdd();
@@ -56,7 +58,7 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     }
     public void GiftDoropRituBonusAdd()
     {
-        kousekiDataBaseManager.giftHuyoSoubiDropritu += 1;
+        playerStatusDataBase.giftHuyoSoubiDropritu += 1;
         kousekiDataBaseManager.reaTorophy += 1;
     }
     public void KakutokuTorophyPanel()

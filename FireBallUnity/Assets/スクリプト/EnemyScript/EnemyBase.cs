@@ -16,8 +16,11 @@ public class EnemyBase : MonoBehaviour
     public int enemyDamage;
     private int saiteihosyouDamage;
     private float damageBairitu;
+    private float tokkouBairitu;
     public Vector2 damagePosition;
     private float desuTime;
+
+    private float itemDropRitu;
 
     public int enemyHp;
 
@@ -28,6 +31,7 @@ public class EnemyBase : MonoBehaviour
     private float kaihi;
 
     public int playerDamage;
+
 
     public GameObject bikkurimark;
 
@@ -105,6 +109,7 @@ public class EnemyBase : MonoBehaviour
     public float syougouDropRitu;
 
     private KousekiDataBaseManager kousekiDataBaseManagerScript;
+    private PlayerStatusDataBase playerStatusDataBase;
 
     [Header("エネミーデータ")]
     public EnemyDataList.EnemyData enemyData;
@@ -117,6 +122,7 @@ public class EnemyBase : MonoBehaviour
         dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
         playerStatus = player.GetComponent<PlayerStatus>();
         kousekiDataBaseManagerScript = dataBaseManager.GetComponent<KousekiDataBaseManager>();
+        playerStatusDataBase = dataBaseManager.GetComponent<PlayerStatusDataBase>();
 
         enemyData = dataBaseManager.GetComponent<EnemyDataBaseManager>().GetEnemyData(enemyData.no);
         enemyHp = enemyData.maxHp;
@@ -191,7 +197,7 @@ public class EnemyBase : MonoBehaviour
         if(f)
         {
             desuTime += Time.deltaTime;
-            if(desuTime >= 0.3f)
+            if(desuTime >= 0.15f)
             {
                 desuPosition = transform.position;
                 Instantiate(desuEffect,desuPosition,transform.rotation);
@@ -237,7 +243,34 @@ public class EnemyBase : MonoBehaviour
         {
             enemyAtackMotion += Time.deltaTime;
         }
-
+        if (player.transform.position.y >= 5.5f)
+        {
+            enemyPosition = transform.position;
+            if (enemyPosition.y <= -5.2f)
+            {
+                enemyPosition.y += 0.5f;
+                transform.position = enemyPosition;
+            }
+            else if(enemyPosition.y>=-2.0f)
+            {
+                Debug.Log("位置修正");
+                myRigid.velocity = Vector2.zero;
+                enemyPosition.y = -2.1f;
+                transform.position = enemyPosition;
+            }
+            else if(enemyPosition.x<=-2.4f)
+            {
+                myRigid.velocity = Vector2.zero;
+                enemyPosition.x = -2.3f;
+                transform.position = enemyPosition;
+            }
+            else if(enemyPosition.x>=2.4f)
+            {
+                myRigid.velocity = Vector2.zero;
+                enemyPosition.x = 2.3f;
+                transform.position = enemyPosition;
+            }
+        }
     }
     private void KyoukasekiDrop()//強化石ドロップメソッド
     {
@@ -324,7 +357,7 @@ public class EnemyBase : MonoBehaviour
             //b==0でレア称号　b==1でスーパーレア称号 b==2でエピックレア称号　b==3以降はアプデで追加？
         }
         //ギフトドロップ
-        if (Random.Range(0.00f, 100.00f) <= enemyData.giftDropRitu)
+        if (Random.Range(0.00f, 100.00f) <= enemyData.giftDropRitu+playerStatusDataBase.giftHuyoSoubiDropritu)
         {
             Debug.Log("ギフトドロップ");
             if (enemyData.lebel <= 10)
@@ -626,28 +659,30 @@ public class EnemyBase : MonoBehaviour
         }
 
 
-            for (int a = 0; a < enemyData.dropItemSuu; a++)
+        for (int a = 0; a < enemyData.dropItemSuu; a++)
         {
-            
+
             dropPosition = desuPosition - new Vector2(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f));
 
             int itemNo = enemyData.dropItemNos[a];
-            itemPrefab = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<EnemyDataBaseManager>(). GetDropItemPrefabDate(itemNo);
-            
+            itemPrefab = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<EnemyDataBaseManager>().GetDropItemPrefabDate(itemNo);
+
             itemController = itemPrefab.GetComponent<ItemController>();
 
             if (itemController.itemStatus.god)
             {
-                if (Random.Range(0.0f, 100.0f) <= enemyData.godDropRitu)
+                itemDropRitu = (enemyData.godDropRitu * (1.00f + playerStatusDataBase.godReaDropRitu / 100.00f));
+                if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
                 {
                     weponBoxScript = weponBoxGod.GetComponent<WeponBox>();
                     weponBoxScript.itemPrefab = itemPrefab;
                     Instantiate(weponBoxGod, dropPosition, transform.rotation);
                 }
             }
-            if(itemController.itemStatus.legendary)
+            if (itemController.itemStatus.legendary)
             {
-                if (Random.Range(0.0f, 100.0f) <= enemyData.legendaryDropRitu)
+                itemDropRitu = (enemyData.legendaryDropRitu * (1.00f + playerStatusDataBase.legendaryReaDropRitu / 100.00f));
+                if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
                 {
                     weponBoxScript = weponBoxLegendary.GetComponent<WeponBox>();
                     weponBoxScript.itemPrefab = itemPrefab;
@@ -656,7 +691,8 @@ public class EnemyBase : MonoBehaviour
             }
             if (itemController.itemStatus.epik)
             {
-                if (Random.Range(0.0f, 100.0f) <= enemyData.epikDropRitu)
+                itemDropRitu = (enemyData.epikDropRitu * (1.00f + playerStatusDataBase.epikReaDropRitu / 100.00f));
+                if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
                 {
                     weponBoxScript = weponBoxEpik.GetComponent<WeponBox>();
                     weponBoxScript.itemPrefab = itemPrefab;
@@ -665,7 +701,8 @@ public class EnemyBase : MonoBehaviour
             }
             if (itemController.itemStatus.superRea)
             {
-                if (Random.Range(0.0f, 100.0f) <= enemyData.superReaDropRitu)
+                itemDropRitu = (enemyData.superReaDropRitu * (1.00f + playerStatusDataBase.superReaDropRitu / 100.00f));
+                if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
                 {
                     weponBoxScript = weponBoxSuperRea.GetComponent<WeponBox>();
                     weponBoxScript.itemPrefab = itemPrefab;
@@ -674,7 +711,8 @@ public class EnemyBase : MonoBehaviour
             }
             if (itemController.itemStatus.rea)
             {
-                if (Random.Range(0.0f, 100.0f) <= enemyData.reaDropRitu)
+                itemDropRitu = (enemyData.reaDropRitu * (1.00f + playerStatusDataBase.reaDropRitu / 100.00f));
+                if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
                 {
                     weponBoxScript = weponBoxRea.GetComponent<WeponBox>();
                     weponBoxScript.itemPrefab = itemPrefab;
@@ -683,11 +721,13 @@ public class EnemyBase : MonoBehaviour
             }
             if (itemController.itemStatus.nomal)
             {
-                if (Random.Range(0.0f, 100.0f) <= enemyData.nomalDropRitu)
+                itemDropRitu = (enemyData.nomalDropRitu * (1.00f + playerStatusDataBase.nomalDropRitu / 100.00f));
+                //Debug.Log(itemDropRitu);
+                if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
                 {
                     weponBoxScript = weponBoxNomal.GetComponent<WeponBox>();
                     weponBoxScript.itemPrefab = itemPrefab;
-                    Instantiate(weponBoxNomal, dropPosition, transform.rotation); 
+                    Instantiate(weponBoxNomal, dropPosition, transform.rotation);
                 }
             }
         }
@@ -798,6 +838,7 @@ public class EnemyBase : MonoBehaviour
                 saiteihosyouDamage = Random.Range(0, 2);
                 damageBairitu = Random.Range(0.8f, 1.21f);
                 damageKeisann = (playerStatus.maryoku - enemyData.mahouBougyoryoku) * damageBairitu;
+                //Debug.Log(damageBairitu);
                 kaisinn = playerStatus.ennkyoriKaisinnritu - enemyData.kaisinnTaisei;
                 if(kaisinn>= Random.Range(0.0f,100.0f))
                 {
@@ -813,7 +854,36 @@ public class EnemyBase : MonoBehaviour
                 }
                 else
                 {
-                    enemyDamage = Mathf.CeilToInt(damageKeisann);
+                    if (enemyData.mazyuu)
+                    {
+                        tokkouBairitu = 1+((playerStatusDataBase.kousekiMazyuuTokkou + playerStatusDataBase.soubiMazyuuTokkou)/100.00f);
+                        //Debug.Log(tokkouBairitu.ToString("F4"));
+                    }
+                    else if(enemyData.husi)
+                    {
+                        tokkouBairitu = 1 + ((playerStatusDataBase.kousekiHusiTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                    }
+                    else if (enemyData.akuma)
+                    {
+                        tokkouBairitu = 1 + ((playerStatusDataBase.kousekiAkumaTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                    }
+                    else if (enemyData.mazinn)
+                    {
+                        tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazinnTokkou + playerStatusDataBase.soubiMazinnTokkou) / 100.00f);
+                    }
+                    else if (enemyData.ninngenn)
+                    {
+                        tokkouBairitu = 1 + ((playerStatusDataBase.kousekiNinngennTokkou + playerStatusDataBase.soubiNinngennTokkou) / 100.00f);
+                    }
+                    else if (enemyData.ryuu)
+                    {
+                        tokkouBairitu = 1 + ((playerStatusDataBase.kousekiRyuuTokkou + playerStatusDataBase.soubiRyuuTokkou) / 100.00f);
+                    }
+                    else if (enemyData.ninngenn)
+                    {
+                        tokkouBairitu = 1 + ((playerStatusDataBase.kousekiKamiTokkou + playerStatusDataBase.soubiKamiTokkou) / 100.00f);
+                    }
+                    enemyDamage = Mathf.CeilToInt(damageKeisann * tokkouBairitu);
                     enemyHp -= enemyDamage;
                   //  Debug.Log(enemyData.enemyName + "に" + enemyDamage.ToString("N0") + "のダメージを与えた！！");
                     e = true;
@@ -880,7 +950,36 @@ public class EnemyBase : MonoBehaviour
                     }
                     else
                     {
-                        enemyDamage = Mathf.CeilToInt(damageKeisann);
+                        if (enemyData.mazyuu)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazyuuTokkou + playerStatusDataBase.soubiMazyuuTokkou) / 100.00f);
+                            //Debug.Log(tokkouBairitu.ToString("F4"));
+                        }
+                        else if (enemyData.husi)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiHusiTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                        }
+                        else if (enemyData.akuma)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiAkumaTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                        }
+                        else if (enemyData.mazinn)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazinnTokkou + playerStatusDataBase.soubiMazinnTokkou) / 100.00f);
+                        }
+                        else if (enemyData.ninngenn)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiNinngennTokkou + playerStatusDataBase.soubiNinngennTokkou) / 100.00f);
+                        }
+                        else if (enemyData.ryuu)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiRyuuTokkou + playerStatusDataBase.soubiRyuuTokkou) / 100.00f);
+                        }
+                        else if (enemyData.ninngenn)
+                        {
+                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiKamiTokkou + playerStatusDataBase.soubiKamiTokkou) / 100.00f);
+                        }
+                        enemyDamage = Mathf.CeilToInt(damageKeisann * tokkouBairitu);
                         enemyHp -= enemyDamage;
                         e = true;
                         //Debug.Log(enemyData.enemyName + "に" + enemyDamage.ToString("N0") + "のダメージを与えた！！");

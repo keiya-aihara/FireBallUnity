@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kouseki.unity
     guid: 49988c30947f7184ab64b2532418a4aa
+  - enabled: 1
+    path: Assets/Scenes/BoukennnoSyo.unity
+    guid: 2900efbb2d04eaf42891ec6004ab3b6e
   m_configObjects: {}

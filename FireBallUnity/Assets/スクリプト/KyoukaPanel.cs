@@ -30,6 +30,7 @@ public class KyoukaPanel : MonoBehaviour
     private YoroiDataBaseManager yoroiDataBaseManager;
     private SonotaDataBaseManager sonotaDataBaseManager;
     private WeponDataList.WeponData soubi;
+    private PlayerStatusDataBase playerStatusDataBase;
     public bool kinnkyoriWepon;
     public bool ennkyoriWepon;
     public bool yoroi;
@@ -42,6 +43,9 @@ public class KyoukaPanel : MonoBehaviour
 
     private KousekiDataBaseManager kousekiDataBaseManager;
 
+    private GameObject statusText;
+    private Text statusTextText;
+
     private List<int> sonotasoubiKyoukaStatus = new List<int>();
     private int sonotaSoubiKyoukaStatusInt;
     // Start is called before the first frame update
@@ -51,7 +55,6 @@ public class KyoukaPanel : MonoBehaviour
     }
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -62,6 +65,8 @@ public class KyoukaPanel : MonoBehaviour
     public void ActiveSelfGameObject()
     {
         dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
+        playerStatusDataBase = dataBaseManager.GetComponent<PlayerStatusDataBase>();
+
         moneyManagerScript = dataBaseManager.GetComponent<MoneyManager>();
         kyoukasekiManager = dataBaseManager.GetComponent<KyoukasekiManager>();
         kousekiDataBaseManager = dataBaseManager.GetComponent<KousekiDataBaseManager>();
@@ -362,9 +367,12 @@ public class KyoukaPanel : MonoBehaviour
         {
             kyoukaKinngaku = 500 * (lv + 1);
             kyoukasekiSyou = lv + 1;
-            if(lv>=30)
+            kyoukasekiSyou = Mathf.CeilToInt((kyoukasekiSyou * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            if (lv>=30)
             {
                 kyoukasekiTyuu = lv + 1 - 30;
+                kyoukasekiTyuu = Mathf.CeilToInt((kyoukasekiTyuu * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+                //Debug.Log(kyoukasekiTyuu);
             }
             else
             {
@@ -373,6 +381,7 @@ public class KyoukaPanel : MonoBehaviour
             if(lv>=60)
             {
                 kyoukasekiDai = lv + 1 - 60;
+                kyoukasekiDai = Mathf.CeilToInt((kyoukasekiDai * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
             }
             else
             {
@@ -417,6 +426,21 @@ public class KyoukaPanel : MonoBehaviour
         kyoukagoText.gameObject.SetActive(true);
         lv100OkBotton.SetActive(false);
         taikagatarimasennPanel.SetActive(false);
+        if(kinnkyoriWepon)
+        {
+            statusText = GameObject.Find("攻撃力(Clone)");
+            statusText.GetComponent<Text>().text = " - 攻撃力　" + soubi.kyoukagoKougekiryoku + "《" + soubi.syougouKougekiryoku + "》";
+        }
+        else if(ennkyoriWepon)
+        {
+            statusText=GameObject.Find("魔力(Clone)");
+            statusText.GetComponent<Text>().text = " - 魔力　" + soubi.kyoukagoMaryoku + "《" + soubi.syougouMamryoku + "》";
+        }
+        else if(yoroi)
+        {
+            statusText = GameObject.Find("防御力(Clone)");
+            statusText.GetComponent<Text>().text= " - 防御力　" + soubi.kyoukagoBougyoryoku + "《" + soubi.syougouBougyoryoku + "》";
+        }
         gameObject.SetActive(false);
     }
     public void HaiBottonDown()

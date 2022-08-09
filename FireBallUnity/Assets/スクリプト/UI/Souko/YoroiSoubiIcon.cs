@@ -14,6 +14,7 @@ public class YoroiSoubiIcon : MonoBehaviour
     private GameObject scrollViewYoroiStatus;
     private GameObject scrollViewSonotaStatus1;
     private GameObject scrollViewSonotaStatus2;
+    private GameObject scrollViewSoubiItirann;
 
     public GameObject reaCircle;
     public GameObject superReaCircle;
@@ -31,8 +32,10 @@ public class YoroiSoubiIcon : MonoBehaviour
     private StatusPanelVector statusPanelVector;
 
     public GameObject tyekku;
+    public GameObject soubityuuTyekku;
 
     public bool a;
+    private bool c;
     void Start()
     {
         databaseManager = GameObject.Find("DataBaseManager");
@@ -79,22 +82,33 @@ public class YoroiSoubiIcon : MonoBehaviour
                 {
                     scrollViewKinnKyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 遠距離武器 ステータス")
+                else if (a.name == "Scroll View 遠距離武器 ステータス")
                 {
                     scrollViewEnnkyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 鎧装備 ステータス")
+                else if (a.name == "Scroll View 鎧装備 ステータス")
                 {
                     scrollViewYoroiStatus = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス1")
+                else if (a.name == "Scroll View その他装備 ステータス1")
                 {
                     scrollViewSonotaStatus1 = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス2")
+                else if (a.name == "Scroll View その他装備 ステータス2")
                 {
                     scrollViewSonotaStatus2 = a;
                 }
+                else if (a.name == "装備一覧 Scroll View")
+                {
+                    scrollViewSoubiItirann = a;
+                }
+            }
+        }
+        if (transform.parent.gameObject.name == "Content 鎧装備 ステータス" || transform.parent.gameObject.name == "Content Select Soubi　装備強化・売却")
+        {
+            if (number == playerStatusDataBase.yoroiNo)
+            {
+                soubiTyuu();
             }
         }
     }
@@ -132,7 +146,10 @@ public class YoroiSoubiIcon : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        if (number != playerStatusDataBase.yoroiNo)
+                        {
+                            Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        }
                     }
                 }
             }
@@ -156,18 +173,47 @@ public class YoroiSoubiIcon : MonoBehaviour
                 scrollViewYoroiStatus.gameObject.SetActive(true);
                 scrollViewSonotaStatus1.gameObject.SetActive(false);
                 scrollViewSonotaStatus2.gameObject.SetActive(false);
+                scrollViewSoubiItirann.gameObject.SetActive(true);
             }
             if (transform.parent.gameObject.name == "Content 鎧装備 ステータス")
             {
-                if (a)
-                {
+                    if (playerStatusDataBase.yoroiNo != number)
+                    {
+                        c = false;
+                    }
+                    else
+                    {
+                        c = true;
+                    }
                     Debug.Log("a");
                     playerStatusDataBase.yoroiNo = number;
                     soubityuuIcon.SoubiHennkou();
                     soubityuuIcon.StatusTextUpdata();
-                }
+                    soubiTyuu();
+
             }
         }
     }
+    public void soubiTyuu()
+    {
+        if (c == false)
+        {
+            if (GameObject.Find("装備中チェック(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック(Clone)"));
+            }
+        }
+        if (playerStatusDataBase.yoroiNo == number)
+        {
+            if (transform.Find("装備中チェック(Clone)"))
+            {
 
+            }
+            else
+            {
+                Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+            }
+        }
+        c = false;
+    }
 }

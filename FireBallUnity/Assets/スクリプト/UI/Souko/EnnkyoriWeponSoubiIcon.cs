@@ -14,6 +14,7 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
     private GameObject scrollViewYoroiStatus;
     private GameObject scrollViewSonotaStatus1;
     private GameObject scrollViewSonotaStatus2;
+    private GameObject scrollViewSoubiItirann;
 
     public GameObject lockKey;
     private Transform lockKeyDelete;
@@ -31,8 +32,10 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
     private StatusPanelVector statusPanelVector;
 
     public GameObject tyekku;
+    public GameObject soubityuuTyekku;
 
     public bool a;
+    private bool c;
     void Start()
     {
         databaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
@@ -79,22 +82,33 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
                 {
                     scrollViewKinnKyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 遠距離武器 ステータス")
+                else if (a.name == "Scroll View 遠距離武器 ステータス")
                 {
                     scrollViewEnnkyoriWeponStatus = a;
                 }
-                if (a.name == "Scroll View 鎧装備 ステータス")
+                else if (a.name == "Scroll View 鎧装備 ステータス")
                 {
                     scrollViewYoroiStatus = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス1")
+                else if (a.name == "Scroll View その他装備 ステータス1")
                 {
                     scrollViewSonotaStatus1 = a;
                 }
-                if (a.name == "Scroll View その他装備 ステータス2")
+                else if (a.name == "Scroll View その他装備 ステータス2")
                 {
                     scrollViewSonotaStatus2 = a;
                 }
+                else if (a.name == "装備一覧 Scroll View")
+                {
+                    scrollViewSoubiItirann = a;
+                }
+            }
+        }
+        if (transform.parent.gameObject.name == "Content 遠距離武器 ステータス" || transform.parent.gameObject.name == "Content Select Soubi　装備強化・売却")
+        {
+            if (number == playerStatusDataBase.ennkyoriWeponNo)
+            {
+                soubiTyuu();
             }
         }
     }
@@ -132,7 +146,10 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        if (number != playerStatusDataBase.ennkyoriWeponNo)
+                        {
+                            Instantiate(tyekku, transform.position, transform.rotation, gameObject.transform);
+                        }
                     }
                 }
             }
@@ -156,16 +173,45 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
                 scrollViewYoroiStatus.gameObject.SetActive(false);
                 scrollViewSonotaStatus1.gameObject.SetActive(false);
                 scrollViewSonotaStatus2.gameObject.SetActive(false);
+                scrollViewSoubiItirann.gameObject.SetActive(true);
             }
-            if (transform.parent.gameObject.name == "Content 遠距離武器 ステータス")
+            else if (transform.parent.gameObject.name == "Content 遠距離武器 ステータス")
             {
-                if (a)
-                {
+                    if (playerStatusDataBase.ennkyoriWeponNo != number)
+                    {
+                        c = false;
+                    }
+                    else
+                    {
+                        c = true;
+                    }
                     playerStatusDataBase.ennkyoriWeponNo = number;
                     soubityuuIcon.SoubiHennkou();
                     soubityuuIcon.StatusTextUpdata();
-                }
+                soubiTyuu();
             }
         }
+    }
+    public void soubiTyuu()
+    {
+        if (c == false)
+        {
+            if (GameObject.Find("装備中チェック(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック(Clone)"));
+            }
+        }
+        if (playerStatusDataBase.ennkyoriWeponNo == number)
+        {
+            if (transform.Find("装備中チェック(Clone)"))
+            {
+
+            }
+            else
+            {
+                Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+            }
+        }
+        c = false;
     }
 }

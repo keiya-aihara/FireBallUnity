@@ -38,6 +38,5 @@ public class DontDestroyOnloadDataBaseManager : MonoBehaviour
 		ennkyoriWeponDataBaseManager.weponDataList.Nyuusyuzyunn();
 		yoroiDataBaseManager.weponDataList.Nyuusyuzyunn();
 		sonotaDataBaseManager.weponDataList.Nyuusyuzyunn();
-		Debug.Log("ソート初期化");
 	}
 }

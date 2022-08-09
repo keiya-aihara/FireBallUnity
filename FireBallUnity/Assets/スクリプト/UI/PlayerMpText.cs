@@ -18,6 +18,6 @@ public class PlayerMpText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "魔力" + playerStatus.maryoku + ":" + "MP" + playerStatus.mp + "/" + playerStatus.maxMp;
+        text.text = "魔力 " + playerStatus.maryoku.ToString("N0")+"：コスト "+playerStatus.fireBallCost.ToString("N0") +  "\nMP" + playerStatus.mp.ToString("N0") + "/" + playerStatus.maxMp.ToString("N0");
     }
 }

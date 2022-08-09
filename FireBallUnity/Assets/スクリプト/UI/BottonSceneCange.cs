@@ -24,11 +24,13 @@ public class BottonSceneCange : MonoBehaviour
     }
     public void mainMenu()
     {
+        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().StatusUpdate();
         SceneManager.LoadScene("MainMenu");
         Destroy(GameObject.Find("ResultManager"));
     }
     public void statusMenu()
     {
+        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().StatusUpdate();
         SceneManager.LoadScene("StatusMenu");
     }
     
@@ -44,5 +46,9 @@ public class BottonSceneCange : MonoBehaviour
     {
         SceneManager.LoadScene("SkillMenu");
 
+    }
+    public void BoukennnoSyo()
+    {
+        SceneManager.LoadScene("BoukennnoSyo");
     }
 }

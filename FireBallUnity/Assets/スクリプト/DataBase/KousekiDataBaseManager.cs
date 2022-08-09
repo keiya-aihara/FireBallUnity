@@ -25,25 +25,6 @@ public class KousekiDataBaseManager : MonoBehaviour
     public int kyoukakaisuu;
     [Header("レア種撃破数カウント")]
     public int reaEnemyToubatuSuu;
-    [Header("特攻数値")]
-    public int mazyuuTokkou;
-    public int ninngennTokkou;
-    public int mazinnTokkou;
-    public int husiTokkou;
-    public int akumaTokkou;
-    public int RyuuTokkou;
-    public int KamiTokkou;
-    [Header("レア度別ドロップ率ボーナス")]
-    public int nomalDropRitu;
-    public int reaDropRitu;
-    public int superReaDropRitu;
-    public int epikReaDropRitu;
-    public int legendaryReaDropRitu;
-    public int godReaDropRitu;
-    [Header("強化対価減少率")]
-    public int kyoukataikaGennsyouritu;
-    [Header("ギフト付与装備ドロップ率")]
-    public int giftHuyoSoubiDropritu;
     [Header("撃破数トロフィー所持数")]
     public int buronzuTorophy;
     public int sirubaaTorophy;

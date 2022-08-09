@@ -120,6 +120,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void FireWallBottonColor()
     {
+        fireWallLevel = playerStatusDataBase.firewallLv;
         for (int a = 0; a <= fireWallLevel - 1; a++)
         {
             fireWallBottonImage[a].image.color = kiiro;
@@ -135,6 +136,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void FireChainBottonColor()
     {
+        fireChainLevel = playerStatusDataBase.fireComboLv;
         for (int a = 0; a <= fireChainLevel - 1; a++)
         {
             fireChainImage[a].image.color = kiiro;
@@ -150,6 +152,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void ZousyokusuuBottonColor()
     {
+        zousyokusuuLevel = playerStatusDataBase.zousyokusuuLv;
         if (zousyokusuuLevel == 0)
         {
             if (fireWallLevel == 0 || fireChainLevel == 0)
@@ -193,6 +196,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void MaryokuUpButtonColor()
     {
+        maryokuUpLevel = playerStatusDataBase.maryokuUpLv;
         for (int a = 0; a <= maryokuUpLevel - 1; a++)
         {
             maryokuUpImage[a].image.color = kiiro;
@@ -208,6 +212,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void FireBallCostDownButtonColor()
     {
+        fireBallConstDownLevel = playerStatusDataBase.fbCostDownLv;
         for (int a = 0; a <= fireBallConstDownLevel - 1; a++)
         {
             fireBallCostDownImage[a].image.color = kiiro;
@@ -223,6 +228,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void FireSpireButtonColor()
     {
+        fireSpireLevel = playerStatusDataBase.fireSpireLv;
         if (fireSpireLevel == 0)
         {
             if (maryokuUpLevel <= 1)
@@ -259,6 +265,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void RapidFireButtonColor()
     {
+        rapidFireLevel = playerStatusDataBase.rapidGireLv;
         if (rapidFireLevel == 0)
         {
             if (fireBallConstDownLevel <= 1)
@@ -295,6 +302,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void FireGravityButtonColor()
     {
+        fireGravityLevel = playerStatusDataBase.fireGrabityLv;
         if (fireGravityLevel == 0)
         {
             if (fireSpireLevel == 0)
@@ -332,6 +340,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void FireBomButtonColor()
     {
+        fireBomLevel = playerStatusDataBase.fireBomLv;
         if (fireBomLevel == 0)
         {
             if (rapidFireLevel == 0)
@@ -368,6 +377,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void WallChainButtonColor()
     {
+        wallChainLevel = playerStatusDataBase.wallChainLv;
         if (wallChainLevel == 0)
         {
             if (fireWallLevel <= 4 || zousyokusuuLevel <= 3)
@@ -386,6 +396,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void TazyuueisyouButtonColor()
     {
+        tazyuuEisyouLevel = playerStatusDataBase.tazyuuEisyouLv;
         if (tazyuuEisyouLevel == 0)
         {
             if (maryokuUpLevel == 0 || fireBallConstDownLevel == 0)
@@ -419,6 +430,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void EisyouTannsyukuButtonColor()
     {
+        eisyouTannsyukuLevel = playerStatusDataBase.eisyouTannsyukuLv;
         if (eisyouTannsyukuLevel == 0)
         {
             if (maryokuUpLevel <= 11 || fireBallConstDownLevel <= 11 || tazyuuEisyouLevel <= 1)
@@ -437,6 +449,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void MueisyouButtonColor()
     {
+        mueisyouLevel = playerStatusDataBase.mueisyouLv;
         if (mueisyouLevel == 0)
         {
             if (eisyouTannsyukuLevel == 0)
@@ -592,7 +605,7 @@ public class SkillBottonColor : MonoBehaviour
                 FireGravityLvText();
                 skillMeiText.text = "ファイヤーグラビティ Lv" + (fireGravityLevel + 1).ToString("D");
                 skillSetumeiText.text = "ファイヤーボールの重量が上昇し、弾速が上がる。";
-                skillKoukaText.text = "Lv\n" + (fireGravityLevel + 1).ToString("D") + "重量+" + zyuuryouBairitu + "%";
+                skillKoukaText.text = "Lv" + (fireGravityLevel + 1).ToString("D") + "\n重量+" + zyuuryouBairitu + "%";
                 skillSyutokuText.text = "消費SP" + syouhiSp + "\nこのスキルを取得しますか？";
                 if (playerStatusDataBase.syoziSp < syouhiSp)
                 {
@@ -641,6 +654,7 @@ public class SkillBottonColor : MonoBehaviour
                 skillMeiText.text = "詠唱短縮 Lv" + (eisyouTannsyukuLevel + 1).ToString("D");
                 skillSetumeiText.text = "ファイヤーボールの長押し発射時の発射速度が早くなる。";
                 skillKoukaText.text = "Lv" + (eisyouTannsyukuLevel + 1).ToString("D") + "\n発射速度2倍";
+                skillSyutokuText.text = "消費SP" + syouhiSp + "\nこのスキルを取得しますか？";
                 if (playerStatusDataBase.syoziSp < syouhiSp)
                 {
                     syoziSPgatarimasennButton.SetActive(true);
@@ -656,6 +670,7 @@ public class SkillBottonColor : MonoBehaviour
                 skillMeiText.text = "無詠唱 Lv" + (mueisyouLevel + 1).ToString("D");
                 skillSetumeiText.text = "ファイヤーボールの長押し発射時の発射速度がとても早くなる。";
                 skillKoukaText.text = "Lv" + (mueisyouLevel + 1).ToString("D") + "\n発射速度3倍";
+                skillSyutokuText.text = "消費SP" + syouhiSp + "\nこのスキルを取得しますか？";
                 if (playerStatusDataBase.syoziSp < syouhiSp)
                 {
                     syoziSPgatarimasennButton.SetActive(true);
@@ -673,6 +688,7 @@ public class SkillBottonColor : MonoBehaviour
         if (fireWall)
         {
             fireWallLevel++;
+            playerStatusDataBase.firewallLv = fireWallLevel;
             FireWallBottonColor();
             ZousyokusuuBottonColor();
             WallChainButtonColor();
@@ -683,6 +699,7 @@ public class SkillBottonColor : MonoBehaviour
         else if (fireCombo)
         {
             fireChainLevel++;
+            playerStatusDataBase.fireComboLv = fireChainLevel;
             FireChainBottonColor();
             ZousyokusuuBottonColor();
             fireCombo = false;
@@ -692,6 +709,7 @@ public class SkillBottonColor : MonoBehaviour
         else if (zousyokusuuBool)
         {
             zousyokusuuLevel++;
+            playerStatusDataBase.zousyokusuuLv = zousyokusuuLevel;
             ZousyokusuuBottonColor();
             WallChainButtonColor();
             zousyokusuuBool = false;
@@ -701,6 +719,7 @@ public class SkillBottonColor : MonoBehaviour
         else if (maryokuUp)
         {
             maryokuUpLevel++;
+            playerStatusDataBase.maryokuUpLv = maryokuUpLevel;
             MaryokuUpButtonColor();
             TazyuueisyouButtonColor();
             FireSpireButtonColor();
@@ -712,6 +731,7 @@ public class SkillBottonColor : MonoBehaviour
         else if (fireBallCostDown)
         {
             fireBallConstDownLevel++;
+            playerStatusDataBase.fbCostDownLv = fireBallConstDownLevel;
             FireBallCostDownButtonColor();
             TazyuueisyouButtonColor();
             RapidFireButtonColor();
@@ -720,74 +740,84 @@ public class SkillBottonColor : MonoBehaviour
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(tazyuueisyou)
+        else if (tazyuueisyou)
         {
             tazyuuEisyouLevel++;
+            playerStatusDataBase.tazyuuEisyouLv = tazyuuEisyouLevel;
             TazyuueisyouButtonColor();
             EisyouTannsyukuButtonColor();
             tazyuueisyou = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(fireSpire)
+        else if (fireSpire)
         {
             fireSpireLevel++;
+            playerStatusDataBase.fireSpireLv = fireSpireLevel;
             FireSpireButtonColor();
             FireGravityButtonColor();
             fireSpire = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(rapidFire)
+        else if (rapidFire)
         {
             rapidFireLevel++;
+            playerStatusDataBase.rapidGireLv = rapidFireLevel;
             RapidFireButtonColor();
             FireBomButtonColor();
             rapidFire = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(fireGravity)
+        else if (fireGravity)
         {
             fireGravityLevel++;
+            playerStatusDataBase.fireGrabityLv = fireGravityLevel;
             FireGravityButtonColor();
             fireGravity = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(fireBom)
+        else if (fireBom)
         {
             fireBomLevel++;
+            playerStatusDataBase.fireBomLv = fireBomLevel;
             FireBomButtonColor();
             fireBom = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(wallcaine)
+        else if (wallcaine)
         {
             wallChainLevel++;
+            playerStatusDataBase.wallChainLv = wallChainLevel;
             WallChainButtonColor();
             wallcaine = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(eisyouTannsyuku)
+        else if (eisyouTannsyuku)
         {
             eisyouTannsyukuLevel++;
+            playerStatusDataBase.eisyouTannsyukuLv = eisyouTannsyukuLevel;
             EisyouTannsyukuButtonColor();
             MueisyouButtonColor();
             eisyouTannsyuku = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
             skillSyutokuPanel.SetActive(false);
         }
-        else if(mueisyou)
+        else if (mueisyou)
         {
             mueisyouLevel++;
+            playerStatusDataBase.mueisyouLv = mueisyouLevel;
             MueisyouButtonColor();
             mueisyou = false;
             playerStatusDataBase.syoziSp -= syouhiSp;
+
             skillSyutokuPanel.SetActive(false);
         }
+        playerStatusDataBase.SkillSave();
         SyoziSPText();
     }
     public void IieButtonDown()
