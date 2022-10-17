@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEditor;
+
 public class PlayerStatusDataBase : MonoBehaviour
 {
     public WeponDateBaseManager weponDateBaseManager;
@@ -170,6 +171,7 @@ public class PlayerStatusDataBase : MonoBehaviour
         StatusLoad();
         SkillLoad();
         expManagerScript.lvUpExp = expManagerScript.GetLvupExp(expManagerScript.lv);
+        SoubiScritableLoad();
         StatusUpdate();
         //Debug.Log(Application.persistentDataPath);
     }
@@ -229,6 +231,7 @@ public class PlayerStatusDataBase : MonoBehaviour
 
         StatusSave();
         SkillSave();
+        SoubiScritableSave();
     }
 
     public void FireSpireLvText()
@@ -640,13 +643,37 @@ public class PlayerStatusDataBase : MonoBehaviour
     public void SoubiScritableSave()
     {
         //ダーティとしてマークする(変更があった事を記録する)
-        EditorUtility.SetDirty(kinnkyoriWeponDatas);
-        EditorUtility.SetDirty(ennkyoriWeponDatas);
-        EditorUtility.SetDirty(yoroiDatas);
-        EditorUtility.SetDirty(sonotaDatas);
+        //EditorUtility.SetDirty(kinnkyoriWeponDatas);
+        //EditorUtility.SetDirty(ennkyoriWeponDatas);
+        //EditorUtility.SetDirty(yoroiDatas);
+        //EditorUtility.SetDirty(sonotaDatas);
         //保存する
-        AssetDatabase.SaveAssets();
+        //AssetDatabase.SaveAssets();
         Debug.Log("装備を保存した");
+
+        soubiSaveData = new SoubiSaveData();
+        soubiSaveData.kinnkyoriWeponDatas = kinnkyoriWeponDatas.weponDatas;
+        soubiSaveData.ennkyoriWeponDatas = ennkyoriWeponDatas.weponDatas;
+        soubiSaveData.yoroiDatas = yoroiDatas.weponDatas;
+        soubiSaveData.sonotaDatas = sonotaDatas.weponDatas;
+        string json = JsonUtility.ToJson(soubiSaveData);
+        File.WriteAllText(Application.persistentDataPath + "/savefile.soubi.json", json);
+    }
+    public void SoubiScritableLoad()
+    {
+
+        string path = Application.persistentDataPath + "/savefile.soubi.json";
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);//ファイル読み込み
+            Debug.Log(json);
+            SoubiSaveData loadData = JsonUtility.FromJson<SoubiSaveData>(json);//読み込んだJsonデータをSaveDataクラスの形式に変換
+
+            kinnkyoriWeponDatas.weponDatas = loadData.kinnkyoriWeponDatas;
+            ennkyoriWeponDatas.weponDatas = loadData.ennkyoriWeponDatas;
+            yoroiDatas.weponDatas = loadData.yoroiDatas;
+            sonotaDatas.weponDatas = loadData.sonotaDatas;
+        }
     }
     public void StatusSyokika()
     {

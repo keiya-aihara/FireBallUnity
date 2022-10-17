@@ -2962,10 +2962,10 @@ MonoBehaviour:
     maryokuUpLv: 0
     fbCostDownLv: 0
   soubiSaveData:
-    kinnkyoriWeponDatas: {fileID: 0}
-    ennkyoriWeponDatas: {fileID: 0}
-    yoroiDatas: {fileID: 0}
-    sonotaDatas: {fileID: 0}
+    kinnkyoriWeponDatas: []
+    ennkyoriWeponDatas: []
+    yoroiDatas: []
+    sonotaDatas: []
 --- !u!114 &1999672075
 MonoBehaviour:
   m_ObjectHideFlags: 0

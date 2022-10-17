@@ -28,117 +28,53 @@ MonoBehaviour:
     epik: 0
     legendary: 0
     god: 0
-    maxHp: 1
-    maxMp: 1
+    maxHp: 151
+    maxMp: 151
     fireBallCost: 0
-    kougekiryoku: 1
+    kougekiryoku: 151
     kinnkyoriKaisinnritu: 0
-    maryoku: 103
+    maryoku: 300
     ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
+    bougyoryoiku: 151
     kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
+    meityuuritu: 1.5
+    kaihiritu: 1.5
     kougekiHinndo: 0
     destroyTime: 0
     srushSpeed: 0
     nokkubakku: 0
     kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 103
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
+    kyoukagoMaxHp: 151
+    kyoukagoMaxMp: 151
+    kyoukagoKougekiryoku: 151
+    kyoukagoMaryoku: 300
+    kyoukagoBougyoryoku: 151
+    kyoukagoMeityuuritu: 1.5
+    kyoukagoKaihiritu: 1.5
     kyoukaLv: 0
     kyoukaLvName: 
     kyoukaBairitu: 0
     sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1030
-    syougouName: 
+    baikyakuKinngaku: 1500
+    syougouName: "\u300A\u5909\u5E7B\u81EA\u5728\u306A\u300B"
     syougouRea: 0
-    syougouSuperRea: 0
+    syougouSuperRea: 1
     syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
+    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+50\uFF05\u300B"
+    syougouMaxHp: 100
+    syougouMaxMp: 100
     syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
+    syougouKougekiryoku: 100
+    syougouMamryoku: 100
     syougouKinnkyoriKaisinnritu: 0
     syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
+    syougouBougyoryoku: 100
     syougouKaisinnTaisei: 0
     syougouMeityuuritu: 0
     syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+3%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+3%\u3009"
-    bairitu: 3
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 2
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 105
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 105
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1050
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+5%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+5%\u3009"
-    bairitu: 5
+    giftName: 
+    giftBairituName: 
+    bairitu: 0
     keyLock: 0
     soubiTyuu: 0
   - srushEffect: {fileID: 0}
@@ -161,7 +97,7 @@ MonoBehaviour:
     fireBallCost: 0
     kougekiryoku: 126
     kinnkyoriKaisinnritu: 0
-    maryoku: 262
+    maryoku: 250
     ennkyoriKaisinnsitu: 0
     bougyoryoiku: 126
     kaisinnTaisei: 0
@@ -175,7 +111,7 @@ MonoBehaviour:
     kyoukagoMaxHp: 126
     kyoukagoMaxMp: 126
     kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 262
+    kyoukagoMaryoku: 250
     kyoukagoBougyoryoku: 126
     kyoukagoMeityuuritu: 126.25
     kyoukagoKaihiritu: 1.25
@@ -183,7 +119,7 @@ MonoBehaviour:
     kyoukaLvName: 
     kyoukaBairitu: 0
     sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1310
+    baikyakuKinngaku: 1250
     syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
     syougouRea: 1
     syougouSuperRea: 0
@@ -200,9 +136,9 @@ MonoBehaviour:
     syougouKaisinnTaisei: 0
     syougouMeityuuritu: 100
     syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+6%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+6%\u3009"
-    bairitu: 6
+    giftName: 
+    giftBairituName: 
+    bairitu: 0
     keyLock: 0
     soubiTyuu: 0
   - srushEffect: {fileID: 0}
@@ -220,53 +156,53 @@ MonoBehaviour:
     epik: 0
     legendary: 0
     god: 0
-    maxHp: 126
-    maxMp: 126
+    maxHp: 1
+    maxMp: 1
     fireBallCost: 0
-    kougekiryoku: 126
+    kougekiryoku: 1
     kinnkyoriKaisinnritu: 0
-    maryoku: 250
+    maryoku: 102
     ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
+    bougyoryoiku: 1
     kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
+    meityuuritu: 1
+    kaihiritu: 1
     kougekiHinndo: 0
     destroyTime: 0
     srushSpeed: 0
     nokkubakku: 0
     kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
+    kyoukagoMaxHp: 1
+    kyoukagoMaxMp: 1
+    kyoukagoKougekiryoku: 1
+    kyoukagoMaryoku: 102
+    kyoukagoBougyoryoku: 1
+    kyoukagoMeityuuritu: 1
+    kyoukagoKaihiritu: 1
     kyoukaLv: 0
     kyoukaLvName: 
     kyoukaBairitu: 0
     sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
+    baikyakuKinngaku: 1020
+    syougouName: 
+    syougouRea: 0
     syougouSuperRea: 0
     syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
+    syougouBairitu: 
+    syougouMaxHp: 0
+    syougouMaxMp: 0
     syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
+    syougouKougekiryoku: 0
+    syougouMamryoku: 0
     syougouKinnkyoriKaisinnritu: 0
     syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
+    syougouBougyoryoku: 0
     syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
+    syougouMeityuuritu: 0
     syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
+    giftName: "\u3008\u9B54\u529B+2%\u3009"
+    giftBairituName: "\u3008\u9B54\u529B+2%\u3009"
+    bairitu: 2
     keyLock: 0
     soubiTyuu: 0
   - srushEffect: {fileID: 0}
@@ -284,39 +220,39 @@ MonoBehaviour:
     epik: 0
     legendary: 0
     god: 0
-    maxHp: 126
-    maxMp: 126
+    maxHp: 151
+    maxMp: 151
     fireBallCost: 0
-    kougekiryoku: 126
+    kougekiryoku: 151
     kinnkyoriKaisinnritu: 0
-    maryoku: 346
+    maryoku: 300
     ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
+    bougyoryoiku: 151
     kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
+    meityuuritu: 1.5
+    kaihiritu: 1.5
     kougekiHinndo: 0
     destroyTime: 0
     srushSpeed: 0
     nokkubakku: 0
     kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 346
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
+    kyoukagoMaxHp: 151
+    kyoukagoMaxMp: 151
+    kyoukagoKougekiryoku: 151
+    kyoukagoMaryoku: 300
+    kyoukagoBougyoryoku: 151
+    kyoukagoMeityuuritu: 1.5
+    kyoukagoKaihiritu: 1.5
     kyoukaLv: 0
     kyoukaLvName: 
     kyoukaBairitu: 0
     sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1730
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
+    baikyakuKinngaku: 1500
+    syougouName: "\u300A\u5909\u5E7B\u81EA\u5728\u306A\u300B"
+    syougouRea: 0
+    syougouSuperRea: 1
     syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
+    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+50\uFF05\u300B"
     syougouMaxHp: 100
     syougouMaxMp: 100
     syougouFireBallCost: 0
@@ -326,71 +262,7 @@ MonoBehaviour:
     syougouEnnkyoriKaisinnritu: 0
     syougouBougyoryoku: 100
     syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+48%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+48%\u3009"
-    bairitu: 48
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 6
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
+    syougouMeityuuritu: 0
     syougouKaihiritu: 0
     giftName: 
     giftBairituName: 
@@ -400,7 +272,7 @@ MonoBehaviour:
   - srushEffect: {fileID: 0}
     soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
     readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 7
+    no: 6
     name: "\u6728\u306E\u6756"
     kinnkyoriWepon: 0
     ennkyoriWepon: 1
@@ -455,6 +327,70 @@ MonoBehaviour:
     syougouBougyoryoku: 0
     syougouKaisinnTaisei: 0
     syougouMeityuuritu: 0
+    syougouKaihiritu: 0
+    giftName: 
+    giftBairituName: 
+    bairitu: 0
+    keyLock: 0
+    soubiTyuu: 0
+  - srushEffect: {fileID: 0}
+    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
+    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
+    no: 7
+    name: "\u6728\u306E\u6756"
+    kinnkyoriWepon: 0
+    ennkyoriWepon: 1
+    yoroi: 0
+    sonota: 0
+    nomal: 1
+    rea: 0
+    superRea: 0
+    epik: 0
+    legendary: 0
+    god: 0
+    maxHp: 126
+    maxMp: 126
+    fireBallCost: 0
+    kougekiryoku: 126
+    kinnkyoriKaisinnritu: 0
+    maryoku: 250
+    ennkyoriKaisinnsitu: 0
+    bougyoryoiku: 126
+    kaisinnTaisei: 0
+    meityuuritu: 126.25
+    kaihiritu: 1.25
+    kougekiHinndo: 0
+    destroyTime: 0
+    srushSpeed: 0
+    nokkubakku: 0
+    kougekiHanni: 0
+    kyoukagoMaxHp: 126
+    kyoukagoMaxMp: 126
+    kyoukagoKougekiryoku: 126
+    kyoukagoMaryoku: 250
+    kyoukagoBougyoryoku: 126
+    kyoukagoMeityuuritu: 126.25
+    kyoukagoKaihiritu: 1.25
+    kyoukaLv: 0
+    kyoukaLvName: 
+    kyoukaBairitu: 0
+    sonotaKyoukaStatus: 0
+    baikyakuKinngaku: 1250
+    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
+    syougouRea: 1
+    syougouSuperRea: 0
+    syougouEpikRea: 0
+    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
+    syougouMaxHp: 100
+    syougouMaxMp: 100
+    syougouFireBallCost: 0
+    syougouKougekiryoku: 100
+    syougouMamryoku: 100
+    syougouKinnkyoriKaisinnritu: 0
+    syougouEnnkyoriKaisinnritu: 0
+    syougouBougyoryoku: 100
+    syougouKaisinnTaisei: 0
+    syougouMeityuuritu: 100
     syougouKaihiritu: 0
     giftName: 
     giftBairituName: 
@@ -604,70 +540,6 @@ MonoBehaviour:
     epik: 0
     legendary: 0
     god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 11
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
     maxHp: 1
     maxMp: 1
     fireBallCost: 0
@@ -715,6 +587,70 @@ MonoBehaviour:
     giftName: 
     giftBairituName: 
     bairitu: 0
+    keyLock: 0
+    soubiTyuu: 0
+  - srushEffect: {fileID: 0}
+    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
+    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
+    no: 11
+    name: "\u6728\u306E\u6756"
+    kinnkyoriWepon: 0
+    ennkyoriWepon: 1
+    yoroi: 0
+    sonota: 0
+    nomal: 1
+    rea: 0
+    superRea: 0
+    epik: 0
+    legendary: 0
+    god: 0
+    maxHp: 1
+    maxMp: 1
+    fireBallCost: 0
+    kougekiryoku: 1
+    kinnkyoriKaisinnritu: 0
+    maryoku: 106
+    ennkyoriKaisinnsitu: 0
+    bougyoryoiku: 1
+    kaisinnTaisei: 0
+    meityuuritu: 1
+    kaihiritu: 1
+    kougekiHinndo: 0
+    destroyTime: 0
+    srushSpeed: 0
+    nokkubakku: 0
+    kougekiHanni: 0
+    kyoukagoMaxHp: 1
+    kyoukagoMaxMp: 1
+    kyoukagoKougekiryoku: 1
+    kyoukagoMaryoku: 106
+    kyoukagoBougyoryoku: 1
+    kyoukagoMeityuuritu: 1
+    kyoukagoKaihiritu: 1
+    kyoukaLv: 0
+    kyoukaLvName: 
+    kyoukaBairitu: 0
+    sonotaKyoukaStatus: 0
+    baikyakuKinngaku: 1060
+    syougouName: 
+    syougouRea: 0
+    syougouSuperRea: 0
+    syougouEpikRea: 0
+    syougouBairitu: 
+    syougouMaxHp: 0
+    syougouMaxMp: 0
+    syougouFireBallCost: 0
+    syougouKougekiryoku: 0
+    syougouMamryoku: 0
+    syougouKinnkyoriKaisinnritu: 0
+    syougouEnnkyoriKaisinnritu: 0
+    syougouBougyoryoku: 0
+    syougouKaisinnTaisei: 0
+    syougouMeityuuritu: 0
+    syougouKaihiritu: 0
+    giftName: "\u3008\u9B54\u529B+6%\u3009"
+    giftBairituName: "\u3008\u9B54\u529B+6%\u3009"
+    bairitu: 6
     keyLock: 0
     soubiTyuu: 0
   - srushEffect: {fileID: 0}
@@ -796,49 +732,49 @@ MonoBehaviour:
     epik: 0
     legendary: 0
     god: 0
-    maxHp: 1
-    maxMp: 1
+    maxHp: 126
+    maxMp: 126
     fireBallCost: 0
-    kougekiryoku: 1
+    kougekiryoku: 126
     kinnkyoriKaisinnritu: 0
-    maryoku: 100
+    maryoku: 250
     ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
+    bougyoryoiku: 126
     kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
+    meityuuritu: 126.25
+    kaihiritu: 1.25
     kougekiHinndo: 0
     destroyTime: 0
     srushSpeed: 0
     nokkubakku: 0
     kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
+    kyoukagoMaxHp: 126
+    kyoukagoMaxMp: 126
+    kyoukagoKougekiryoku: 126
+    kyoukagoMaryoku: 250
+    kyoukagoBougyoryoku: 126
+    kyoukagoMeityuuritu: 126.25
+    kyoukagoKaihiritu: 1.25
     kyoukaLv: 0
     kyoukaLvName: 
     kyoukaBairitu: 0
     sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
+    baikyakuKinngaku: 1250
+    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
+    syougouRea: 1
     syougouSuperRea: 0
     syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
+    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
+    syougouMaxHp: 100
+    syougouMaxMp: 100
     syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
+    syougouKougekiryoku: 100
+    syougouMamryoku: 100
     syougouKinnkyoriKaisinnritu: 0
     syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
+    syougouBougyoryoku: 100
     syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
+    syougouMeityuuritu: 100
     syougouKaihiritu: 0
     giftName: 
     giftBairituName: 
@@ -865,7 +801,7 @@ MonoBehaviour:
     fireBallCost: 0
     kougekiryoku: 1
     kinnkyoriKaisinnritu: 0
-    maryoku: 100
+    maryoku: 122
     ennkyoriKaisinnsitu: 0
     bougyoryoiku: 1
     kaisinnTaisei: 0
@@ -879,7 +815,7 @@ MonoBehaviour:
     kyoukagoMaxHp: 1
     kyoukagoMaxMp: 1
     kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
+    kyoukagoMaryoku: 122
     kyoukagoBougyoryoku: 1
     kyoukagoMeityuuritu: 1
     kyoukagoKaihiritu: 1
@@ -887,7 +823,7 @@ MonoBehaviour:
     kyoukaLvName: 
     kyoukaBairitu: 0
     sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
+    baikyakuKinngaku: 1220
     syougouName: 
     syougouRea: 0
     syougouSuperRea: 0
@@ -904,1935 +840,15 @@ MonoBehaviour:
     syougouKaisinnTaisei: 0
     syougouMeityuuritu: 0
     syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
+    giftName: "\u3008\u9B54\u529B+22%\u3009"
+    giftBairituName: "\u3008\u9B54\u529B+22%\u3009"
+    bairitu: 22
     keyLock: 0
     soubiTyuu: 0
   - srushEffect: {fileID: 0}
     soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
     readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
     no: 15
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 16
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 104
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 104
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1040
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+4%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+4%\u3009"
-    bairitu: 4
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 17
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 115
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 115
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1150
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+15%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+15%\u3009"
-    bairitu: 15
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 18
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 19
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 20
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 202
-    maxMp: 202
-    fireBallCost: 0
-    kougekiryoku: 202
-    kinnkyoriKaisinnritu: 0
-    maryoku: 400
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 202
-    kaisinnTaisei: 0
-    meityuuritu: 2
-    kaihiritu: 2
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 202
-    kyoukagoMaxMp: 202
-    kyoukagoKougekiryoku: 202
-    kyoukagoMaryoku: 400
-    kyoukagoBougyoryoku: 202
-    kyoukagoMeityuuritu: 2
-    kyoukagoKaihiritu: 2
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 2000
-    syougouName: "\u300A\u9752\u3044\u9632\u58C1\u300B"
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 1
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+100\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 21
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 22
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 202
-    maxMp: 202
-    fireBallCost: 0
-    kougekiryoku: 202
-    kinnkyoriKaisinnritu: 0
-    maryoku: 416
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 202
-    kaisinnTaisei: 0
-    meityuuritu: 2
-    kaihiritu: 2
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 202
-    kyoukagoMaxMp: 202
-    kyoukagoKougekiryoku: 202
-    kyoukagoMaryoku: 416
-    kyoukagoBougyoryoku: 202
-    kyoukagoMeityuuritu: 2
-    kyoukagoKaihiritu: 2
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 2080
-    syougouName: "\u300A\u9752\u3044\u9632\u58C1\u300B"
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 1
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+100\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+8%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+8%\u3009"
-    bairitu: 8
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 23
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 24
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 127
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 127
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1270
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+27%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+27%\u3009"
-    bairitu: 27
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 25
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 26
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 101
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 101
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1010
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+1%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+1%\u3009"
-    bairitu: 1
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 27
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 151
-    maxMp: 151
-    fireBallCost: 0
-    kougekiryoku: 151
-    kinnkyoriKaisinnritu: 0
-    maryoku: 300
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 151
-    kaisinnTaisei: 0
-    meityuuritu: 1.5
-    kaihiritu: 1.5
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 151
-    kyoukagoMaxMp: 151
-    kyoukagoKougekiryoku: 151
-    kyoukagoMaryoku: 300
-    kyoukagoBougyoryoku: 151
-    kyoukagoMeityuuritu: 1.5
-    kyoukagoKaihiritu: 1.5
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1500
-    syougouName: "\u300A\u5909\u5E7B\u81EA\u5728\u306A\u300B"
-    syougouRea: 0
-    syougouSuperRea: 1
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+50\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 28
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 29
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 30
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 314
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 314
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1570
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+32%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+32%\u3009"
-    bairitu: 32
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 31
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 107
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 107
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1070
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+7%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+7%\u3009"
-    bairitu: 7
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 32
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 151
-    maxMp: 151
-    fireBallCost: 0
-    kougekiryoku: 151
-    kinnkyoriKaisinnritu: 0
-    maryoku: 300
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 151
-    kaisinnTaisei: 0
-    meityuuritu: 1.5
-    kaihiritu: 1.5
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 151
-    kyoukagoMaxMp: 151
-    kyoukagoKougekiryoku: 151
-    kyoukagoMaryoku: 300
-    kyoukagoBougyoryoku: 151
-    kyoukagoMeityuuritu: 1.5
-    kyoukagoKaihiritu: 1.5
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1500
-    syougouName: "\u300A\u5909\u5E7B\u81EA\u5728\u306A\u300B"
-    syougouRea: 0
-    syougouSuperRea: 1
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+50\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 33
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 202
-    maxMp: 202
-    fireBallCost: 0
-    kougekiryoku: 202
-    kinnkyoriKaisinnritu: 0
-    maryoku: 400
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 202
-    kaisinnTaisei: 0
-    meityuuritu: 2
-    kaihiritu: 2
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 202
-    kyoukagoMaxMp: 202
-    kyoukagoKougekiryoku: 202
-    kyoukagoMaryoku: 400
-    kyoukagoBougyoryoku: 202
-    kyoukagoMeityuuritu: 2
-    kyoukagoKaihiritu: 2
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 2000
-    syougouName: "\u300A\u9752\u3044\u9632\u58C1\u300B"
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 1
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+100\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 34
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 35
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 151
-    maxMp: 151
-    fireBallCost: 0
-    kougekiryoku: 151
-    kinnkyoriKaisinnritu: 0
-    maryoku: 304
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 151
-    kaisinnTaisei: 0
-    meityuuritu: 1.5
-    kaihiritu: 1.5
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 151
-    kyoukagoMaxMp: 151
-    kyoukagoKougekiryoku: 151
-    kyoukagoMaryoku: 304
-    kyoukagoBougyoryoku: 151
-    kyoukagoMeityuuritu: 1.5
-    kyoukagoKaihiritu: 1.5
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1520
-    syougouName: "\u300A\u5909\u5E7B\u81EA\u5728\u306A\u300B"
-    syougouRea: 0
-    syougouSuperRea: 1
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+50\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+2%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+2%\u3009"
-    bairitu: 2
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 36
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 37
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 151
-    maxMp: 151
-    fireBallCost: 0
-    kougekiryoku: 151
-    kinnkyoriKaisinnritu: 0
-    maryoku: 350
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 151
-    kaisinnTaisei: 0
-    meityuuritu: 1.5
-    kaihiritu: 1.5
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 151
-    kyoukagoMaxMp: 151
-    kyoukagoKougekiryoku: 151
-    kyoukagoMaryoku: 350
-    kyoukagoBougyoryoku: 151
-    kyoukagoMeityuuritu: 1.5
-    kyoukagoKaihiritu: 1.5
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1750
-    syougouName: "\u300A\u5909\u5E7B\u81EA\u5728\u306A\u300B"
-    syougouRea: 0
-    syougouSuperRea: 1
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+50\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+25%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+25%\u3009"
-    bairitu: 25
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 38
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 39
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 100
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 100
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1000
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 40
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 264
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 264
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1320
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+7%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+7%\u3009"
-    bairitu: 7
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 41
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 133
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 133
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1330
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+33%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+33%\u3009"
-    bairitu: 33
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 42
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 290
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 290
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1450
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+20%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+20%\u3009"
-    bairitu: 20
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 43
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 1
-    maxMp: 1
-    fireBallCost: 0
-    kougekiryoku: 1
-    kinnkyoriKaisinnritu: 0
-    maryoku: 127
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 1
-    kaisinnTaisei: 0
-    meityuuritu: 1
-    kaihiritu: 1
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 1
-    kyoukagoMaxMp: 1
-    kyoukagoKougekiryoku: 1
-    kyoukagoMaryoku: 127
-    kyoukagoBougyoryoku: 1
-    kyoukagoMeityuuritu: 1
-    kyoukagoKaihiritu: 1
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1270
-    syougouName: 
-    syougouRea: 0
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: 
-    syougouMaxHp: 0
-    syougouMaxMp: 0
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 0
-    syougouMamryoku: 0
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 0
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 0
-    syougouKaihiritu: 0
-    giftName: "\u3008\u9B54\u529B+27%\u3009"
-    giftBairituName: "\u3008\u9B54\u529B+27%\u3009"
-    bairitu: 27
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 44
-    name: "\u6728\u306E\u6756"
-    kinnkyoriWepon: 0
-    ennkyoriWepon: 1
-    yoroi: 0
-    sonota: 0
-    nomal: 1
-    rea: 0
-    superRea: 0
-    epik: 0
-    legendary: 0
-    god: 0
-    maxHp: 126
-    maxMp: 126
-    fireBallCost: 0
-    kougekiryoku: 126
-    kinnkyoriKaisinnritu: 0
-    maryoku: 250
-    ennkyoriKaisinnsitu: 0
-    bougyoryoiku: 126
-    kaisinnTaisei: 0
-    meityuuritu: 126.25
-    kaihiritu: 1.25
-    kougekiHinndo: 0
-    destroyTime: 0
-    srushSpeed: 0
-    nokkubakku: 0
-    kougekiHanni: 0
-    kyoukagoMaxHp: 126
-    kyoukagoMaxMp: 126
-    kyoukagoKougekiryoku: 126
-    kyoukagoMaryoku: 250
-    kyoukagoBougyoryoku: 126
-    kyoukagoMeityuuritu: 126.25
-    kyoukagoKaihiritu: 1.25
-    kyoukaLv: 0
-    kyoukaLvName: 
-    kyoukaBairitu: 0
-    sonotaKyoukaStatus: 0
-    baikyakuKinngaku: 1250
-    syougouName: "\u300A\u3076\u3088\u3076\u3088\u306E\u300B"
-    syougouRea: 1
-    syougouSuperRea: 0
-    syougouEpikRea: 0
-    syougouBairitu: "\u300A\u30B9\u30C6\u30FC\u30BF\u30B9+25\uFF05\u300B"
-    syougouMaxHp: 100
-    syougouMaxMp: 100
-    syougouFireBallCost: 0
-    syougouKougekiryoku: 100
-    syougouMamryoku: 100
-    syougouKinnkyoriKaisinnritu: 0
-    syougouEnnkyoriKaisinnritu: 0
-    syougouBougyoryoku: 100
-    syougouKaisinnTaisei: 0
-    syougouMeityuuritu: 100
-    syougouKaihiritu: 0
-    giftName: 
-    giftBairituName: 
-    bairitu: 0
-    keyLock: 0
-    soubiTyuu: 0
-  - srushEffect: {fileID: 0}
-    soubiIcon: {fileID: 8949997330792774273, guid: 86fd35927541ac64b971b84214ac8363, type: 3}
-    readoIcon: {fileID: 1257720321440453538, guid: 0c7c40d05fd12da4f991fc30f37921a4, type: 3}
-    no: 45
     name: "\u6728\u306E\u6756"
     kinnkyoriWepon: 0
     ennkyoriWepon: 1
