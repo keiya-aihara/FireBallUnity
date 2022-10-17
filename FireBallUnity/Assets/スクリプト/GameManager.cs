@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
 
 	public List<int> numbers = new List<int>();
 	public List<int> numbers2 = new List<int>();
-	void Start()
+    void Start()
 	{
 		playerStatus = player.GetComponent<PlayerStatus>();
 		a = false;
@@ -40,8 +41,9 @@ public class GameManager : MonoBehaviour
 					}
 					if (a)
 					{
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().SoubiScritableSave();
 						SceneManager.LoadScene("Result");
-					}
+                    }
 
 				}
 			}

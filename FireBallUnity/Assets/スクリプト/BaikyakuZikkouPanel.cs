@@ -118,6 +118,7 @@ public class BaikyakuZikkouPanel : MonoBehaviour
             a = false;
         }
         dataBaseManager.GetComponent<MoneyManager>().money += baikyakuKinngaku;
+        dataBaseManager.GetComponent<PlayerStatusDataBase>().SoubiScritableSave();
         gameObject.SetActive(false);
 
     }

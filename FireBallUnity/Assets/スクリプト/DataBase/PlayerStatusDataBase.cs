@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+using UnityEditor;
 public class PlayerStatusDataBase : MonoBehaviour
 {
     public WeponDateBaseManager weponDateBaseManager;
@@ -169,7 +169,6 @@ public class PlayerStatusDataBase : MonoBehaviour
     {
         StatusLoad();
         SkillLoad();
-        SoubiLoad();
         expManagerScript.lvUpExp = expManagerScript.GetLvupExp(expManagerScript.lv);
         StatusUpdate();
         //Debug.Log(Application.persistentDataPath);
@@ -230,7 +229,6 @@ public class PlayerStatusDataBase : MonoBehaviour
 
         StatusSave();
         SkillSave();
-        SoubiSave();
     }
 
     public void FireSpireLvText()
@@ -589,19 +587,6 @@ public class PlayerStatusDataBase : MonoBehaviour
         string json = JsonUtility.ToJson(skillSaveData);
         File.WriteAllText(Application.persistentDataPath + "/savefile.skill.json", json);
     }
-    public void SoubiSave()
-    {
-        soubiSaveData  = new SoubiSaveData();
-
-        soubiSaveData.kinnkyoriWeponDatas = kinnkyoriWeponDatas;
-        soubiSaveData.ennkyoriWeponDatas = ennkyoriWeponDatas;
-        soubiSaveData.yoroiDatas = yoroiDatas;
-        soubiSaveData.sonotaDatas = sonotaDatas;
-        // Debug.Log(JsonUtility.ToJson(saveData));
-
-        string json = JsonUtility.ToJson(soubiSaveData);
-        File.WriteAllText(Application.persistentDataPath + "/savefile.soubi.json", json);
-    }
     public void StatusLoad()
     {
         string path = Application.persistentDataPath + "/savefile.status.json";
@@ -652,20 +637,16 @@ public class PlayerStatusDataBase : MonoBehaviour
             fbCostDownLv = loadData.fbCostDownLv;
         }
     }
-    public void SoubiLoad()
+    public void SoubiScritableSave()
     {
-        string path = Application.persistentDataPath + "/savefile.soubi.json";
-        if (File.Exists(path))
-        {
-            string json = File.ReadAllText(path);//ファイル読み込み
-            Debug.Log(json);
-            SoubiSaveData loadData = JsonUtility.FromJson<SoubiSaveData>(json);//読み込んだJsonデータをSaveDataクラスの形式に変換
-
-            kinnkyoriWeponDatas = soubiSaveData.kinnkyoriWeponDatas;
-            ennkyoriWeponDatas = soubiSaveData.ennkyoriWeponDatas;
-            yoroiDatas = soubiSaveData.yoroiDatas;
-            sonotaDatas = soubiSaveData.sonotaDatas;
-        }
+        //ダーティとしてマークする(変更があった事を記録する)
+        EditorUtility.SetDirty(kinnkyoriWeponDatas);
+        EditorUtility.SetDirty(ennkyoriWeponDatas);
+        EditorUtility.SetDirty(yoroiDatas);
+        EditorUtility.SetDirty(sonotaDatas);
+        //保存する
+        AssetDatabase.SaveAssets();
+        Debug.Log("装備を保存した");
     }
     public void StatusSyokika()
     {

@@ -42,11 +42,13 @@ public class ResultSceneManager : MonoBehaviour
             kakutokuKyoukasekiDai = 0;
             kakutokuKeikennti = 0;
 
-            expManager = GameObject.Find("DataBaseManager");
+            expManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
             expManagerScript = expManager.GetComponent<EXPManager>();
             boukennmaeLv = expManagerScript.lv;
             b= false;
         }
+
+
     }
     private void Start()
     {

@@ -12,7 +12,7 @@ public class WeponDataList : ScriptableObject
     {
 
     }
-	public List<WeponData> weponDatas = new List<WeponData>();
+    public List<WeponData> weponDatas;
 	[Serializable]
 	public class WeponData
 	{

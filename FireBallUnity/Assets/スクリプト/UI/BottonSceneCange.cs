@@ -25,6 +25,7 @@ public class BottonSceneCange : MonoBehaviour
     public void mainMenu()
     {
         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().StatusUpdate();
+
         SceneManager.LoadScene("MainMenu");
         Destroy(GameObject.Find("ResultManager"));
     }

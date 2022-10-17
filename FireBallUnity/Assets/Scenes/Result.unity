@@ -415,8 +415,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1925347190}
   m_HandleRect: {fileID: 1925347189}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.9999969
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a08766a9edf44f54082076c64fcd1ce6, type: 2}
-  m_sharedMaterial: {fileID: 7657734537577287530, guid: a08766a9edf44f54082076c64fcd1ce6, type: 2}
+  m_sharedMaterial: {fileID: -1007929248504556175, guid: a08766a9edf44f54082076c64fcd1ce6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1785,8 +1785,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 8.8}
+  m_SizeDelta: {x: 0, y: -17.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529487218
 MonoBehaviour:
@@ -1815,7 +1815,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -2493,7 +2493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -554, y: 450.25}
+  m_AnchoredPosition: {x: -554, y: 450.25003}
   m_SizeDelta: {x: 1108, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1816686155

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class ItemController : MonoBehaviour
 {
@@ -508,6 +509,7 @@ public class ItemController : MonoBehaviour
             KousekiAdd();
             resultSceneManager.GetComponent<ResultSceneManager>().kakutokuItemName.Add(itemStatus.syougouName + itemStatus.name + itemStatus.giftName);
         }
+        
     }
     public void SyougouDrop()
     {

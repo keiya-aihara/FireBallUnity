@@ -14,7 +14,7 @@ public class LockBotton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dataBasaManager = GameObject.Find("DataBaseManager");
+        dataBasaManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
     }
 
     // Update is called once per frame
@@ -84,5 +84,6 @@ public class LockBotton : MonoBehaviour
                 sonotaDataBaseManager.GetWeponData(number).keyLock = false;
             }
         }
+        dataBasaManager.GetComponent<PlayerStatusDataBase>().SoubiScritableSave();
     }
 }
