@@ -12,79 +12,144 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65028
+65093
 Successfully changed project path to: /Users/aiharakeiya/Documents/GitHub/FireBallUnity/FireBallUnity
 /Users/aiharakeiya/Documents/GitHub/FireBallUnity/FireBallUnity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 47.82 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 39.00 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/aiharakeiya/Documents/GitHub/FireBallUnity/FireBallUnity/Assets
 GfxDevice: creating device client; threaded=0
-2022-10-17 19:51:50.818 Unity[97064:31649817] (null) preferred device: Apple M1 (high power)
-2022-10-17 19:51:50.818 Unity[97064:31649817] Metal devices available: 1
-2022-10-17 19:51:50.818 Unity[97064:31649817] 0: Apple M1 (high power)
-2022-10-17 19:51:50.819 Unity[97064:31649817] Using device Apple M1 (high power)
+2022-10-17 19:53:47.447 Unity[97180:31651620] (null) preferred device: Apple M1 (high power)
+2022-10-17 19:53:47.447 Unity[97180:31651620] Metal devices available: 1
+2022-10-17 19:53:47.447 Unity[97180:31651620] 0: Apple M1 (high power)
+2022-10-17 19:53:47.447 Unity[97180:31651620] Using device Apple M1 (high power)
 Initializing Metal device caps: Apple M1
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000384 seconds.
+Registered in 0.001560 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 42.60 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.93 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.092 seconds
+- Completed reload, in  2.008 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000306 seconds.
+Registered in 0.000603 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 40.77 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.61 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.647 seconds
+- Completed reload, in  1.580 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1951 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 156.0 MB.
 System memory in use after: 156.1 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2397.
-Total: 1.565834 ms (FindLiveObjects: 0.145959 ms CreateObjectMapping: 0.040417 ms MarkObjects: 1.321167 ms  DeleteObjects: 0.057542 ms)
+Total: 1.563291 ms (FindLiveObjects: 0.142417 ms CreateObjectMapping: 0.040458 ms MarkObjects: 1.320708 ms  DeleteObjects: 0.058958 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/DataBase/EnnkyoriWeponDatas.asset
-  artifactKey: Guid(4b719497a04d444a2afde31c5e668014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DataBase/EnnkyoriWeponDatas.asset using Guid(4b719497a04d444a2afde31c5e668014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed27e24b0e090bc78faa8ede947ae5c5') in 0.421364 seconds
-  Import took 0.426189 seconds .
+  path: Assets/DataBase/YoroiDatas.asset
+  artifactKey: Guid(6637887cfacf54e4e88f42d0b5f56664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DataBase/YoroiDatas.asset using Guid(6637887cfacf54e4e88f42d0b5f56664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37f054c0a9e3ada071b41b9f24042123') in 0.410475 seconds
+  Import took 0.415006 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/DataBase/KinnkyoriWeponDataList.asset
-  artifactKey: Guid(69b101913c83c954ca44f635cc837004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DataBase/KinnkyoriWeponDataList.asset using Guid(69b101913c83c954ca44f635cc837004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28fad0c1c7a91e65a3e0a8c8e0b41077') in 0.166665 seconds
-  Import took 0.170269 seconds .
+  Time since last request: 0.000269 seconds.
+  path: Assets/DataBase/SonotaDatas.asset
+  artifactKey: Guid(eb9bf542edc5a114d8449e1314596082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DataBase/SonotaDatas.asset using Guid(eb9bf542edc5a114d8449e1314596082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f17adee49eab184c1ed993169d255b9') in 0.181605 seconds
+  Import took 0.185324 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000842 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.516 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1931 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 158.7 MB.
+System memory in use after: 158.8 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2402.
+Total: 1.539459 ms (FindLiveObjects: 0.121625 ms CreateObjectMapping: 0.038000 ms MarkObjects: 1.350209 ms  DeleteObjects: 0.028834 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000822 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.465 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1931 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 158.9 MB.
+System memory in use after: 159.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2405.
+Total: 1.489375 ms (FindLiveObjects: 0.132709 ms CreateObjectMapping: 0.038708 ms MarkObjects: 1.304000 ms  DeleteObjects: 0.013375 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.2 MB.
+System memory in use after: 121.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2405.
+Total: 13.308083 ms (FindLiveObjects: 0.273583 ms CreateObjectMapping: 0.036250 ms MarkObjects: 12.968417 ms  DeleteObjects: 0.028916 ms)
 
