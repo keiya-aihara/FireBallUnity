@@ -22,7 +22,7 @@ public class WeponBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.y <= -2)
+        if(player.transform.position.y <= 2.5f)
         {
             Instantiate(itemPrefab,transform.position,transform.rotation);
             Destroy(gameObject);

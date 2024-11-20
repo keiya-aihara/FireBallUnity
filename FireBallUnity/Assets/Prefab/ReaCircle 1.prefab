@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1539174782125785438}
   - component: {fileID: 3810985073608648755}
   - component: {fileID: -6234024639803867033}
+  - component: {fileID: 7515382976642730432}
   m_Layer: 5
   m_Name: ReaCircle 1
   m_TagString: Untagged
@@ -29,6 +30,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,3 +90,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b6976afb80cea4ca91ae9933584335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7515382976642730432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511482139073665760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1

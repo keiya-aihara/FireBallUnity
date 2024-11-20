@@ -7,17 +7,19 @@ public class EnemyKougekiHanniBase : MonoBehaviour
     private GameObject enemy;
     private EnemyBase enemyBase;
     private CircleCollider2D enemyKougekiHanniCollider;
+    private GameObject player;
+
     void Start()
     {
-        enemy = transform.root.gameObject;
-        enemyBase = enemy.GetComponent<EnemyBase>();
+        enemyBase = gameObject.GetComponent<EnemyBase>();
         enemyKougekiHanniCollider = GetComponent<CircleCollider2D>();
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyKougekiHanniCollider.radius = enemyBase.enemyData.kougekiHanni;
+        //enemyKougekiHanniCollider.radius = enemyBase.enemyData.kougekiHanni;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -28,18 +30,21 @@ public class EnemyKougekiHanniBase : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag =="Player")
+        if (player.transform.position.y <= -5)
         {
-            enemyBase.b = false;
-            enemyBase.g = true;
+            if (collision.gameObject.tag == "EnemyKougekiWall")
+            {
+                enemyBase.collisionEnterLowLowWallBool = false;
+                enemyBase.collisionEnterKougekiWallBool = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            enemyBase.b = true;
-            enemyBase.g = false;
+            enemyBase.collisionEnterLowLowWallBool = true;
+            enemyBase.collisionEnterKougekiWallBool = false;
         }
     }
 }

@@ -17,6 +17,15 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     private GameObject statusPanel2;
     private GameObject statusPanel2Content;
 
+    private StatusPanelSetActive statusPanelSetActive;
+
+    private SoubiSkillDatabase soubiSkillDatabase;
+
+    public KinnkyoriWeponSoubiIcon soubiIcon;
+
+    private SkillPanelOpen skillPanelOpen;
+    public GameObject skillPanel;
+
     public float e=1;
 
     private GameObject soubi;
@@ -29,16 +38,21 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     private bool sonota;
 
     private TextMeshProUGUI textMeshProUGUI;
-    private Text text;
+
     public GameObject soubiName;
     public GameObject syougouGiftHosei;
 
-    public GameObject nomalSyougouhoseinouryoku;
-    public GameObject reaSyougouhoseinouryoiku;
-    public GameObject superReaSyougouhoseinouryoku;
+    public Text nomalSyougouhoseinouryoku;
+    public Text reaSyougouhoseinouryoiku;
+    public Text superReaSyougouhoseinouryoku;
 
-    public GameObject gihutohoseibairitu;
-    public GameObject nouryokuti;
+    public Text text;
+    public Text statasText;
+    private GameObject statusTextGameObject;
+
+    public Text gihutohoseibairitu;
+    public Text nouryokuti;
+    /*
     public GameObject hp;
     public GameObject mp;
     public GameObject fireBallCost;
@@ -53,6 +67,17 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     public GameObject syougekiryoku;
     public GameObject kougekisokudo;
     public GameObject kougekihanni;
+    public GameObject mazyuuTokkou;
+    public GameObject ninngennTokkou;
+    public GameObject mazinnTokkou;
+    public GameObject husiTokkou;
+    public GameObject akumaTokkou;
+    public GameObject ryuuTokkou;
+    public GameObject kamiTokkou;
+    public GameObject soubiDropBairitu;
+    public GameObject syougouHuyoritu;
+    public GameObject giftHuyoritu;
+   */
     public GameObject sukiru;
     public GameObject sukiruName;
 
@@ -60,9 +85,6 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     private SoubiBotton soubiBottonScript;
     private GameObject lockBotton;
     private LockBotton lockBottonScript;
-    private GameObject kyoukaBotton;
-
-    private GameObject baikyakuBotton;
 
     private KinnkyoriWeponSoubiIcon kinnkyoriWeponSoubiIcon;
     private EnnkyoriWeponSoubiIcon ennkyoriWeponSoubiIcon;
@@ -74,6 +96,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     private EnnkyoriWeponDataBaseManager ennkyoriWeponDataBaseManager;
     private YoroiDataBaseManager yoroiDataBaseManager;
     private SonotaDataBaseManager sonotaDataBaseManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +109,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             panel = GameObject.Find("UIPanel");
         }
         dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
+        soubiSkillDatabase = dataBaseManager.GetComponent<SoubiSkillDatabase>();
     }
 
     // Update is called once per frame
@@ -98,12 +122,15 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
         if(nagaosiTime >= 0.4f)
         {
             if (SceneManager.GetActiveScene().name == "StatusMenu")
-            {            
-                statusPanel = GameObject.Find("スタータスパネル専用Canvas").GetComponent<StatusPanelSetActive>().statusPanelStatusMenu;
+            {
+                statusPanelSetActive = GameObject.Find("スタータスパネル専用Canvas").GetComponent<StatusPanelSetActive>();
+                statusPanel =statusPanelSetActive.statusPanelStatusMenu;
+                Debug.Log(statusPanel);
                 if (kinnkyoriWepon)
                 {
+                    kinnkyoriWeponSoubiIcon.HaiSEPlay();
                     statusPanel.SetActive(true);
-
+                    
                     weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                     soubiData = weponDateBaseManager.GetWeponData(number);
 
@@ -112,17 +139,25 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
+                    soubiBottonScript.kinnkyoriWeponSoubiIcon = kinnkyoriWeponSoubiIcon;//
+
+
+                    lockBottonScript.kinnkyoriWepon = true;
+                    lockBottonScript.ennkyoriWepon = false;
+                    lockBottonScript.yoroi = false;
+                    lockBottonScript.sonota = false;
+
                     soubiBottonScript.number = number;
                     lockBottonScript.number = number;
-
                     b = true;
 
                     kinnkyoriWeponSoubiIcon.a = false;
                     kinnkyoriWepon = false;
                 }
 
-                if (ennkyoriWepon)
+                else if (ennkyoriWepon)
                 {
+                    ennkyoriWeponSoubiIcon.HaiSEPlay();
                     statusPanel.SetActive(true);
 
                     ennkyoriWeponDataBaseManager = dataBaseManager.GetComponent<EnnkyoriWeponDataBaseManager>();
@@ -133,16 +168,23 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
+                    soubiBottonScript.ennkyoriWeponSoubiIcon = ennkyoriWeponSoubiIcon;
+
+                    lockBottonScript.kinnkyoriWepon = false;
+                    lockBottonScript.ennkyoriWepon = true;
+                    lockBottonScript.yoroi = false;
+                    lockBottonScript.sonota = false;
+
                     soubiBottonScript.number = number;
                     lockBottonScript.number = number;
-
                     b = true;
 
                     ennkyoriWeponSoubiIcon.a = false;
                     ennkyoriWepon = false;
                 }
-                if (yoroi)
+                else if (yoroi)
                 {
+                    yoroiSoubiIcon.HaiSEPlay();
                     statusPanel.SetActive(true);
 
                     yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
@@ -153,9 +195,15 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
+                    soubiBottonScript.yoroiSoubiIcon = yoroiSoubiIcon;
+
+                    lockBottonScript.kinnkyoriWepon = false;
+                    lockBottonScript.ennkyoriWepon = false;
+                    lockBottonScript.yoroi = true;
+                    lockBottonScript.sonota = false;
+
                     soubiBottonScript.number = number;
                     lockBottonScript.number = number;
-
                     b = true;
 
                     yoroiSoubiIcon.a = false;
@@ -163,6 +211,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 }
                 if (sonota)
                 {
+                    sonotaSoubiIcon.HaiSEPlay();
                     statusPanel.SetActive(true);
 
                     sonotaDataBaseManager = dataBaseManager.GetComponent<SonotaDataBaseManager>();
@@ -173,9 +222,15 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                     soubiBottonScript = soubiBotton.GetComponent<SoubiBotton>();
                     lockBottonScript = lockBotton.GetComponent<LockBotton>();
 
+                    soubiBottonScript.sonotaSoubiIcon = sonotaSoubiIcon;
+
+                    lockBottonScript.kinnkyoriWepon = false;
+                    lockBottonScript.ennkyoriWepon = false;
+                    lockBottonScript.yoroi = false;
+                    lockBottonScript.sonota = true;
+
                     soubiBottonScript.number = number;
                     lockBottonScript.number = number;
-
                     b = true;
 
                     sonotaSoubiIcon.a = false;
@@ -199,7 +254,8 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     {
         if (SceneManager.GetActiveScene().name == "Souko")
         {
-            statusPanel2 = GameObject.Find("ステータスパネル専用Canvas").GetComponent<StatusPanelSetActive>().statusPanelSouko;
+            statusPanelSetActive = GameObject.Find("ステータスパネル専用Canvas").GetComponent<StatusPanelSetActive>();
+            statusPanel2 = statusPanelSetActive.GetComponent<StatusPanelSetActive>().statusPanelSouko;
             if (kinnkyoriWepon)
             {
                 statusPanel2.SetActive(true);
@@ -320,93 +376,144 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
 
             if (soubiData.maxHp != 0)
             {
-                text = hp.GetComponent<Text>();
-                text.text = " - HP　" + soubiData.kyoukagoMaxHp + "《" + soubiData.syougouMaxHp + "》";
-                Instantiate(hp, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - HP　" + soubiData.kyoukagoMaxHp + "《" + soubiData.syougouMaxHp + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.maxMp != 0)
             {
-                text = mp.GetComponent<Text>();
-                text.text = " - MP　" + soubiData.kyoukagoMaxMp + "《" + soubiData.syougouMaxMp + "》";
-                Instantiate(mp, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - MP　" + soubiData.kyoukagoMaxMp + "《" + soubiData.syougouMaxMp + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.fireBallCost != 0)
             {
-                text = fireBallCost.GetComponent<Text>();
-                text.text = " - FBコスト　" + soubiData.fireBallCost + "《" + soubiData.fireBallCost + "》";
-                Instantiate(fireBallCost, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - FBコスト　" + soubiData.fireBallCost + "《" + soubiData.fireBallCost + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kougekiryoku != 0)
             {
-                text = kougekiryoku.GetComponent<Text>();
-                text.text = " - 攻撃力　" + soubiData.kyoukagoKougekiryoku + "《" + soubiData.syougouKougekiryoku + "》";
-                Instantiate(kougekiryoku, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 攻撃力　" + soubiData.kyoukagoKougekiryoku + "《" + soubiData.syougouKougekiryoku + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.maryoku != 0)
             {
-                text = maryoku.GetComponent<Text>();
-                text.text = " - 魔力　" + soubiData.kyoukagoMaryoku + "《" + soubiData.syougouMamryoku + "》";
-                Instantiate(maryoku, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 魔力　" + soubiData.kyoukagoMaryoku + "《" + soubiData.syougouMamryoku + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kinnkyoriKaisinnritu != 0)
             {
-                text = kinnkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - 近距離会心率　" + soubiData.kinnkyoriKaisinnritu + "《" + soubiData.syougouKinnkyoriKaisinnritu + "》";
-                Instantiate(kinnkyoriKaisinnritu, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 近距離会心率　" + soubiData.kinnkyoriKaisinnritu + "《" + soubiData.syougouKinnkyoriKaisinnritu + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.ennkyoriKaisinnsitu != 0)
             {
-                text = ennkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - 遠距離会心率　" + soubiData.ennkyoriKaisinnsitu + "《" + soubiData.syougouEnnkyoriKaisinnritu + "》";
-                Instantiate(ennkyoriKaisinnritu, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 遠距離会心率　" + soubiData.ennkyoriKaisinnsitu + "《" + soubiData.syougouEnnkyoriKaisinnritu + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.bougyoryoiku != 0)
             {
-                text = bougyoryoku.GetComponent<Text>();
-                text.text = " - 防御力　" + soubiData.kyoukagoBougyoryoku + "《" + soubiData.syougouBougyoryoku + "》";
-                Instantiate(bougyoryoku, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 防御力　" + soubiData.kyoukagoBougyoryoku + "《" + soubiData.syougouBougyoryoku + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kaisinnTaisei != 0)
             {
-                text = kaisinnTaisei.GetComponent<Text>();
-                text.text = " - 会心耐性　" + soubiData.kaisinnTaisei + "《" + soubiData.syougouKaisinnTaisei + "》";
-                Instantiate(kaisinnTaisei, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 会心耐性　" + soubiData.kaisinnTaisei + "《" + soubiData.syougouKaisinnTaisei + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.meityuuritu != 0)
             {
-                text = meityuuritu.GetComponent<Text>();
-                text.text = " - 命中率　" + soubiData.kyoukagoMeityuuritu + "《" + soubiData.syougouMeityuuritu + "》";
-                Instantiate(meityuuritu, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 命中率　" + soubiData.kyoukagoMeityuuritu + "《" + soubiData.syougouMeityuuritu + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kaihiritu != 0)
             {
-                text = kaihiritu.GetComponent<Text>();
-                text.text = " - 回避率　" + soubiData.kyoukagoKaihiritu + "《" + soubiData.syougouKaihiritu + "》";
-                Instantiate(kaihiritu, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 回避率　" + soubiData.kyoukagoKaihiritu + "《" + soubiData.syougouKaihiritu + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.nokkubakku != 0)
             {
-                text = syougekiryoku.GetComponent<Text>();
-                text.text = " - 衝撃力　" + soubiData.nokkubakku + "m";
-                Instantiate(syougekiryoku, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 衝撃力　" + soubiData.nokkubakku + "《" + soubiData.syougouSyougekiryoku + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
             if (soubiData.kougekiHinndo != 0)
             {
-                text = kougekisokudo.GetComponent<Text>();
-                text.text = " - 攻撃速度　" + soubiData.kougekiHinndo + "秒";
-                Instantiate(kougekisokudo, transform.position, transform.rotation, statusPanelContent.transform);
+                if (soubiData.zyukurenndoKougekiHinndo != 0)
+                {
+                    statasText.text = " - 攻撃速度　" + soubiData.zyukurenndoKougekiHinndo + "秒"+ "《" + soubiData.syougouSrushHinndo + "》";
+                    Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
+                }
+                else
+                {
+                    statasText.text = " - 攻撃速度　" + soubiData.kougekiHinndo + "秒"+ "《" + soubiData.syougouSrushHinndo + "》";
+                    Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
+                }
             }
             if (soubiData.kougekiHanni != 0)
             {
-                text = kougekihanni.GetComponent<Text>();
-                text.text = " - 攻撃範囲　半径" + soubiData.kougekiHanni + "m";
-                Instantiate(kougekihanni, transform.position, transform.rotation, statusPanelContent.transform);
+                statasText.text = " - 攻撃範囲　半径" + soubiData.kougekiHanni + "《" + soubiData.syougouKougekiHanni + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanelContent.transform);
             }
-            text = sukiru.GetComponent<Text>();
-            text.text = "スキル";
-            Instantiate(sukiru, transform.position, transform.rotation, statusPanelContent.transform);
+            if (soubiData.soubiMazyuuTokkou!=0)
+            {
+                statasText.text = " - 魔獣特攻" + soubiData.soubiMazyuuTokkou + "%"+"《" + soubiData.syougouMazyuuTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiNinngennTokkou != 0)
+            {
+                statasText.text = " - 人間特攻" + soubiData.soubiNinngennTokkou + "%"+"《" + soubiData.syougouNinngennTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiMazinnTokkou != 0)
+            {
+                statasText.text = " - 魔人特攻" + soubiData.soubiMazinnTokkou + "%"+"《" + soubiData.syougouMazinnTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiHusiTokkou != 0)
+            {
+                statasText.text = " - 不死特攻" + soubiData.soubiHusiTokkou + "%"+ "《" + soubiData.syougouHusiTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiAkumaTokkou != 0)
+            {
+                statasText.text = " - 悪魔特攻" + soubiData.soubiAkumaTokkou + "%"+ "《" + soubiData.syougouAkumaTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiRyuuTokkou != 0)
+            {
+                statasText.text = " - 竜特攻" + soubiData.soubiRyuuTokkou + "%"+ "《" + soubiData.syougouRyuuTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiKamiTokkou != 0)
+            {
+                statasText.text = " - 神特攻" + soubiData.soubiKamiTokkou + "%"+ "《" + soubiData.syougouKamiTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiDropBairitu != 0)
+            {
+                statasText.text = " - ドロップ倍率" + soubiData.soubiDropBairitu + "%"+ "《" + soubiData.syougouSoubiDropBairitu + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.syougouDropRitu != 0)
+            {
+                statasText.text = " - 称号付与率" + soubiData.syougouDropRitu + "%"+ "《" + soubiData.syougouSyougouDropRitu + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+            if (soubiData.soubiGifthuyosoubiDropritu != 0)
+            {
+                statasText.text = " - ギフト付与率" + soubiData.soubiGifthuyosoubiDropritu + "%"+"《" + soubiData.syougouSoubiGifthuyosoubiDropritu + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanelContent.transform);
+            }
+
+            if (soubiData.skill)
+            {
+                Instantiate(sukiru, transform.position, transform.rotation, statusPanelContent.transform);
+                sukiruName.GetComponent<Text>().text = soubiSkillDatabase.GetSoubiSkillData(soubiData.skillNo).skillName;
+                skillPanelOpen = Instantiate(sukiruName, transform.position, transform.rotation, statusPanelContent.transform).GetComponent<SkillPanelOpen>();
+                skillPanelOpen.statusPanelSetActive = statusPanelSetActive;
+                skillPanelOpen.skillNo = soubiData.skillNo;
+                skillPanelOpen.soubiSkillDatabase = soubiSkillDatabase;
+            }
         }
-        if (SceneManager.GetActiveScene().name == "Souko")
+        else if (SceneManager.GetActiveScene().name == "Souko")
         {
             statusPanel2Content = GameObject.Find("Content 装備 称号・ギフト補正");
 
@@ -455,91 +562,150 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
 
             if (soubiData.maxHp != 0)
             {
-                text = hp.GetComponent<Text>();
-                text.text = " - HP　" + soubiData.kyoukagoMaxHp + "《" + soubiData.syougouMaxHp + "》";
-                Instantiate(hp, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - HP　" + soubiData.kyoukagoMaxHp + "《" + soubiData.syougouMaxHp + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "HP(Clone)";
             }
             if (soubiData.maxMp != 0)
             {
-                text = mp.GetComponent<Text>();
-                text.text = " - MP　" + soubiData.kyoukagoMaxMp + "《" + soubiData.syougouMaxMp + "》";
-                Instantiate(mp, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - MP　" + soubiData.kyoukagoMaxMp + "《" + soubiData.syougouMaxMp + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "MP(Clone)";
             }
             if (soubiData.fireBallCost != 0)
             {
-                text = fireBallCost.GetComponent<Text>();
-                text.text = " - FBコスト　" + soubiData.fireBallCost + "《" + soubiData.fireBallCost + "》";
-                Instantiate(fireBallCost, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - FBコスト　" + soubiData.fireBallCost + "《" + soubiData.fireBallCost + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kougekiryoku != 0)
             {
-                text = kougekiryoku.GetComponent<Text>();
-                text.text = " - 攻撃力　" + soubiData.kyoukagoKougekiryoku + "《" + soubiData.syougouKougekiryoku + "》";
-                Instantiate(kougekiryoku, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 攻撃力　" + soubiData.kyoukagoKougekiryoku + "《" + soubiData.syougouKougekiryoku + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "攻撃力(Clone)";
             }
             if (soubiData.maryoku != 0)
             {
-                text = maryoku.GetComponent<Text>();
-                text.text = " - 魔力　" + soubiData.kyoukagoMaryoku + "《" + soubiData.syougouMamryoku + "》";
-                Instantiate(maryoku, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 魔力　" + soubiData.kyoukagoMaryoku + "《" + soubiData.syougouMamryoku + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "魔力(Clone)";
             }
             if (soubiData.kinnkyoriKaisinnritu != 0)
             {
-                text = kinnkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - 近距離会心率　" + soubiData.kinnkyoriKaisinnritu + "《" + soubiData.syougouKinnkyoriKaisinnritu + "》";
-                Instantiate(kinnkyoriKaisinnritu, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 近距離会心率　" + soubiData.kinnkyoriKaisinnritu + "《" + soubiData.syougouKinnkyoriKaisinnritu + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.ennkyoriKaisinnsitu != 0)
             {
-                text = ennkyoriKaisinnritu.GetComponent<Text>();
-                text.text = " - 遠距離会心率　" + soubiData.ennkyoriKaisinnsitu + "《" + soubiData.syougouEnnkyoriKaisinnritu + "》";
-                Instantiate(ennkyoriKaisinnritu, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 遠距離会心率　" + soubiData.ennkyoriKaisinnsitu + "《" + soubiData.syougouEnnkyoriKaisinnritu + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.bougyoryoiku != 0)
             {
-                text = bougyoryoku.GetComponent<Text>();
-                text.text = " - 防御力　" + soubiData.kyoukagoBougyoryoku + "《" + soubiData.syougouBougyoryoku + "》";
-                Instantiate(bougyoryoku, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 防御力　" + soubiData.kyoukagoBougyoryoku + "《" + soubiData.syougouBougyoryoku + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "防御力(Clone)";
             }
             if (soubiData.kaisinnTaisei != 0)
             {
-                text = kaisinnTaisei.GetComponent<Text>();
-                text.text = " - 会心耐性　" + soubiData.kaisinnTaisei + "《" + soubiData.syougouKaisinnTaisei + "》";
-                Instantiate(kaisinnTaisei, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 会心耐性　" + soubiData.kaisinnTaisei + "《" + soubiData.syougouKaisinnTaisei + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.meityuuritu != 0)
             {
-                text = meityuuritu.GetComponent<Text>();
-                text.text = " - 命中率　" + soubiData.kyoukagoMeityuuritu + "《" + soubiData.syougouMeityuuritu + "》";
-                Instantiate(meityuuritu, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 命中率　" + soubiData.kyoukagoMeityuuritu + "《" + soubiData.syougouMeityuuritu + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "命中率(Clone)";
             }
             if (soubiData.kaihiritu != 0)
             {
-                text = kaihiritu.GetComponent<Text>();
-                text.text = " - 回避率　" + soubiData.kyoukagoKaihiritu + "《" + soubiData.syougouKaihiritu + "》";
-                Instantiate(kaihiritu, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 回避率　" + soubiData.kyoukagoKaihiritu + "《" + soubiData.syougouKaihiritu + "》";
+                statusTextGameObject = Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+                statusTextGameObject.name = "回避率(Clone)";
             }
             if (soubiData.nokkubakku != 0)
             {
-                text = syougekiryoku.GetComponent<Text>();
-                text.text = " - 衝撃力　" + soubiData.nokkubakku + "m";
-                Instantiate(syougekiryoku, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 衝撃力　" + soubiData.nokkubakku + "《" + soubiData.syougouSyougekiryoku + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
             }
             if (soubiData.kougekiHinndo != 0)
             {
-                text = kougekisokudo.GetComponent<Text>();
-                text.text = " - 攻撃速度　" + soubiData.kougekiHinndo + "秒";
-                Instantiate(kougekisokudo, transform.position, transform.rotation, statusPanel2Content.transform);
+                if (soubiData.zyukurenndoKougekiHinndo != 0)
+                {
+                    statasText.text = " - 攻撃速度　" + soubiData.zyukurenndoKougekiHinndo + "秒"+ "《" + soubiData.syougouSrushHinndo + "》";
+                    Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
+                }
+                else
+                {
+                    statasText.text = " - 攻撃速度　" + "秒"+"《" + soubiData.syougouSrushHinndo + "》" + soubiData.kougekiHinndo;
+                    Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
+                }
             }
             if (soubiData.kougekiHanni != 0)
             {
-                text = kougekihanni.GetComponent<Text>();
-                text.text = " - 攻撃範囲　半径" + soubiData.kougekiHanni + "m";
-                Instantiate(kougekihanni, transform.position, transform.rotation, statusPanel2Content.transform);
+                statasText.text = " - 攻撃範囲　半径" + soubiData.kougekiHanni + "m"+ "《" + soubiData.syougouKougekiHanni + "》";
+                Instantiate(statasText, transform.position, transform.rotation, statusPanel2Content.transform);
             }
-            text = sukiru.GetComponent<Text>();
-            text.text = "スキル";
-            Instantiate(sukiru, transform.position, transform.rotation, statusPanel2Content.transform);
+            if (soubiData.soubiMazyuuTokkou != 0)
+            {
+                statasText.text = " - 魔獣特攻" + soubiData.soubiMazyuuTokkou + "%"+ "《" + soubiData.syougouMazyuuTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiNinngennTokkou != 0)
+            {
+                statasText.text = " - 人間特攻" + soubiData.soubiNinngennTokkou + "%"+"《" + soubiData.syougouNinngennTokkou+"》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiMazinnTokkou != 0)
+            {
+                statasText.text = " - 魔人特攻" + soubiData.soubiMazinnTokkou + "%"+ "《" + soubiData.syougouMazinnTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiHusiTokkou != 0)
+            {
+                statasText.text = " - 不死特攻" + soubiData.soubiHusiTokkou + "%"+"《" + soubiData.syougouHusiTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiAkumaTokkou != 0)
+            {
+                statasText.text = " - 悪魔特攻" + soubiData.soubiAkumaTokkou + "%"+ "《" + soubiData.syougouAkumaTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiRyuuTokkou != 0)
+            {
+                statasText.text = " - 竜特攻" + soubiData.soubiRyuuTokkou + "%"+ "《" + soubiData.syougouRyuuTokkou + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiKamiTokkou != 0)
+            {
+                statasText.text = " - 神特攻" + soubiData.soubiKamiTokkou + "%"+ "《" + soubiData.syougouKamiTokkou+ "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiDropBairitu != 0)
+            {
+                statasText.text = " - ドロップ倍率" + soubiData.soubiDropBairitu + "%"+ "《" + soubiData.syougouSoubiDropBairitu + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.syougouDropRitu != 0)
+            {
+                statasText.text = " - 称号付与率" + soubiData.syougouDropRitu + "%"+ "《" + soubiData.syougouSyougouDropRitu + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+            if (soubiData.soubiGifthuyosoubiDropritu != 0)
+            {
+                statasText.text = " - ギフト付与率" + soubiData.soubiGifthuyosoubiDropritu + "%"+ "《" + soubiData.syougouSoubiGifthuyosoubiDropritu + "》";
+                Instantiate(statasText.gameObject, transform.position, transform.rotation, statusPanel2Content.transform);
+            }
+
+            if (soubiData.skill)
+            {
+                Instantiate(sukiru, transform.position, transform.rotation, statusPanel2Content.transform);
+
+                sukiruName.GetComponent<Text>().text = soubiSkillDatabase.GetSoubiSkillData(soubiData.skillNo).skillName;
+                skillPanelOpen = Instantiate(sukiruName, transform.position, transform.rotation, statusPanel2Content.transform).GetComponent<SkillPanelOpen>();
+                skillPanelOpen.statusPanelSetActive = statusPanelSetActive;
+                skillPanelOpen.skillNo = soubiData.skillNo;
+                skillPanelOpen.soubiSkillDatabase = soubiSkillDatabase;
+            }
 
         }
     }
@@ -553,7 +719,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             if (soubi.transform.parent.name == "Content 近距離武器　ステータス"|| soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 kinnkyoriWeponSoubiIcon = soubi.GetComponent<KinnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
+                number = kinnkyoriWeponSoubiIcon.number;
                 kinnkyoriWeponSoubiIcon.a = true;
                 a = true;
                 kinnkyoriWepon = true;
@@ -566,13 +732,14 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
                 a = true;
                 kinnkyoriWepon = true;
             }
+            Debug.Log(soubi);
         }
         else if(soubi.tag == "KinnkyoriWeponSoubiIcon")
         {
             if(soubi.transform.parent.parent.name == "Content 近距離武器　ステータス"|| soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 kinnkyoriWeponSoubiIcon = soubi.transform.parent.GetComponent<KinnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
+                number = kinnkyoriWeponSoubiIcon.number;
                 kinnkyoriWeponSoubiIcon.a = true;
                 a = true;
                 kinnkyoriWepon = true;
@@ -580,18 +747,19 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 kinnkyoriWeponSoubiIcon = soubi.GetComponent<KinnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<KinnkyoriWeponSoubiIcon>().number;
+                number = kinnkyoriWeponSoubiIcon.number;
                 kinnkyoriWeponSoubiIcon.a = true;
                 a = true;
                 kinnkyoriWepon = true;
             }
+            Debug.Log(soubi);
         }
         else if (soubi.tag == "EnnkyoriWeponSoubiReadoIcon")
         {
             if (soubi.transform.parent.name == "Content 遠距離武器 ステータス" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
+                number = ennkyoriWeponSoubiIcon.number;
                 ennkyoriWeponSoubiIcon.a = true;
                 a = true;
                 ennkyoriWepon = true;
@@ -599,7 +767,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
+                number = ennkyoriWeponSoubiIcon.number;
                 ennkyoriWeponSoubiIcon.a = true;
                 a = true;
                 ennkyoriWepon = true;
@@ -610,7 +778,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             if (soubi.transform.parent.parent.name == "Content 遠距離武器 ステータス" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 ennkyoriWeponSoubiIcon = soubi.transform.parent.GetComponent<EnnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
+                number = ennkyoriWeponSoubiIcon.number;
                 ennkyoriWeponSoubiIcon.a = true;
                 a = true;
                 ennkyoriWepon = true;
@@ -619,7 +787,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 ennkyoriWeponSoubiIcon = soubi.GetComponent<EnnkyoriWeponSoubiIcon>();
-                number = soubi.GetComponent<EnnkyoriWeponSoubiIcon>().number;
+                number = ennkyoriWeponSoubiIcon.number;
                 ennkyoriWeponSoubiIcon.a = true;
                 a = true;
                 ennkyoriWepon = true;
@@ -630,7 +798,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             if (soubi.transform.parent.name == "Content 鎧装備 ステータス" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
-                number = soubi.GetComponent<YoroiSoubiIcon>().number;
+                number = yoroiSoubiIcon.number;
                 yoroiSoubiIcon.a = true;
                 a = true;
                 yoroi = true;
@@ -638,7 +806,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
-                number = soubi.GetComponent<YoroiSoubiIcon>().number;
+                number = yoroiSoubiIcon.number;
                 yoroiSoubiIcon.a = true;
                 a = true;
                 yoroi = true;
@@ -649,7 +817,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             if (soubi.transform.parent.parent.name == "Content 鎧装備 ステータス" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 yoroiSoubiIcon = soubi.transform.parent.GetComponent<YoroiSoubiIcon>();
-                number = soubi.GetComponent<YoroiSoubiIcon>().number;
+                number = yoroiSoubiIcon.number;
                 yoroiSoubiIcon.a = true;
                 a = true;
                 yoroi = true;
@@ -658,7 +826,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 yoroiSoubiIcon = soubi.GetComponent<YoroiSoubiIcon>();
-                number = soubi.GetComponent<YoroiSoubiIcon>().number;
+                number = yoroiSoubiIcon.number;
                 yoroiSoubiIcon.a = true;
                 a = true;
                 yoroi = true;
@@ -669,7 +837,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             if (soubi.transform.parent.parent.name == "Content その他装備 ステータス 1" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.transform.parent.GetComponent<SonotaSoubiIcon>();
-                number = soubi.GetComponent<SonotaSoubiIcon>().number;
+                number = sonotaSoubiIcon.number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;
@@ -678,7 +846,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
-                number = soubi.GetComponent<SonotaSoubiIcon>().number;
+                number = sonotaSoubiIcon.number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;
@@ -689,7 +857,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             if (soubi.transform.parent.name == "Content その他装備 ステータス 1" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
-                number = soubi.GetComponent<SonotaSoubiIcon>().number;
+                number = sonotaSoubiIcon.number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;
@@ -697,31 +865,31 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             else if (soubi.transform.parent.name == "Content Select Soubi　装備強化・売却")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
-                number = soubi.GetComponent<SonotaSoubiIcon>().number;
+                number = sonotaSoubiIcon.number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;
             }
 
         }
-        else if (soubi.tag == "SonotaSoubiIcon")
+        if (soubi.tag == "SonotaSoubiIcon")
         {
             if (soubi.transform.parent.parent.name == "Content その他装備 ステータス2" || soubi.transform.parent.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.transform.parent.GetComponent<SonotaSoubiIcon>();
-                number = soubi.GetComponent<SonotaSoubiIcon>().number;
+                number = sonotaSoubiIcon.number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;
                 Debug.Log(sonotaSoubiIcon.a);
             }
         }
-        else if (soubi.tag == "SonotaSoubiReadoIcon")
+        if (soubi.tag == "SonotaSoubiReadoIcon")
         {
             if (soubi.transform.parent.name == "Content その他装備 ステータス2" || soubi.transform.parent.name == "Content Select Soubi　ステータス")
             {
                 sonotaSoubiIcon = soubi.GetComponent<SonotaSoubiIcon>();
-                number = soubi.GetComponent<SonotaSoubiIcon>().number;
+                number = sonotaSoubiIcon.number;
                 sonotaSoubiIcon.a = true;
                 a = true;
                 sonota = true;

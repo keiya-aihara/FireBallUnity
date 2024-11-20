@@ -31,17 +31,46 @@ public class BaikyakuZikkouPanel : MonoBehaviour
     public BaikyakuPanelBaikyakugoKoinn baikyakuPanelBaikyakugoKoinn;
     public BaikyakuPanelSyozikoinnText baikyakuPanelSyozikoinnText;
 
+    private PlayerStatusDataBase playerStatusDataBase;
+    public GameObject soubiTyuuPanel;
+
     public bool a;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void SoubityuuKakuninnPanel()
+    {
+        dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
+        playerStatusDataBase = dataBaseManager.GetComponent<PlayerStatusDataBase>();
+        soubiTyuuPanel.SetActive(false);
+        if (kinnkyoriWeponScrollView.activeSelf)
+        {
+            if (statusPanelVector.number == playerStatusDataBase.kinnkyoriWeponNo)
+                soubiTyuuPanel.SetActive(true);
+        }
+        else if (ennkyoriWeponScrollView.activeSelf)
+        {
+            if (statusPanelVector.number == playerStatusDataBase.ennkyoriWeponNo)
+                soubiTyuuPanel.SetActive(true);
+        }
+        else if (yoroiScrollView.activeSelf)
+        {
+            if (statusPanelVector.number == playerStatusDataBase.yoroiNo)
+                soubiTyuuPanel.SetActive(true);
+        }
+        else if (sonotaScrollView.activeSelf)
+        {
+            if (statusPanelVector.number == playerStatusDataBase.sonota1No || statusPanelVector.number == playerStatusDataBase.sonota2No)
+                soubiTyuuPanel.SetActive(true);
+        }
     }
     public void IieBotonDown()
     {
@@ -54,6 +83,7 @@ public class BaikyakuZikkouPanel : MonoBehaviour
         {
             if (kinnkyoriWeponScrollView.activeSelf)
             {
+                
                 weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
                 for (int a = 0; a < tyekkuLangth; a++)
                 {
@@ -93,9 +123,16 @@ public class BaikyakuZikkouPanel : MonoBehaviour
         {
             if (statusPanelVector.kinnkyoriWepon)
             {
-                weponDateBaseManager.weponDataList.weponDatas.Remove(weponDateBaseManager.GetWeponData(statusPanelVector.number));
-                GameObject.FindGameObjectWithTag("SoukoKinnkyoriWeponContent").GetComponent<KinnkyoriWeponContentController>().kinnkyoriWeponContentUpdata();
-                statusPanel.SetActive(false);
+                if (dataBaseManager.GetComponent<PlayerStatusDataBase>().kinnkyoriWeponNo == statusPanelVector.number)
+                {
+
+                }
+                else
+                {
+                    weponDateBaseManager.weponDataList.weponDatas.Remove(weponDateBaseManager.GetWeponData(statusPanelVector.number));
+                    GameObject.FindGameObjectWithTag("SoukoKinnkyoriWeponContent").GetComponent<KinnkyoriWeponContentController>().kinnkyoriWeponContentUpdata();
+                    statusPanel.SetActive(false);
+                }
             }
             else if(statusPanelVector.ennkyoriWepon)
             {
@@ -118,6 +155,7 @@ public class BaikyakuZikkouPanel : MonoBehaviour
             a = false;
         }
         dataBaseManager.GetComponent<MoneyManager>().money += baikyakuKinngaku;
+        dataBaseManager.GetComponent<MoneyManager>().MoneySave();
         dataBaseManager.GetComponent<PlayerStatusDataBase>().SoubiScritableSave();
         gameObject.SetActive(false);
 

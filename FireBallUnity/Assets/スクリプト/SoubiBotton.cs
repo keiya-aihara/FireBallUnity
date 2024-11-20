@@ -8,10 +8,12 @@ public class SoubiBotton : MonoBehaviour
     private GameObject dataBasaManager;
 
     private PlayerStatusDataBase playerStatusDataBase;
-    private WeponDateBaseManager weponDateBaseManager;
-    private EnnkyoriWeponDataBaseManager ennkyoriWeponDataBaseManager;
-    private YoroiDataBaseManager yoroiDataBaseManager;
-    private SonotaDataBaseManager sonotaDataBaseManager;
+    public StatusPanelVector statusPanelVector;
+
+    public KinnkyoriWeponSoubiIcon kinnkyoriWeponSoubiIcon;
+    public EnnkyoriWeponSoubiIcon ennkyoriWeponSoubiIcon;
+    public YoroiSoubiIcon yoroiSoubiIcon;
+    public SonotaSoubiIcon sonotaSoubiIcon;
 
     private SoubityuuIcon contentSelectSoubiStatus;
     // Start is called before the first frame update
@@ -32,37 +34,42 @@ public class SoubiBotton : MonoBehaviour
         if(GameObject.Find("Scroll View 近距離武器 ステータス"))
         {
             playerStatusDataBase.kinnkyoriWeponNo = number;
-            playerStatusDataBase.StatusUpdate();
             contentSelectSoubiStatus = GameObject.Find("Content Select Soubi　ステータス").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
+            contentSelectSoubiStatus.StatusTextUpdata();//
+            kinnkyoriWeponSoubiIcon.soubiTyuu();
         }
-        if (GameObject.Find("Scroll View 遠距離武器 ステータス"))
+        else if (GameObject.Find("Scroll View 遠距離武器 ステータス"))
         {
             playerStatusDataBase.ennkyoriWeponNo = number;
-            playerStatusDataBase.StatusUpdate();
             contentSelectSoubiStatus = GameObject.Find("Content Select Soubi　ステータス").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
+            contentSelectSoubiStatus.StatusTextUpdata();
+            ennkyoriWeponSoubiIcon.soubiTyuu();
         }
-        if (GameObject.Find("Scroll View 鎧装備 ステータス"))
+        else if (GameObject.Find("Scroll View 鎧装備 ステータス"))
         {
             playerStatusDataBase.yoroiNo = number;
-            playerStatusDataBase.StatusUpdate();
             contentSelectSoubiStatus = GameObject.Find("Content Select Soubi　ステータス").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
+            contentSelectSoubiStatus.StatusTextUpdata();
+            yoroiSoubiIcon.soubiTyuu();
         }
-        if (GameObject.Find("Scroll View その他装備 ステータス1"))
+        else if (GameObject.Find("Scroll View その他装備 ステータス1"))
         {
             playerStatusDataBase.sonota1No = number;
-            playerStatusDataBase.StatusUpdate();
             contentSelectSoubiStatus = GameObject.Find("Content Select Soubi　ステータス").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
+            contentSelectSoubiStatus.StatusTextUpdata();
+            sonotaSoubiIcon.SoubiTyuu1();
         }
-        if (GameObject.Find("Scroll View その他装備 ステータス2"))
+       else if (GameObject.Find("Scroll View その他装備 ステータス2"))
         {
             playerStatusDataBase.sonota2No = number;
-            playerStatusDataBase.StatusUpdate();
             contentSelectSoubiStatus = GameObject.Find("Content Select Soubi　ステータス").GetComponent<SoubityuuIcon>();
             contentSelectSoubiStatus.SoubiHennkou();
+            contentSelectSoubiStatus.StatusTextUpdata();
+            sonotaSoubiIcon.SoubiTyuu2();
         }
     }
 }

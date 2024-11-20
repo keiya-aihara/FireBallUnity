@@ -19,7 +19,8 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
     public GameObject lockKey;
     private Transform lockKeyDelete;
 
-    public GameObject giftLv;
+    public GiftLv giftLv;
+    public KyoukaLv kyoukaLv;
 
     public GameObject reaCircle;
     public GameObject superReaCircle;
@@ -28,6 +29,8 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
     private PlayerStatusDataBase playerStatusDataBase;
     private SoubityuuIcon soubityuuIcon;
     private GameObject contentSelectSoubi;
+
+    private KyoukaLv kyoukaLvUpdate;
 
     private StatusPanelVector statusPanelVector;
 
@@ -69,8 +72,15 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
 
         if (ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu != 0)
         {
-            giftLv.GetComponent<GiftLv>().giftLv = ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu;
+            giftLv.giftLv = ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu;
             Instantiate(giftLv, transform.position, transform.rotation, gameObject.transform);
+        }
+
+        if (ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv != 0)
+        {
+            kyoukaLv.kyoukaLv = ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv;
+            Instantiate(kyoukaLv, transform.position, transform.rotation, gameObject.transform);
+            kyoukaLvUpdate = transform.Find("強化LV(Clone)").GetComponent<KyoukaLv>();
         }
 
         if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
@@ -131,9 +141,19 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
                 Destroy(lockKeyDelete.gameObject);
             }
         }
+        if (ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv != 0)
+        {
+            if (!gameObject.transform.Find("強化LV(Clone)"))
+            {
+                Instantiate(kyoukaLv, transform.position, transform.rotation, gameObject.transform);
+                kyoukaLvUpdate = transform.Find("強化LV(Clone)").GetComponent<KyoukaLv>();
+            }
+            kyoukaLvUpdate.kyoukaLv = ennkyoriWeponDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv;
+        }
     }
     public void selectEnnkyoriWepon()
     {
+        HaiSEPlay();
         if (SceneManager.GetActiveScene().name == "Souko")
         {
             if (GameObject.Find("売却キャンセルBotton"))
@@ -177,17 +197,17 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
             }
             else if (transform.parent.gameObject.name == "Content 遠距離武器 ステータス")
             {
-                    if (playerStatusDataBase.ennkyoriWeponNo != number)
-                    {
-                        c = false;
-                    }
-                    else
-                    {
-                        c = true;
-                    }
-                    playerStatusDataBase.ennkyoriWeponNo = number;
-                    soubityuuIcon.SoubiHennkou();
-                    soubityuuIcon.StatusTextUpdata();
+                if (playerStatusDataBase.ennkyoriWeponNo != number)
+                {
+                    c = false;
+                }
+                else
+                {
+                    c = true;
+                }
+                playerStatusDataBase.ennkyoriWeponNo = number;
+               soubityuuIcon.SoubiHennkou();
+                soubityuuIcon.StatusTextUpdata();
                 soubiTyuu();
             }
         }
@@ -213,5 +233,9 @@ public class EnnkyoriWeponSoubiIcon : MonoBehaviour
             }
         }
         c = false;
+    }
+    public void HaiSEPlay()
+    {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
     }
 }

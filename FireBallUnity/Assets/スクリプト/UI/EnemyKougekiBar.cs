@@ -12,7 +12,7 @@ public class EnemyKougekiBar : MonoBehaviour
     void Start()
     {
         slider = gameObject.GetComponent<Slider>();
-        enemy = transform.root.gameObject;
+        enemy = transform.parent.parent.gameObject;
         enemyBase = enemy.GetComponent<EnemyBase>();
     }
 

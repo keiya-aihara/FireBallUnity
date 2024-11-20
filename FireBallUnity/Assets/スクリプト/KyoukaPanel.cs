@@ -16,7 +16,6 @@ public class KyoukaPanel : MonoBehaviour
     public Text kyoukagoText;
 
     private int kyoukagoNouryokuti;
-    private GameObject moneyManager;
     private MoneyManager moneyManagerScript;
     private KyoukasekiManager kyoukasekiManager;
     public GameObject yesBotton;
@@ -223,7 +222,7 @@ public class KyoukaPanel : MonoBehaviour
             }
             kyoukaHiyou(soubi.kyoukaLv, reado);
         }
-        if (yoroi)
+        else if (yoroi)
         {
             yoroiDataBaseManager = dataBaseManager.GetComponent<YoroiDataBaseManager>();
             soubi = yoroiDataBaseManager.GetWeponData(number);
@@ -388,6 +387,87 @@ public class KyoukaPanel : MonoBehaviour
                 kyoukasekiDai = 0;
             }
         }
+        else if(reado==2)
+        {
+            kyoukaKinngaku = 750 * (lv + 1);
+            kyoukasekiSyou = Mathf.CeilToInt((lv + 1) * 1.2f);
+            kyoukasekiSyou = Mathf.CeilToInt((kyoukasekiSyou * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            if (lv >= 30)
+            {
+                kyoukasekiTyuu = Mathf.CeilToInt((lv + 1 - 30) * 1.2f);
+                kyoukasekiTyuu = Mathf.CeilToInt((kyoukasekiTyuu * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            }
+            else
+                kyoukasekiTyuu = 0;
+            if (lv >= 60)
+            {
+                kyoukasekiDai = Mathf.CeilToInt((lv + 1 - 60) * 1.2f);
+                kyoukasekiDai = Mathf.CeilToInt((kyoukasekiDai * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            }
+            else
+                kyoukasekiDai = 0;
+        }
+        else if(reado==3)
+        {
+            kyoukaKinngaku = 1000 * (lv + 1);
+            kyoukasekiSyou = Mathf.CeilToInt((lv + 1) * 1.4f);
+            kyoukasekiSyou = Mathf.CeilToInt((kyoukasekiSyou * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            if (lv >= 30)
+            {
+                kyoukasekiTyuu = Mathf.CeilToInt((lv + 1 - 30) * 1.4f);
+                kyoukasekiTyuu = Mathf.CeilToInt((kyoukasekiTyuu * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            }
+            else
+                kyoukasekiTyuu = 0;
+            if (lv >= 60)
+            {
+                kyoukasekiDai = Mathf.CeilToInt((lv + 1 - 60) * 1.4f);
+                kyoukasekiDai = Mathf.CeilToInt((kyoukasekiDai * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            }
+            else
+                kyoukasekiDai = 0;
+        }
+        else if(reado==4)
+        {
+            kyoukaKinngaku = 1500 * (lv + 1);
+            kyoukasekiSyou = Mathf.CeilToInt((lv + 1) * 1.6f);
+            kyoukasekiSyou = Mathf.CeilToInt((kyoukasekiSyou * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            kyoukasekiTyuu= Mathf.CeilToInt((lv + 1) * 1.4f);
+            kyoukasekiTyuu = Mathf.CeilToInt((kyoukasekiTyuu * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            if (lv >= 30)
+            {
+                kyoukasekiDai = Mathf.CeilToInt((lv + 1 - 30) * 1.6f);
+                kyoukasekiDai = Mathf.CeilToInt((kyoukasekiDai * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            }
+            else
+                kyoukasekiDai = 0;
+        }
+        else if(reado==5)
+        {
+            kyoukaKinngaku = 2250 * (lv + 1);
+            kyoukasekiSyou = Mathf.CeilToInt((lv + 1) * 1.8f);
+            kyoukasekiSyou = Mathf.CeilToInt((kyoukasekiSyou * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            kyoukasekiTyuu = Mathf.CeilToInt((lv + 1) * 1.6f);
+            kyoukasekiTyuu = Mathf.CeilToInt((kyoukasekiTyuu * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            if (lv >= 30)
+            {
+                kyoukasekiDai = Mathf.CeilToInt((lv + 1 - 30) * 1.8f);
+                kyoukasekiDai = Mathf.CeilToInt((kyoukasekiDai * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            }
+            else
+                kyoukasekiDai = 0;
+        }
+        else if(reado==6)
+        {
+            kyoukaKinngaku = 3000 * (lv + 1);
+            kyoukasekiSyou = Mathf.CeilToInt((lv + 1) * 2.2f);
+            kyoukasekiSyou = Mathf.CeilToInt((kyoukasekiSyou * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            kyoukasekiTyuu = Mathf.CeilToInt((lv + 1) * 2);
+            kyoukasekiTyuu = Mathf.CeilToInt((kyoukasekiTyuu * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+            kyoukasekiDai = Mathf.CeilToInt((lv + 1) * 1.8f);
+            kyoukasekiDai = Mathf.CeilToInt((kyoukasekiDai * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
+        }
+        kyoukaKinngaku = Mathf.CeilToInt((kyoukaKinngaku * (100 - (playerStatusDataBase.kyoukataikaGennsyouritu))) / 100);
         if (moneyManagerScript.money < kyoukaKinngaku || kyoukasekiManager.kyoukasekiSyou < kyoukasekiSyou || kyoukasekiManager.kyoukasekiTyuu < kyoukasekiTyuu || kyoukasekiManager.kyoukasekiDai < kyoukasekiDai)
         {
             taikagatarimasennPanel.SetActive(true);
@@ -440,6 +520,44 @@ public class KyoukaPanel : MonoBehaviour
         {
             statusText = GameObject.Find("防御力(Clone)");
             statusText.GetComponent<Text>().text= " - 防御力　" + soubi.kyoukagoBougyoryoku + "《" + soubi.syougouBougyoryoku + "》";
+        }
+        else if(sonota)
+        {
+            if(soubi.sonotaKyoukaStatus==0)
+            {
+                statusText = GameObject.Find("HP(Clone)");
+                statusText.GetComponent<Text>().text = " - HP　" + soubi.kyoukagoMaxHp + "《" + soubi.syougouMaxHp + "》";
+            }
+            else if (soubi.sonotaKyoukaStatus == 1)
+            {
+                statusText = GameObject.Find("MP(Clone)");
+                statusText.GetComponent<Text>().text = " - MP　" + soubi.kyoukagoMaxMp + "《" + soubi.syougouMaxMp + "》";
+            }
+            else if (soubi.sonotaKyoukaStatus == 2)
+            {
+                statusText = GameObject.Find("攻撃力(Clone)");
+                statusText.GetComponent<Text>().text = " - 攻撃力　" + soubi.kyoukagoKougekiryoku + "《" + soubi.syougouKougekiryoku + "》";
+            }
+            else if (soubi.sonotaKyoukaStatus == 3)
+            {
+                statusText = GameObject.Find("魔力(Clone)");
+                statusText.GetComponent<Text>().text = " - 魔力　" + soubi.kyoukagoMaryoku + "《" + soubi.syougouMamryoku + "》";
+            }
+            else if (soubi.sonotaKyoukaStatus == 4)
+            {
+                statusText = GameObject.Find("防御力(Clone)");
+                statusText.GetComponent<Text>().text = " - 防御力　" + soubi.kyoukagoBougyoryoku + "《" + soubi.syougouBougyoryoku + "》";
+            }
+            else if (soubi.sonotaKyoukaStatus == 5)
+            {
+                statusText = GameObject.Find("命中率(Clone)");
+                statusText.GetComponent<Text>().text = " - 命中率　" + soubi.kyoukagoMeityuuritu + "《" + soubi.syougouMeityuuritu + "》";
+            }
+            else if(soubi.sonotaKyoukaStatus==6)
+            {
+                statusText = GameObject.Find("回避率(Clone)");
+                statusText.GetComponent<Text>().text = " - 回避率　" + soubi.kyoukagoKaihiritu + "《" + soubi.syougouKaihiritu + "》";
+            }
         }
         gameObject.SetActive(false);
     }
@@ -495,46 +613,57 @@ public class KyoukaPanel : MonoBehaviour
         kyoukaHiyou(soubi.kyoukaLv,reado);
         KyoukazenngoNouryokutiGet();
         kousekiDataBaseManager.kyoukakaisuu++;
+        moneyManagerScript.MoneySave();
+        kyoukasekiManager.KyoukasekiSave();
+        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().SoubiScritableSave();
     }
     public void NouryokutiUpdata()
     {
         if (kinnkyoriWepon)
         {
-            soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku * (1 + soubi.kyoukaBairitu / 100));
+            soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku * (1 + soubi.kyoukaBairitu / 100))+soubi.kyoukaLv;
         }
         else if (ennkyoriWepon)
         {
-            soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1 + soubi.kyoukaBairitu / 100));
+            soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
         }
         else if (yoroi)
         {
-            soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + soubi.kyoukaBairitu / 100));
+            soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
         }
         else if (sonota)
         {
-            if (soubi.sonotaKyoukaStatus == 1)
+            if (soubi.sonotaKyoukaStatus == 0)
             {
-                soubi.kyoukagoMaxHp = Mathf.FloorToInt(soubi.maxHp * (1 + soubi.kyoukaBairitu / 100));
+                soubi.kyoukagoMaxHp = Mathf.FloorToInt(soubi.maxHp * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
+            }
+
+            else if (soubi.sonotaKyoukaStatus == 1)
+            {
+                soubi.kyoukagoMaxMp = Mathf.FloorToInt(soubi.maxMp * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
             }
 
             else if (soubi.sonotaKyoukaStatus == 2)
             {
-                soubi.kyoukagoMaxMp = Mathf.FloorToInt(soubi.maxMp * (1 + soubi.kyoukaBairitu / 100));
+                soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
             }
 
             else if (soubi.sonotaKyoukaStatus == 3)
             {
-                soubi.kyoukagoKougekiryoku = Mathf.FloorToInt(soubi.kougekiryoku * (1 + soubi.kyoukaBairitu / 100));
+                soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
             }
 
             else if (soubi.sonotaKyoukaStatus == 4)
             {
-                soubi.kyoukagoMaryoku = Mathf.FloorToInt(soubi.maryoku * (1 + soubi.kyoukaBairitu / 100));
+                soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
             }
-
             else if (soubi.sonotaKyoukaStatus == 5)
             {
-                soubi.kyoukagoBougyoryoku = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + soubi.kyoukaBairitu / 100));
+                soubi.kyoukagoMeityuuritu = Mathf.FloorToInt(soubi.meityuuritu * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
+            }
+            else if (soubi.sonotaKyoukaStatus == 6)
+            {
+                soubi.kyoukagoKaihiritu = Mathf.FloorToInt(soubi.kaihiritu * (1 + soubi.kyoukaBairitu / 100)) + soubi.kyoukaLv;
             }
         }
     }
@@ -545,23 +674,23 @@ public class KyoukaPanel : MonoBehaviour
             kyoukamaeText.text = "攻撃力\n" + soubi.kyoukagoKougekiryoku;
             if (soubi.kyoukaLv < 10)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 20)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 30)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 40)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
             }
             else
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
             }
             kyoukagoText.text = "攻撃力\n" + kyoukagoNouryokuti;
         }
@@ -570,23 +699,23 @@ public class KyoukaPanel : MonoBehaviour
             kyoukamaeText.text = "魔力\n" + soubi.kyoukagoMaryoku;
             if (soubi.kyoukaLv < 10)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 20)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 30)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 40)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
             }
             else
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
             }
             kyoukagoText.text = "魔力\n" + kyoukagoNouryokuti;
         }
@@ -595,152 +724,202 @@ public class KyoukaPanel : MonoBehaviour
             kyoukamaeText.text = "防御力\n" + soubi.kyoukagoBougyoryoku;
             if (soubi.kyoukaLv < 10)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 20)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 30)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
             }
             else if (soubi.kyoukaLv < 40)
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
             }
             else
             {
-                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
             }
             kyoukagoText.text = "防御力\n" + kyoukagoNouryokuti;
         }
         else if (sonota)
         {
-            if (soubi.sonotaKyoukaStatus == 1)
+            if (soubi.sonotaKyoukaStatus == 0)
             {
                 kyoukamaeText.text = "HP\n" + soubi.kyoukagoMaxHp;
                 if (soubi.kyoukaLv < 10)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 20)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 30)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 40)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxHp * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 kyoukagoText.text = "HP\n" + kyoukagoNouryokuti;
             }
-            else if (soubi.sonotaKyoukaStatus == 2)
+            else if (soubi.sonotaKyoukaStatus == 1)
             {
                 kyoukamaeText.text = "MP\n" + soubi.kyoukagoMaxMp;
                 if (soubi.kyoukaLv < 10)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 20)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 30)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 40)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maxMp * (1 + (soubi.kyoukaBairitu + 5) / 100))+(soubi.kyoukaLv + 1);
                 }
                 kyoukagoText.text = "MP\n" + kyoukagoNouryokuti;
             }
-            else if (soubi.sonotaKyoukaStatus == 3)
+            else if (soubi.sonotaKyoukaStatus == 2)
             {
                 kyoukamaeText.text = "攻撃力\n" + soubi.kyoukagoKougekiryoku;
                 if (soubi.kyoukaLv < 10)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 20)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 30)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 40)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kougekiryoku * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 kyoukagoText.text = "攻撃力\n" + kyoukagoNouryokuti;
             }
-            else if (soubi.sonotaKyoukaStatus == 4)
+            else if (soubi.sonotaKyoukaStatus == 3)
             {
                 kyoukamaeText.text = "魔力\n" + soubi.kyoukagoMaryoku;
                 if (soubi.kyoukaLv < 10)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 20)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 30)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 40)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.maryoku * (1 + (soubi.kyoukaBairitu + 5) / 100))+(soubi.kyoukaLv + 1);
                 }
                 kyoukagoText.text = "魔力\n" + kyoukagoNouryokuti;
             }
-            else if (soubi.sonotaKyoukaStatus == 5)
+            else if (soubi.sonotaKyoukaStatus == 4)
             {
                 kyoukamaeText.text = "防御力\n" + soubi.kyoukagoBougyoryoku;
                 if (soubi.kyoukaLv < 10)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 1) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 20)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 2) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 30)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 3) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else if (soubi.kyoukaLv < 40)
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 4) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 else
                 {
-                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 5) / 100));
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.bougyoryoiku * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
                 }
                 kyoukagoText.text = "防御力\n" + kyoukagoNouryokuti;
+            }
+            else if (soubi.sonotaKyoukaStatus == 5)
+            {
+                kyoukamaeText.text = "命中率\n" + soubi.kyoukagoMeityuuritu;
+                if (soubi.kyoukaLv < 10)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.meityuuritu * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else if (soubi.kyoukaLv < 20)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.meityuuritu * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else if (soubi.kyoukaLv < 30)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.meityuuritu * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else if (soubi.kyoukaLv < 40)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.meityuuritu * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.meityuuritu * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                kyoukagoText.text = "命中率\n" + kyoukagoNouryokuti;
+            }
+            else if (soubi.sonotaKyoukaStatus == 6)
+            {
+                kyoukamaeText.text = "回避率\n" + soubi.kyoukagoKaihiritu;
+                if (soubi.kyoukaLv < 10)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kaihiritu * (1 + (soubi.kyoukaBairitu + 1) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else if (soubi.kyoukaLv < 20)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kaihiritu * (1 + (soubi.kyoukaBairitu + 2) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else if (soubi.kyoukaLv < 30)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kaihiritu * (1 + (soubi.kyoukaBairitu + 3) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else if (soubi.kyoukaLv < 40)
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kaihiritu * (1 + (soubi.kyoukaBairitu + 4) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                else
+                {
+                    kyoukagoNouryokuti = Mathf.FloorToInt(soubi.kaihiritu * (1 + (soubi.kyoukaBairitu + 5) / 100)) + (soubi.kyoukaLv + 1);
+                }
+                kyoukagoText.text = "回避率\n" + kyoukagoNouryokuti;
             }
         }
     }

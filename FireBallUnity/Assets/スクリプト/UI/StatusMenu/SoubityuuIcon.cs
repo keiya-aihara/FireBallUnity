@@ -29,7 +29,19 @@ public class SoubityuuIcon : MonoBehaviour
 
     void Start()
     {
-        dataBaseManager = GameObject.Find("DataBaseManager");
+        
+
+        SoubiHennkou();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void SoubiHennkou()
+    {
+        dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
         playerStatusDataBase = dataBaseManager.GetComponent<PlayerStatusDataBase>();
 
         weponDateBaseManager = dataBaseManager.GetComponent<WeponDateBaseManager>();
@@ -44,20 +56,11 @@ public class SoubityuuIcon : MonoBehaviour
         sonotaSoubiIcon1 = sonotaDataBaseManager1.weponDataList.weponDatas.Find((x) => x.no == playerStatusDataBase.sonota1No).readoIcon.GetComponent<SonotaSoubiIcon>();
         sonotaSoubiIcon2 = sonotaDataBaseManager2.weponDataList.weponDatas.Find((x) => x.no == playerStatusDataBase.sonota2No).readoIcon.GetComponent<SonotaSoubiIcon>();
 
-        SoubiHennkou();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void SoubiHennkou()
-    {
-        foreach(Transform child in this.transform)
+        foreach (Transform child in this.transform)
         {
             Destroy(child.gameObject);
         }
+
         playerStatusDataBase.StatusUpdate();
         kinnkyoriWeponReadoIcon = weponDateBaseManager.weponDataList.weponDatas.Find((x) => x.no == playerStatusDataBase.kinnkyoriWeponNo).readoIcon;
         ennkyoriWeponReadoIcon = ennkyoriWeponDataBaseManager.weponDataList.weponDatas.Find((x) => x.no == playerStatusDataBase.ennkyoriWeponNo).readoIcon;

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] enemys;
     public GameObject[] fireBalls;
     public GameObject kougekiHanniCanvas;
+    public GameObject kinnsetusenntouButton;
     public KougekiHanniCircle kougekiHanniCircle;
     bool a;
     bool b;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     bool d;
     bool e;
 
+    public AudioSource audioSource;
     public GameObject damageHanntei;
     void Start()
     {
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if(d)
         {
             myRigid.AddForce((transform.up) * -150, ForceMode2D.Force);
+            audioSource.Play();
             a = false;
             d = false;
         }
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             if (enemys.Length == 0)
             {
+                kinnsetusenntouButton.SetActive(false);
                 myRigid.AddForce((transform.up) * -150, ForceMode2D.Force);
                 a = false;
                 e = false;
@@ -60,33 +64,37 @@ public class PlayerController : MonoBehaviour
         fireBalls = GameObject.FindGameObjectsWithTag("FireBall");
         enemys = GameObject.FindGameObjectsWithTag("Enemy");
 
-            if (fireBalls.Length == 0)
+        if (fireBalls.Length == 0)
+        {
+            if (playerStatus.mp < playerStatus.fireBallCost)
             {
-                if (playerStatus.mp < playerStatus.fireBallCost)
+                if (fireBalls.Length == 0)
                 {
-                    if (fireBalls.Length == 0)
-                    {
-                            myRigid.AddForce((transform.up) * -150, ForceMode2D.Force);
-                            a = false;
-                    }
+                    kinnsetusenntouButton.SetActive(false);
+                    myRigid.AddForce((transform.up) * -150, ForceMode2D.Force);
+                    a = false;
+                    if(enemys.Length!=0) DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().KinnkyoriBGMStart();
+
                 }
             }
+        }
     }
     public void KinnsetuSenntou()
     {
+        
         d = true;
+        kinnsetusenntouButton.SetActive(false);
+        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().KinnkyoriBGMStart();
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "LowWall")
         {
-            if(enemys == null)
-            {
-                   
-            }
+
             stop += 2;
             anim.SetInteger("Stop", stop);
             myRigid.velocity = Vector2.zero;
+            audioSource.Stop();
             kougekiHanniCanvas.SetActive(true);
             if (enemys.Length == 0)
             {

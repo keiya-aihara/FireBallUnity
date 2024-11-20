@@ -33,6 +33,18 @@ TagManager:
   - SpireBall
   - RapidBall
   - BomBall
+  - StageObject
+  - EnemyKougekiWall
+  - SoubiIconHaikei
+  - "\u8D64\u8272"
+  - SoukoEnnkyoriWeponContent
+  - SoukoSonotaContent
+  - SoukoKinnkyoriWeponContent
+  - SoukoYoroiContent
+  - SE
+  - Taru
+  - MakennotikaraHi
+  - Siild
   layers:
   - Default
   - TransparentFX

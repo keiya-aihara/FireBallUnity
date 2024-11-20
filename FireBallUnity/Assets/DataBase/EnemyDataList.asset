@@ -13,8 +13,48 @@ MonoBehaviour:
   m_Name: EnemyDataList
   m_EditorClassIdentifier: 
   enemyDatas:
+  - no: 0
+    rea: 0
+    enemyName: 
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 2992
+    kougekiryoku: 0
+    kaisinnritu: 1
+    bougyoryoku: 1
+    kaisinnTaisei: 0.2
+    mahouBougyoryoku: 1
+    meityuuritu: 1
+    kaihiritu: 1
+    kougekiHinndo: 3
+    speed: 20
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - 1.2.3"
+    exp: 1
+    gold: 2
+    dropItemSuu: 8
+    dropItemNos: 4e0000004f000000500000005100000052000000560000005700000058000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: ec07660cc508a18449699c5af30d260a, type: 3}
+    - {fileID: 5855167156134022348, guid: f2fb9057783b1884ea014e57ab743a70, type: 3}
+    - {fileID: 5855167156134022348, guid: 3d11c11de384d4547b355dbbbac28eb0, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 100
+    epikDropRitu: 100
+    legendaryDropRitu: 100
+    godDropRitu: 100
+    reaSyougouDropRitu: 100
+    superReaSyougouDropRitu: 100
+    epikSyougouDropRitu: 100
+    giftDropRitu: 100
   - no: 1
-    lebel: 50
     rea: 0
     enemyName: "\u30D6\u30EB\u30FC\u30B9\u30E9\u30A4\u30E0"
     mazyuu: 1
@@ -24,34 +64,2479 @@ MonoBehaviour:
     akuma: 0
     ryuu: 0
     kami: 0
-    maxHp: 500
-    hp: 500
-    kougekiryoku: 1
-    kaisinnritu: 0
+    maxHp: 5
+    kougekiryoku: 3
+    kaisinnritu: 1
     bougyoryoku: 1
-    kaisinnTaisei: 0
+    kaisinnTaisei: 0.3
     mahouBougyoryoku: 1
     meityuuritu: 100
     kaihiritu: 5
     kougekiHinndo: 3
-    kougekiHanni: 5
-    speed: 70
+    speed: 20
     nokkubakkuBougyo: 0.1
-    exp: 900000
-    gold: 1000
-    dropItemSuu: 5
-    dropItemNos: 0000000001000000020000000300000004000000
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - \u5168\u57DF"
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - 7"
+    exp: 2
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000005000000
     dropSyougou:
     - {fileID: 5855167156134022348, guid: c163e2992854d2a4aafeda83875d320a, type: 3}
     - {fileID: 5855167156134022348, guid: db615499b51132b41bb065217451991f, type: 3}
     - {fileID: 5855167156134022348, guid: 7ae9f0d28b106174db8f84b712253d1f, type: 3}
     nomalDropRitu: 8
-    reaDropRitu: 4
-    superReaDropRitu: 3
-    epikDropRitu: 2
-    legendaryDropRitu: 1
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
     godDropRitu: 0.01
-    reaSyougouDropRitu: 10
-    superReaSyougouDropRitu: 5
-    epikSyougouDropRitu: 2.5
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 2
+    rea: 0
+    enemyName: "\u30EC\u30C3\u30C9\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 3
+    kougekiryoku: 4
+    kaisinnritu: 0.5
+    bougyoryoku: 1
+    kaisinnTaisei: 0.5
+    mahouBougyoryoku: 1
+    meityuuritu: 102.5
+    kaihiritu: 4
+    kougekiHinndo: 2
+    speed: 30
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - 2.3"
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - 7"
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - 34"
+    exp: 1
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000006000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 072bb433284228b44b395fb2398bde40, type: 3}
+    - {fileID: 5855167156134022348, guid: 9911281af298639468f2b3cbca9fde61, type: 3}
+    - {fileID: 5855167156134022348, guid: 85936350741df5a49944e0b4f15d6644, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 3
+    rea: 0
+    enemyName: "\u30B0\u30EA\u30FC\u30F3\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 4
+    kougekiryoku: 4
+    kaisinnritu: 0.5
+    bougyoryoku: 1
+    kaisinnTaisei: 0.5
+    mahouBougyoryoku: 2
+    meityuuritu: 102.5
+    kaihiritu: 2
+    kougekiHinndo: 3
+    speed: 20
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - 2.3"
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - 7"
+    exp: 1
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000007000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: b25cb41700f433e428ab8e2d8a17c295, type: 3}
+    - {fileID: 5855167156134022348, guid: c00d26fc57b76584ea6085752d786783, type: 3}
+    - {fileID: 5855167156134022348, guid: 6e96a56a7993124459fd8c06287aaa60, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 4
+    rea: 1
+    enemyName: "\u30B9\u30E9\u30A4\u30E0\u30D5\u30A9\u30FC\u30B9"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 10
+    kougekiryoku: 9
+    kaisinnritu: 3.34
+    bougyoryoku: 5
+    kaisinnTaisei: 0.84
+    mahouBougyoryoku: 5
+    meityuuritu: 103.9
+    kaihiritu: 3.34
+    kougekiHinndo: 2.5
+    speed: 10
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - \u5168\u57DF \u2605"
+    exp: 3
+    gold: 5
+    dropItemSuu: 6
+    dropItemNos: 00000000010000000200000003000000040000000500000008000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 63d44e6974346554abc07885220fdda6, type: 3}
+    - {fileID: 5855167156134022348, guid: 9a56ccc782844794ea1a24c938c3de36, type: 3}
+    - {fileID: 5855167156134022348, guid: 6a25525b0940e064aa923cdc818050af, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 5
+    rea: 0
+    enemyName: "\u30EC\u30C3\u30C9\u30DC\u30A2"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 10
+    kougekiryoku: 6
+    kaisinnritu: 1.67
+    bougyoryoku: 4
+    kaisinnTaisei: 0.67
+    mahouBougyoryoku: 2
+    meityuuritu: 103.34
+    kaihiritu: 1.67
+    kougekiHinndo: 3
+    speed: 40
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - 3"
+    - "\u30DE\u30FC\u30DE\u30EA\u30AA\u30F3 - 19"
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 40"
+    exp: 2
+    gold: 3
+    dropItemSuu: 7
+    dropItemNos: 0000000001000000020000000300000004000000090000000a000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 8a395e1be763581458f95a6101eb943a, type: 3}
+    - {fileID: 5855167156134022348, guid: 925e389ebf3578d4cb0aef288c74deb2, type: 3}
+    - {fileID: 5855167156134022348, guid: 9843b4b76e7d0d6409c36fd6c9226297, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 6
+    rea: 1
+    enemyName: "\u30D6\u30EB\u30FC\u30DC\u30A2"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 7
+    kaisinnritu: 2.5
+    bougyoryoku: 5
+    kaisinnTaisei: 0.75
+    mahouBougyoryoku: 4
+    meityuuritu: 104
+    kaihiritu: 3.5
+    kougekiHinndo: 2.5
+    speed: 50
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30D5\u30A1\u30A4\u30A2\u30B8\u30A2\u5E73\u539F - 3 \u2605"
+    exp: 4
+    gold: 4
+    dropItemSuu: 7
+    dropItemNos: 00000000010000000200000003000000040000000b0000000c000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 980db531afcc22d4dbb7a234b5a6073e, type: 3}
+    - {fileID: 5855167156134022348, guid: 35c89a24977ca554db6dc8273be1b1d4, type: 3}
+    - {fileID: 5855167156134022348, guid: 506bcee263d1d264bb86daedd6f96c82, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 7
+    rea: 0
+    enemyName: "\u30B4\u30D6\u30EA\u30F3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 8
+    kougekiryoku: 6
+    kaisinnritu: 1
+    bougyoryoku: 3
+    kaisinnTaisei: 1.7
+    mahouBougyoryoku: 3
+    meityuuritu: 102.5
+    kaihiritu: 3
+    kougekiHinndo: 2.5
+    speed: 30
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u8A66\u7DF4\u306E\u6D1E\u7A9F - \u5168\u57DF"
+    - "\u30D6\u30E9\u30C3\u30C9\u30D5\u30A1\u30F3\u30B0\u5E73\u539F - 10"
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 40.41"
+    exp: 1
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 00000000010000000200000003000000040000000d000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: ea5832c351b6cb9458ad5911670cd813, type: 3}
+    - {fileID: 5855167156134022348, guid: d317cd2607c189a4eb0b198ecb1bea0a, type: 3}
+    - {fileID: 5855167156134022348, guid: a71ddcad85b1a1241975f5f1435c2c72, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 8
+    rea: 0
+    enemyName: "\u30B4\u30D6\u30EA\u30F3\u30A6\u30A9\u30FC\u30EA\u30A2\u30FC"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 9
+    kougekiryoku: 6
+    kaisinnritu: 0.8
+    bougyoryoku: 4
+    kaisinnTaisei: 1.3
+    mahouBougyoryoku: 2
+    meityuuritu: 102
+    kaihiritu: 2.6
+    kougekiHinndo: 2.5
+    speed: 20
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u8A66\u7DF4\u306E\u6D1E\u7A9F - 5.6"
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - 14"
+    exp: 2
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 00000000010000000200000003000000040000000e000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 0883bde024b266942a8a9ae8da832eae, type: 3}
+    - {fileID: 5855167156134022348, guid: a39bee4693fb19b4884f20e06328e493, type: 3}
+    - {fileID: 5855167156134022348, guid: b156d996b8b932c43b53b450a29aafd0, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 9
+    rea: 0
+    enemyName: "\u30B4\u30D6\u30EA\u30F3\u30E1\u30A4\u30B8"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 7
+    kougekiryoku: 5
+    kaisinnritu: 0.7
+    bougyoryoku: 2
+    kaisinnTaisei: 1.3
+    mahouBougyoryoku: 4
+    meityuuritu: 102
+    kaihiritu: 0.8
+    kougekiHinndo: 1
+    speed: 30
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u8A66\u7DF4\u306E\u6D1E\u7A9F - 5.6"
+    - "\u8B0E\u306E\u6A5F\u68B0\u65BD\u8A2D - 22"
+    exp: 2
+    gold: 4
+    dropItemSuu: 6
+    dropItemNos: 00000000010000000200000003000000040000000f000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 6cc24f782a55a37469d6a696e6270c1e, type: 3}
+    - {fileID: 5855167156134022348, guid: 076964fd6c966784c83d86c48334a8f7, type: 3}
+    - {fileID: 5855167156134022348, guid: f05b7974ba2bbb645987199758e2e2f5, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 10
+    rea: 0
+    enemyName: "\u30DC\u30D6\u30B4\u30D6\u30EA\u30F3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 17
+    kougekiryoku: 8
+    kaisinnritu: 1.2
+    bougyoryoku: 5
+    kaisinnTaisei: 1.05
+    mahouBougyoryoku: 5
+    meityuuritu: 103
+    kaihiritu: 1.67
+    kougekiHinndo: 2.2
+    speed: 40
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u8A66\u7DF4\u306E\u6D1E\u7A9F - 6"
+    - "\u30EF\u30EB\u30E0\u8352\u91CE - 16"
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 40.41"
+    exp: 3
+    gold: 4
+    dropItemSuu: 7
+    dropItemNos: 00000000010000000200000003000000040000001000000011000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 6915973e87f01dc42bfc857e14b7cd3d, type: 3}
+    - {fileID: 5855167156134022348, guid: 82ddf59d5d827104a97e2e49c90e46de, type: 3}
+    - {fileID: 5855167156134022348, guid: c87865afd7001ba4986b25c28f1b86f0, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 11
+    rea: 1
+    enemyName: "\u30DE\u30C6\u30EA\u30A2\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 2
+    kougekiryoku: 1
+    kaisinnritu: 0.15
+    bougyoryoku: 150
+    kaisinnTaisei: 150
+    mahouBougyoryoku: 150
+    meityuuritu: 103.2
+    kaihiritu: 8.58
+    kougekiHinndo: 2
+    speed: 100
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u8A66\u7DF4\u306E\u6D1E\u7A9F - \u5168\u57DF \u2605"
+    exp: 8
+    gold: 18
+    dropItemSuu: 7
+    dropItemNos: 00000000010000000200000003000000040000001200000013000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7a3cbfd9c0f465f4e87e992c4974c3cf, type: 3}
+    - {fileID: 5855167156134022348, guid: b437e838eb548d342beac47aec9cdce9, type: 3}
+    - {fileID: 5855167156134022348, guid: b9f52b23438302249b6ee05ea67089bd, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 5
+  - no: 12
+    rea: 0
+    enemyName: "\u30EB\u30FC\u30A4\u30F3\u30BA\u30B9\u30E9\u30C3\u30B0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 8
+    kaisinnritu: 1.8
+    bougyoryoku: 5
+    kaisinnTaisei: 0.9
+    mahouBougyoryoku: 5
+    meityuuritu: 102.3
+    kaihiritu: 0.15
+    kougekiHinndo: 3.5
+    speed: 10
+    nokkubakkuBougyo: 0.5
+    stage:
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - \u5168\u57DF"
+    exp: 2
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000014000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: c271018c7209e2d42b5fc3eeda29f0b7, type: 3}
+    - {fileID: 5855167156134022348, guid: 0fdc49fde26cc1540a66a057744d5346, type: 3}
+    - {fileID: 5855167156134022348, guid: 896454a1f140e0c4980a30b1db1f6fd5, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 13
+    rea: 0
+    enemyName: "\u30E9\u30A4\u30C6\u30A3\u30F3\u30B0\u30B9\u30E9\u30C3\u30B0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 8
+    kaisinnritu: 1.85
+    bougyoryoku: 6
+    kaisinnTaisei: 0.95
+    mahouBougyoryoku: 6
+    meityuuritu: 102.4
+    kaihiritu: 0.2
+    kougekiHinndo: 3.2
+    speed: 15
+    nokkubakkuBougyo: 0.6
+    stage:
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - 8.9"
+    exp: 3
+    gold: 3
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000015000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 4ff54da76225b894dba0f3170ca87cdf, type: 3}
+    - {fileID: 5855167156134022348, guid: 2aaa4d58743281c479b0420a7179bf13, type: 3}
+    - {fileID: 5855167156134022348, guid: 928f56915ccd7d341b3b8980b40c8a4b, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 14
+    rea: 0
+    enemyName: "\u5E7D\u970A"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 18
+    kougekiryoku: 9
+    kaisinnritu: 1.7
+    bougyoryoku: 6
+    kaisinnTaisei: 1.05
+    mahouBougyoryoku: 7
+    meityuuritu: 103.4
+    kaihiritu: 3.7
+    kougekiHinndo: 2.4
+    speed: 55
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - 9"
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - 13"
+    - "\u9B54\u6E26\u6D77 - 37"
+    exp: 4
+    gold: 4
+    dropItemSuu: 7
+    dropItemNos: 00000000010000000200000003000000040000001600000017000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 30fca402d92d58441a3d28573fa73a71, type: 3}
+    - {fileID: 5855167156134022348, guid: c954fe71d270eca4ab923797a3a675b9, type: 3}
+    - {fileID: 5855167156134022348, guid: cb80b4d0ca92a60419e2cf904b870e95, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 15
+    rea: 1
+    enemyName: "\u6028\u5FF5"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 25
+    kougekiryoku: 14
+    kaisinnritu: 1.75
+    bougyoryoku: 11
+    kaisinnTaisei: 1.1
+    mahouBougyoryoku: 11
+    meityuuritu: 103.5
+    kaihiritu: 6
+    kougekiHinndo: 2
+    speed: 70
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u6D77\u8FBA\u306E\u5EC3\u589F - \u5168\u57DF\u2605"
+    exp: 5
+    gold: 5
+    dropItemSuu: 7
+    dropItemNos: 00000000010000000200000003000000040000001800000019000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 47a7eacb1f656324298f5e834ba7e007, type: 3}
+    - {fileID: 5855167156134022348, guid: b31c38f44f1865345ba0e87c9c0059ae, type: 3}
+    - {fileID: 5855167156134022348, guid: ed8f1f48abd08cd4fac70b46d8ea3d3c, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 16
+    rea: 0
+    enemyName: "\u30B3\u30DC\u30EB\u30C8"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 12
+    kougekiryoku: 9
+    kaisinnritu: 1.7
+    bougyoryoku: 7
+    kaisinnTaisei: 0.7
+    mahouBougyoryoku: 7
+    meityuuritu: 102.5
+    kaihiritu: 0.8
+    kougekiHinndo: 2.5
+    speed: 40
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D5\u30A1\u30F3\u30B0\u5E73\u539F - 10.11"
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 41"
+    exp: 3
+    gold: 4
+    dropItemSuu: 6
+    dropItemNos: 00000000010000000200000003000000040000001a000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: bf751e2044991de4283cc4ba688cc2a4, type: 3}
+    - {fileID: 5855167156134022348, guid: 46bd18dead0907e428849d42bf8a7edc, type: 3}
+    - {fileID: 5855167156134022348, guid: 92195d35b8d92794db64fb98ac1479ae, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 17
+    rea: 0
+    enemyName: "\u30A6\u30EB\u30D5"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 14
+    kougekiryoku: 11
+    kaisinnritu: 1.75
+    bougyoryoku: 6
+    kaisinnTaisei: 0.75
+    mahouBougyoryoku: 5
+    meityuuritu: 102.7
+    kaihiritu: 4.3
+    kougekiHinndo: 2
+    speed: 75
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D5\u30A1\u30F3\u30B0\u5E73\u539F - 11.12"
+    - "\u30EF\u30EB\u30E0\u8352\u91CE - 16"
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - 35"
+    exp: 4
+    gold: 4
+    dropItemSuu: 6
+    dropItemNos: 00000000010000000200000003000000040000001b000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: f5aef9775e36b0746aea3919a6ef92d5, type: 3}
+    - {fileID: 5855167156134022348, guid: 6618faaca31b72a42a593c299376b6b8, type: 3}
+    - {fileID: 5855167156134022348, guid: fb7ef9442298f764ea8c93cf85fd337d, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 18
+    rea: 1
+    enemyName: "\u30D6\u30E9\u30C3\u30C9\u30A6\u30EB\u30D5"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 27
+    kougekiryoku: 14
+    kaisinnritu: 1.8
+    bougyoryoku: 11
+    kaisinnTaisei: 1.15
+    mahouBougyoryoku: 9
+    meityuuritu: 103.6
+    kaihiritu: 6
+    kougekiHinndo: 1.8
+    speed: 85
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D5\u30A1\u30F3\u30B0\u5E73\u539F - \u5168\u57DF\u2605"
+    exp: 6
+    gold: 7
+    dropItemSuu: 7
+    dropItemNos: 00000000010000000200000003000000040000001c0000001d000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 1a808a3fcc372f14fa9c6d54ffc61a67, type: 3}
+    - {fileID: 5855167156134022348, guid: 18c3d12f2c50118468a2a38bf5e93292, type: 3}
+    - {fileID: 5855167156134022348, guid: c3f0df848f4f6d546b3a41d7559de8c8, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1.25
+    giftDropRitu: 10
+  - no: 19
+    rea: 0
+    enemyName: "\u4EBA\u72FC"
+    mazyuu: 0
+    ninngenn: 1
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 17
+    kougekiryoku: 12
+    kaisinnritu: 1.85
+    bougyoryoku: 7
+    kaisinnTaisei: 1.2
+    mahouBougyoryoku: 6
+    meityuuritu: 103.8
+    kaihiritu: 5.3
+    kougekiHinndo: 2
+    speed: 80
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D5\u30A1\u30F3\u30B0\u5E73\u539F - 15"
+    - "\u540D\u5DE5\u306E\u5BB6 - 28"
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - 34"
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 40"
+    exp: 5
+    gold: 6
+    dropItemSuu: 8
+    dropItemNos: 00000000010000000200000003000000040000001e0000001f00000020000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: b7b75eb0da077be4f87abc39ec07d12f, type: 3}
+    - {fileID: 5855167156134022348, guid: 569d34b4c6b517f41a646f021aeb3937, type: 3}
+    - {fileID: 5855167156134022348, guid: 4e7a8b92568376f44bcf9d1b26c53afe, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 20
+    rea: 0
+    enemyName: "\u30BE\u30F3\u30D3A"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 11
+    kaisinnritu: 1.3
+    bougyoryoku: 13
+    kaisinnTaisei: 1.6
+    mahouBougyoryoku: 3
+    meityuuritu: 102.1
+    kaihiritu: 0.2
+    kougekiHinndo: 3
+    speed: 40
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - \u5168\u57DF"
+    exp: 4
+    gold: 2
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000021000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: d50f881b600f429489aa5e642a5bd006, type: 3}
+    - {fileID: 5855167156134022348, guid: 2106b0b2882b8ed4198521768cdfdd5c, type: 3}
+    - {fileID: 5855167156134022348, guid: 5577426519dd0a04d9f175fbca492ba5, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 21
+    rea: 0
+    enemyName: "\u30BE\u30F3\u30D3B"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 11
+    kaisinnritu: 1.3
+    bougyoryoku: 13
+    kaisinnTaisei: 1.6
+    mahouBougyoryoku: 3
+    meityuuritu: 102.1
+    kaihiritu: 0.2
+    kougekiHinndo: 3
+    speed: 40
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - \u5168\u57DF"
+    exp: 4
+    gold: 5
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000022000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: d50f881b600f429489aa5e642a5bd006, type: 3}
+    - {fileID: 5855167156134022348, guid: 2106b0b2882b8ed4198521768cdfdd5c, type: 3}
+    - {fileID: 5855167156134022348, guid: 52f54f7bd17d70b41a257f5ae5ab4294, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 22
+    rea: 0
+    enemyName: "\u30BE\u30F3\u30D3C"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 11
+    kaisinnritu: 1.3
+    bougyoryoku: 13
+    kaisinnTaisei: 1.6
+    mahouBougyoryoku: 3
+    meityuuritu: 102.1
+    kaihiritu: 0.2
+    kougekiHinndo: 3
+    speed: 40
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - 14.15"
+    exp: 4
+    gold: 5
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000021000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: d50f881b600f429489aa5e642a5bd006, type: 3}
+    - {fileID: 5855167156134022348, guid: 2106b0b2882b8ed4198521768cdfdd5c, type: 3}
+    - {fileID: 5855167156134022348, guid: 47a2cff594999dd469265172052b32f6, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 23
+    rea: 0
+    enemyName: "\u30BE\u30F3\u30D3D"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 15
+    kougekiryoku: 11
+    kaisinnritu: 1.3
+    bougyoryoku: 13
+    kaisinnTaisei: 1.6
+    mahouBougyoryoku: 5
+    meityuuritu: 102.1
+    kaihiritu: 0.2
+    kougekiHinndo: 3
+    speed: 40
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - 14.15"
+    exp: 4
+    gold: 8
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000022000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: d50f881b600f429489aa5e642a5bd006, type: 3}
+    - {fileID: 5855167156134022348, guid: 2106b0b2882b8ed4198521768cdfdd5c, type: 3}
+    - {fileID: 5855167156134022348, guid: 25185b65375e01444a4826ed2cdc21f0, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 24
+    rea: 0
+    enemyName: "\u30C9\u30EC\u30C3\u30C9\u30CF\u30F3\u30BF\u30FC"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 18
+    kougekiryoku: 14
+    kaisinnritu: 1.4
+    bougyoryoku: 12
+    kaisinnTaisei: 1.9
+    mahouBougyoryoku: 8
+    meityuuritu: 102.1
+    kaihiritu: 2.65
+    kougekiHinndo: 2.5
+    speed: 65
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - 15"
+    exp: 6
+    gold: 7
+    dropItemSuu: 6
+    dropItemNos: 000000000100000002000000030000000400000023000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: e0dde13101b71be47b6b91f41104a220, type: 3}
+    - {fileID: 5855167156134022348, guid: 4526a49af2158724a8865d23bf2034d0, type: 3}
+    - {fileID: 5855167156134022348, guid: e149eeec346c0e84cb2e09e367b1a2dd, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 25
+    rea: 1
+    enemyName: "\u30A2\u30B7\u30C3\u30C9\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 25
+    kougekiryoku: 14
+    kaisinnritu: 1.4
+    bougyoryoku: 15
+    kaisinnTaisei: 1.95
+    mahouBougyoryoku: 12
+    meityuuritu: 103.5
+    kaihiritu: 2.7
+    kougekiHinndo: 2.4
+    speed: 55
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30D6\u30E9\u30C3\u30C9\u30D8\u30A4\u30D6\u30F3 - \u5168\u57DF\u2605"
+    exp: 7
+    gold: 8
+    dropItemSuu: 8
+    dropItemNos: 0000000001000000020000000300000004000000240000002500000026000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 24385b7bd7f327244b399d75e347487a, type: 3}
+    - {fileID: 5855167156134022348, guid: 27d60d94a6925ec4ea710ff7aada3a97, type: 3}
+    - {fileID: 5855167156134022348, guid: f6748cbdfb03b6d43b051583a770bbd2, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 26
+    rea: 0
+    enemyName: "\u30B9\u30B1\u30EB\u30C8\u30F3"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 17
+    kougekiryoku: 13
+    kaisinnritu: 1.1
+    bougyoryoku: 10
+    kaisinnTaisei: 1.8
+    mahouBougyoryoku: 4
+    meityuuritu: 102.1
+    kaihiritu: 3.2
+    kougekiHinndo: 3.2
+    speed: 50
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u30EF\u30EB\u30E0\u8352\u91CE - \u5168\u57DF"
+    - "\u5080\u5121\u7089 - 31.32"
+    exp: 5
+    gold: 6
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b0000002c000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: f979f919b2aa3c141bf60427c8231f27, type: 3}
+    - {fileID: 5855167156134022348, guid: ae88cf1049dd6254380917f32547ca0d, type: 3}
+    - {fileID: 5855167156134022348, guid: 8ab32dc16412f0b4a81385a72f5d0bc4, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 27
+    rea: 0
+    enemyName: "\u30B5\u30F3\u30C9\u30EF\u30FC\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 20
+    kougekiryoku: 14
+    kaisinnritu: 1.13
+    bougyoryoku: 11
+    kaisinnTaisei: 1.83
+    mahouBougyoryoku: 8
+    meityuuritu: 102.12
+    kaihiritu: 2.8
+    kougekiHinndo: 2.9
+    speed: 70
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30EF\u30EB\u30E0\u8352\u91CE - 17.18"
+    exp: 6
+    gold: 6
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b0000002d000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: b4885fddf71621a408f2f0bb40ed018d, type: 3}
+    - {fileID: 5855167156134022348, guid: 484e728759b308643805b151d795f2cd, type: 3}
+    - {fileID: 5855167156134022348, guid: cb7fd15a01658cf42a2555a7970db7c5, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 28
+    rea: 0
+    enemyName: "\u30D6\u30E9\u30C3\u30AF\u30B5\u30F3\u30C9\u30EF\u30FC\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 24
+    kougekiryoku: 17
+    kaisinnritu: 1.4
+    bougyoryoku: 15
+    kaisinnTaisei: 2.4
+    mahouBougyoryoku: 12
+    meityuuritu: 103
+    kaihiritu: 3.5
+    kougekiHinndo: 2.8
+    speed: 75
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30EF\u30EB\u30E0\u8352\u91CE - 18"
+    exp: 8
+    gold: 9
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000030000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 5ea627d435258e247bf1fdacc9d6f24e, type: 3}
+    - {fileID: 5855167156134022348, guid: 6d558707d0900de41a63e9b029f9f1c8, type: 3}
+    - {fileID: 5855167156134022348, guid: fb878e54c7dc88845b5cfb5ae1c5c6a5, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 29
+    rea: 1
+    enemyName: "\u30A2\u30EB\u30D3\u30CE\u30B3\u30DC\u30EB\u30C8"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 26
+    kougekiryoku: 20
+    kaisinnritu: 1.42
+    bougyoryoku: 18
+    kaisinnTaisei: 2.43
+    mahouBougyoryoku: 16
+    meityuuritu: 103.3
+    kaihiritu: 4
+    kougekiHinndo: 2.6
+    speed: 85
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30EF\u30EB\u30E0\u8352\u91CE - \u5168\u57DF\u2605"
+    exp: 9
+    gold: 10
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000031000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 5831f524e9b2ebb49a4d0fd5867629d9, type: 3}
+    - {fileID: 5855167156134022348, guid: dbb24f71a4cba314ea33cf7b5ff38085, type: 3}
+    - {fileID: 5855167156134022348, guid: a2b9b958d2f4a824faa4eb669870fca0, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 30
+    rea: 0
+    enemyName: "\u9B54\u6CD5\u4F7F\u3044"
+    mazyuu: 0
+    ninngenn: 1
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 18
+    kougekiryoku: 15
+    kaisinnritu: 1.36
+    bougyoryoku: 9
+    kaisinnTaisei: 3.1
+    mahouBougyoryoku: 12
+    meityuuritu: 103.6
+    kaihiritu: 4.8
+    kougekiHinndo: 3
+    speed: 50
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30DE\u30FC\u30DE\u30EA\u30AA\u30F3 - \u5168\u57DF"
+    exp: 7
+    gold: 6
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000032000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 5897cc03d229ab64a98355a394f506d8, type: 3}
+    - {fileID: 5855167156134022348, guid: 4843a6b89e3bdec4fbdf0ad81ea46a22, type: 3}
+    - {fileID: 5855167156134022348, guid: b6bd2d8bab193004294ea44fcead03f2, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 31
+    rea: 0
+    enemyName: "\u9B54\u5973"
+    mazyuu: 0
+    ninngenn: 1
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 18
+    kougekiryoku: 14
+    kaisinnritu: 1.39
+    bougyoryoku: 13
+    kaisinnTaisei: 3.12
+    mahouBougyoryoku: 12
+    meityuuritu: 103.7
+    kaihiritu: 4.82
+    kougekiHinndo: 3
+    speed: 53
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30DE\u30FC\u30DE\u30EA\u30AA\u30F3 - \u5168\u57DF"
+    exp: 7
+    gold: 7
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000032000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 5897cc03d229ab64a98355a394f506d8, type: 3}
+    - {fileID: 5855167156134022348, guid: 4843a6b89e3bdec4fbdf0ad81ea46a22, type: 3}
+    - {fileID: 5855167156134022348, guid: 5230b856da765424bb9e7980d2229e49, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 32
+    rea: 0
+    enemyName: "\u30F4\u30A3\u30AF\u30C8\u30EA\u30A2\u30FB\u30D5\u30EC\u30A4\u30E0\u30CF\u30FC\u30C8"
+    mazyuu: 0
+    ninngenn: 1
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 22
+    kougekiryoku: 16
+    kaisinnritu: 2.1
+    bougyoryoku: 11
+    kaisinnTaisei: 3.46
+    mahouBougyoryoku: 16
+    meityuuritu: 103.2
+    kaihiritu: 5.2
+    kougekiHinndo: 2.7
+    speed: 54
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u30DE\u30FC\u30DE\u30EA\u30AA\u30F3 - 21"
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - 34"
+    exp: 9
+    gold: 10
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000033000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: da6e351147e8b924183330473895b24d, type: 3}
+    - {fileID: 5855167156134022348, guid: 87d33401352edbd43aeda8e4488800d1, type: 3}
+    - {fileID: 5855167156134022348, guid: ffc089cb9e590bd4babdf5b6a6d2fc3c, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 33
+    rea: 1
+    enemyName: "\u30AB\u30FC\u30E9\u30FB\u30D5\u30EC\u30A4\u30E0\u30CF\u30FC\u30C8"
+    mazyuu: 0
+    ninngenn: 1
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 28
+    kougekiryoku: 17
+    kaisinnritu: 2.2
+    bougyoryoku: 19
+    kaisinnTaisei: 3.5
+    mahouBougyoryoku: 16
+    meityuuritu: 103.5
+    kaihiritu: 5.23
+    kougekiHinndo: 2.3
+    speed: 70
+    nokkubakkuBougyo: 0.4
+    stage:
+    - "\u30DE\u30FC\u30DE\u30EA\u30AA\u30F3 - \u5168\u57DF\u2605"
+    exp: 11
+    gold: 11
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b0000003400000035000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: da6e351147e8b924183330473895b24d, type: 3}
+    - {fileID: 5855167156134022348, guid: 87d33401352edbd43aeda8e4488800d1, type: 3}
+    - {fileID: 5855167156134022348, guid: ffc089cb9e590bd4babdf5b6a6d2fc3c, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 34
+    rea: 0
+    enemyName: "\u30B4\u30FC\u30EC\u30E0\u30CA\u30A4\u30C8"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 25
+    kougekiryoku: 12
+    kaisinnritu: 1.6
+    bougyoryoku: 14
+    kaisinnTaisei: 2.6
+    mahouBougyoryoku: 14
+    meityuuritu: 103.9
+    kaihiritu: 2
+    kougekiHinndo: 3.3
+    speed: 20
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u8B0E\u306E\u6A5F\u68B0\u65BD\u8A2D -\u300023.24"
+    exp: 8
+    gold: 8
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000036000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 3e6d86f1700f9414da87864ed96c0936, type: 3}
+    - {fileID: 5855167156134022348, guid: c09194f5020600f40967c7a7237fdf4e, type: 3}
+    - {fileID: 5855167156134022348, guid: 083f765e3661b584286396aa4883f415, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 35
+    rea: 0
+    enemyName: "\u6EB6\u5CA9\u9B54\u4EBA"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 26
+    kougekiryoku: 15
+    kaisinnritu: 1.63
+    bougyoryoku: 12
+    kaisinnTaisei: 2.8
+    mahouBougyoryoku: 12
+    meityuuritu: 104.1
+    kaihiritu: 4
+    kougekiHinndo: 2.9
+    speed: 40
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u8B0E\u306E\u6A5F\u68B0\u65BD\u8A2D - 23.24"
+    exp: 8
+    gold: 9
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b0000003700000038000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7787e736a0fe21c48bf46e5d4ef7b8d0, type: 3}
+    - {fileID: 5855167156134022348, guid: 870b69b63c649df47983be5e2243e717, type: 3}
+    - {fileID: 5855167156134022348, guid: fde0796e483556a4bbabd18d8ea4dbdd, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 36
+    rea: 1
+    enemyName: "\u84BC\u6EB6\u5CA9\u9B54\u4EBA"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 30
+    kougekiryoku: 16
+    kaisinnritu: 1.82
+    bougyoryoku: 18
+    kaisinnTaisei: 3.8
+    mahouBougyoryoku: 15
+    meityuuritu: 105.1
+    kaihiritu: 5
+    kougekiHinndo: 3
+    speed: 50
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u8B0E\u306E\u6A5F\u68B0\u65BD\u8A2D - \u5168\u57DF\u2605"
+    exp: 12
+    gold: 12
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b000000390000003a000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 8bd740348e314344eb76133887156535, type: 3}
+    - {fileID: 5855167156134022348, guid: 4a8db299a47acff4fbdb586d7c6b5961, type: 3}
+    - {fileID: 5855167156134022348, guid: 7184bd4f768dcdf43a381515422b456f, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 37
+    rea: 0
+    enemyName: "\u9B54\u4EBA\u306E\u571F\u5076"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 30
+    kougekiryoku: 13
+    kaisinnritu: 1.84
+    bougyoryoku: 13
+    kaisinnTaisei: 3.9
+    mahouBougyoryoku: 15
+    meityuuritu: 105.2
+    kaihiritu: 2
+    kougekiHinndo: 3.3
+    speed: 25
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u8B0E\u306E\u6A5F\u68B0\u65BD\u8A2D - 24"
+    - "\u5080\u5121\u7089 - 37"
+    exp: 9
+    gold: 9
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b0000003b0000003c000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: e82dc8fa48d5cc2468bde06835129d3a, type: 3}
+    - {fileID: 5855167156134022348, guid: a1d3c23ae97873549b7e28a070f37a00, type: 3}
+    - {fileID: 5855167156134022348, guid: 687166ba67aa798459e0e98b46e75510, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 38
+    rea: 0
+    enemyName: "\u30B4\u30FC\u30EC\u30E0\u30AC\u30FC\u30C7\u30A3\u30A2\u30F3"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 32
+    kougekiryoku: 10
+    kaisinnritu: 1.8
+    bougyoryoku: 16
+    kaisinnTaisei: 10
+    mahouBougyoryoku: 16
+    meityuuritu: 104.2
+    kaihiritu: 2
+    kougekiHinndo: 3.5
+    speed: 18
+    nokkubakkuBougyo: 1.2
+    stage:
+    - "\u30B4\u30FC\u30EC\u30E0\u88FD\u9020\u6240 - 25.26"
+    exp: 9
+    gold: 8
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000036000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 3e6d86f1700f9414da87864ed96c0936, type: 3}
+    - {fileID: 5855167156134022348, guid: c09194f5020600f40967c7a7237fdf4e, type: 3}
+    - {fileID: 5855167156134022348, guid: 5b1b5a8ee98a41a4295dd85715b95ed3, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 39
+    rea: 0
+    enemyName: "\u30B7\u30EB\u30D0\u30FC\u30B4\u30FC\u30EC\u30E0"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 35
+    kougekiryoku: 12
+    kaisinnritu: 1.86
+    bougyoryoku: 18
+    kaisinnTaisei: 10
+    mahouBougyoryoku: 18
+    meityuuritu: 104.3
+    kaihiritu: 2
+    kougekiHinndo: 3.5
+    speed: 25
+    nokkubakkuBougyo: 1.2
+    stage:
+    - "\u30B4\u30FC\u30EC\u30E0\u88FD\u9020\u6240 - 26.27"
+    - "\u5080\u5121\u7089 - 31"
+    exp: 10
+    gold: 10
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b0000003f000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 3e6d86f1700f9414da87864ed96c0936, type: 3}
+    - {fileID: 5855167156134022348, guid: c09194f5020600f40967c7a7237fdf4e, type: 3}
+    - {fileID: 5855167156134022348, guid: 0e06f3e654ab59d4db10df9956af7893, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 40
+    rea: 0
+    enemyName: "\u30B4\u30FC\u30EB\u30C9\u30B4\u30FC\u30EC\u30E0"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 37
+    kougekiryoku: 13
+    kaisinnritu: 1.93
+    bougyoryoku: 20
+    kaisinnTaisei: 10
+    mahouBougyoryoku: 20
+    meityuuritu: 104.5
+    kaihiritu: 2
+    kougekiHinndo: 3.5
+    speed: 50
+    nokkubakkuBougyo: 1.2
+    stage:
+    - "\u30B4\u30FC\u30EC\u30E0\u88FD\u9020\u6240 - 27"
+    exp: 12
+    gold: 12
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000040000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 3e6d86f1700f9414da87864ed96c0936, type: 3}
+    - {fileID: 5855167156134022348, guid: c09194f5020600f40967c7a7237fdf4e, type: 3}
+    - {fileID: 5855167156134022348, guid: f1135b71a78d89540b70b9888c7c5cc5, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 41
+    rea: 1
+    enemyName: "\u30B7\u30EB\u30D0\u30FC\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 2
+    kougekiryoku: 2
+    kaisinnritu: 1.95
+    bougyoryoku: 150
+    kaisinnTaisei: 150
+    mahouBougyoryoku: 150
+    meityuuritu: 105.4
+    kaihiritu: 8.23
+    kougekiHinndo: 0.5
+    speed: 100
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u30B4\u30FC\u30EC\u30E0\u88FD\u9020\u6240 - \u5168\u57DF\u2605"
+    exp: 20
+    gold: 15
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b0000004100000042000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 907999486cd35224ba0066820e7f2586, type: 3}
+    - {fileID: 5855167156134022348, guid: 2c2369c857f02ee49a9f824c32cc9e11, type: 3}
+    - {fileID: 5855167156134022348, guid: 781ddf378fb4960439dad5c84e048ebf, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 42
+    rea: 0
+    enemyName: "\u6D6E\u904A\u7532\u5191"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 35
+    kougekiryoku: 12
+    kaisinnritu: 1.88
+    bougyoryoku: 15
+    kaisinnTaisei: 3
+    mahouBougyoryoku: 15
+    meityuuritu: 104.1
+    kaihiritu: 4.7
+    kougekiHinndo: 2.9
+    speed: 60
+    nokkubakkuBougyo: 0.2
+    stage:
+    - "\u540D\u5DE5\u306E\u5BB6 - 29.30"
+    - "\u5080\u5121\u7089 - 31.32"
+    - "\u9B54\u6E26\u6D77 - 38"
+    exp: 10
+    gold: 11
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000043000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 30fca402d92d58441a3d28573fa73a71, type: 3}
+    - {fileID: 5855167156134022348, guid: 5edc9552e4ebc7243bc99845968dc55f, type: 3}
+    - {fileID: 5855167156134022348, guid: 496f9e7e576fa9248b2394f4a4173548, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 43
+    rea: 0
+    enemyName: "\u30B5\u30A4\u30AF\u30ED\u30D7\u30B9"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 40
+    kougekiryoku: 17
+    kaisinnritu: 2.08
+    bougyoryoku: 15
+    kaisinnTaisei: 3.2
+    mahouBougyoryoku: 16
+    meityuuritu: 104.8
+    kaihiritu: 4.83
+    kougekiHinndo: 4
+    speed: 40
+    nokkubakkuBougyo: 0.8
+    stage:
+    - "\u540D\u5DE5\u306E\u5BB6 - 30"
+    exp: 14
+    gold: 15
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000044000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: a5bc23d460d988f4eab56a6aaebf2b5e, type: 3}
+    - {fileID: 5855167156134022348, guid: 12181c0498e32ba4d9fbb9facaac22d4, type: 3}
+    - {fileID: 5855167156134022348, guid: e136ce6d1fb2e6d4db78886404c20c97, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 44
+    rea: 1
+    enemyName: "\u30BD\u30EB\u30C9\u30EA\u30E0\u30FB\u30A2\u30A4\u30A2\u30F3\u30CF\u30FC\u30C8"
+    mazyuu: 0
+    ninngenn: 1
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 45
+    kougekiryoku: 20
+    kaisinnritu: 2.18
+    bougyoryoku: 16
+    kaisinnTaisei: 3.3
+    mahouBougyoryoku: 17
+    meityuuritu: 106.1
+    kaihiritu: 4.93
+    kougekiHinndo: 3
+    speed: 50
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u540D\u5DE5\u306E\u5BB6 - \u5168\u57DF\u2605"
+    exp: 22
+    gold: 18
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b0000004500000046000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 2d59c71bb65b65743bb9ae642086a274, type: 3}
+    - {fileID: 5855167156134022348, guid: 0b0019ff36a41a34c9e69a6c33fdee22, type: 3}
+    - {fileID: 5855167156134022348, guid: 99c9355dc30c3bf4289b678f288a9207, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 45
+    rea: 0
+    enemyName: "\u30D6\u30EC\u30A4\u30BA\u30B4\u30FC\u30EC\u30E0"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 36
+    kougekiryoku: 13
+    kaisinnritu: 1.89
+    bougyoryoku: 16
+    kaisinnTaisei: 3.1
+    mahouBougyoryoku: 15
+    meityuuritu: 104
+    kaihiritu: 2
+    kougekiHinndo: 3
+    speed: 60
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u5080\u5121\u7089 - 32.33"
+    exp: 15
+    gold: 13
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000047000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: b1b303619408b95498f88d9bca7436f0, type: 3}
+    - {fileID: 5855167156134022348, guid: 3cd6e63e9c7c3a045bf4100fd8da98b9, type: 3}
+    - {fileID: 5855167156134022348, guid: 6ee284711264007438a4c241d82a6ef4, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 46
+    rea: 0
+    enemyName: "\u30B4\u30FC\u30EC\u30E0\u30E1\u30FC\u30AB\u30FC"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 40
+    kougekiryoku: 18
+    kaisinnritu: 2.09
+    bougyoryoku: 17
+    kaisinnTaisei: 3.3
+    mahouBougyoryoku: 17
+    meityuuritu: 104.9
+    kaihiritu: 4.82
+    kougekiHinndo: 3.5
+    speed: 70
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u5080\u5121\u7089 - 33"
+    exp: 18
+    gold: 18
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000048000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 31838b5db20a38a4c8dc1f7860f96bbb, type: 3}
+    - {fileID: 5855167156134022348, guid: 28ee64751d728284191b776cf43e2465, type: 3}
+    - {fileID: 5855167156134022348, guid: 2d59587f60ab7384ebd4511114f6abec, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 47
+    rea: 1
+    enemyName: "\u706B\u708E\u9B54\u4EBA"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 50
+    kougekiryoku: 20
+    kaisinnritu: 2.19
+    bougyoryoku: 20
+    kaisinnTaisei: 3.4
+    mahouBougyoryoku: 20
+    meityuuritu: 106.2
+    kaihiritu: 4.9
+    kougekiHinndo: 2.5
+    speed: 80
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u5080\u5121\u7089 - \u5168\u57DF\u2605"
+    exp: 25
+    gold: 25
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b00000049000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 664fc26bcdfa5af4980721df78fb8ab7, type: 3}
+    - {fileID: 5855167156134022348, guid: ace766d88c8b2da4faa37991f83e0687, type: 3}
+    - {fileID: 5855167156134022348, guid: 9168db0079dff9a42825d61a13937d71, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 48
+    rea: 0
+    enemyName: "\u30B5\u30E9\u30DE\u30F3\u30C0\u30FC"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 1
+    maxHp: 37
+    kougekiryoku: 14
+    kaisinnritu: 1.89
+    bougyoryoku: 17
+    kaisinnTaisei: 2.9
+    mahouBougyoryoku: 16
+    meityuuritu: 104
+    kaihiritu: 3.2
+    kougekiHinndo: 3
+    speed: 80
+    nokkubakkuBougyo: 0.4
+    stage:
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - 35.36"
+    exp: 18
+    gold: 17
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b0000004a000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 490dd7462a2e7684588fb07894cb61a5, type: 3}
+    - {fileID: 5855167156134022348, guid: 38497550da479ee4bae86fac36599450, type: 3}
+    - {fileID: 5855167156134022348, guid: 38dafdc50fabbb04e81777ca391a4bd1, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 49
+    rea: 0
+    enemyName: "\u8D64\u7ADC"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 1
+    kami: 0
+    maxHp: 56
+    kougekiryoku: 19
+    kaisinnritu: 2.08
+    bougyoryoku: 19
+    kaisinnTaisei: 3.3
+    mahouBougyoryoku: 30
+    meityuuritu: 104.8
+    kaihiritu: 3.27
+    kougekiHinndo: 3.6
+    speed: 40
+    nokkubakkuBougyo: 0.9
+    stage:
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - 36"
+    exp: 20
+    gold: 20
+    dropItemSuu: 6
+    dropItemNos: 2700000028000000290000002a0000002b0000004b000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 1e741cc5a166dbc49bde6420b3111073, type: 3}
+    - {fileID: 5855167156134022348, guid: 3e273196497c4fb40b3e98a3bfd7c9f7, type: 3}
+    - {fileID: 5855167156134022348, guid: c00c3bb5350e98640b1da0253395b680, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 50
+    rea: 1
+    enemyName: "\u30A8\u30F3\u30B7\u30A7\u30F3\u30C8\u30FB\u30EC\u30C3\u30C9"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 1
+    kami: 0
+    maxHp: 55
+    kougekiryoku: 21
+    kaisinnritu: 2.1
+    bougyoryoku: 21
+    kaisinnTaisei: 3.4
+    mahouBougyoryoku: 22
+    meityuuritu: 104.9
+    kaihiritu: 3.32
+    kougekiHinndo: 3.2
+    speed: 50
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - \u5168\u57DF\u2605"
+    exp: 30
+    gold: 30
+    dropItemSuu: 7
+    dropItemNos: 2700000028000000290000002a0000002b0000004c0000004d000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: adc5ea04df956e94dad6fd326d5180bc, type: 3}
+    - {fileID: 5855167156134022348, guid: 73d8201c68edebc47aca3d2c4518b41f, type: 3}
+    - {fileID: 5855167156134022348, guid: cc93e105db5004e4f9352cbe4cd629a5, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 51
+    rea: 0
+    enemyName: "\u30B9\u30A4\u30DE\u30FC\u30B4\u30D6\u30EA\u30F3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 46
+    kougekiryoku: 14
+    kaisinnritu: 1.93
+    bougyoryoku: 18
+    kaisinnTaisei: 3.1
+    mahouBougyoryoku: 18
+    meityuuritu: 104.2
+    kaihiritu: 3.32
+    kougekiHinndo: 3
+    speed: 60
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - \u5168\u57DF\u2605"
+    exp: 26
+    gold: 27
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000053000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: fbc2cda8ec9ed1d459e0d64b9a13683a, type: 3}
+    - {fileID: 5855167156134022348, guid: 87d2835d6e119d7409adb6979a35afe8, type: 3}
+    - {fileID: 5855167156134022348, guid: 19c2eeedd28d32b47bae5f422f191940, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 52
+    rea: 0
+    enemyName: "\u6F15\u624B\u30B4\u30D6\u30EA\u30F3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 54
+    kougekiryoku: 16
+    kaisinnritu: 2.09
+    bougyoryoku: 19
+    kaisinnTaisei: 3.31
+    mahouBougyoryoku: 30
+    meityuuritu: 104.9
+    kaihiritu: 3.28
+    kougekiHinndo: 3
+    speed: 70
+    nokkubakkuBougyo: 0.8
+    stage:
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - \u5168\u57DF\u2605"
+    exp: 32
+    gold: 33
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000054000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 0f8d2ef6ab9b8664199bb32cff7012f9, type: 3}
+    - {fileID: 5855167156134022348, guid: e006f5e729283ad4ab1cb3a67c98ca55, type: 3}
+    - {fileID: 5855167156134022348, guid: 3594b72ff27d4194bb6f5e8f59f859bb, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 53
+    rea: 0
+    enemyName: "\u30E1\u30AC\u30ED\u30C9\u30F3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 62
+    kougekiryoku: 21
+    kaisinnritu: 2.11
+    bougyoryoku: 23
+    kaisinnTaisei: 3.41
+    mahouBougyoryoku: 24
+    meityuuritu: 105
+    kaihiritu: 3.33
+    kougekiHinndo: 2.5
+    speed: 90
+    nokkubakkuBougyo: 0.9
+    stage:
+    - "\u5B64\u5CF6\u306E\u30CC\u30B7 - \u5168\u57DF\u2605"
+    exp: 35
+    gold: 34
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000055000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: ec07660cc508a18449699c5af30d260a, type: 3}
+    - {fileID: 5855167156134022348, guid: f2fb9057783b1884ea014e57ab743a70, type: 3}
+    - {fileID: 5855167156134022348, guid: 3d11c11de384d4547b355dbbbac28eb0, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 54
+    rea: 0
+    enemyName: "\u72E9\u731F\u30B4\u30D6\u30EA\u30F3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 47
+    kougekiryoku: 16
+    kaisinnritu: 1.94
+    bougyoryoku: 19
+    kaisinnTaisei: 4.12
+    mahouBougyoryoku: 20
+    meityuuritu: 105.9
+    kaihiritu: 5.92
+    kougekiHinndo: 2.8
+    speed: 60
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 41.42"
+    exp: 31
+    gold: 32
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000056000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 1d1608723f3666b4ebde4fefcc59a74d, type: 3}
+    - {fileID: 5855167156134022348, guid: ac081369dca5e9842ba3a78bb659f54a, type: 3}
+    - {fileID: 5855167156134022348, guid: 072baff01e3d13448868e70494f3d40d, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 55
+    rea: 0
+    enemyName: "\u30D5\u30A7\u30A2\u30EA\u30FC"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 1
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 55
+    kougekiryoku: 17
+    kaisinnritu: 2.1
+    bougyoryoku: 21
+    kaisinnTaisei: 4.42
+    mahouBougyoryoku: 22
+    meityuuritu: 106.2
+    kaihiritu: 6.21
+    kougekiHinndo: 2.2
+    speed: 95
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - 42"
+    exp: 36
+    gold: 35
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000057000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 5e024c4fba6af7c45892863efc708861, type: 3}
+    - {fileID: 5855167156134022348, guid: 2103fd417f271c74298a3eb31a24f304, type: 3}
+    - {fileID: 5855167156134022348, guid: fd224350faf2f0645aa6beffa7225dac, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 56
+    rea: 0
+    enemyName: "\u9577\u8001\u30B4\u30D6\u30EA\u30F3"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 1
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 70
+    kougekiryoku: 23
+    kaisinnritu: 2.12
+    bougyoryoku: 24
+    kaisinnTaisei: 4.49
+    mahouBougyoryoku: 30
+    meityuuritu: 106.21
+    kaihiritu: 6.22
+    kougekiHinndo: 4
+    speed: 20
+    nokkubakkuBougyo: 1
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - \u5168\u57DF\u2605"
+    exp: 42
+    gold: 43
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
+    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
+    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 57
+    rea: 0
+    enemyName: "\u4EBA\u98DF\u3044\u30AD\u30CE\u30B3"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 51
+    kougekiryoku: 17
+    kaisinnritu: 2.11
+    bougyoryoku: 20
+    kaisinnTaisei: 4.13
+    mahouBougyoryoku: 21
+    meityuuritu: 106.12
+    kaihiritu: 5.94
+    kougekiHinndo: 2.7
+    speed: 55
+    nokkubakkuBougyo: 0.3
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - \u5168\u57DF\u2605"
+    exp: 36
+    gold: 38
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
+    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
+    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    nomalDropRitu: 8
+    reaDropRitu: 20
+    superReaDropRitu: 10
+    epikDropRitu: 5
+    legendaryDropRitu: 2.5
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 58
+    rea: 0
+    enemyName: "\u30B4\u30FC\u30EB\u30C9\u30B9\u30E9\u30A4\u30E0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 57
+    kougekiryoku: 19
+    kaisinnritu: 2.29
+    bougyoryoku: 23
+    kaisinnTaisei: 4.43
+    mahouBougyoryoku: 23
+    meityuuritu: 106.41
+    kaihiritu: 6.25
+    kougekiHinndo: 2
+    speed: 95
+    nokkubakkuBougyo: 0.1
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - \u5168\u57DF\u2605"
+    exp: 80
+    gold: 100
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
+    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
+    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    nomalDropRitu: 25
+    reaDropRitu: 10
+    superReaDropRitu: 5
+    epikDropRitu: 2.5
+    legendaryDropRitu: 1.25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 59
+    rea: 1
+    enemyName: "\u30B9\u30E9\u30A4\u30E0\u30AD\u30F3\u30B0"
+    mazyuu: 1
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 73
+    kougekiryoku: 24
+    kaisinnritu: 2.31
+    bougyoryoku: 26
+    kaisinnTaisei: 4.51
+    mahouBougyoryoku: 30
+    meityuuritu: 106.43
+    kaihiritu: 6.3
+    kougekiHinndo: 3
+    speed: 60
+    nokkubakkuBougyo: 0.8
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - \u5168\u57DF\u2605"
+    exp: 52
+    gold: 58
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
+    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
+    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
+    giftDropRitu: 10
+  - no: 0
+    rea: 0
+    enemyName: "\u8FFD\u52A0\u7528"
+    mazyuu: 0
+    ninngenn: 0
+    mazinn: 0
+    husi: 0
+    akuma: 0
+    ryuu: 0
+    kami: 0
+    maxHp: 73
+    kougekiryoku: 24
+    kaisinnritu: 2.31
+    bougyoryoku: 26
+    kaisinnTaisei: 4.51
+    mahouBougyoryoku: 30
+    meityuuritu: 106.43
+    kaihiritu: 6.3
+    kougekiHinndo: 3
+    speed: 60
+    nokkubakkuBougyo: 0.8
+    stage:
+    - "\u4EBA\u578B\u9B54\u7363\u306E\u96C6\u843D - \u5168\u57DF\u2605"
+    exp: 52
+    gold: 58
+    dropItemSuu: 6
+    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropSyougou:
+    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
+    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
+    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    nomalDropRitu: 100
+    reaDropRitu: 100
+    superReaDropRitu: 75
+    epikDropRitu: 50
+    legendaryDropRitu: 25
+    godDropRitu: 0.01
+    reaSyougouDropRitu: 5
+    superReaSyougouDropRitu: 2.5
+    epikSyougouDropRitu: 1
     giftDropRitu: 10

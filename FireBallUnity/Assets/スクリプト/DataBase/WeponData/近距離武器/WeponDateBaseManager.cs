@@ -6,7 +6,7 @@ public class WeponDateBaseManager : MonoBehaviour
 {
     public static WeponDateBaseManager instance;    
 
-    [Header("WeponDataList???X?N???v?^?u???E?I?u?W?F?N?g")]
+    [Header("所持装備一覧")]
     public WeponDataList weponDataList;        
     public WeponDataList.WeponData GetWeponData(int weponNo)
     {
