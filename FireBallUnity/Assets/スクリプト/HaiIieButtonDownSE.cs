@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HaiIieButtonDownSE : MonoBehaviour
 {
-    
+    public BGMSEVolume bGMSEVolume;
     public void HaiButtonDown()
     {
         GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();

@@ -32,7 +32,7 @@ public class BottonSceneCange : MonoBehaviour
     {
         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<SystemDatabase>().zidouSyuukai = false;
         SceneManager.LoadScene("MAP");
-        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().MapBGMStart();
+        //DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().MapBGMStart();
         Destroy(GameObject.Find("ResultManager"));
 
 

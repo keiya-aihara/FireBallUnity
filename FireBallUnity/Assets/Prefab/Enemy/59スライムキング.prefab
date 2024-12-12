@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b2fae353283ef42b34d4a37e36fc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLv: 0
+  enemyLv: 19
   enemyData:
     no: 59
     rea: 1

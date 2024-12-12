@@ -68,6 +68,8 @@ public class Atack : MonoBehaviour
         SoubiSkillSettei();
 
         attack = anim.GetInteger("Attack");
+
+        audioSource.volume = dataBaseManger.GetComponent<BGMSEVolume>().seVolume;
     }
     private void SoubiSkillSettei()
     {

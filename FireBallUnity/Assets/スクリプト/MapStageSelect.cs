@@ -28,6 +28,7 @@ public class MapStageSelect : MonoBehaviour
     public GameObject kotounoNusi;
     public GameObject makaikai;
     public GameObject hitogatamazyuuNoSyuuraku;
+    public GameObject maborosinoDoukutu;
     private void Start()
     {
         stageZissekiDatabase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<StageZissekiDatabase>();
@@ -82,6 +83,10 @@ public class MapStageSelect : MonoBehaviour
             if (stageZissekiDatabase.stageNo[38] >= 1)
             {
                 hitogatamazyuuNoSyuuraku.SetActive(true);
+            }
+            if(stageZissekiDatabase.stageNo[41]>=1)
+            {
+                maborosinoDoukutu.SetActive(true);
             }
         }
     }
@@ -321,6 +326,23 @@ public class MapStageSelect : MonoBehaviour
         {
             stage3.SetActive(true);
             stageName3.text = "42";
+        }
+    }
+    public void MaborosinoDoukutu()
+    {
+        stageSyousaiPanel.SetActive(true);
+        titleStageName.text = "幻の洞窟";
+        stageName1.text = "43";
+
+        if (stageZissekiDatabase.stageNo[42] >= 1)
+        {
+            stage2.SetActive(true);
+            stageName2.text = "44";
+        }
+        if (stageZissekiDatabase.stageNo[43] >= 1)
+        {
+            stage3.SetActive(true);
+            stageName3.text = "45";
         }
     }
 }

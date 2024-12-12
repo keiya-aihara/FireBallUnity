@@ -688,6 +688,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void HaiButtonDown()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         if (fireWall)
         {
             fireWallLevel++;
@@ -825,6 +826,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void IieButtonDown()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().IieButtonSE();
         skillSyutokuPanel.SetActive(false);
         fireWall = false;
         fireCombo = false;

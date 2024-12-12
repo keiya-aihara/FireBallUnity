@@ -51,7 +51,6 @@ public class AdsInitializer : MonoBehaviour
                 break;
         }
     }
-
     private void GrantReward()
     {
         // ユーザーに報酬を付与する処理
@@ -62,6 +61,47 @@ public class AdsInitializer : MonoBehaviour
         playerStatusDataBase.epikReaDropRitu += 50;
         playerStatusDataBase.legendaryReaDropRitu += 50;
         playerStatusDataBase.godReaDropRitu += 50;
+    }
+
+
+
+
+
+    public void ShowAdZidouSyuukai()
+    {
+        if (Advertisement.IsReady("Rewarded_Android")) // 適切な広告ユニットIDを指定
+        {
+            Advertisement.Show("Rewarded_Android", new ShowOptions
+            {
+                resultCallback = HandleAdResultZidouSyuukai
+            });
+        }
+        else
+        {
+            Debug.Log("広告が準備できていません。");
+        }
+    }
+    private void HandleAdResultZidouSyuukai(ShowResult result)
+    {
+        switch (result)
+        {
+            case ShowResult.Finished:
+                Debug.Log("広告が正常に再生されました。報酬を与えます。");
+                GrantRewardZidouSyuukai();
+                break;
+            case ShowResult.Skipped:
+                Debug.Log("広告がスキップされました。報酬は与えません。");
+                break;
+            case ShowResult.Failed:
+                Debug.LogWarning("広告の再生に失敗しました。");
+                break;
+        }
+    }
+    private void GrantRewardZidouSyuukai()
+    {
+        // ユーザーに報酬を付与する処理
+        Debug.Log("ユーザーに報酬を付与しました。");
+        GameObject.Find("冒険するButton (Legacy)").GetComponent<StageChange>().Zidousyuukai();
     }
 }
 

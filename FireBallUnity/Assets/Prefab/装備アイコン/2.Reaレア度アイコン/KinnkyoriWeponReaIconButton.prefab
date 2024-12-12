@@ -151,7 +151,7 @@ MonoBehaviour:
   giftLv: {fileID: 6362189937314382237, guid: d197eeb249c93904cb89b3f900ea6569, type: 3}
   kyoukaLv: {fileID: 5192181059161467606, guid: 20f280390e45819409495ce556e7d966, type: 3}
   zyukurenndo: {fileID: 6187080608302797044, guid: 6e868c47328123c4ab3c78fb445d86ed, type: 3}
-  number: 5
+  number: 112
   a: 0
   b: 0
   reaCircle: {fileID: 511482139073665760, guid: 0cb8ff7c84103c94da8bda244a372bad, type: 3}
@@ -187,3 +187,21 @@ MonoBehaviour:
   nouryokuti: {fileID: 5729726323636984384, guid: fa044a221117e664fa72940352c89015, type: 3}
   sukiru: {fileID: 5280881017444327546, guid: b4d935c94d1136041985fa861ea8f4a7, type: 3}
   sukiruName: {fileID: 4910090017531768913, guid: 7d9dfd0c0ec258244a2e180486ca72f5, type: 3}
+  color1:
+    serializedVersion: 2
+    rgba: 4294967295
+  color2:
+    serializedVersion: 2
+    rgba: 4284415820
+  color3:
+    serializedVersion: 2
+    rgba: 4294948693
+  color4:
+    serializedVersion: 2
+    rgba: 4283322109
+  color5:
+    serializedVersion: 2
+    rgba: 4294926561
+  color6:
+    serializedVersion: 2
+    rgba: 4280912079

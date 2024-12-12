@@ -15,4 +15,8 @@ public class AdPlay : MonoBehaviour
         adsInitializer.ShowAd();
 
     }
+    public void BottunDownZidouSyuukai()
+    {
+        adsInitializer.ShowAdZidouSyuukai();
+    }
 }

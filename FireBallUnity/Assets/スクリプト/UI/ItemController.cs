@@ -62,6 +62,8 @@ public class ItemController : MonoBehaviour
 
     private KousekiDataBaseManager kousekiDataBaseManager;
 
+    private Nannido nannido;
+
     public List<int> sonotasoubiStatus = new List<int>();
     private int sonotasoubiGiftStatusKakutei;
     // Start is called before the first frame update
@@ -76,6 +78,7 @@ public class ItemController : MonoBehaviour
         sonotaDataBaseManagerScript = dataBaseManager.GetComponent<SonotaDataBaseManager>();
         systemDatabase = dataBaseManager.GetComponent<SystemDatabase>();
         kakutokuDataBase = dataBaseManager.GetComponent<KakutokuDataBase>();
+        nannido = dataBaseManager.GetComponent<Nannido>();
 
         resultSceneManagerScript = GameObject.Find("ResultManager").GetComponent<ResultSceneManager>();
         gameManager = GameObject.Find("GameManager");
@@ -127,15 +130,108 @@ public class ItemController : MonoBehaviour
             GiftDrop();
             SyougouDrop();
 
-            itemStatus.maxHp = itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu);
-            itemStatus.maxMp = itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu);
-            itemStatus.kougekiryoku = itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu));
-            itemStatus.maryoku = itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu);
-            itemStatus.bougyoryoiku = itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu);
-            itemStatus.meityuuritu = itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu;
-            itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
+            if (nannido.syosinnsyanoMiti)
+            {
+                itemStatus.maxHp = itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu);
+                itemStatus.maxMp = itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu);
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu));
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu*1;
+                itemStatus.maryoku = itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu);
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu*1;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu);
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei*1;
+                itemStatus.meityuuritu = itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu;
+                itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
 
-            itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu));
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu));
+
+                itemStatus.syosinnsyanoMiti = true;
+            }
+            else if (nannido.boukennsyanoSirenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu))*2;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu))*2;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu)))*2;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 2;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu))*2;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 2;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu))*2;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 2;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu)*2;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu)*2;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu)))*2;
+
+                itemStatus.boukennsyanoSirenn = true;
+            }
+            else if (nannido.eiyuunoMiti)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 3;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 3;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu))) * 3;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 3;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 3;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 3;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 3;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 3;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 3;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 3;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 3;
+
+                itemStatus.eiyuunoMiti = true;
+            }
+            else if (nannido.yuusyanoTyousenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 4;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 4;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu))) * 4;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 4;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 4;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 4;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 4;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 4;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 4;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 4;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 4;
+
+                itemStatus.yuusyanoTyousenn = true;
+            }
+            else if (nannido.dennsetunoSirenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 5;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 5;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu))) * 5;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 5;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 5;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 5;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 5;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 5;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 5;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 5;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 5;
+
+                itemStatus.dennsetunoSirenn = true;
+            }
+            else if (nannido.kamigaminoRyouiki)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 6;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 6;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * (syougouBairitu + giftBairitu))) * 6;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 6;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 6;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 6;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 6;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 6;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 6;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 6;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 6;
+
+                itemStatus.kamigaminoRyouiki = true;
+            }
 
             itemStatus.kyoukagoMaxHp = itemStatus.maxHp;
             itemStatus.kyoukagoMaxMp = itemStatus.maxMp;
@@ -265,15 +361,108 @@ public class ItemController : MonoBehaviour
             GiftDrop();
             SyougouDrop();
 
-            itemStatus.maxHp = itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu);
-            itemStatus.maxMp = itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu);
-            itemStatus.kougekiryoku = itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu);
-            itemStatus.maryoku = itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * (syougouBairitu + giftBairitu));
-            itemStatus.bougyoryoiku = itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu);
-            itemStatus.meityuuritu = itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu;
-            itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
+            if (nannido.syosinnsyanoMiti)
+            {
+                itemStatus.maxHp = itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu);
+                itemStatus.maxMp = itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu);
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu);
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 1;
+                itemStatus.maryoku = itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * (syougouBairitu + giftBairitu));
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 1;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu);
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 1;
+                itemStatus.meityuuritu = itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu;
+                itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
 
-            itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu));
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu));
+
+                itemStatus.syosinnsyanoMiti = true;
+            }
+            else if (nannido.boukennsyanoSirenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 2;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 2;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 2;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 2;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * (syougouBairitu + giftBairitu))) * 2;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 2;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 2;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 2;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 2;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 2;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 2;
+
+                itemStatus.boukennsyanoSirenn = true;
+            }
+            else if (nannido.eiyuunoMiti)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 3;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 3;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 3;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 3;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * (syougouBairitu + giftBairitu))) * 3;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 3;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 3;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 3;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 3;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 3;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 3;
+
+                itemStatus.eiyuunoMiti = true;
+            }
+            else if (nannido.yuusyanoTyousenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 4;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 4;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 4;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 4;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * (syougouBairitu + giftBairitu))) * 4;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 4;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 4;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 4;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 4;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 4;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 4;
+
+                itemStatus.yuusyanoTyousenn = true;
+            }
+            else if (nannido.dennsetunoSirenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 5;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 5;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 5;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 5;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku *(syougouBairitu + giftBairitu))) * 5;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 5;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 5;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 5;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 5;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 5;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 5;
+
+                itemStatus.dennsetunoSirenn = true;
+            }
+            else if (nannido.kamigaminoRyouiki)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 6;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 6;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 6;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 6;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * (syougouBairitu + giftBairitu))) * 6;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 6;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * syougouBairitu)) * 6;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 6;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 6;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 6;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 6;
+
+                itemStatus.kamigaminoRyouiki = true;
+            }
 
             itemStatus.kyoukagoMaxHp = itemStatus.maxHp;
             itemStatus.kyoukagoMaxMp = itemStatus.maxMp;
@@ -403,15 +592,108 @@ public class ItemController : MonoBehaviour
             GiftDrop();
             SyougouDrop();
 
-            itemStatus.maxHp = itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu);
-            itemStatus.maxMp = itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu);
-            itemStatus.kougekiryoku = itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu);
-            itemStatus.maryoku = itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu);
-            itemStatus.bougyoryoiku = itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * (syougouBairitu + giftBairitu));
-            itemStatus.meityuuritu = itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu;
-            itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
+            if (nannido.syosinnsyanoMiti)
+            {
+                itemStatus.maxHp = itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu);
+                itemStatus.maxMp = itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu);
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu);
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 1;
+                itemStatus.maryoku = itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu);
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 1;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * (syougouBairitu + giftBairitu));
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 1;
+                itemStatus.meityuuritu = itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu;
+                itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
 
-            itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu));
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu));
+
+                itemStatus.syosinnsyanoMiti = true;
+            }
+            else if (nannido.boukennsyanoSirenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 2;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 2;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 2;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 2;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 2;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 2;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * (syougouBairitu + giftBairitu))) * 2;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 2;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 2;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 2;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 2;
+
+                itemStatus.boukennsyanoSirenn = true;
+            }
+            else if (nannido.eiyuunoMiti)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 3;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 3;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 3;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 3;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 3;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 3;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku*(syougouBairitu + giftBairitu))) * 3;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 3;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 3;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 3;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 3;
+
+                itemStatus.eiyuunoMiti = true;
+            }
+            else if (nannido.yuusyanoTyousenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 4;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 4;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 4;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 4;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 4;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 4;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * (syougouBairitu + giftBairitu))) * 4;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 4;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 4;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 4;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 4;
+
+                itemStatus.yuusyanoTyousenn=true;
+            }
+            else if (nannido.dennsetunoSirenn)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 5;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 5;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 5;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 5;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 5;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 5;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * (syougouBairitu + giftBairitu))) * 5;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 5;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 5;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 5;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 5;
+
+                itemStatus.dennsetunoSirenn = true;
+            }
+            else if (nannido.kamigaminoRyouiki)
+            {
+                itemStatus.maxHp = (itemStatus.maxHp + Mathf.CeilToInt(itemStatus.maxHp * syougouBairitu)) * 6;
+                itemStatus.maxMp = (itemStatus.maxMp + Mathf.CeilToInt(itemStatus.maxMp * syougouBairitu)) * 6;
+                itemStatus.kougekiryoku = (itemStatus.kougekiryoku + Mathf.CeilToInt(itemStatus.kougekiryoku * syougouBairitu)) * 6;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 6;
+                itemStatus.maryoku = (itemStatus.maryoku + Mathf.CeilToInt(itemStatus.maryoku * syougouBairitu)) * 6;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 6;
+                itemStatus.bougyoryoiku = (itemStatus.bougyoryoiku + Mathf.CeilToInt(itemStatus.bougyoryoiku * (syougouBairitu + giftBairitu))) * 6;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 6;
+                itemStatus.meityuuritu = (itemStatus.meityuuritu + itemStatus.meityuuritu * syougouBairitu) * 6;
+                itemStatus.kaihiritu = (itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu) * 6;
+
+                itemStatus.baikyakuKinngaku = (itemStatus.baikyakuKinngaku + Mathf.CeilToInt(itemStatus.baikyakuKinngaku * (syougouBairitu + giftBairitu))) * 6;
+
+                itemStatus.kamigaminoRyouiki = true;
+            }
 
             itemStatus.kyoukagoMaxHp = itemStatus.maxHp;
             itemStatus.kyoukagoMaxMp = itemStatus.maxMp;
@@ -816,6 +1098,110 @@ public class ItemController : MonoBehaviour
             {
                 itemStatus.kaihiritu = itemStatus.kaihiritu + itemStatus.kaihiritu * syougouBairitu;
             }
+
+            if (nannido.syosinnsyanoMiti)
+            {
+                itemStatus.maxHp = itemStatus.maxHp * 1;
+                itemStatus.maxMp = itemStatus.maxMp * 1;
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku * 1;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 1;
+                itemStatus.maryoku = itemStatus.maryoku * 1;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 1;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku * 1;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 1;
+                itemStatus.meityuuritu = itemStatus.meityuuritu * 1;
+                itemStatus.kaihiritu = itemStatus.kaihiritu * 1;
+
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku * 1;
+
+                itemStatus.syosinnsyanoMiti = true;
+            }
+            else if (nannido.boukennsyanoSirenn)
+            {
+                itemStatus.maxHp = itemStatus.maxHp * 2;
+                itemStatus.maxMp = itemStatus.maxMp * 2;
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku * 2;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 2;
+                itemStatus.maryoku = itemStatus.maryoku * 2;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 2;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku * 2;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 2;
+                itemStatus.meityuuritu = itemStatus.meityuuritu * 2;
+                itemStatus.kaihiritu = itemStatus.kaihiritu * 2;
+
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku * 2;
+
+                itemStatus.boukennsyanoSirenn = true;
+            }
+            else if (nannido.eiyuunoMiti)
+            {
+                itemStatus.maxHp = itemStatus.maxHp * 3;
+                itemStatus.maxMp = itemStatus.maxMp * 3;
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku * 3;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 3;
+                itemStatus.maryoku = itemStatus.maryoku * 3;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 3;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku * 3;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 3;
+                itemStatus.meityuuritu = itemStatus.meityuuritu * 3;
+                itemStatus.kaihiritu = itemStatus.kaihiritu * 3;
+
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku * 3;
+
+                itemStatus.eiyuunoMiti = true;
+            }
+            else if (nannido.yuusyanoTyousenn)
+            {
+                itemStatus.maxHp = itemStatus.maxHp * 4;
+                itemStatus.maxMp = itemStatus.maxMp * 4;
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku * 4;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 4;
+                itemStatus.maryoku = itemStatus.maryoku * 4;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 4;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku * 4;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 4;
+                itemStatus.meityuuritu = itemStatus.meityuuritu * 4;
+                itemStatus.kaihiritu = itemStatus.kaihiritu * 4;
+
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku * 4;
+
+                itemStatus.yuusyanoTyousenn = true;
+            }
+            else if (nannido.dennsetunoSirenn)
+            {
+                itemStatus.maxHp = itemStatus.maxHp * 5;
+                itemStatus.maxMp = itemStatus.maxMp * 5;
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku * 5;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 5;
+                itemStatus.maryoku = itemStatus.maryoku * 5;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 5;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku * 5;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 5;
+                itemStatus.meityuuritu = itemStatus.meityuuritu * 5;
+                itemStatus.kaihiritu = itemStatus.kaihiritu * 5;
+
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku * 5;
+
+                itemStatus.dennsetunoSirenn = true;
+            }
+            else if (nannido.kamigaminoRyouiki)
+            {
+                itemStatus.maxHp = itemStatus.maxHp * 6;
+                itemStatus.maxMp = itemStatus.maxMp * 6;
+                itemStatus.kougekiryoku = itemStatus.kougekiryoku * 6;
+                itemStatus.kinnkyoriKaisinnritu = itemStatus.kinnkyoriKaisinnritu * 6;
+                itemStatus.maryoku = itemStatus.maryoku * 6;
+                itemStatus.ennkyoriKaisinnsitu = itemStatus.ennkyoriKaisinnsitu * 6;
+                itemStatus.bougyoryoiku = itemStatus.bougyoryoiku * 6;
+                itemStatus.kaisinnTaisei = itemStatus.kaisinnTaisei * 6;
+                itemStatus.meityuuritu = itemStatus.meityuuritu * 6;
+                itemStatus.kaihiritu = itemStatus.kaihiritu * 6;
+
+                itemStatus.baikyakuKinngaku = itemStatus.baikyakuKinngaku * 6;
+
+                itemStatus.kamigaminoRyouiki = true;
+            }
+
             itemStatus.kyoukagoMaxHp = itemStatus.maxHp;
             itemStatus.kyoukagoMaxMp = itemStatus.maxMp;
             itemStatus.kyoukagoKougekiryoku = itemStatus.kougekiryoku;

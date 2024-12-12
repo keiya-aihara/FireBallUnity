@@ -112,6 +112,7 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     }
     public void TorophyKakutoku()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         kakutokuzumi = true;
         kakutokuBotton.SetActive(false);
         kousekiDataBaseManager.TrophySave();

@@ -47,6 +47,8 @@ public class BallGenerator : MonoBehaviour
         if (playerStatusDataBase.fireSpireLv == 0) fireSpireButtonGameObject.SetActive(false);
         if (playerStatusDataBase.rapidGireLv == 0) rapidFireButtonGameObject.SetActive(false);
         if (playerStatusDataBase.fireBomLv == 0) bomFireBallButtonGameObject.SetActive(false);
+
+        audioSource.volume = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<BGMSEVolume>().seVolume;
     }
     void Update()
     {

@@ -46,6 +46,7 @@ public class PlayerDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource.volume = dataBaseManager.GetComponent<BGMSEVolume>().seVolume;
         player = GameObject.Find("Player");
         playerStatus = player.GetComponent<PlayerStatus>();
         a = true;

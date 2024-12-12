@@ -187,3 +187,21 @@ MonoBehaviour:
   nouryokuti: {fileID: 5729726323636984384, guid: fa044a221117e664fa72940352c89015, type: 3}
   sukiru: {fileID: 5280881017444327546, guid: b4d935c94d1136041985fa861ea8f4a7, type: 3}
   sukiruName: {fileID: 4910090017531768913, guid: 7d9dfd0c0ec258244a2e180486ca72f5, type: 3}
+  color1:
+    serializedVersion: 2
+    rgba: 4294967295
+  color2:
+    serializedVersion: 2
+    rgba: 4284350284
+  color3:
+    serializedVersion: 2
+    rgba: 4294946124
+  color4:
+    serializedVersion: 2
+    rgba: 4283256317
+  color5:
+    serializedVersion: 2
+    rgba: 4294926561
+  color6:
+    serializedVersion: 2
+    rgba: 4280846287

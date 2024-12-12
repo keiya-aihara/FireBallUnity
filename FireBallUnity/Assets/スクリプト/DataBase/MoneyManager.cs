@@ -16,6 +16,7 @@ public class MoneyManager : MonoBehaviour
     void Start()
     {
         MoneyLoad();
+        audioSource.volume = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<BGMSEVolume>().seVolume;
     }
 
     // Update is called once per frame

@@ -97,6 +97,13 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
     private YoroiDataBaseManager yoroiDataBaseManager;
     private SonotaDataBaseManager sonotaDataBaseManager;
 
+    private Text nouryokutiText;
+    public Color32 color1 = new Color(255,255,255,255);
+    public Color32 color2 = new Color(76,255,94,255);
+    public Color32 color3 = new Color(76,173, 255, 255);
+    public Color32 color4 = new Color(253,78,78, 255);
+    public Color32 color5 = new Color(255, 95, 255, 255);
+    public Color32 color6 = new Color(207,136,41, 255);
     // Start is called before the first frame update
     void Start()
     {
@@ -333,7 +340,7 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             statusPanelContent = GameObject.Find("Content 装備 称号・ギフト補正");
 
             SoubiNameUpdata();
-            Instantiate(soubiName, transform.position, transform.rotation, statusPanelContent.transform);
+            Instantiate(soubiName, transform.position, transform.rotation, statusPanelContent.transform).GetComponent<TextMeshPro>();
 
             if (soubiData.syougouName != "" || soubiData.giftBairituName != "")
             {
@@ -372,6 +379,21 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             }
             text = nouryokuti.GetComponent<Text>();
             text.text = "能力値";
+            if (soubiData.syosinnsyanoMiti)
+                nouryokuti.color = color1;
+            else if (soubiData.boukennsyanoSirenn)
+                nouryokuti.color = color2;
+            else if (soubiData.eiyuunoMiti)
+                nouryokuti.color = color3;
+            else if (soubiData.yuusyanoTyousenn)
+                nouryokuti.color = color4;
+            else if (soubiData.dennsetunoSirenn)
+                nouryokuti.color = color5;
+            else if (soubiData.kamigaminoRyouiki)
+                nouryokuti.color = color6;
+            else
+                nouryokuti.color = color1;
+
             Instantiate(nouryokuti, transform.position, transform.rotation, statusPanelContent.transform);
 
             if (soubiData.maxHp != 0)
@@ -558,7 +580,24 @@ public class SoubiIconNagaosi : MonoBehaviour, IPointerClickHandler, IPointerDow
             }
             text = nouryokuti.GetComponent<Text>();
             text.text = "能力値";
+
+            if (soubiData.syosinnsyanoMiti)
+                nouryokuti.color = color1;
+            else if (soubiData.boukennsyanoSirenn)
+                nouryokuti.color = color2;
+            else if (soubiData.eiyuunoMiti)
+                nouryokuti.color = color3;
+            else if (soubiData.yuusyanoTyousenn)
+                nouryokuti.color = color4;
+            else if (soubiData.dennsetunoSirenn)
+                nouryokuti.color = color5;
+            else if (soubiData.kamigaminoRyouiki)
+                nouryokuti.color = color6;
+            else
+                nouryokuti.color = color1;
+
             Instantiate(nouryokuti, transform.position, transform.rotation, statusPanel2Content.transform);
+
 
             if (soubiData.maxHp != 0)
             {

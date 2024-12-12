@@ -78,12 +78,10 @@ public class OpenSoubiZukan : MonoBehaviour
     private GameObject syougouHuyoritu;
     private GameObject giftHuyoritu;
 
-    private GameObject sePlayer;
     // Start is called before the first frame update
     public void OpenSoubiStatusPanel()
     {
-        sePlayer = GameObject.FindGameObjectWithTag("SE");
-        SEPlay();
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
 
         soubiKakutokuDataBase = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KakutokuDataBase>();
         weponData = enemyDataBaseManager.dropItemPrefabs[soubiNumber].GetComponent<ItemController>().itemStatus;
@@ -310,8 +308,4 @@ public class OpenSoubiZukan : MonoBehaviour
     {
         GameObject.Find("1ブルースライム").GetComponent<OpenEnemyZukannPanel>().CloseSoubiStatusPanel();
     }*/
-    public void SEPlay()
-    {
-        sePlayer.GetComponent<AudioSource>().Play();
-    }
 }

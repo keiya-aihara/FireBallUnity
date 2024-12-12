@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 477770639938180020}
   - component: {fileID: 6193117724244150148}
   - component: {fileID: 6024326377755455316}
+  - component: {fileID: 3189342403001475830}
   m_Layer: 0
   m_Name: "\u843D\u77F3Rigid"
   m_TagString: Taru
@@ -144,3 +145,15 @@ MonoBehaviour:
   y: 0
   destroyTime: 0
   time: 0
+--- !u!114 &3189342403001475830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940811291388880954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc37a656038e81d4ab8490dd9ade3bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

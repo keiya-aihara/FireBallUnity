@@ -173,11 +173,12 @@ public class EnemyBase : MonoBehaviour
     private float sekikaCountTime;
     public Color sekikaColor;
 
+    public Nannido nannido;
+
     private SenntouBGMManager senntouBGMManager;
 
     void Start()
     {
-        
         player = GameObject.Find("Player");
         resultSceneManager = GameObject.Find("ResultManager").GetComponent<ResultSceneManager>();
         dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
@@ -185,8 +186,33 @@ public class EnemyBase : MonoBehaviour
         senntouBGMManager = dataBaseManager.GetComponent<SenntouBGMManager>();
         kousekiDataBaseManagerScript = dataBaseManager.GetComponent<KousekiDataBaseManager>();
         playerStatusDataBase = dataBaseManager.GetComponent<PlayerStatusDataBase>();
-
+        nannido = dataBaseManager.GetComponent<Nannido>();
         enemyData = dataBaseManager.GetComponent<EnemyDataBaseManager>().GetEnemyData(enemyData.no);
+
+        if(nannido.syosinnsyanoMiti)
+        {
+            enemyLv *= 1;
+        }
+        else if(nannido.boukennsyanoSirenn)
+        {
+            enemyLv =enemyLv * 2 + Random.Range(0, 11);
+        }
+        else if(nannido.eiyuunoMiti)
+        {
+            enemyLv =enemyLv * 3 + Random.Range(10, 31);
+        }
+        else if(nannido.yuusyanoTyousenn)
+        {
+            enemyLv =enemyLv * 4 + Random.Range(20, 51);
+        }
+        else if(nannido.dennsetunoSirenn)
+        {
+            enemyLv = enemyLv * 5 + Random.Range(30, 71);
+        }
+        else if(nannido.kamigaminoRyouiki)
+        {
+            enemyLv = enemyLv * 6 + Random.Range(40, 101);
+        }
 
             maxHp = enemyData.maxHp*enemyLv;
             kougekiryoku = enemyData.kougekiryoku*enemyLv;
@@ -1085,9 +1111,9 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyLv <= 200)
+            else if (enemyLv <= 1000)
             {
-                //Debug.Log("LV200以下の敵のギフトがドロップ");
+                //Debug.Log("LV1000以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 1.00f)
                 {

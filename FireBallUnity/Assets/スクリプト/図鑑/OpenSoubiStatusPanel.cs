@@ -6,11 +6,6 @@ using UnityEngine.UI;
 public class OpenSoubiStatusPanel : MonoBehaviour
 {
     public WeponDataList.WeponData weponData;
-    private GameObject sePlayer;
-    private void Start()
-    {
-        sePlayer = GameObject.FindGameObjectWithTag("SE");
-    }
     public void OpenStatusPanel()
     {
         SEPlay();
@@ -19,6 +14,6 @@ public class OpenSoubiStatusPanel : MonoBehaviour
     }
     public void SEPlay()
     {
-        sePlayer.GetComponent<AudioSource>().Play();
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
     }
 }

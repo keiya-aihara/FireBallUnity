@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
         c = false;
         d = false;
         e = true;
-        
+        audioSource.volume = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<BGMSEVolume>().seVolume;
+
     }
 
     void Update()

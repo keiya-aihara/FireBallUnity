@@ -25,6 +25,8 @@ public class MenuBGMScript : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public BGMSEVolume bGMSEVolume;
+
     private void Start()
     {
         MenuBGMStart();
@@ -32,11 +34,13 @@ public class MenuBGMScript : MonoBehaviour
     public void MenuBGMStart()
     {
         audioSource.clip = menuBGM;
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
     public void MapBGMStart()
     {
         audioSource.clip = mapBGM;
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
     public void EnnkyoriBGMStart()
@@ -47,7 +51,7 @@ public class MenuBGMScript : MonoBehaviour
         else if (bgmRandomNumber == 1) audioSource.clip = ennkyoriBGM2;
         else if (bgmRandomNumber == 2) audioSource.clip = ennkyoriBGM3;
         else if(bgmRandomNumber == 3) audioSource.clip = ennkyoriBGM4;
-
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
     public void KinnkyoriBGMStart()
@@ -58,22 +62,25 @@ public class MenuBGMScript : MonoBehaviour
         else if (bgmRandomNumber == 1) audioSource.clip = kinnkyoriBGM2;
         else if (bgmRandomNumber == 2) audioSource.clip = kinnkyoriBGM3;
         else if (bgmRandomNumber == 3) audioSource.clip = kinnkyoriBGM4;
-
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
     public void WinBGMStart()
     {
         audioSource.clip = winBGM;
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
     public void WinSEStart()
     {
         audioSource.clip = winSE;
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
     public void LoseBGMStart()
     {
         audioSource.clip = loseBGM;
+        audioSource.volume = bGMSEVolume.bgmVolume;
         audioSource.Play();
     }
 }

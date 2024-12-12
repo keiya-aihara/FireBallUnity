@@ -2394,7 +2394,7 @@ MonoBehaviour:
     mahouBougyoryoku: 21
     meityuuritu: 106.12
     kaihiritu: 5.94
-    kougekiHinndo: 2.7
+    kougekiHinndo: 3.5
     speed: 55
     nokkubakkuBougyo: 0.3
     stage:
@@ -2402,11 +2402,11 @@ MonoBehaviour:
     exp: 36
     gold: 38
     dropItemSuu: 6
-    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropItemNos: 4e0000004f00000050000000510000005200000059000000
     dropSyougou:
-    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
-    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
-    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    - {fileID: 5855167156134022348, guid: 2209c69b3d777844fa1dc737e8ce5937, type: 3}
+    - {fileID: 5855167156134022348, guid: 0ef646ddbf642bf45814251e5bfe72bd, type: 3}
+    - {fileID: 5855167156134022348, guid: 32f102cee6b474f44aee4d64c1e53a4a, type: 3}
     nomalDropRitu: 8
     reaDropRitu: 20
     superReaDropRitu: 10
@@ -2443,11 +2443,11 @@ MonoBehaviour:
     exp: 80
     gold: 100
     dropItemSuu: 6
-    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropItemNos: 4e0000004f0000005000000051000000520000005a000000
     dropSyougou:
-    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
-    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
-    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    - {fileID: 5855167156134022348, guid: 0d687b08d4757694786a8a991cafa0ec, type: 3}
+    - {fileID: 5855167156134022348, guid: e40db184a64c68c4aad012e965bcedb3, type: 3}
+    - {fileID: 5855167156134022348, guid: 6d351b77be50e4047b08e1bc8c76a75a, type: 3}
     nomalDropRitu: 25
     reaDropRitu: 10
     superReaDropRitu: 5
@@ -2484,11 +2484,11 @@ MonoBehaviour:
     exp: 52
     gold: 58
     dropItemSuu: 6
-    dropItemNos: 4e0000004f00000050000000510000005200000058000000
+    dropItemNos: 4e0000004f0000005000000051000000520000005b000000
     dropSyougou:
-    - {fileID: 5855167156134022348, guid: 7531ff04a2e4e564d884c44b6d4c4949, type: 3}
-    - {fileID: 5855167156134022348, guid: 7203f6861c61db4469dfcd46c930dfce, type: 3}
-    - {fileID: 5855167156134022348, guid: 49acb6e722e835449ae501be99be4082, type: 3}
+    - {fileID: 5855167156134022348, guid: e5cd12a9b57383949867c82b1ce5f835, type: 3}
+    - {fileID: 5855167156134022348, guid: 0aefabe7a8112bc4f89a007f83daad51, type: 3}
+    - {fileID: 5855167156134022348, guid: f4921114bc4d61944be69bcb21292b86, type: 3}
     nomalDropRitu: 100
     reaDropRitu: 100
     superReaDropRitu: 75

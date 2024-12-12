@@ -167,7 +167,13 @@ public class WeponDataList : ScriptableObject
         [Header("熟練度")]
         public int zyukurenndo;
 
-
+        [Header("難易度")]
+        public bool syosinnsyanoMiti;
+        public bool boukennsyanoSirenn;
+        public bool eiyuunoMiti;
+        public bool yuusyanoTyousenn;
+        public bool dennsetunoSirenn;
+        public bool kamigaminoRyouiki;
         public void ZyukurennWepon()
         {
             if (zyukurenndo < 1000)

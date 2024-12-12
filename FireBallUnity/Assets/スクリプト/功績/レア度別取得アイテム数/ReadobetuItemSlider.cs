@@ -450,6 +450,7 @@ public class ReadobetuItemSlider : MonoBehaviour
     }
     public void KakutokuTorophyPanel()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         torophyKakutokuPanel.SetActive(true);
         torophyKakutokuText.GetComponent<Text>().text = "「" + reado + "アイテムを" + slider.maxValue.ToString("N0") + "回取得する」\n"+torophy+"を獲得しました";
         dropBonusText.GetComponent<Text>().text = reado + "アイテムのドロップ倍率が50%上昇します";

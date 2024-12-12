@@ -128,6 +128,7 @@ public class KyoukakaisuuKousekiSlider : MonoBehaviour
     }
     public void KakutokuTorophyPanel()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         torophyKakutokuPanel.SetActive(true);
         torophyKakutokuText.GetComponent<Text>().text = "「アイテム強化を"+slider.maxValue.ToString("N0")+"回行う」\n強化石トロフィーを獲得しました";
         kyoukaHiyouBonusText.GetComponent<Text>().text = "アイテム強化時の対価消費量が5%減少します";
