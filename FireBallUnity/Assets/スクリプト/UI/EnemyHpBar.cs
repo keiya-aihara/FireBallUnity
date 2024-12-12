@@ -11,15 +11,15 @@ public class EnemyHpBar : MonoBehaviour
     void Start()
     {
         slider = gameObject.GetComponent<Slider>();
-        enemy = transform.root.gameObject;
+        enemy = transform.parent.parent.gameObject;
         enemyBase = enemy.GetComponent<EnemyBase>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.maxValue = enemyBase.enemyData.maxHp;
-        slider.value = enemyBase.enemyHp;
+        slider.maxValue = enemyBase.maxHp;
+        slider.value = enemyBase.hp;
 
     }
 }

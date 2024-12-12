@@ -7,8 +7,8 @@ public class SkillBottonColor : MonoBehaviour
     [Header("ファイヤーウォール")]
     public Button[] fireWallBottonImage;
     public int fireWallLevel;
-    private int fireWallTennkaisuu;
-    private int fireWallHannizoukakakuritu;
+    private int fireWallTennkaisuuSyou;
+    private int fireWallTennkaisuuDai;
     private bool fireWall;
     [Header("ファイヤーコンボ")]
     public Button[] fireChainImage;
@@ -183,9 +183,13 @@ public class SkillBottonColor : MonoBehaviour
             }
             if (zousyokusuuLevel == 4)
             {
-                if (zousyokusuuLevel == 4 && fireChainLevel == 5)
+                if (fireChainLevel == 5)
                 {
                     zousyokusuuImage[4].image.color = siro;
+                }
+                else
+                {
+                    zousyokusuuImage[4].image.color = haiiro;
                 }
             }
             else if (zousyokusuuLevel <= 3)
@@ -475,9 +479,8 @@ public class SkillBottonColor : MonoBehaviour
                 skillSyutokuPanel.SetActive(true);
                 FireWallLvUpText();
                 skillMeiText.text = "ファイヤーウォール Lv" + (fireWallLevel + 1).ToString("D");
-                skillSetumeiText.text = "戦闘開始時にファイヤウォールを展開する。\nファイヤーウォールを通過したファイヤーボールは増殖する。\nまた、スキルレベルが上がると確率で範囲が広がる。";
-                if (fireWallHannizoukakakuritu == 0) skillKoukaText.text = "Lv" + (fireWallLevel + 1).ToString("D") + "\n展開数" + fireWallTennkaisuu;
-                else skillKoukaText.text = "Lv" + (fireWallLevel + 1).ToString("D") + "\n展開数" + fireWallTennkaisuu + "\n範囲増加確率" + fireWallHannizoukakakuritu + "%";
+                skillSetumeiText.text = "戦闘開始時にファイヤウォールを展開する。\nファイヤーウォールを通過したファイヤーボールは増殖する。";
+                skillKoukaText.text = "Lv" + (fireWallLevel + 1).ToString("D") + "\n展開数" + fireWallTennkaisuuSyou+"～"+fireWallTennkaisuuDai;
                 skillSyutokuText.text = "消費SP" + syouhiSp + "\nこのスキルを取得しますか？";
                 if (playerStatusDataBase.syoziSp < syouhiSp)
                 {
@@ -492,7 +495,7 @@ public class SkillBottonColor : MonoBehaviour
                 skillSyutokuPanel.SetActive(true);
                 FireComboLvUpText();
                 skillMeiText.text = "ファイヤーコンボ Lv" + (fireChainLevel + 1).ToString("D");
-                skillSetumeiText.text = "ファイヤーボールの敵へのヒット数に応じて、近接戦闘時の与ダメ―ジが上昇する。";
+                skillSetumeiText.text = "ファイヤーボールの敵へのヒット数に応じて、近接戦闘時の攻撃力が上昇する。";
                 skillKoukaText.text = "Lv" + (fireChainLevel + 1).ToString("D") + "\n上昇率" + fireComboZyousyouritu + "%";
                 skillSyutokuText.text = "消費SP" + syouhiSp + "\nこのスキルを取得しますか？";
                 if (playerStatusDataBase.syoziSp < syouhiSp)
@@ -685,6 +688,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void HaiButtonDown()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         if (fireWall)
         {
             fireWallLevel++;
@@ -822,6 +826,7 @@ public class SkillBottonColor : MonoBehaviour
     }
     public void IieButtonDown()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().IieButtonSE();
         skillSyutokuPanel.SetActive(false);
         fireWall = false;
         fireCombo = false;
@@ -841,32 +846,32 @@ public class SkillBottonColor : MonoBehaviour
     {
         if (fireWallLevel == 0)
         {
-            fireWallTennkaisuu = 1;
-            fireWallHannizoukakakuritu = 0;
+            fireWallTennkaisuuSyou = 1;
+            fireWallTennkaisuuDai = 1;
             syouhiSp = 1;
         }
         else if (fireWallLevel == 1)
         {
-            fireWallTennkaisuu = 2;
-            fireWallHannizoukakakuritu = 0;
+            fireWallTennkaisuuSyou = 1;
+            fireWallTennkaisuuDai = 2;
             syouhiSp = 2;
         }
         else if (fireWallLevel == 2)
         {
-            fireWallTennkaisuu = 3;
-            fireWallHannizoukakakuritu = 0;
+            fireWallTennkaisuuSyou = 2;
+            fireWallTennkaisuuDai = 2;
             syouhiSp = 3;
         }
         else if (fireWallLevel == 3)
         {
-            fireWallTennkaisuu = 3;
-            fireWallHannizoukakakuritu = 15;
+            fireWallTennkaisuuSyou = 2;
+            fireWallTennkaisuuDai = 3;
             syouhiSp = 4;
         }
         else
         {
-            fireWallTennkaisuu = 3;
-            fireWallHannizoukakakuritu = 30;
+            fireWallTennkaisuuSyou = 3;
+            fireWallTennkaisuuDai = 3;
             syouhiSp = 6;
         }
     }
@@ -874,27 +879,27 @@ public class SkillBottonColor : MonoBehaviour
     {
         if (fireChainLevel == 0)
         {
-            fireComboZyousyouritu = 0.01f;
+            fireComboZyousyouritu = 0.1f;
             syouhiSp = 1;
         }
         else if (fireChainLevel == 1)
         {
-            fireComboZyousyouritu = 0.02f;
+            fireComboZyousyouritu = 0.2f;
             syouhiSp = 2;
         }
         else if (fireChainLevel == 2)
         {
-            fireComboZyousyouritu = 0.03f;
+            fireComboZyousyouritu = 0.3f;
             syouhiSp = 3;
         }
         else if (fireChainLevel == 3)
         {
-            fireComboZyousyouritu = 0.04f;
+            fireComboZyousyouritu = 0.4f;
             syouhiSp = 4;
         }
         else
         {
-            fireComboZyousyouritu = 0.05f;
+            fireComboZyousyouritu = 0.5f;
             syouhiSp = 6;
         }
     }
@@ -908,25 +913,25 @@ public class SkillBottonColor : MonoBehaviour
         }
         else if (zousyokusuuLevel == 1)
         {
-            saisyouZousyokusuu = 1;
+            saisyouZousyokusuu = 2;
             saidaiZousyokusuu = 3;
             syouhiSp = 4;
         }
         else if (zousyokusuuLevel == 2)
         {
-            saisyouZousyokusuu = 1;
+            saisyouZousyokusuu = 3;
             saidaiZousyokusuu = 4;
             syouhiSp = 6;
         }
         else if (zousyokusuuLevel == 3)
         {
-            saisyouZousyokusuu = 1;
+            saisyouZousyokusuu = 4;
             saidaiZousyokusuu = 5;
             syouhiSp = 8;
         }
         else if (zousyokusuuLevel == 4)
         {
-            saisyouZousyokusuu = 2;
+            saisyouZousyokusuu = 4;
             saidaiZousyokusuu = 6;
             syouhiSp = 10;
         }

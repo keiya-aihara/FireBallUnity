@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 public class ToubatusuuSlider : MonoBehaviour
 {
     public GameObject mazyuuCountText;
@@ -40,6 +41,7 @@ public class ToubatusuuSlider : MonoBehaviour
     public bool tokkou25;
     public bool tokkou30;
 
+    private KousekiSaveData kousekiSaveData;
     public bool kakutokuZumi;
     // Start is called before the first frame update
     void Start()
@@ -51,33 +53,211 @@ public class ToubatusuuSlider : MonoBehaviour
         if(mazyuu)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.mazyuuToubatuSuu;
+
+            if (tokkou10)
+            {
+                if (playerStatusDataBase.kousekiMazyuuTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if(tokkou15)
+            {
+                if(playerStatusDataBase.kousekiMazyuuTokkou>=25)
+                    kakutokuZumi = true;
+            }
+            else if(tokkou20)
+            {
+                if(playerStatusDataBase.kousekiMazyuuTokkou>=45)
+                    kakutokuZumi = true;
+            }
+            else if(tokkou25)
+            {
+                if(playerStatusDataBase.kousekiMazyuuTokkou>=70)
+                    kakutokuZumi = true;
+            }
+            else if(tokkou30)
+            {
+                if(playerStatusDataBase.kousekiMazyuuTokkou>=100)
+                    kakutokuZumi = true;
+            }
         }
         if(ninngenn)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.ninngennToubatuSuu;
+            if(tokkou10)
+            {
+                if (playerStatusDataBase.kousekiNinngennTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if(tokkou15)
+            {
+                if (playerStatusDataBase.kousekiNinngennTokkou >= 25)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou20)
+            {
+                if (playerStatusDataBase.kousekiNinngennTokkou >= 45)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou25)
+            {
+                if (playerStatusDataBase.kousekiNinngennTokkou >= 70)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou30)
+            {
+                if (playerStatusDataBase.kousekiNinngennTokkou >= 100)
+                    kakutokuZumi = true;
+            }
         }
         if (mazinn)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.mazinnToubatuSuu;
+            if (tokkou10)
+            {
+                if (playerStatusDataBase.kousekiMazinnTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou15)
+            {
+                if (playerStatusDataBase.kousekiMazinnTokkou >= 25)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou20)
+            {
+                if (playerStatusDataBase.kousekiMazinnTokkou >= 45)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou25)
+            {
+                if (playerStatusDataBase.kousekiMazinnTokkou >= 70)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou30)
+            {
+                if (playerStatusDataBase.kousekiMazinnTokkou >= 100)
+                    kakutokuZumi = true;
+            }
         }
         if (husi)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.husiToubatuSuu;
+            if (tokkou10)
+            {
+                if (playerStatusDataBase.kousekiHusiTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou15)
+            {
+                if (playerStatusDataBase.kousekiHusiTokkou >= 25)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou20)
+            {
+                if (playerStatusDataBase.kousekiHusiTokkou >= 45)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou25)
+            {
+                if (playerStatusDataBase.kousekiHusiTokkou >= 70)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou30)
+            {
+                if (playerStatusDataBase.kousekiHusiTokkou >= 100)
+                    kakutokuZumi = true;
+            }
         }
         if (akuma)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.akumaToubatuSuu;
+            if (tokkou10)
+            {
+                if (playerStatusDataBase.kousekiAkumaTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou15)
+            {
+                if (playerStatusDataBase.kousekiAkumaTokkou >= 25)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou20)
+            {
+                if (playerStatusDataBase.kousekiAkumaTokkou >= 45)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou25)
+            {
+                if (playerStatusDataBase.kousekiAkumaTokkou >= 70)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou30)
+            {
+                if (playerStatusDataBase.kousekiAkumaTokkou >= 100)
+                    kakutokuZumi = true;
+            }
         }
         if(ryuu)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.ryuuTToubatuSuu;
+            if (tokkou10)
+            {
+                if (playerStatusDataBase.kousekiRyuuTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou15)
+            {
+                if (playerStatusDataBase.kousekiRyuuTokkou >= 25)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou20)
+            {
+                if (playerStatusDataBase.kousekiRyuuTokkou >= 45)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou25)
+            {
+                if (playerStatusDataBase.kousekiRyuuTokkou >= 70)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou30)
+            {
+                if (playerStatusDataBase.kousekiRyuuTokkou >= 100)
+                    kakutokuZumi = true;
+            }
         }
         if (kami)
         {
             slider.value = kousekiCopyScript.kousekiDataBaseManager.kamiToubatuSuu;
+            if (tokkou10)
+            {
+                if (playerStatusDataBase.kousekiKamiTokkou >= 10)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou15)
+            {
+                if (playerStatusDataBase.kousekiKamiTokkou >= 25)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou20)
+            {
+                if (playerStatusDataBase.kousekiKamiTokkou >= 45)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou25)
+            {
+                if (playerStatusDataBase.kousekiKamiTokkou >= 70)
+                    kakutokuZumi = true;
+            }
+            else if (tokkou30)
+            {
+                if (playerStatusDataBase.kousekiKamiTokkou >= 100)
+                    kakutokuZumi = true;
+            }
         }
 
         mazyuuCountText.GetComponent<CountText>().a = true;
+
+        
         if(kakutokuZumi)
         {
             tyekkuBotton.SetActive(true);
@@ -91,6 +271,7 @@ public class ToubatusuuSlider : MonoBehaviour
                 kakutokuBotton.SetActive(true);
             }
         }
+        
     }
 
     // Update is called once per frame
@@ -100,9 +281,12 @@ public class ToubatusuuSlider : MonoBehaviour
     }
     public void TorophyKakutoku()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         kakutokuZumi = true;
         kakutokuBotton.SetActive(false);
+        kousekiDataBaseManager.TrophySave();
         TokkouAdd();
+        playerStatusDataBase.BairituSave();
         KakutokuTorophyPanel();
     }
     private void TokkouAdd()
@@ -324,5 +508,6 @@ public class ToubatusuuSlider : MonoBehaviour
         else if (tokkou25) Instantiate(puratinaTorophy, transform.position, transform.rotation, kinnwakuImage.transform);
         else if (tokkou30) Instantiate(daiamonndoTorophy, transform.position,transform.rotation, kinnwakuImage.transform);
     }
+    
 }
 

@@ -48,7 +48,13 @@ public class PlayerDamageTextCanvas : MonoBehaviour
                     damageHanni = GameObject.Find("DamageHanni(Clone)");
                     playerDamage = damageHanni.GetComponent<PlayerDamage>();
                     damage = playerDamage.playerDamage;
-                    damageText.GetComponent<Text>().text = damage.ToString("N0");
+                    if (playerDamage.d)
+                    {
+                        damageText.GetComponent<Text>().text = "会心！！" + damage.ToString("N0");
+                        playerDamage.d = false;
+                    }
+                    else
+                        damageText.GetComponent<Text>().text = damage.ToString("N0");
                     if (playerDamage.b)
                     {
                         Attack();

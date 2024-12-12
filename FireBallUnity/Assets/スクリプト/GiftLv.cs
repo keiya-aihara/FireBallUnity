@@ -10,7 +10,7 @@ public class GiftLv : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.localPosition = new Vector3(0, 44);
+        transform.localPosition = new Vector3(0, 0);
         text = gameObject.GetComponent<Text>();
 
         text.text = "<"+giftLv+">";

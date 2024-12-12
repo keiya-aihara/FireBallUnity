@@ -9,4 +9,6 @@ public class SoubiSaveData
     public List<WeponDataList.WeponData> ennkyoriWeponDatas;
     public List<WeponDataList.WeponData> yoroiDatas;
     public List<WeponDataList.WeponData> sonotaDatas;
+
+    
 }

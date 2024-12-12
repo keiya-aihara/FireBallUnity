@@ -92,31 +92,31 @@ public class StatusText : MonoBehaviour
         }
         else if (gameObject.name == "魔獣特攻")
         {
-            text.text = "+" + playerStatusDataBase.kousekiMazyuuTokkou + "%";
-        }
-        else if (gameObject.name == "不死特攻")
-        {
-            text.text = "+" + playerStatusDataBase.kousekiHusiTokkou + "%";
-        }
-        else if (gameObject.name == "悪魔特攻")
-        {
-            text.text = "+" + playerStatusDataBase.kousekiAkumaTokkou + "%";
-        }
-        else if (gameObject.name == "魔人特攻")
-        {
-            text.text = "+" + playerStatusDataBase.kousekiMazinnTokkou + "%";
+            text.text = "+" + playerStatusDataBase.mazyuuTokkou + "%";
         }
         else if (gameObject.name == "人間特攻")
         {
-            text.text = "+" + playerStatusDataBase.kousekiHusiTokkou + "%";
+            text.text = "+" + playerStatusDataBase.ninngennTokkou + "%";
+        }
+        else if (gameObject.name == "魔人特攻")
+        {
+            text.text = "+" + playerStatusDataBase.mazinnTokkou + "%";
+        }
+        else if (gameObject.name == "不死特攻")
+        {
+            text.text = "+" + playerStatusDataBase.husiTokkou + "%";
+        }
+        else if (gameObject.name == "悪魔特攻")
+        {
+            text.text = "+" + playerStatusDataBase.akumaTokkou + "%";
         }
         else if (gameObject.name == "竜特攻")
         {
-            text.text = "+" + playerStatusDataBase.kousekiRyuuTokkou + "%";
+            text.text = "+" + playerStatusDataBase.ryuuTokkou + "%";
         }
         else if (gameObject.name == "神特攻")
         {
-            text.text = "+" + playerStatusDataBase.kousekiKamiTokkou + "%";
+            text.text = "+" + playerStatusDataBase.kamiTokkou + "%";
         }
         else if (gameObject.name == "Nアイテムドロップ率")
         {

@@ -1,15 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBase : MonoBehaviour
-{
+{   
+    public int enemyLv;    
+    [Header("エネミーデータ")]
+    public EnemyDataList.EnemyData enemyData;
+    [Header("HP")]
+    public int maxHp;
+    public int hp;
+    [Header("攻撃力")]
+    public int kougekiryoku;
+    [Header("会心率")]
+    public float kaisinnritu;
+    [Header("防御力")]
+    public int bougyoryoku;
+    [Header("会心耐性")]
+    public float kaisinnTaisei;
+    [Header("魔法防御力")]
+    public int mahouBougyoryoku;
+    [Header("命中率")]
+    public float meityuuritu;
+    [Header("回避率")]
+    public float kaihiritu;
+    [Header("攻撃頻度")]
+    public float kougekiHinndo;
+   //[Header("攻撃範囲")]
+   // public float kougekiHanni;
+    [Header("速度")]
+    public float enemySpeed;
+    [Header("緩衝力")]
+    public float nokkubakkuBougyo;
+    [Header("ゴールド")]
+    public int money;
+    [Header("経験値")]
+    public int enemyExp;
+
+    public Text lvText;
     public GameObject enemyDataBaseManager;
     public GameObject fireBallDamageEffect;
     private GameObject dataBaseManager;
     private GameObject player;
+    public Atack atack;
     private Vector2 enemyPosition;
-    private Vector2 playerPosition;
     private PlayerStatus playerStatus;
 
     private float damageKeisann;
@@ -22,7 +57,6 @@ public class EnemyBase : MonoBehaviour
 
     private float itemDropRitu;
 
-    public int enemyHp;
 
     public float speed;
     private Rigidbody2D myRigid;
@@ -35,18 +69,20 @@ public class EnemyBase : MonoBehaviour
 
     public GameObject bikkurimark;
 
-    private bool a;
-    public bool b;
-    private bool c;
-    private bool d;
-    public bool e;
-    private bool f;
-    public bool g;
-    private bool h;
-    public bool i;
-    private bool j;
-    public bool k;
-    public bool l;
+    private bool kinnsetuSentouBool;
+    public bool collisionEnterLowLowWallBool;
+    private bool damegeBool;
+    private bool damegeIkkaiBool;
+    public bool damageTextIkkaiBool;
+    private bool deadBool;
+    public bool collisionEnterKougekiWallBool;
+    private bool enemuKougekiTimeBool;
+    public bool damageEffectBool;
+    private bool kaihiBool;
+    public bool missTextBool;
+    public bool kaisinnBool;
+    private bool kougekiTimeBool=false;
+    private bool kougekiAnime;
 
     private SpriteRenderer sprite;
     private float flashTime;
@@ -108,37 +144,106 @@ public class EnemyBase : MonoBehaviour
     public float giftHuyoHanni;
     public float syougouDropRitu;
 
+    public DamageTaxtCanvas damageTaxtCanvas;
+
     private KousekiDataBaseManager kousekiDataBaseManagerScript;
     private PlayerStatusDataBase playerStatusDataBase;
 
-    [Header("エネミーデータ")]
-    public EnemyDataList.EnemyData enemyData;
+    private ResultSceneManager resultSceneManager;
 
-    
+    private SoubiSkillDatabase soubiSkillDatabase;
+    private bool saikutuBool;
+    private SoubiSkillDataList.SoubiSkillData saikutuData;
+    private bool kyuusyuuBool;
+    private SoubiSkillDataList.SoubiSkillData kyuusyuuData;
+    private int kyuusyuuSuuti;
+    private bool atackSetteiBool=true;
+    private bool kyougiriBool;
+    private SoubiSkillDataList.SoubiSkillData kyougiriData;
+    private bool asidBallBool;
+    private SoubiSkillDataList.SoubiSkillData asidBallData;
+    private bool asidSrushBool;
+    private SoubiSkillDataList.SoubiSkillData asidSrushData;
+    private bool asidMode;
+    private float asidTime;
+    private int asidDamage;
+    private int asidCount;
+    public bool sekikaMode;
+    private int sekikaTime=3;
+    private float sekikaCountTime;
+    public Color sekikaColor;
+
+    public Nannido nannido;
+
+    private SenntouBGMManager senntouBGMManager;
+
     void Start()
     {
-        
         player = GameObject.Find("Player");
+        resultSceneManager = GameObject.Find("ResultManager").GetComponent<ResultSceneManager>();
         dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
         playerStatus = player.GetComponent<PlayerStatus>();
+        senntouBGMManager = dataBaseManager.GetComponent<SenntouBGMManager>();
         kousekiDataBaseManagerScript = dataBaseManager.GetComponent<KousekiDataBaseManager>();
         playerStatusDataBase = dataBaseManager.GetComponent<PlayerStatusDataBase>();
-
+        nannido = dataBaseManager.GetComponent<Nannido>();
         enemyData = dataBaseManager.GetComponent<EnemyDataBaseManager>().GetEnemyData(enemyData.no);
-        enemyHp = enemyData.maxHp;
 
+        if(nannido.syosinnsyanoMiti)
+        {
+            enemyLv *= 1;
+        }
+        else if(nannido.boukennsyanoSirenn)
+        {
+            enemyLv =enemyLv * 2 + Random.Range(0, 11);
+        }
+        else if(nannido.eiyuunoMiti)
+        {
+            enemyLv =enemyLv * 3 + Random.Range(10, 31);
+        }
+        else if(nannido.yuusyanoTyousenn)
+        {
+            enemyLv =enemyLv * 4 + Random.Range(20, 51);
+        }
+        else if(nannido.dennsetunoSirenn)
+        {
+            enemyLv = enemyLv * 5 + Random.Range(30, 71);
+        }
+        else if(nannido.kamigaminoRyouiki)
+        {
+            enemyLv = enemyLv * 6 + Random.Range(40, 101);
+        }
+
+            maxHp = enemyData.maxHp*enemyLv;
+            kougekiryoku = enemyData.kougekiryoku*enemyLv;
+            kaisinnritu = enemyData.kaisinnritu*enemyLv;
+            bougyoryoku = enemyData.bougyoryoku * enemyLv;
+            kaisinnTaisei = enemyData.kaisinnTaisei * enemyLv;
+            mahouBougyoryoku = enemyData.mahouBougyoryoku * enemyLv;
+            meityuuritu = (enemyData.meityuuritu-100)*enemyLv+100;
+            kaihiritu = enemyData.kaihiritu * enemyLv;
+            kougekiHinndo = enemyData.kougekiHinndo;
+           // kougekiHanni = enemyData.kougekiHanni;
+            enemySpeed = enemyData.speed;
+            nokkubakkuBougyo = enemyData.nokkubakkuBougyo;
+            money = enemyData.gold * enemyLv;
+            enemyExp = enemyData.exp * enemyLv;
+
+        hp = maxHp;
+        lvText.text = "Lv" + enemyLv;
 
         //???W?b?g?{?f?B?QD??????
         myRigid = gameObject.GetComponent<Rigidbody2D>();
-        a = true;
-        b = false;
-        c = false;
-        d = true;
-        e = false;
-        f = false;
-        g = false;
-        h = false;
-        i = false;
+        kinnsetuSentouBool = true;
+        collisionEnterLowLowWallBool = false;
+        damegeBool = false;
+        damegeIkkaiBool = true;
+        damageTextIkkaiBool = false;
+        deadBool = false;
+        collisionEnterKougekiWallBool = false;
+        enemuKougekiTimeBool = false;
+        damageEffectBool = false;
+        kougekiAnime = true;
 
         desuTime = 0;
 
@@ -153,93 +258,209 @@ public class EnemyBase : MonoBehaviour
         expManagerScript = dataBaseManager.GetComponent<EXPManager>();
         expControllerScript = exp.GetComponent<EXPController>();
 
-        speed = 0.0004f * enemyData.speed;
-
-        
+        speed = 0.03f+(enemySpeed/10000);
+        SoubiSkillSettei();
     }
 
     void Update()
     {
-        if (a == true)
-        if(player.transform.position.y <= 4)
+        if (kinnsetuSentouBool == true)//近接戦闘が始まったら
         {
-            Debug.Log("Playerが現れた！！");
-            myRigid.isKinematic = true;
-            myRigid.velocity = Vector2.down * 3;
-            myRigid.isKinematic = true;
+            if (player.transform.position.y <= 4)
+            {
+                //Debug.Log("Playerが現れた！！");
+                myRigid.isKinematic = true;
+                myRigid.velocity = Vector2.down * 3;
+                myRigid.isKinematic = true;
 
-            Instantiate(bikkurimark, transform.position, transform.rotation);
+                Instantiate(bikkurimark, transform.position, transform.rotation);
 
-            a = false;
+                kinnsetuSentouBool = false;
+            }
         }
-        if(b == true)
+        if(collisionEnterLowLowWallBool == true)
         {
             enemyPosition = transform.position;
             myRigid.velocity = Vector2.zero;
             enemyPosition.y += speed;
             transform.position = enemyPosition;
         }
-        if(c == true)
+        if(damegeBool == true)//ダメージを受けたら
         {
-            b = false;
+            collisionEnterLowLowWallBool = false;
             myRigid.velocity = Vector2.zero;
             flashCount += Time.deltaTime;
+            
+            if(!asidMode)
             DamageFlash();
+
             if(flashCount >= flashTime)
             {
-                b = true;
+                collisionEnterLowLowWallBool = true;
+
+                if(!asidMode)
                 sprite.color =new Color (255, 255, 255, 255);
+
                 flashCount = 0;
-                c = false;
-                d = true;
+                damegeBool = false;
+                damegeIkkaiBool = true;
             }
         }
-        if(f)
+
+        if(asidMode)//アシッド状態になったら
+        {
+            Debug.Log(asidDamage);
+            asidTime += Time.deltaTime;
+            if(asidCount==0)
+            {
+                if(asidTime>=1)
+                {
+                    enemyDamage = asidDamage;
+                    damagePosition = transform.position;
+                    damageTaxtCanvas.DamageTextPopUp();
+                    hp -= asidDamage;
+                    asidCount++;
+                }
+            }
+            else if(asidCount==1)
+            {
+                if(asidTime>=2)
+                {
+                    enemyDamage = asidDamage;
+                    damagePosition = transform.position;
+                    damageTaxtCanvas.DamageTextPopUp();
+                    hp -= asidDamage;
+                    asidCount++;
+                }
+            }
+            else if (asidCount == 2)
+            {
+                if (asidTime >= 3)
+                {
+                    enemyDamage = asidDamage;
+                    damagePosition = transform.position;
+                    damageTaxtCanvas.DamageTextPopUp();
+                    hp -= asidDamage;
+                    asidCount++;
+                }
+            }
+            else if (asidCount == 3)
+            {
+                if (asidTime >= 4)
+                {
+                    enemyDamage = asidDamage;
+                    damagePosition = transform.position;
+                    damageTaxtCanvas.DamageTextPopUp();
+                    hp -= asidDamage;
+                    asidCount++;
+                }
+            }
+            else if (asidCount == 4)
+            {
+                if (asidTime >= 5)
+                {
+                    enemyDamage = asidDamage;
+                    damagePosition = transform.position;
+                    damageTaxtCanvas.DamageTextPopUp();
+                    hp -= asidDamage;
+                    asidCount++;
+                }
+            }
+            else if(asidCount==5)
+            {
+                asidTime = 0;
+                asidCount = 0;
+                sprite.color = new Color(255, 255, 255, 255);
+                asidMode = false;
+            }
+            if (hp <= 0)
+            {
+                deadBool = true;
+            }
+        }
+        if(sekikaMode)//石化状態になったら
+        {
+            sekikaCountTime += Time.deltaTime;
+            if(sekikaCountTime<=sekikaTime)
+            {
+                enemyKougeki = 0;
+                gameObject.GetComponent<SpriteRenderer>().color = sekikaColor;
+            }
+            else
+            {
+                sekikaMode = false;
+                sekikaCountTime = 0;
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(255f,255f,255f);
+
+            }
+        }
+
+        if(deadBool)//死んだら
         {
             desuTime += Time.deltaTime;
-            if(desuTime >= 0.15f)
+            if(desuTime >= 0.4f)
             {
                 desuPosition = transform.position;
                 Instantiate(desuEffect,desuPosition,transform.rotation);
                 expDrop();
                 itemDrop();
                 moneyDrop();
-                KyoukasekiDrop();
+
+                if (!saikutuBool)
+                {
+                    KyoukasekiDrop();
+                }
+                else//採掘初小津
+                {
+                    for (int a = 0; a <= saikutuData.saikutuKaisuu; a++)
+                    {
+                        Debug.Log(a+1+ "回目の採掘発動！！");
+                        KyoukasekiDrop();
+                    }
+                }
+
                 KousekiAdd();
+                DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KakutokuDataBase>().enemyGekihasuuNo[enemyData.no]++;
                 Destroy(gameObject);
             }
         }
-        if (player != null)
+        if (player != null)//playerが現れたら
         {
-            if (player.transform.position.y <= 4)
+            if (kougekiTimeBool == true)
             {
                 enemyKougeki += Time.deltaTime;
                 playerDamageHanntei = GameObject.Find("DamageHanni(Clone)");
 
             }
         }
-        if(g)
+        if(collisionEnterKougekiWallBool)
         {
             playerDamageA = playerDamageHanntei.GetComponent<PlayerDamage>();
-            myRigid.velocity = Vector2.zero;
-            if(enemyKougeki >= enemyData.kougekiHinndo)
+            if(kougekiAnime)
+            {
+                myRigid.velocity = Vector2.zero;
+                kougekiAnime = false;
+            }
+            
+            if(enemyKougeki >= kougekiHinndo)//
             {
                 playerDamageA.a = true;
                 if (player != null)
                 {
                     transform.position = player.transform.position;
+                    //myRigid.AddForce(new Vector3(0,5),ForceMode2D.Force);
                 }
-                h = true;
-                if(enemyAtackMotion >= 0.25f)
+                enemuKougekiTimeBool = true;
+                if (enemyAtackMotion >= 0.25f)
                 {
                     enemyKougeki = 0;
-                    transform.position = new Vector2(Random.Range(-1,1.1f), -7.8f);
-                    h = false;
+                    transform.position = new Vector2(Random.Range(-1, 1.1f), -7.8f);
+                    enemuKougekiTimeBool = false;
                     enemyAtackMotion = 0f;
                 }
             }
         }
-        if(h)
+        if(enemuKougekiTimeBool)
         {
             enemyAtackMotion += Time.deltaTime;
         }
@@ -271,29 +492,31 @@ public class EnemyBase : MonoBehaviour
                 transform.position = enemyPosition;
             }
         }
+
+
     }
     private void KyoukasekiDrop()//強化石ドロップメソッド
     {
         kyoukasekiDropPosition = desuPosition - new Vector2(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f));
-        if (enemyData.lebel<=30)
+        if (enemyLv<=30)
         {
             kyoukasekiDropritu = Random.Range(0.00f, 100.00f);
-            if (enemyData.lebel <= 20)
+            if (enemyLv <= 20)
             {
                 if (kyoukasekiDropritu <= 20)
                 {
                     Instantiate(kyoukasekiSyou, kyoukasekiDropPosition, transform.rotation);
                 }
             }
-            else if (kyoukasekiDropritu <= enemyData.lebel)
+            else if (kyoukasekiDropritu <= enemyLv)
             {
                 Instantiate(kyoukasekiSyou, kyoukasekiDropPosition, transform.rotation);
             }
         }
-        else if(enemyData.lebel<=60)
+        else if(enemyLv <= 60)
         {
             kyoukasekiDropritu = Random.Range(0.00f, 100.00f);
-            if(kyoukasekiDropritu<=(100-enemyData.lebel))
+            if(kyoukasekiDropritu<=(100- enemyLv))
             {
                 Instantiate(kyoukasekiSyou, kyoukasekiDropPosition, transform.rotation);
             }
@@ -304,8 +527,8 @@ public class EnemyBase : MonoBehaviour
         }
         else
         {
-            kyoukasekisyouDropritu = 100 - enemyData.lebel;
-            kyoukasekityuuDropritu = enemyData.lebel - enemyData.lebel / 10;
+            kyoukasekisyouDropritu = 100 - enemyLv;
+            kyoukasekityuuDropritu = enemyLv - enemyLv / 10;
             kyoukasekidaiDrooritu = 100 - kyoukasekisyouDropritu - kyoukasekityuuDropritu;
             kyoukasekiDropritu = Random.Range(0.00f, 100.00f);
             if(kyoukasekiDropritu<=kyoukasekisyouDropritu)
@@ -330,27 +553,27 @@ public class EnemyBase : MonoBehaviour
             syougouDropRitu = Random.Range(0.00f, 100.00f);
             if(b==0)
             {
-                if (enemyData.reaSyougouDropRitu >= syougouDropRitu)
+                if (enemyData.reaSyougouDropRitu+playerStatusDataBase.syougouDropRitu >= syougouDropRitu)
                 {
                     Instantiate(enemyData.dropSyougou[b]);
-                    Debug.Log("レア称号ドロップ");
+                   // Debug.Log("レア称号ドロップ");
                 }
             }
             if(b==1)
             {
-                if(enemyData.superReaSyougouDropRitu >= syougouDropRitu)
+                if(enemyData.superReaSyougouDropRitu + playerStatusDataBase.syougouDropRitu >= syougouDropRitu)
                 {
                     Instantiate(enemyData.dropSyougou[b]);             
-                    Debug.Log("スーパーレア称号ドロップ");
+                   // Debug.Log("スーパーレア称号ドロップ");
 
                 }
             }
             if(b==2)
             {
-                if(enemyData.epikSyougouDropRitu >= syougouDropRitu)
+                if(enemyData.epikSyougouDropRitu + playerStatusDataBase.syougouDropRitu >= syougouDropRitu)
                 {
                     Instantiate(enemyData.dropSyougou[b]);
-                    Debug.Log("エピック称号ドロップ");
+                   // Debug.Log("エピック称号ドロップ");
                 }
             }
 
@@ -359,22 +582,22 @@ public class EnemyBase : MonoBehaviour
         //ギフトドロップ
         if (Random.Range(0.00f, 100.00f) <= enemyData.giftDropRitu+playerStatusDataBase.giftHuyoSoubiDropritu)
         {
-            Debug.Log("ギフトドロップ");
-            if (enemyData.lebel <= 10)
+            //Debug.Log("ギフトドロップ");
+            if (enemyLv <= 10)
             {
-                Debug.Log("LV10以下の敵のギフトがドロップ");
-                giftBairitu = Random.Range(1, enemyData.lebel + 1);
+                //Debug.Log("LV10以下の敵のギフトがドロップ");
+                giftBairitu = Random.Range(1, enemyLv + 1);
                 gift.GetComponent<Gift>().giftBairitu = giftBairitu;
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 20)
+            else if (enemyLv <= 20)
             {
-                Debug.Log("LV20以下の敵のギフトがドロップ");
+                //Debug.Log("LV20以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 40.00f)
                 {
-                    giftBairitu = Random.Range(11, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(11, enemyLv + 1);
                 }
                 else
                 {
@@ -384,13 +607,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 30)
+            else if (enemyLv <= 30)
             {
-                Debug.Log("LV30以下の敵のギフトがドロップ");
+                //Debug.Log("LV30以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 20.00f)
                 {
-                    giftBairitu = Random.Range(21, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(21, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 50)
                 {
@@ -404,13 +627,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 40)
+            else if (enemyLv <= 40)
             {
-                Debug.Log("LV40以下の敵のギフトがドロップ");
+                //Debug.Log("LV40以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 10.00f)
                 {
-                    giftBairitu = Random.Range(31, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(31, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 30.00f)
                 {
@@ -428,13 +651,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 50)
+            else if (enemyLv <= 50)
             {
-                Debug.Log("LV50以下の敵のギフトがドロップ");
+                //Debug.Log("LV50以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 10.00f)
                 {
-                    giftBairitu = Random.Range(41, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(41, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 25.00f)
                 {
@@ -456,13 +679,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 60)
+            else if (enemyLv <= 60)
             {
-                Debug.Log("LV60以下の敵のギフトがドロップ");
+                //Debug.Log("LV60以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 9.00f)
                 {
-                    giftBairitu = Random.Range(51, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(51, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 20.00f)
                 {
@@ -488,13 +711,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 70)
+            else if (enemyLv <= 70)
             {
-                Debug.Log("LV70以下の敵のギフトがドロップ");
+                //Debug.Log("LV70以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if (giftHuyoHanni <= 8.00f)
                 {
-                    giftBairitu = Random.Range(61, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(61, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <=18.00f)
                 {
@@ -524,13 +747,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 80)
+            else if (enemyLv <= 80)
             {
-                Debug.Log("LV80以下の敵のギフトがドロップ");
+                //Debug.Log("LV80以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if(giftHuyoHanni <=3.00f)
                 {
-                    giftBairitu = Random.Range(71, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(71, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 9.00f)
                 {
@@ -564,13 +787,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 90)
+            else if (enemyLv <= 90)
             {
-                Debug.Log("LV90以下の敵のギフトがドロップ");
+                //Debug.Log("LV90以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if(giftHuyoHanni <= 2.00f)
                 {
-                    giftBairitu = Random.Range(81, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(81, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 5.00f)
                 {
@@ -608,13 +831,13 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
-            else if (enemyData.lebel <= 100)
+            else if (enemyLv <= 100)
             {
-                Debug.Log("LV100以下の敵のギフトがドロップ");
+                //Debug.Log("LV100以下の敵のギフトがドロップ");
                 giftHuyoHanni = Random.Range(0.00f, 100.00f);
                 if(giftHuyoHanni<=1.00f)
                 {
-                    giftBairitu = Random.Range(91, enemyData.lebel + 1);
+                    giftBairitu = Random.Range(91, enemyLv + 1);
                 }
                 else if (giftHuyoHanni <= 3.00f)
                 {
@@ -656,6 +879,306 @@ public class EnemyBase : MonoBehaviour
                 Instantiate(gift);
                 giftBairitu = 0;
             }
+            else if (enemyLv <= 120)
+            {
+                //Debug.Log("LV120以下の敵のギフトがドロップ");
+                giftHuyoHanni = Random.Range(0.00f, 100.00f);
+                if (giftHuyoHanni <= 1.00f)
+                {
+                    giftBairitu = Random.Range(101, enemyLv + 1);
+                }
+                else if(giftHuyoHanni<=2.5f)
+                {
+                    giftBairitu = Random.Range(91, 101);
+                }
+                else if (giftHuyoHanni <= 4.50f)
+                {
+                    giftBairitu = Random.Range(81, 91);
+                }
+                else if (giftHuyoHanni <= 7.00f)
+                {
+                    giftBairitu = Random.Range(71, 81);
+                }
+                else if (giftHuyoHanni <= 11.00f)
+                {
+                    giftBairitu = Random.Range(61, 71);
+                }
+                else if (giftHuyoHanni <= 19.00f)
+                {
+                    giftBairitu = Random.Range(51, 61);
+                }
+                else if (giftHuyoHanni <= 30.00f)
+                {
+                    giftBairitu = Random.Range(41, 51);
+                }
+                else if (giftHuyoHanni <= 45.00f)
+                {
+                    giftBairitu = Random.Range(31, 41);
+                }
+                else if (giftHuyoHanni <= 62.00f)
+                {
+                    giftBairitu = Random.Range(21, 31);
+                }
+                else if (giftHuyoHanni <= 80.00f)
+                {
+                    giftBairitu = Random.Range(11, 21);
+                }
+                else
+                {
+                    giftBairitu = Random.Range(1, 11);
+                }
+                gift.GetComponent<Gift>().giftBairitu = giftBairitu;
+                Instantiate(gift);
+                giftBairitu = 0;
+            }
+            else if (enemyLv <= 140)
+            {
+                //Debug.Log("LV140以下の敵のギフトがドロップ");
+                giftHuyoHanni = Random.Range(0.00f, 100.00f);
+                if (giftHuyoHanni <= 1.00f)
+                {
+                    giftBairitu = Random.Range(121, enemyLv + 1);
+                }
+                else if (giftHuyoHanni <= 2f)
+                {
+                    giftBairitu = Random.Range(101, 121);
+                }
+                else if (giftHuyoHanni <= 3.5f)
+                {
+                    giftBairitu = Random.Range(91, 101);
+                }
+                else if (giftHuyoHanni <= 5.5)
+                {
+                    giftBairitu = Random.Range(81, 91);
+                }
+                else if (giftHuyoHanni <= 7.00f)
+                {
+                    giftBairitu = Random.Range(71, 81);
+                }
+                else if (giftHuyoHanni <= 11.00f)
+                {
+                    giftBairitu = Random.Range(61, 71);
+                }
+                else if (giftHuyoHanni <= 19.00f)
+                {
+                    giftBairitu = Random.Range(51, 61);
+                }
+                else if (giftHuyoHanni <= 30.00f)
+                {
+                    giftBairitu = Random.Range(41, 51);
+                }
+                else if (giftHuyoHanni <= 45.00f)
+                {
+                    giftBairitu = Random.Range(31, 41);
+                }
+                else if (giftHuyoHanni <= 62.00f)
+                {
+                    giftBairitu = Random.Range(21, 31);
+                }
+                else if (giftHuyoHanni <= 80.00f)
+                {
+                    giftBairitu = Random.Range(11, 21);
+                }
+                else
+                {
+                    giftBairitu = Random.Range(1, 11);
+                }
+                gift.GetComponent<Gift>().giftBairitu = giftBairitu;
+                Instantiate(gift);
+                giftBairitu = 0;
+            }
+            else if (enemyLv <= 160)
+            {
+                //Debug.Log("LV160以下の敵のギフトがドロップ");
+                giftHuyoHanni = Random.Range(0.00f, 100.00f);
+                if (giftHuyoHanni <= 1.00f)
+                {
+                    giftBairitu = Random.Range(141, enemyLv + 1);
+                }
+                else if (giftHuyoHanni <= 2f)
+                {
+                    giftBairitu = Random.Range(121, 141);
+                }
+                else if (giftHuyoHanni <= 3.5f)
+                {
+                    giftBairitu = Random.Range(101, 121);
+                }
+                else if (giftHuyoHanni <= 5.5f)
+                {
+                    giftBairitu = Random.Range(91, 101);
+                }
+                else if (giftHuyoHanni <= 8.00f)
+                {
+                    giftBairitu = Random.Range(81, 91);
+                }
+                else if (giftHuyoHanni <= 11.00f)
+                {
+                    giftBairitu = Random.Range(71, 81);
+                }
+                else if (giftHuyoHanni <= 14.50f)
+                {
+                    giftBairitu = Random.Range(61, 71);
+                }
+                else if (giftHuyoHanni <= 19.00f)
+                {
+                    giftBairitu = Random.Range(51, 61);
+                }
+                else if (giftHuyoHanni <= 30.00f)
+                {
+                    giftBairitu = Random.Range(41, 51);
+                }
+                else if (giftHuyoHanni <= 45.00f)
+                {
+                    giftBairitu = Random.Range(31, 41);
+                }
+                else if (giftHuyoHanni <= 62.00f)
+                {
+                    giftBairitu = Random.Range(21, 31);
+                }
+                else if (giftHuyoHanni <= 80.00f)
+                {
+                    giftBairitu = Random.Range(11, 21);
+                }
+                else
+                {
+                    giftBairitu = Random.Range(1, 11);
+                }
+                gift.GetComponent<Gift>().giftBairitu = giftBairitu;
+                Instantiate(gift);
+                giftBairitu = 0;
+            }
+            else if (enemyLv <= 180)
+            {
+                //Debug.Log("LV180以下の敵のギフトがドロップ");
+                giftHuyoHanni = Random.Range(0.00f, 100.00f);
+                if (giftHuyoHanni <= 1.00f)
+                {
+                    giftBairitu = Random.Range(161, enemyLv + 1);
+                }
+                else if (giftHuyoHanni <= 2f)
+                {
+                    giftBairitu = Random.Range(141, 161);
+                }
+                else if (giftHuyoHanni <= 3.5f)
+                {
+                    giftBairitu = Random.Range(121, 141);
+                }
+                else if (giftHuyoHanni <= 5.5f)
+                {
+                    giftBairitu = Random.Range(101, 121);
+                }
+                else if (giftHuyoHanni <= 8.00f)
+                {
+                    giftBairitu = Random.Range(91, 101);
+                }
+                else if (giftHuyoHanni <= 11.00f)
+                {
+                    giftBairitu = Random.Range(81, 91);
+                }
+                else if (giftHuyoHanni <= 14.50f)
+                {
+                    giftBairitu = Random.Range(71, 81);
+                }
+                else if (giftHuyoHanni <= 18.50f)
+                {
+                    giftBairitu = Random.Range(61, 71);
+                }
+                else if (giftHuyoHanni <= 23.00f)
+                {
+                    giftBairitu = Random.Range(51, 61);
+                }
+                else if (giftHuyoHanni <= 30.00f)
+                {
+                    giftBairitu = Random.Range(41, 51);
+                }
+                else if (giftHuyoHanni <= 45.00f)
+                {
+                    giftBairitu = Random.Range(31, 41);
+                }
+                else if (giftHuyoHanni <= 62.00f)
+                {
+                    giftBairitu = Random.Range(21, 31);
+                }
+                else if (giftHuyoHanni <= 80.00f)
+                {
+                    giftBairitu = Random.Range(11, 21);
+                }
+                else
+                {
+                    giftBairitu = Random.Range(1, 11);
+                }
+                gift.GetComponent<Gift>().giftBairitu = giftBairitu;
+                Instantiate(gift);
+                giftBairitu = 0;
+            }
+            else if (enemyLv <= 1000)
+            {
+                //Debug.Log("LV1000以下の敵のギフトがドロップ");
+                giftHuyoHanni = Random.Range(0.00f, 100.00f);
+                if (giftHuyoHanni <= 1.00f)
+                {
+                    giftBairitu = Random.Range(181, enemyLv + 1);
+                }
+                else if (giftHuyoHanni <= 2f)
+                {
+                    giftBairitu = Random.Range(161, 181);
+                }
+                else if (giftHuyoHanni <= 3.5f)
+                {
+                    giftBairitu = Random.Range(141, 161);
+                }
+                else if (giftHuyoHanni <= 5.5f)
+                {
+                    giftBairitu = Random.Range(121, 141);
+                }
+                else if (giftHuyoHanni <= 8.00f)
+                {
+                    giftBairitu = Random.Range(101, 121);
+                }
+                else if (giftHuyoHanni <= 11.00f)
+                {
+                    giftBairitu = Random.Range(91, 101);
+                }
+                else if (giftHuyoHanni <= 14.50f)
+                {
+                    giftBairitu = Random.Range(81, 91);
+                }
+                else if (giftHuyoHanni <= 18.50f)
+                {
+                    giftBairitu = Random.Range(71, 81);
+                }
+                else if (giftHuyoHanni <= 23.00f)
+                {
+                    giftBairitu = Random.Range(61, 71);
+                }
+                else if (giftHuyoHanni <= 30.00f)
+                {
+                    giftBairitu = Random.Range(51, 61);
+                }
+                else if (giftHuyoHanni <= 37.5f)
+                {
+                    giftBairitu = Random.Range(41, 51);
+                }
+                else if (giftHuyoHanni <= 45.00f)
+                {
+                    giftBairitu = Random.Range(31, 41);
+                }
+                else if (giftHuyoHanni <= 62.00f)
+                {
+                    giftBairitu = Random.Range(21, 31);
+                }
+                else if (giftHuyoHanni <= 80.00f)
+                {
+                    giftBairitu = Random.Range(11, 21);
+                }
+                else
+                {
+                    giftBairitu = Random.Range(1, 11);
+                }
+                gift.GetComponent<Gift>().giftBairitu = giftBairitu;
+                Instantiate(gift);
+                giftBairitu = 0;
+            }
         }
 
 
@@ -665,9 +1188,11 @@ public class EnemyBase : MonoBehaviour
             dropPosition = desuPosition - new Vector2(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f));
 
             int itemNo = enemyData.dropItemNos[a];
+            Debug.Log(itemNo);
             itemPrefab = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<EnemyDataBaseManager>().GetDropItemPrefabDate(itemNo);
 
             itemController = itemPrefab.GetComponent<ItemController>();
+            
 
             if (itemController.itemStatus.god)
             {
@@ -679,7 +1204,7 @@ public class EnemyBase : MonoBehaviour
                     Instantiate(weponBoxGod, dropPosition, transform.rotation);
                 }
             }
-            if (itemController.itemStatus.legendary)
+           else if (itemController.itemStatus.legendary)
             {
                 itemDropRitu = (enemyData.legendaryDropRitu * (1.00f + playerStatusDataBase.legendaryReaDropRitu / 100.00f));
                 if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
@@ -689,7 +1214,7 @@ public class EnemyBase : MonoBehaviour
                     Instantiate(weponBoxLegendary, dropPosition, transform.rotation);
                 }
             }
-            if (itemController.itemStatus.epik)
+            else if (itemController.itemStatus.epik)
             {
                 itemDropRitu = (enemyData.epikDropRitu * (1.00f + playerStatusDataBase.epikReaDropRitu / 100.00f));
                 if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
@@ -699,7 +1224,7 @@ public class EnemyBase : MonoBehaviour
                     Instantiate(weponBoxEpik, dropPosition, transform.rotation);
                 }
             }
-            if (itemController.itemStatus.superRea)
+            else if (itemController.itemStatus.superRea)
             {
                 itemDropRitu = (enemyData.superReaDropRitu * (1.00f + playerStatusDataBase.superReaDropRitu / 100.00f));
                 if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
@@ -709,7 +1234,7 @@ public class EnemyBase : MonoBehaviour
                     Instantiate(weponBoxSuperRea, dropPosition, transform.rotation);
                 }
             }
-            if (itemController.itemStatus.rea)
+            else if (itemController.itemStatus.rea)
             {
                 itemDropRitu = (enemyData.reaDropRitu * (1.00f + playerStatusDataBase.reaDropRitu / 100.00f));
                 if (Random.Range(0.0f, 100.0f) <= itemDropRitu)
@@ -719,7 +1244,7 @@ public class EnemyBase : MonoBehaviour
                     Instantiate(weponBoxRea, dropPosition, transform.rotation);
                 }
             }
-            if (itemController.itemStatus.nomal)
+            else if (itemController.itemStatus.nomal)
             {
                 itemDropRitu = (enemyData.nomalDropRitu * (1.00f + playerStatusDataBase.nomalDropRitu / 100.00f));
                 //Debug.Log(itemDropRitu);
@@ -732,11 +1257,10 @@ public class EnemyBase : MonoBehaviour
             }
         }
         
-    }
-    
+    } 
     private void moneyDrop()//Moneyドロップメソッド
     {
-        moneyCount = enemyData.gold;
+        moneyCount = money;
         itimannennCount = Mathf.FloorToInt(moneyCount / 10000);
         moneyCount = moneyCount - itimannennCount * 10000;
         sennennCount = Mathf.FloorToInt(moneyCount / 1000);
@@ -780,7 +1304,7 @@ public class EnemyBase : MonoBehaviour
     }
     public void expDrop()
     {
-        expControllerScript.exp = enemyData.exp;
+        expControllerScript.exp = enemyExp;
         Instantiate(exp, desuPosition, transform.rotation);
     }
     public void KousekiAdd()
@@ -799,7 +1323,7 @@ public class EnemyBase : MonoBehaviour
         }
         else if(enemyData.husi)
         {
-            kousekiDataBaseManagerScript.mazinnToubatuSuu++;
+            kousekiDataBaseManagerScript.husiToubatuSuu++;
         }
         else if(enemyData.akuma)
         {
@@ -825,31 +1349,34 @@ public class EnemyBase : MonoBehaviour
         color.a = flashColor;
         sprite.color = color;
     }
-    //ダメージ計算メゾット
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)//ダメージ計算メゾット
     {
         if(collision.gameObject.tag == "FireBall")
         {
-            damagePosition = collision.transform.position;
+            senntouBGMManager.FireBallSEPlay();
 
-            if (i)
+            damagePosition = collision.transform.position;
+            if (damageEffectBool)
             {
                 Instantiate(fireBallDamageEffect, transform.position, transform.rotation);
-                saiteihosyouDamage = Random.Range(0, 2);
+                saiteihosyouDamage = 1;
                 damageBairitu = Random.Range(0.8f, 1.21f);
-                damageKeisann = (playerStatus.maryoku - enemyData.mahouBougyoryoku) * damageBairitu;
+                damageKeisann = (playerStatus.maryoku/2 - mahouBougyoryoku/3) * damageBairitu;
                 //Debug.Log(damageBairitu);
-                kaisinn = playerStatus.ennkyoriKaisinnritu - enemyData.kaisinnTaisei;
-                if(kaisinn>= Random.Range(0.0f,100.0f))
+                kaisinn = playerStatus.ennkyoriKaisinnritu - kaisinnTaisei;
+
+                if (kaisinn >= Random.Range(0.0f, 100.0f))//会心だったら
                 {
-                    damageKeisann *= 2;
-                    l = true;
+                    damageKeisann = (playerStatus.maryoku * 2 / 2 - mahouBougyoryoku / 3) * damageBairitu;
+                    kaisinnBool = true;
+                    Debug.Log("会心");
                 }
+                
                 if (damageKeisann < 1)
                 {
                     enemyDamage = saiteihosyouDamage;
-                    enemyHp -= enemyDamage;
-                    e = true;
+                    hp -= enemyDamage;
+                    damageTextIkkaiBool = true;
                 //    Debug.Log(enemyData.enemyName + "に" + saiteihosyouDamage.ToString("N0") + "のダメージを与えた！！");
                 }
                 else
@@ -879,130 +1406,338 @@ public class EnemyBase : MonoBehaviour
                     {
                         tokkouBairitu = 1 + ((playerStatusDataBase.kousekiRyuuTokkou + playerStatusDataBase.soubiRyuuTokkou) / 100.00f);
                     }
-                    else if (enemyData.ninngenn)
+                    else if (enemyData.kami)
                     {
                         tokkouBairitu = 1 + ((playerStatusDataBase.kousekiKamiTokkou + playerStatusDataBase.soubiKamiTokkou) / 100.00f);
                     }
+
                     enemyDamage = Mathf.CeilToInt(damageKeisann * tokkouBairitu);
-                    enemyHp -= enemyDamage;
-                  //  Debug.Log(enemyData.enemyName + "に" + enemyDamage.ToString("N0") + "のダメージを与えた！！");
-                    e = true;
+                    hp -= enemyDamage;
+
+                    //  Debug.Log(enemyData.enemyName + "に" + enemyDamage.ToString("N0") + "のダメージを与えた！！");
+                    damageTextIkkaiBool = true;
                 }
-                if (enemyHp <= 0)
+
+                if(asidBallBool)//アシッドボール発動
+                {
+                    if(Random.Range(0,101)<asidBallData.asidBallKakuritu)
+                    {
+                        asidMode = true;
+                        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 150, 0, 255);
+                    }
+                }
+
+                if (hp <= 0)
                 {
 
-                    f = true;
+                    deadBool = true;
                 }
-                i = false;
+                damageEffectBool = false;
             }
         }
         if (collision.gameObject.tag == "Srush")
         {
-            if (d)
+            
+            if (atackSetteiBool) atack = GameObject.Find("攻撃範囲Canvas").GetComponent<Atack>();
+            if (damegeIkkaiBool)
             {
-                d = false;
-                nokkubakkuKyori = playerStatus.nokkubakku - enemyData.nokkubakkuBougyo;
+                damegeIkkaiBool = false;
+                nokkubakkuKyori = playerStatus.nokkubakku - nokkubakkuBougyo;
                 enemyPosition = transform.position;
                 enemyPosition.y -= nokkubakkuKyori;
                 transform.position = enemyPosition;
 
                 damagePosition = transform.position;
 
-                kaihi = 100 - (playerStatus.meityuuritu - enemyData.kaihiritu);
+                kaihi = 100 - (playerStatus.meityuuritu -kaihiritu);
 
                 if(Random.Range(0.0f,100.0f) <= kaihi)
                 {
                     Debug.Log(kaihi);
-                    j = true;
+                    kaihiBool = true;
                     if (kaihi >= 95)
                     {
                         if (Random.Range(0.0f, 100.0f) <= 5)
                         {
-                            j = false;
+                            kaihiBool = false;
                         }
                         else
                         {
-                            k = true;
+                            senntouBGMManager.MissSEPlay();
+                            missTextBool = true;
                         }
                     }
                     else
                     {
-                        k = true;
+                        senntouBGMManager.MissSEPlay();
+                        missTextBool = true;
                     }
                 }
-                if (j == false)
+                if (kaihiBool == false)
                 {
+                    senntouBGMManager.PlayerAtackSEPlay();
                     damageBairitu = Random.Range(0.8f, 1.21f);
-                    saiteihosyouDamage = Random.Range(0, 2);
-                    damageKeisann = (playerStatus.kougekiryoku - enemyData.bougyoryoku) * damageBairitu;
-                    kaisinn = playerStatus.kinnkyoriKaisinnritu - enemyData.kaisinnTaisei;
+                    saiteihosyouDamage = 1;
+                    //damageKeisann = (playerStatus.kougekiryoku - bougyoryoku) * damageBairitu;
+                    kaisinn = playerStatus.kinnkyoriKaisinnritu - kaisinnTaisei;
                     if (kaisinn >= Random.Range(0.0f, 100.0f))
                     {
-                        damageKeisann *= 2;
-                        l = true;
+                        if (kyougiriBool)//強斬りスキルダメージ計算
+                        {
+                            if (atack.srushKaisuu % kyougiriData.kyougiriHinndo == 0)
+                            {
+                                damageKeisann = (playerStatus.kougekiryoku/2 * kyougiriData.iryoku / 100 * 2 - bougyoryoku/4) * damageBairitu;
+                            }
+                            else
+                            {
+                                damageKeisann = (playerStatus.kougekiryoku/2 * 2 - bougyoryoku/4) * damageBairitu;
+                            }
+                        }
+                        else
+                        {
+                            damageKeisann = (playerStatus.kougekiryoku/2 * 2 - bougyoryoku/4) * damageBairitu;
+                        }
+                        kaisinnBool = true;
+                    }
+                    else
+                    {
+                        if (kyougiriBool)//強斬りスキルダメージ計算
+                        {
+                            if (atack.srushKaisuu % kyougiriData.kyougiriHinndo == 0)
+                            {
+                                damageKeisann = (playerStatus.kougekiryoku/2 * kyougiriData.iryoku / 100  - bougyoryoku/4) * damageBairitu;
+                            }
+                            else
+                            {
+                                damageKeisann = (playerStatus.kougekiryoku/2  - bougyoryoku/4) * damageBairitu;
+                                Debug.Log(damageKeisann);
+                            }
+                        }
+                        else
+                        {
+                            damageKeisann = (playerStatus.kougekiryoku/2  - bougyoryoku/4) * damageBairitu;
+                        }
                     }
                     if (damageKeisann <= 1)
                     {
                         enemyDamage = saiteihosyouDamage;
-                        enemyHp -= enemyDamage;
-                        e = true;
+                        hp -= enemyDamage;
+                        damageTextIkkaiBool = true;
                       //  Debug.Log(enemyData.enemyName + "に" + saiteihosyouDamage.ToString("N0") + "のダメージを与えた！！");
                     }
                     else
                     {
                         if (enemyData.mazyuu)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazyuuTokkou + playerStatusDataBase.soubiMazyuuTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.mazyuuTokkou / 100.00f;
                             //Debug.Log(tokkouBairitu.ToString("F4"));
                         }
                         else if (enemyData.husi)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiHusiTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.husiTokkou / 100.00f;
                         }
                         else if (enemyData.akuma)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiAkumaTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.akumaTokkou/ 100.00f;
                         }
                         else if (enemyData.mazinn)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazinnTokkou + playerStatusDataBase.soubiMazinnTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.mazinnTokkou/ 100.00f;
                         }
                         else if (enemyData.ninngenn)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiNinngennTokkou + playerStatusDataBase.soubiNinngennTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.ninngennTokkou / 100.00f;
                         }
                         else if (enemyData.ryuu)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiRyuuTokkou + playerStatusDataBase.soubiRyuuTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.ryuuTokkou / 100.00f;
                         }
-                        else if (enemyData.ninngenn)
+                        else if (enemyData.kami)
                         {
-                            tokkouBairitu = 1 + ((playerStatusDataBase.kousekiKamiTokkou + playerStatusDataBase.soubiKamiTokkou) / 100.00f);
+                            tokkouBairitu = 1 + playerStatusDataBase.kamiTokkou / 100.00f;
                         }
+
+                        /*if(kyougiriBool)//強斬りスキルダメージ計算
+                        {
+                            if(atack.srushKaisuu%kyougiriData.kyougiriHinndo==0)
+                            {
+                                damageKeisann *=  kyougiriData.iryoku/100;
+                            }
+                        }*/
+                       // Debug.Log(damageKeisann);
                         enemyDamage = Mathf.CeilToInt(damageKeisann * tokkouBairitu);
-                        enemyHp -= enemyDamage;
-                        e = true;
+                        hp -= enemyDamage;
+
+                        if (asidSrushBool)//アシッドスラッシュ発動
+                        {
+                            if (Random.Range(0, 101) < asidSrushData.asidSrushKakuritu)
+                            {
+                                asidMode = true;
+                                gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 150, 0, 255);
+                            }
+                        }
+                        if (kyuusyuuBool)//吸収スキル
+                        {
+                            kyuusyuuSuuti = Mathf.CeilToInt(enemyDamage * (kyuusyuuData.kyuusyuuWariai / 100.0f));
+                            soubiSkillDatabase.kaihukuHpText.GetComponent<Text>().text = kyuusyuuSuuti.ToString("N0");
+
+                            playerStatus.hp += kyuusyuuSuuti;
+
+                            atack.KaihukuTextInstantiate(kyuusyuuSuuti);//Atackスクリプトのメソッドを使用する。
+
+                            if (playerStatus.maxHp < playerStatus.hp) playerStatus.hp = playerStatus.maxHp;
+                        }
+
+                        damageTextIkkaiBool = true;
                         //Debug.Log(enemyData.enemyName + "に" + enemyDamage.ToString("N0") + "のダメージを与えた！！");
                     }
                 }
-                c = true;
-                if (enemyHp <= 0)
+                damegeBool = true;
+                if (hp <= 0)
                 {
-                    f = true;
+                    resultSceneManager.weponZyukurenndo++;
+                    deadBool = true;
                 }
-                j = false;
+                kaihiBool = false;
             }
+
+        }
+        if (collision.gameObject.tag == "MakennotikaraHi")
+        {
+            senntouBGMManager.FireBallSEPlay();
+
+            damagePosition = collision.transform.position;
+
+            Instantiate(fireBallDamageEffect, transform.position, transform.rotation);
+            saiteihosyouDamage = 1;
+            damageBairitu = Random.Range(0.8f, 1.21f);
+            damageKeisann = (playerStatus.maryoku / 2 - mahouBougyoryoku / 3) * damageBairitu;
+            //Debug.Log(damageBairitu);
+            kaisinn = playerStatus.ennkyoriKaisinnritu - kaisinnTaisei;
+            if (kaisinn >= Random.Range(0.0f, 100.0f))//会心だったら
+            {
+                damageKeisann = (playerStatus.maryoku * 2 / 2 - mahouBougyoryoku / 3) * damageBairitu;
+                kaisinnBool = true;
+            }
+            if (damageKeisann < 1)
+            {
+                enemyDamage = saiteihosyouDamage;
+                hp -= enemyDamage;
+                damageTextIkkaiBool = true;
+                //    Debug.Log(enemyData.enemyName + "に" + saiteihosyouDamage.ToString("N0") + "のダメージを与えた！！");
+            }
+            else
+            {
+                if (enemyData.mazyuu)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazyuuTokkou + playerStatusDataBase.soubiMazyuuTokkou) / 100.00f);
+                    //Debug.Log(tokkouBairitu.ToString("F4"));
+                }
+                else if (enemyData.husi)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiHusiTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                }
+                else if (enemyData.akuma)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiAkumaTokkou + playerStatusDataBase.soubiHusiTokkou) / 100.00f);
+                }
+                else if (enemyData.mazinn)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiMazinnTokkou + playerStatusDataBase.soubiMazinnTokkou) / 100.00f);
+                }
+                else if (enemyData.ninngenn)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiNinngennTokkou + playerStatusDataBase.soubiNinngennTokkou) / 100.00f);
+                }
+                else if (enemyData.ryuu)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiRyuuTokkou + playerStatusDataBase.soubiRyuuTokkou) / 100.00f);
+                }
+                else if (enemyData.kami)
+                {
+                    tokkouBairitu = 1 + ((playerStatusDataBase.kousekiKamiTokkou + playerStatusDataBase.soubiKamiTokkou) / 100.00f);
+                }
+
+                enemyDamage = Mathf.CeilToInt(damageKeisann * tokkouBairitu);
+                hp -= enemyDamage;
+
+                //  Debug.Log(enemyData.enemyName + "に" + enemyDamage.ToString("N0") + "のダメージを与えた！！");
+                damageTextIkkaiBool = true;
+            }
+
+            if (asidBallBool)//アシッドボール発動
+            {
+                if (Random.Range(0, 101) < asidBallData.asidBallKakuritu)
+                {
+                    asidMode = true;
+                    gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 150, 0, 255);
+                }
+            }
+
+            if (hp <= 0)
+            {
+
+                deadBool = true;
+            }
+            damageEffectBool = false;
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "LowLowWall")
         {
             myRigid.isKinematic  = false;
-            b = true;
+            collisionEnterLowLowWallBool = true;
+            kougekiTimeBool = true;
         }
 
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void SoubiSkillSettei()
     {
-        
+        soubiSkillDatabase = dataBaseManager.GetComponent<SoubiSkillDatabase>();
+        for (int a = 0; a < soubiSkillDatabase.skillNumber.Length; a++)
+        {
+            if (soubiSkillDatabase.skillNumber[a] == 3)//採掘Lv.1
+            {
+                saikutuBool = true;
+                saikutuData = soubiSkillDatabase.GetSoubiSkillData(3);
+            }
+            if (soubiSkillDatabase.skillNumber[a] == 5)//吸収Lv.1
+            {
+                kyuusyuuBool = true;
+                kyuusyuuData = soubiSkillDatabase.GetSoubiSkillData(5);
+            }
+            if (soubiSkillDatabase.skillNumber[a] == 6)//強斬りLv.1
+            {
+                kyougiriBool = true;
+                kyougiriData = soubiSkillDatabase.GetSoubiSkillData(6);
+            }
+            if (soubiSkillDatabase.skillNumber[a] == 7) //アシッドボールLv1
+            {
+                asidBallBool = true;
+                asidBallData = soubiSkillDatabase.GetSoubiSkillData(7);
+                asidDamage = Mathf.CeilToInt(maxHp * 0.06f);
+            }
+            if(soubiSkillDatabase.skillNumber[a]==8)//アシッドスラッシュLv1
+            {
+                asidSrushBool = true;
+                asidSrushData = soubiSkillDatabase.GetSoubiSkillData(8);
+                asidDamage = Mathf.CeilToInt(maxHp * 0.06f);
+            }
+            if (soubiSkillDatabase.skillNumber[a] == 12)//強斬りLv.2
+            {
+                kyougiriBool = true;
+                kyougiriData = soubiSkillDatabase.GetSoubiSkillData(12);
+            }
+            if (soubiSkillDatabase.skillNumber[a] == 13)//採掘Lv.2
+            {
+                saikutuBool = true;
+                saikutuData = soubiSkillDatabase.GetSoubiSkillData(13);
+            }
+            if (soubiSkillDatabase.skillNumber[a] == 15)//吸収Lv.2
+            {
+                kyuusyuuBool = true;
+                kyuusyuuData = soubiSkillDatabase.GetSoubiSkillData(15);
+            }
+        }
     }
 }

@@ -21,4 +21,29 @@ public class StatusSaveData
     public float statusKaisinnTaisei;
     public float statusMeityuuritu;
     public float statusKaihiritu;
+
+    public int kinnkyoriWeponNo;
+    public int ennkyoriWeponNo;
+    public int yoroiNo;
+    public int sonota1No;
+    public int sonota2No;
+
+    public int kousekiMazyuuTokkou;
+    public int kousekiNinngennTokkou;
+    public int kousekiMazinnTokkou;
+    public int kousekiHusiTokkou;
+    public int kousekiAkumaTokkou;
+    public int kousekiRyuuTokkou;
+    public int kousekiKamiTokkou;
+
+    public int kousekiNomalDropRitu;
+    public int kousekiReaDropRitu;
+    public int kousekiSuperReaDropRitu;
+    public int kousekiEpikReaDropRitu;
+    public int kousekiLegendaryReaDropRitu;
+    public int kousekiGodReaDropRitu;
+
+    public int kyoukataikaGennsyouritu;
+
+    public int kousekiGiftHuyoSoubiDropritu;
 }

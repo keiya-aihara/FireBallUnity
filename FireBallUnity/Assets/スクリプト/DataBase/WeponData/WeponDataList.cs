@@ -8,10 +8,6 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "MyScriptable/Create WeponData", fileName = "WeponDataList")]  
 public class WeponDataList : ScriptableObject
 {	
-	void Start()
-    {
-
-    }
     public List<WeponData> weponDatas;
 	[Serializable]
 	public class WeponData
@@ -24,12 +20,14 @@ public class WeponDataList : ScriptableObject
 		public int no;
 		[Header("装備名")]
 		public string name;
+
 		[Space(1)]
 		[Header("装備種別")]
 		public bool kinnkyoriWepon;
 		public bool ennkyoriWepon;
 		public bool yoroi;
 		public bool sonota;
+
 		[Space(1)]
 		[Header("レア度")]
 		public bool nomal;
@@ -38,6 +36,7 @@ public class WeponDataList : ScriptableObject
 		public bool epik;
 		public bool legendary;
 		public bool god;
+
 		[Space(1)]
 		[Header("装備ステータス")]
 		public int maxHp;
@@ -51,12 +50,48 @@ public class WeponDataList : ScriptableObject
 		public float kaisinnTaisei;
 		public float meityuuritu;
 		public float kaihiritu;
+
 		[Space(1)]
 		public float kougekiHinndo;
-		public float destroyTime;
-		public float srushSpeed;
 		public float nokkubakku;
 		public float kougekiHanni;
+		public float srushSpeed;
+
+		[Space(1)]
+        [Header("売却金額")]
+        public int baikyakuKinngaku;
+
+        [Space(1)]
+        [Header("図鑑No")]
+        public int zukannNo;
+
+        [Space(1)]
+        [Header("スキル")]
+        public bool skill;
+        public int skillNo;
+
+        [Space(1)]
+        [Header("特攻")]
+        public int soubiMazyuuTokkou;
+        public int soubiNinngennTokkou;
+        public int soubiMazinnTokkou;
+        public int soubiHusiTokkou;
+        public int soubiAkumaTokkou;
+        public int soubiRyuuTokkou;
+        public int soubiKamiTokkou;
+
+        [Space(1)]
+        [Header("装備ドロップ率倍率")]
+        public int soubiDropBairitu;
+
+        [Space(1)]
+        [Header("称号付き装備装備ドロップ率")]
+        public int syougouDropRitu;
+
+        [Space(1)]
+        [Header("ギフト付与装備ドロップ率")]
+        public int soubiGifthuyosoubiDropritu;
+
 		[Space(1)]
 		[Header("強化後ステータス")]
 		public int kyoukagoMaxHp;
@@ -66,15 +101,19 @@ public class WeponDataList : ScriptableObject
 		public int kyoukagoBougyoryoku;
 		public float kyoukagoMeityuuritu;
 		public float kyoukagoKaihiritu;
-		[Space(1)]
+
+        [Space(1)]
+        [Header("熟練後攻撃速度")]
+        public float zyukurenndoKougekiHinndo;
+
+        [Space(1)]
 		public int kyoukaLv;
 		public string kyoukaLvName;
 		public float kyoukaBairitu;
 		public int sonotaKyoukaStatus;
+
 		[Space(1)]
-		public int baikyakuKinngaku;
-		[Space(1)]
-		[Header("称号")]
+		[Header("称号ステータス")]
 		public string syougouName;
 		public bool syougouRea;
 		public bool syougouSuperRea;
@@ -91,17 +130,59 @@ public class WeponDataList : ScriptableObject
 		public float syougouKaisinnTaisei;
 		public float syougouMeityuuritu;
 		public float syougouKaihiritu;
-		[Space(1)]
+        
+        public float syougouSyougekiryoku;
+        public float syougouSrushHinndo;
+        public float syougouKougekiHanni;
+
+        [Space(1)]
+        [Header("称号特攻")]
+        public int syougouMazyuuTokkou;
+        public int syougouNinngennTokkou;
+        public int syougouMazinnTokkou;
+        public int syougouHusiTokkou;
+        public int syougouAkumaTokkou;
+        public int syougouRyuuTokkou;
+        public int syougouKamiTokkou;
+
+        [Space(1)]
+        [Header("称号トレハン率")]
+        public int syougouSoubiDropBairitu;
+        public int syougouSyougouDropRitu;
+        public int syougouSoubiGifthuyosoubiDropritu;
+
+        [Space(1)]
 		[Header("ギフト")]
 		public string giftName;
 		public string giftBairituName;
 		public int bairitu;
+        
 		[Space(1)]
 		[Header("ロック")]
 		public bool keyLock;
+
         [Header("装備中")]
         public bool soubiTyuu;
-	}
+
+        [Header("熟練度")]
+        public int zyukurenndo;
+
+        [Header("難易度")]
+        public bool syosinnsyanoMiti;
+        public bool boukennsyanoSirenn;
+        public bool eiyuunoMiti;
+        public bool yuusyanoTyousenn;
+        public bool dennsetunoSirenn;
+        public bool kamigaminoRyouiki;
+        public void ZyukurennWepon()
+        {
+            if (zyukurenndo < 1000)
+                zyukurenndoKougekiHinndo = kougekiHinndo - (kougekiHinndo * (zyukurenndo * 0.0005f));
+            else
+                zyukurenndoKougekiHinndo = kougekiHinndo - kougekiHinndo / 2;
+        }
+    }
+    
 	public void Hpzyunn()
     {
 		weponDatas.Sort((a, b) => b.kyoukagoMaxHp - a.kyoukagoMaxHp);
@@ -137,7 +218,7 @@ public class WeponDataList : ScriptableObject
     }
 	public void EnnkyoriKaisinnrituzyunn()
     {
-		weponDatas.Sort((a, b) => b.ennkyoriKaisinnsitu.CompareTo(a.syougouEnnkyoriKaisinnritu));
+		weponDatas.Sort((a, b) => b.ennkyoriKaisinnsitu.CompareTo(a.ennkyoriKaisinnsitu));
     }
 
 	public void Bougyoryokuzyunn()

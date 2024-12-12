@@ -30,6 +30,27 @@ public class SyougouDataList : ScriptableObject
 		public float meityuurituPlus;
 		public float kaihirituPlus;
 
-		public bool huyoZumi;
+        public float syougekiryoku;
+        public float srushHinndo;
+        public float kougekiHanni;
+
+        [Header("特攻")]
+        public int mazyuuTokkou;
+        public int ninngennTokkou;
+        public int mazinnTokkou;
+        public int husiTokkou;
+        public int akumaTokkou;
+        public int ryuuTokkou;
+        public int kamiTokkou;
+        [Space(1)]
+        [Header("装備ドロップ率倍率")]
+        public int soubiDropBairitu;
+        [Space(1)]
+        [Header("称号付き装備装備ドロップ率")]
+        public int syougouDropRitu;
+        [Space(1)]
+        [Header("ギフト付与装備ドロップ率")]
+        public int soubiGifthuyosoubiDropritu;
+        public bool huyoZumi;
 	}
 }

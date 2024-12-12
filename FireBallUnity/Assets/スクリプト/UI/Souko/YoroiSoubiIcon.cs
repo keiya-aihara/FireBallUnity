@@ -23,13 +23,16 @@ public class YoroiSoubiIcon : MonoBehaviour
     public GameObject lockKey;
     public Transform lockKeyDelete;
 
-    public GameObject giftLv;
+    public GiftLv giftLv;
+    public KyoukaLv kyoukaLv;
 
     private PlayerStatusDataBase playerStatusDataBase;
     private SoubityuuIcon soubityuuIcon;
     private GameObject contentSelectSoubi;
 
     private StatusPanelVector statusPanelVector;
+
+    private KyoukaLv kyoukaLvUpdate;
 
     public GameObject tyekku;
     public GameObject soubityuuTyekku;
@@ -69,8 +72,15 @@ public class YoroiSoubiIcon : MonoBehaviour
 
         if (yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu != 0)
         {
-            giftLv.GetComponent<GiftLv>().giftLv = yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu;
+            giftLv.giftLv = yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu;
             Instantiate(giftLv, transform.position, transform.rotation, gameObject.transform);
+        }
+
+        if (yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv != 0)
+        {
+            kyoukaLv.kyoukaLv = yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv;
+            Instantiate(kyoukaLv, transform.position, transform.rotation, gameObject.transform);
+            kyoukaLvUpdate = transform.Find("強化LV(Clone)").GetComponent<KyoukaLv>();
         }
 
         if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
@@ -131,9 +141,21 @@ public class YoroiSoubiIcon : MonoBehaviour
                 Destroy(lockKeyDelete.gameObject);
             }
         }
+        if (yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv != 0)
+        {
+            if (!gameObject.transform.Find("強化LV(Clone)"))
+            {
+                Instantiate(kyoukaLv, transform.position, transform.rotation, gameObject.transform);
+                kyoukaLvUpdate = transform.Find("強化LV(Clone)").GetComponent<KyoukaLv>();
+            }
+            kyoukaLvUpdate.kyoukaLv = yoroiDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv;
+
+        }
     }
     public void selectYoroiSoubi()
     {
+        HaiSEPlay();
+
         if (SceneManager.GetActiveScene().name == "Souko")
         {
             if (GameObject.Find("売却キャンセルBotton"))
@@ -177,19 +199,19 @@ public class YoroiSoubiIcon : MonoBehaviour
             }
             if (transform.parent.gameObject.name == "Content 鎧装備 ステータス")
             {
-                    if (playerStatusDataBase.yoroiNo != number)
-                    {
-                        c = false;
-                    }
-                    else
-                    {
-                        c = true;
-                    }
-                    Debug.Log("a");
-                    playerStatusDataBase.yoroiNo = number;
-                    soubityuuIcon.SoubiHennkou();
-                    soubityuuIcon.StatusTextUpdata();
-                    soubiTyuu();
+                if (playerStatusDataBase.yoroiNo != number)
+                {
+                    c = false;
+                }
+                else
+                {
+                    c = true;
+                }
+               
+                playerStatusDataBase.yoroiNo = number;
+                soubityuuIcon.SoubiHennkou();
+                soubityuuIcon.StatusTextUpdata();
+                soubiTyuu();
 
             }
         }
@@ -215,5 +237,9 @@ public class YoroiSoubiIcon : MonoBehaviour
             }
         }
         c = false;
+    }
+    public void HaiSEPlay()
+    {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
     }
 }

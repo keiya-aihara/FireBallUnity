@@ -11,18 +11,13 @@ public class EXPSlider : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        expManager = GameObject.Find("DataBaseManager");
-        expManagerScript = expManager.GetComponent<EXPManager>();
+        expManagerScript = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<EXPManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(expManagerScript.exp_stokku==0)
-        {
-            slider.value = 0;
-        }
-        slider.maxValue = expManagerScript.lv * 100;
+        slider.maxValue = expManagerScript.lvUpExp;
         slider.value = slider.maxValue - expManagerScript.needExp;
     }
 }

@@ -7,6 +7,8 @@ public class ZousyokukabeInstantiateFireBall : MonoBehaviour
     public GameObject fireBall;
     private Rigidbody2D fireBallRigid;
     ZousyokukabeStatus zousyokuBairitu;
+    private GameObject[] fireBalls;
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -17,18 +19,21 @@ public class ZousyokukabeInstantiateFireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        fireBalls= GameObject.FindGameObjectsWithTag("FireBall");
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "FireBall")
+        if (fireBalls.Length <= 500)
         {
-            for (float n = 0; zousyokuBairitu.zousyokusuu > n; n += 1)
+            if (collision.gameObject.tag == "FireBall")
             {
-                Instantiate(fireBall, new Vector3(collision.transform.position.x + Random.Range(-0.2f,0.2f),collision.transform.position.y - 0.5f,transform.position.z), transform.rotation);
+                    for (float n = 0; zousyokuBairitu.zousyokusuu > n; n += 1)
+                    {
+                        Instantiate(fireBall, new Vector3(collision.transform.position.x + Random.Range(-0.2f, 0.2f), collision.transform.position.y - 0.5f, transform.position.z), transform.rotation);
+                    }
             }
         }
     }
-
+    */
 }
 

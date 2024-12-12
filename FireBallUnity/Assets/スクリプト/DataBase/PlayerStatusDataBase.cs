@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityEditor;
+
 
 public class PlayerStatusDataBase : MonoBehaviour
 {
@@ -11,10 +11,27 @@ public class PlayerStatusDataBase : MonoBehaviour
     public YoroiDataBaseManager yoroiDataBaseManager;
     public SonotaDataBaseManager sonotaDataBaseManager;
 
+    public SoubiSkillDatabase soubiSkillDatabase;
+
     public WeponDataList kinnkyoriWeponDatas;
     public WeponDataList ennkyoriWeponDatas;
     public WeponDataList yoroiDatas;
     public WeponDataList sonotaDatas;
+
+    public SoubiSaveZone soubiSaveZone;
+    /*
+    public List<WeponDataList.WeponData> kinnkyoriWeponDatas;
+    public List<WeponDataList.WeponData> ennkyoriWeponDatas;
+    public List<WeponDataList.WeponData> yoroiDatas;
+    public List<WeponDataList.WeponData> sonotaDatas;
+    */
+    public WeponDataList.WeponData[] soubiItirann;
+
+    public KousekiDataBaseManager kousekiDataBaseManager;
+    public KakutokuDataBase soubiKakutokuDataBase;
+
+    public SystemDatabase systemDatabase;
+    public StageZissekiDatabase stageZissekiDatabase;
     [Space(1)]
     public EXPManager expManagerScript;
     [Space(1)]
@@ -54,7 +71,7 @@ public class PlayerStatusDataBase : MonoBehaviour
     public float soubiKougekiHinndo;
     public float soubiKougekiHanni;
 
-    public float soubiDestroyTime;
+    //public float soubiDestroyTime;
     public float soubiSrushSpeed;
     [Space(1)]
     [Header("基礎・装備ステータスの合計")]
@@ -77,8 +94,8 @@ public class PlayerStatusDataBase : MonoBehaviour
     public float kougekiHanni;
 
     public float nokkubakku;
-    public float destroyTime;
-    [Space(1)]
+    //public float destroyTime;
+    [Space(2)]
     [Header("倍率")]
     [Header("功績特攻数値")]
     public int kousekiMazyuuTokkou;
@@ -96,6 +113,29 @@ public class PlayerStatusDataBase : MonoBehaviour
     public int soubiAkumaTokkou;
     public int soubiRyuuTokkou;
     public int soubiKamiTokkou;
+    [Header("特攻数値")]
+    public int mazyuuTokkou;
+    public int ninngennTokkou;
+    public int mazinnTokkou;
+    public int husiTokkou;
+    public int akumaTokkou;
+    public int ryuuTokkou;
+    public int kamiTokkou;
+    [Space(1)]
+    [Header("功績レア度別ドロップ率ボーナス")]
+    public int kousekiNomalDropRitu;
+    public int kousekiReaDropRitu;
+    public int kousekiSuperReaDropRitu;
+    public int kousekiEpikReaDropRitu;
+    public int kousekiLegendaryReaDropRitu;
+    public int kousekiGodReaDropRitu;
+    [Header("装備レア度別ドロップ率ボーナス")]
+    public int soubiNomalDropRitu;
+    public int soubiReaDropRitu;
+    public int soubiSuperReaDropRitu;
+    public int soubiEpikReaDropRitu;
+    public int soubiLegendaryReaDropRitu;
+    public int soubiGodReaDropRitu;
     [Header("レア度別ドロップ率ボーナス")]
     public int nomalDropRitu;
     public int reaDropRitu;
@@ -103,8 +143,17 @@ public class PlayerStatusDataBase : MonoBehaviour
     public int epikReaDropRitu;
     public int legendaryReaDropRitu;
     public int godReaDropRitu;
+    [Space(1)]
+    [Header("称号ドロップ率")]
+    public int syougouDropRitu;
+    [Space(1)]
     [Header("強化対価減少率")]
     public int kyoukataikaGennsyouritu;
+    [Space(1)]
+    [Header("功績ギフト付与装備ドロップ率")]
+    public int kousekiGiftHuyoSoubiDropritu;
+    [Header("装備ギフト付与装備ドロップ率")]
+    public int soubiGiftHuyoSoubiDropritu;
     [Header("ギフト付与装備ドロップ率")]
     public int giftHuyoSoubiDropritu;
 
@@ -127,8 +176,8 @@ public class PlayerStatusDataBase : MonoBehaviour
     [Header("ファイヤーウォール")]
     [Header("パッシブスキル")]
     public int firewallLv;
-    public int fireWallTennkaisuu;
-    public int fireWallHannizoukakakuritu;
+    public int fireWallTennkaisuuSyou;
+    public int fireWallTennkaisuuDai;
     [Header("増殖数")]
     public int zousyokusuuLv;
     public int saisyouZousyokusuu;
@@ -151,10 +200,10 @@ public class PlayerStatusDataBase : MonoBehaviour
     public int mueisyouLv;
     [Header("魔力アップ")]
     public int maryokuUpLv;
-    public int maryokuZyousyouritu;
+    public int skillMaryokuZyousyouritu;
     [Header("FBコストダウン")]
     public int fbCostDownLv;
-    public int fireBallCostDownRitu;
+    public int skillFireBallCostDownRitu;
     [Space(1)]
     [Header("武器の情報。番号で検索して、スクリプタブル・オブジェクトから取得する")]
     public WeponDataList.WeponData kinnkyoriWeponData;
@@ -166,14 +215,22 @@ public class PlayerStatusDataBase : MonoBehaviour
     public StatusSaveData statusSaveData;
     public SkillSaveData skillSaveData;
     public SoubiSaveData soubiSaveData;
+
     void Start()
     {
         StatusLoad();
         SkillLoad();
-        expManagerScript.lvUpExp = expManagerScript.GetLvupExp(expManagerScript.lv);
+        BairituLoad();
+        kousekiDataBaseManager.TorophyLoad();
         SoubiScritableLoad();
+        systemDatabase.SystemLoad();
+        stageZissekiDatabase.StageZissekiDataLoad();
+        soubiKakutokuDataBase.KakutokuLoad();
+        soubiKakutokuDataBase.GekihasuuLoad();
+        expManagerScript.lvUpExp = expManagerScript.GetLvupExp(expManagerScript.lv);
         StatusUpdate();
         //Debug.Log(Application.persistentDataPath);
+DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<SystemDatabase>().StageNameLoad();
     }
     // Update is called once per frame
     void Update()
@@ -182,12 +239,14 @@ public class PlayerStatusDataBase : MonoBehaviour
     }
     public void StatusUpdate()
     {
+       Debug.Log("ステータスアップデート");
+        //装備中装備データ取得
         kinnkyoriWeponData = weponDateBaseManager.GetWeponData(kinnkyoriWeponNo);
         ennkyoriWeponData = ennkyoriWeponDataBaseManager.GetWeponData(ennkyoriWeponNo);
         yoroiData = yoroiDataBaseManager.GetWeponData(yoroiNo);
         sonota1Data = sonotaDataBaseManager.GetWeponData(sonota1No);
         sonota2Data = sonotaDataBaseManager.GetWeponData(sonota2No);
-
+        //装備中装備ステータス合算
         soubiMaxHp = kinnkyoriWeponData.kyoukagoMaxHp + ennkyoriWeponData.kyoukagoMaxHp + yoroiData.kyoukagoMaxHp + sonota1Data.maxHp + sonota2Data.kyoukagoMaxHp;
         soubiMaxMp = kinnkyoriWeponData.kyoukagoMaxMp + ennkyoriWeponData.kyoukagoMaxMp + yoroiData.maxMp + sonota1Data.kyoukagoMaxMp + sonota2Data.kyoukagoMaxMp;
         soubiFireBallCost = kinnkyoriWeponData.fireBallCost + ennkyoriWeponData.fireBallCost + yoroiData.fireBallCost + sonota1Data.fireBallCost + sonota2Data.fireBallCost;
@@ -200,17 +259,38 @@ public class PlayerStatusDataBase : MonoBehaviour
         soubiMeityuuritu = kinnkyoriWeponData.kyoukagoMeityuuritu + ennkyoriWeponData.kyoukagoMeityuuritu + yoroiData.kyoukagoMeityuuritu + sonota1Data.kyoukagoMeityuuritu + sonota2Data.kyoukagoMeityuuritu;
         soubiKaihiritu = kinnkyoriWeponData.kyoukagoKaihiritu + ennkyoriWeponData.kyoukagoKaihiritu + yoroiData.kyoukagoKaihiritu + sonota1Data.kyoukagoKaihiritu + sonota2Data.kyoukagoKaihiritu;
         soubiNokkubakku = kinnkyoriWeponData.nokkubakku + ennkyoriWeponData.nokkubakku + yoroiData.nokkubakku + sonota1Data.nokkubakku + sonota2Data.nokkubakku;
-        soubiKougekiHinndo = kinnkyoriWeponData.kougekiHinndo + ennkyoriWeponData.kougekiHinndo + yoroiData.kougekiHinndo + sonota1Data.kougekiHinndo + sonota2Data.kougekiHinndo;
+        if (kinnkyoriWeponData.zyukurenndo == 0)
+            soubiKougekiHinndo = kinnkyoriWeponData.kougekiHinndo + ennkyoriWeponData.kougekiHinndo + yoroiData.kougekiHinndo + sonota1Data.kougekiHinndo + sonota2Data.kougekiHinndo;
+        else soubiKougekiHinndo = kinnkyoriWeponData.zyukurenndoKougekiHinndo + ennkyoriWeponData.kougekiHinndo + yoroiData.kougekiHinndo + sonota1Data.kougekiHinndo + sonota2Data.kougekiHinndo;
 
+        soubiKougekiHanni= kinnkyoriWeponData.kougekiHanni + ennkyoriWeponData.kougekiHanni + yoroiData.kougekiHanni + sonota1Data.kougekiHanni + sonota2Data.kougekiHanni;
+        //装備中装備特攻倍率合算
+        soubiMazyuuTokkou = kinnkyoriWeponData.soubiMazyuuTokkou + ennkyoriWeponData.soubiMazyuuTokkou + yoroiData.soubiMazyuuTokkou + sonota1Data.soubiMazyuuTokkou + sonota2Data.soubiMazyuuTokkou;
+        soubiNinngennTokkou = kinnkyoriWeponData.soubiNinngennTokkou + ennkyoriWeponData.soubiNinngennTokkou + yoroiData.soubiNinngennTokkou + sonota1Data.soubiNinngennTokkou + sonota2Data.soubiNinngennTokkou;
+        soubiMazinnTokkou = kinnkyoriWeponData.soubiMazinnTokkou + ennkyoriWeponData.soubiMazinnTokkou + yoroiData.soubiMazinnTokkou + sonota1Data.soubiMazinnTokkou + sonota2Data.soubiMazinnTokkou;
+        soubiHusiTokkou = kinnkyoriWeponData.soubiHusiTokkou + ennkyoriWeponData.soubiHusiTokkou + yoroiData.soubiHusiTokkou + sonota1Data.soubiHusiTokkou + sonota2Data.soubiHusiTokkou;
+        soubiAkumaTokkou = kinnkyoriWeponData.soubiAkumaTokkou + ennkyoriWeponData.soubiAkumaTokkou + yoroiData.soubiAkumaTokkou + sonota1Data.soubiAkumaTokkou + sonota2Data.soubiAkumaTokkou;
+        soubiRyuuTokkou = kinnkyoriWeponData.soubiRyuuTokkou + ennkyoriWeponData.soubiRyuuTokkou + yoroiData.soubiRyuuTokkou + sonota1Data.soubiRyuuTokkou + sonota2Data.soubiRyuuTokkou;
+        soubiKamiTokkou = kinnkyoriWeponData.soubiKamiTokkou + ennkyoriWeponData.soubiKamiTokkou + yoroiData.soubiKamiTokkou + sonota1Data.soubiKamiTokkou + sonota2Data.soubiKamiTokkou;
+        //装備中装備トレハン倍率合算
+        soubiNomalDropRitu = kinnkyoriWeponData.soubiDropBairitu + ennkyoriWeponData.soubiDropBairitu + yoroiData.soubiDropBairitu + sonota1Data.soubiDropBairitu + sonota2Data.soubiDropBairitu;
+        soubiReaDropRitu = kinnkyoriWeponData.soubiDropBairitu + ennkyoriWeponData.soubiDropBairitu + yoroiData.soubiDropBairitu + sonota1Data.soubiDropBairitu + sonota2Data.soubiDropBairitu;
+        soubiSuperReaDropRitu = kinnkyoriWeponData.soubiDropBairitu + ennkyoriWeponData.soubiDropBairitu + yoroiData.soubiDropBairitu + sonota1Data.soubiDropBairitu + sonota2Data.soubiDropBairitu;
+        soubiEpikReaDropRitu = kinnkyoriWeponData.soubiDropBairitu + ennkyoriWeponData.soubiDropBairitu + yoroiData.soubiDropBairitu + sonota1Data.soubiDropBairitu + sonota2Data.soubiDropBairitu;
+        soubiLegendaryReaDropRitu = kinnkyoriWeponData.soubiDropBairitu + ennkyoriWeponData.soubiDropBairitu + yoroiData.soubiDropBairitu + sonota1Data.soubiDropBairitu + sonota2Data.soubiDropBairitu;
+        soubiGodReaDropRitu = kinnkyoriWeponData.soubiDropBairitu + ennkyoriWeponData.soubiDropBairitu + yoroiData.soubiDropBairitu + sonota1Data.soubiDropBairitu + sonota2Data.soubiDropBairitu;
+        syougouDropRitu = kinnkyoriWeponData.syougouDropRitu + ennkyoriWeponData.syougouDropRitu + yoroiData.syougouDropRitu + sonota1Data.syougouDropRitu + sonota2Data.syougouDropRitu;
+        soubiGiftHuyoSoubiDropritu = kinnkyoriWeponData.soubiGifthuyosoubiDropritu + ennkyoriWeponData.soubiGifthuyosoubiDropritu + yoroiData.soubiGifthuyosoubiDropritu + sonota1Data.soubiGifthuyosoubiDropritu + sonota2Data.soubiGifthuyosoubiDropritu;
+        //基礎ステータス・装備中装備ステータス合算。最終ステータス数値確定
         maxHp = statusMaxHp + soubiMaxHp;
         maxMp = statusMaxMp + soubiMaxMp;
         FBCostDownLvText();
-        fireBallCost = Mathf.FloorToInt(statusFireBallCost - ((statusFireBallCost * fireBallCostDownRitu)) / 100) + soubiFireBallCost;
+        fireBallCost = Mathf.FloorToInt(statusFireBallCost - ((statusFireBallCost * skillFireBallCostDownRitu)) / 100) + soubiFireBallCost;
         //Debug.Log(statusFireBallCost - Mathf.CeilToInt((statusFireBallCost * fireBallCostDownRitu) / 100) + soubiFireBallCost);
         kougekiryoku = statusKougekiryoku + soubiKougekiryoku;
         kinnkyoriKaisinnritu = statusKinnkyoriKaisinnritu + soubiKinnkyoriKaisinnritu;
         MaryokuUpLvUpText();
-        maryoku = Mathf.CeilToInt(statusMaryoku * (100 + maryokuZyousyouritu) / 100 + soubiMaryoku);
+        maryoku = Mathf.CeilToInt(statusMaryoku * (100 + skillMaryokuZyousyouritu) / 100 + soubiMaryoku);
         //Debug.Log(Mathf.CeilToInt(statusMaryoku * (100 + maryokuZyousyouritu)/100));
         ennkyoriKaisinnritu = statusEnnkyoriKaisinnritu + soubiEnnkyoriKaisinnritu;
         bougyoryoku = statusBougyoryoku + soubiBougyoryoiku;
@@ -221,17 +301,43 @@ public class PlayerStatusDataBase : MonoBehaviour
         nokkubakku = soubiNokkubakku;
         kougekiHinndo = soubiKougekiHinndo;
 
-        kougekiHanni = kinnkyoriWeponData.kougekiHanni;
+        kougekiHanni = soubiKougekiHanni;
+        Debug.Log(kougekiHanni);
 
-        destroyTime = kinnkyoriWeponData.destroyTime;
+        //destroyTime = kinnkyoriWeponData.destroyTime;
         srushSpeed = kinnkyoriWeponData.srushSpeed;
 
-        hp = maxHp;
-        mp = maxMp;
+        mazyuuTokkou = kousekiMazyuuTokkou + soubiMazyuuTokkou;
+        ninngennTokkou = kousekiNinngennTokkou + soubiNinngennTokkou;
+        mazinnTokkou = kousekiMazinnTokkou + soubiMazinnTokkou;
+        husiTokkou = kousekiHusiTokkou + soubiHusiTokkou;
+        akumaTokkou = kousekiAkumaTokkou + soubiAkumaTokkou;
+        ryuuTokkou = kousekiRyuuTokkou + soubiRyuuTokkou;
+        kamiTokkou = kousekiKamiTokkou + soubiKamiTokkou;
+
+        nomalDropRitu = kousekiNomalDropRitu + soubiNomalDropRitu;
+        reaDropRitu = kousekiReaDropRitu + soubiReaDropRitu;
+        superReaDropRitu = kousekiSuperReaDropRitu + soubiSuperReaDropRitu;
+        epikReaDropRitu = kousekiEpikReaDropRitu + soubiEpikReaDropRitu;
+        legendaryReaDropRitu = kousekiLegendaryReaDropRitu + soubiLegendaryReaDropRitu;
+        godReaDropRitu = kousekiGodReaDropRitu + soubiGodReaDropRitu;
+
+        giftHuyoSoubiDropritu = kousekiGiftHuyoSoubiDropritu + soubiGiftHuyoSoubiDropritu;
+
+        if (kinnkyoriWeponData.skill) soubiSkillDatabase.skillNumber[0] = kinnkyoriWeponData.skillNo;
+        else soubiSkillDatabase.skillNumber[0] = 0;
+        if (ennkyoriWeponData.skill) soubiSkillDatabase.skillNumber[1] = ennkyoriWeponData.skillNo;
+        else soubiSkillDatabase.skillNumber[1] = 0;
+        if (yoroiData.skill) soubiSkillDatabase.skillNumber[2] = yoroiData.skillNo;
+        else soubiSkillDatabase.skillNumber[2] = 0;
+        if (sonota1Data.skill) soubiSkillDatabase.skillNumber[3] = sonota1Data.skillNo;
+        else soubiSkillDatabase.skillNumber[3] = 0;
+        if (sonota2Data.skill) soubiSkillDatabase.skillNumber[4] = sonota2Data.skillNo;
+        else soubiSkillDatabase.skillNumber[4] = 0;
 
         StatusSave();
         SkillSave();
-        SoubiScritableSave();
+
     }
 
     public void FireSpireLvText()
@@ -322,28 +428,28 @@ public class PlayerStatusDataBase : MonoBehaviour
     {
         if (firewallLv == 1)
         {
-            fireWallTennkaisuu = 1;
-            fireWallHannizoukakakuritu = 0;
+            fireWallTennkaisuuSyou = 1;
+            fireWallTennkaisuuDai = 1;
         }
         else if (firewallLv == 2)
         {
-            fireWallTennkaisuu = 2;
-            fireWallHannizoukakakuritu = 0;
+            fireWallTennkaisuuSyou = 1;
+            fireWallTennkaisuuDai = 2;
         }
         else if (firewallLv == 3)
         {
-            fireWallTennkaisuu = 3;
-            fireWallHannizoukakakuritu = 0;
+            fireWallTennkaisuuSyou = 2;
+            fireWallTennkaisuuDai = 2;
         }
         else if (firewallLv == 4)
         {
-            fireWallTennkaisuu = 3;
-            fireWallHannizoukakakuritu = 15;
+            fireWallTennkaisuuSyou = 2;
+            fireWallTennkaisuuDai = 3;
         }
         else if (firewallLv == 5)
         {
-            fireWallTennkaisuu = 3;
-            fireWallHannizoukakakuritu = 30;
+            fireWallTennkaisuuSyou = 3;
+            fireWallTennkaisuuDai = 3;
         }
     }
     public void WallZousyokusuuLvUpText()
@@ -355,22 +461,22 @@ public class PlayerStatusDataBase : MonoBehaviour
         }
         else if (zousyokusuuLv == 2)
         {
-            saisyouZousyokusuu = 1;
+            saisyouZousyokusuu = 2;
             saidaiZousyokusuu = 3;
         }
         else if (zousyokusuuLv == 3)
         {
-            saisyouZousyokusuu = 1;
+            saisyouZousyokusuu = 3;
             saidaiZousyokusuu = 4;
         }
         else if (zousyokusuuLv == 4)
         {
-            saisyouZousyokusuu = 1;
+            saisyouZousyokusuu = 4;
             saidaiZousyokusuu = 5;
         }
         else if (zousyokusuuLv == 5)
         {
-            saisyouZousyokusuu = 2;
+            saisyouZousyokusuu = 4;
             saidaiZousyokusuu = 6;
         }
     }
@@ -378,23 +484,23 @@ public class PlayerStatusDataBase : MonoBehaviour
     {
         if (fireComboLv == 1)
         {
-            fireComboZyousyouritu = 0.01f;
+            fireComboZyousyouritu = 0.1f;
         }
         else if (fireComboLv == 2)
         {
-            fireComboZyousyouritu = 0.02f;
+            fireComboZyousyouritu = 0.2f;
         }
         else if (fireComboLv == 3)
         {
-            fireComboZyousyouritu = 0.03f;
+            fireComboZyousyouritu = 0.3f;
         }
         else if (fireComboLv == 4)
         {
-            fireComboZyousyouritu = 0.04f;
+            fireComboZyousyouritu = 0.4f;
         }
         else if (fireComboLv == 5)
         {
-            fireComboZyousyouritu = 0.05f;
+            fireComboZyousyouritu = 0.5f;
         }
     }
     public void TazyuueisyouLvText()
@@ -437,113 +543,112 @@ public class PlayerStatusDataBase : MonoBehaviour
     {
         if (maryokuUpLv == 1)
         {
-            maryokuZyousyouritu = 15;
+            skillMaryokuZyousyouritu = 15;
         }
         else if (maryokuUpLv == 2)
         {
-            maryokuZyousyouritu = 30;
+            skillMaryokuZyousyouritu = 30;
         }
         else if (maryokuUpLv == 3)
         {
-            maryokuZyousyouritu = 45;
+            skillMaryokuZyousyouritu = 45;
         }
         else if (maryokuUpLv == 4)
         {
-            maryokuZyousyouritu = 60;
+            skillMaryokuZyousyouritu = 60;
         }
         else if (maryokuUpLv == 5)
         {
-            maryokuZyousyouritu = 75;
+            skillMaryokuZyousyouritu = 75;
         }
         else if (maryokuUpLv == 6)
         {
-            maryokuZyousyouritu = 90;
+            skillMaryokuZyousyouritu = 90;
         }
         else if (maryokuUpLv == 7)
         {
-            maryokuZyousyouritu = 105;
+            skillMaryokuZyousyouritu = 105;
         }
         else if (maryokuUpLv == 8)
         {
-            maryokuZyousyouritu = 120;
+            skillMaryokuZyousyouritu = 120;
         }
         else if (maryokuUpLv == 9)
         {
-            maryokuZyousyouritu = 135;
+            skillMaryokuZyousyouritu = 135;
         }
         else if (maryokuUpLv == 10)
         {
-            maryokuZyousyouritu = 150;
+            skillMaryokuZyousyouritu = 150;
         }
         else if (maryokuUpLv == 11)
         {
-            maryokuZyousyouritu = 165;
+            skillMaryokuZyousyouritu = 165;
         }
         else if (maryokuUpLv == 12)
         {
-            maryokuZyousyouritu = 180;
+            skillMaryokuZyousyouritu = 180;
         }
         else if (maryokuUpLv == 13)
         {
-            maryokuZyousyouritu = 200;
+            skillMaryokuZyousyouritu = 200;
         }
     }
     public void FBCostDownLvText()
     {
         if (fbCostDownLv == 1)
         {
-            fireBallCostDownRitu = 3;
+            skillFireBallCostDownRitu = 3;
         }
         else if (fbCostDownLv == 2)
         {
-            fireBallCostDownRitu = 6;
+            skillFireBallCostDownRitu = 6;
         }
         else if (fbCostDownLv == 3)
         {
-            fireBallCostDownRitu = 9;
+            skillFireBallCostDownRitu = 9;
         }
         else if (fbCostDownLv == 4)
         {
-            fireBallCostDownRitu = 12;
+            skillFireBallCostDownRitu = 12;
         }
         else if (fbCostDownLv == 5)
         {
-            fireBallCostDownRitu = 15;
+            skillFireBallCostDownRitu = 15;
         }
         else if (fbCostDownLv == 6)
         {
-            fireBallCostDownRitu = 18;
+            skillFireBallCostDownRitu = 18;
         }
         else if (fbCostDownLv == 7)
         {
-            fireBallCostDownRitu = 22;
+            skillFireBallCostDownRitu = 22;
         }
         else if (fbCostDownLv == 8)
         {
-            fireBallCostDownRitu = 26;
+            skillFireBallCostDownRitu = 26;
         }
         else if (fbCostDownLv == 9)
         {
-            fireBallCostDownRitu = 30;
+            skillFireBallCostDownRitu = 30;
         }
         else if (fbCostDownLv == 10)
         {
-            fireBallCostDownRitu = 34;
+            skillFireBallCostDownRitu = 34;
         }
         else if (fbCostDownLv == 11)
         {
-            fireBallCostDownRitu = 39;
+            skillFireBallCostDownRitu = 39;
         }
         else if (fbCostDownLv == 12)
         {
-            fireBallCostDownRitu = 44;
+            skillFireBallCostDownRitu = 44;
         }
         else if (fbCostDownLv == 13)
         {
-            fireBallCostDownRitu = 50;
+            skillFireBallCostDownRitu = 50;
         }
     }
-
     public void StatusSave()
     {
         statusSaveData = new StatusSaveData();
@@ -563,7 +668,13 @@ public class PlayerStatusDataBase : MonoBehaviour
         statusSaveData.statusKaisinnTaisei = statusKaisinnTaisei;
         statusSaveData.statusMeityuuritu = statusMeityuuritu;
         statusSaveData.statusKaihiritu = statusKaihiritu;
-        // Debug.Log(JsonUtility.ToJson(saveData));
+        //Debug.Log("ステータスをセーブ");
+        statusSaveData.kinnkyoriWeponNo = kinnkyoriWeponNo;
+        statusSaveData.ennkyoriWeponNo = ennkyoriWeponNo;
+        statusSaveData.yoroiNo = yoroiNo;
+        statusSaveData.sonota1No = sonota1No;
+        statusSaveData.sonota2No = sonota2No;
+
 
         string json = JsonUtility.ToJson(statusSaveData);
         File.WriteAllText(Application.persistentDataPath + "/savefile.status.json", json);
@@ -585,10 +696,33 @@ public class PlayerStatusDataBase : MonoBehaviour
         skillSaveData.mueisyouLv = mueisyouLv;
         skillSaveData.maryokuUpLv = maryokuUpLv;
         skillSaveData.fbCostDownLv = fbCostDownLv;
-        // Debug.Log(JsonUtility.ToJson(saveData));
+        //Debug.Log("スキルをセーブ");
 
         string json = JsonUtility.ToJson(skillSaveData);
         File.WriteAllText(Application.persistentDataPath + "/savefile.skill.json", json);
+    }
+    public void BairituSave()
+    {
+        statusSaveData = new StatusSaveData();
+
+        statusSaveData.kousekiMazyuuTokkou = kousekiMazyuuTokkou;
+        statusSaveData.kousekiNinngennTokkou = kousekiNinngennTokkou;
+        statusSaveData.kousekiMazinnTokkou = kousekiMazinnTokkou;
+        statusSaveData.kousekiHusiTokkou = kousekiHusiTokkou;
+        statusSaveData.kousekiAkumaTokkou = kousekiAkumaTokkou;
+        statusSaveData.kousekiRyuuTokkou = kousekiRyuuTokkou;
+        statusSaveData.kousekiKamiTokkou = kousekiKamiTokkou;
+        statusSaveData.kousekiNomalDropRitu = kousekiNomalDropRitu;
+        statusSaveData.kousekiReaDropRitu = kousekiReaDropRitu;
+        statusSaveData.kousekiSuperReaDropRitu = kousekiSuperReaDropRitu;
+        statusSaveData.kousekiEpikReaDropRitu = kousekiEpikReaDropRitu;
+        statusSaveData.kousekiLegendaryReaDropRitu = kousekiLegendaryReaDropRitu;
+        statusSaveData.kousekiGodReaDropRitu = kousekiGodReaDropRitu;
+        statusSaveData.kyoukataikaGennsyouritu = kyoukataikaGennsyouritu;
+        statusSaveData.kousekiGiftHuyoSoubiDropritu = kousekiGiftHuyoSoubiDropritu;
+
+        string json = JsonUtility.ToJson(statusSaveData);
+        File.WriteAllText(Application.persistentDataPath + "/savefile.kousekiBairitu.json", json);
     }
     public void StatusLoad()
     {
@@ -596,7 +730,7 @@ public class PlayerStatusDataBase : MonoBehaviour
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);//ファイル読み込み
-            Debug.Log(json);
+            //Debug.Log(json);
             StatusSaveData loadData = JsonUtility.FromJson<StatusSaveData>(json);//読み込んだJsonデータをSaveDataクラスの形式に変換
             expManagerScript.lv = loadData.lv;
             expManagerScript.exp_stokku = loadData.exp_stock;
@@ -614,6 +748,11 @@ public class PlayerStatusDataBase : MonoBehaviour
             statusKaisinnTaisei = loadData.statusKaisinnTaisei;
             statusMeityuuritu = loadData.statusMeityuuritu;
             statusKaihiritu = loadData.statusKaihiritu;
+            kinnkyoriWeponNo = loadData.kinnkyoriWeponNo;
+            ennkyoriWeponNo = loadData.ennkyoriWeponNo;
+            yoroiNo = loadData.yoroiNo;
+            sonota1No = loadData.sonota1No;
+            sonota2No = loadData.sonota2No;
         }
     }
     public void SkillLoad()
@@ -622,7 +761,7 @@ public class PlayerStatusDataBase : MonoBehaviour
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);//ファイル読み込み
-            Debug.Log(json);
+            //Debug.Log(json);
             SkillSaveData loadData = JsonUtility.FromJson<SkillSaveData>(json);//読み込んだJsonデータをSaveDataクラスの形式に変換
             
             fireSpireLv = loadData.fireSpireLv;
@@ -640,6 +779,32 @@ public class PlayerStatusDataBase : MonoBehaviour
             fbCostDownLv = loadData.fbCostDownLv;
         }
     }
+    public void BairituLoad()
+    {
+        string path = Application.persistentDataPath + "/savefile.kousekiBairitu.json";
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);//ファイル読み込み
+            //Debug.Log(json);
+            StatusSaveData loadData = JsonUtility.FromJson<StatusSaveData>(json);//読み込んだJsonデータをSaveDataクラスの形式に変換
+
+            kousekiMazyuuTokkou = loadData.kousekiMazyuuTokkou;
+            kousekiNinngennTokkou = loadData.kousekiNinngennTokkou;
+            kousekiMazinnTokkou = loadData.kousekiMazinnTokkou;
+            kousekiHusiTokkou = loadData.kousekiHusiTokkou;
+            kousekiAkumaTokkou = loadData.kousekiAkumaTokkou;
+            kousekiRyuuTokkou = loadData.kousekiRyuuTokkou;
+            kousekiKamiTokkou = loadData.kousekiKamiTokkou;
+            kousekiNomalDropRitu = loadData.kousekiNomalDropRitu;
+            kousekiReaDropRitu = loadData.kousekiReaDropRitu;
+            kousekiSuperReaDropRitu = loadData.kousekiSuperReaDropRitu;
+            kousekiEpikReaDropRitu = loadData.kousekiEpikReaDropRitu;
+            kousekiLegendaryReaDropRitu = loadData.kousekiLegendaryReaDropRitu;
+            kousekiGodReaDropRitu = loadData.kousekiGodReaDropRitu;
+            kyoukataikaGennsyouritu = loadData.kyoukataikaGennsyouritu;
+            kousekiGiftHuyoSoubiDropritu = loadData.kousekiGiftHuyoSoubiDropritu;
+        }
+    }
     public void SoubiScritableSave()
     {
         //ダーティとしてマークする(変更があった事を記録する)
@@ -649,13 +814,27 @@ public class PlayerStatusDataBase : MonoBehaviour
         //EditorUtility.SetDirty(sonotaDatas);
         //保存する
         //AssetDatabase.SaveAssets();
-        Debug.Log("装備を保存した");
+        //Debug.Log("装備を保存した");
 
         soubiSaveData = new SoubiSaveData();
+
         soubiSaveData.kinnkyoriWeponDatas = kinnkyoriWeponDatas.weponDatas;
         soubiSaveData.ennkyoriWeponDatas = ennkyoriWeponDatas.weponDatas;
         soubiSaveData.yoroiDatas = yoroiDatas.weponDatas;
         soubiSaveData.sonotaDatas = sonotaDatas.weponDatas;
+
+        /*
+        kinnkyoriWeponDatas = weponDateBaseManager.weponDataList.weponDatas;
+        ennkyoriWeponDatas = ennkyoriWeponDataBaseManager.weponDataList.weponDatas;
+        yoroiDatas = yoroiDataBaseManager.weponDataList.weponDatas;
+        sonotaDatas = sonotaDataBaseManager.weponDataList.weponDatas;
+
+        soubiSaveData.kinnkyoriWeponDatas = kinnkyoriWeponDatas;
+        soubiSaveData.ennkyoriWeponDatas = ennkyoriWeponDatas;
+        soubiSaveData.yoroiDatas = yoroiDatas;
+        soubiSaveData.sonotaDatas = sonotaDatas;
+        */
+
         string json = JsonUtility.ToJson(soubiSaveData);
         File.WriteAllText(Application.persistentDataPath + "/savefile.soubi.json", json);
     }
@@ -666,13 +845,95 @@ public class PlayerStatusDataBase : MonoBehaviour
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);//ファイル読み込み
-            Debug.Log(json);
+            //Debug.Log(json);
             SoubiSaveData loadData = JsonUtility.FromJson<SoubiSaveData>(json);//読み込んだJsonデータをSaveDataクラスの形式に変換
 
             kinnkyoriWeponDatas.weponDatas = loadData.kinnkyoriWeponDatas;
             ennkyoriWeponDatas.weponDatas = loadData.ennkyoriWeponDatas;
             yoroiDatas.weponDatas = loadData.yoroiDatas;
             sonotaDatas.weponDatas = loadData.sonotaDatas;
+            
+            for(int a=0;a<kinnkyoriWeponDatas.weponDatas.Count;a++)
+            {
+                kinnkyoriWeponDatas.weponDatas[a].srushEffect = soubiSaveZone.srushEffect[kinnkyoriWeponDatas.weponDatas[a].zukannNo];
+                kinnkyoriWeponDatas.weponDatas[a].soubiIcon = soubiSaveZone.kinnkyoriWeponSoubiIcon[kinnkyoriWeponDatas.weponDatas[a].zukannNo];
+
+                if (kinnkyoriWeponDatas.weponDatas[a].nomal)
+                    kinnkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.kinnkyoriWeponReadoIcon[0];
+                else if (kinnkyoriWeponDatas.weponDatas[a].rea)
+                    kinnkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.kinnkyoriWeponReadoIcon[1];
+                else if (kinnkyoriWeponDatas.weponDatas[a].superRea)
+                    kinnkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.kinnkyoriWeponReadoIcon[2];
+                else if(kinnkyoriWeponDatas.weponDatas[a].epik)
+                    kinnkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.kinnkyoriWeponReadoIcon[3];
+                else if(kinnkyoriWeponDatas.weponDatas[a].legendary)
+                    kinnkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.kinnkyoriWeponReadoIcon[4];
+                else if(kinnkyoriWeponDatas.weponDatas[a].god)
+                    kinnkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.kinnkyoriWeponReadoIcon[5];
+
+            }
+            for (int a = 0; a < ennkyoriWeponDatas.weponDatas.Count; a++)
+            {
+                ennkyoriWeponDatas.weponDatas[a].soubiIcon = soubiSaveZone.ennkyoriWeponSoubiIcon[ennkyoriWeponDatas.weponDatas[a].zukannNo];
+
+                if (ennkyoriWeponDatas.weponDatas[a].nomal)
+                    ennkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.ennkyoriWeponReadoIcon[0];
+                else if(ennkyoriWeponDatas.weponDatas[a].rea)
+                    ennkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.ennkyoriWeponReadoIcon[1];
+                else if(ennkyoriWeponDatas.weponDatas[a].superRea)
+                    ennkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.ennkyoriWeponReadoIcon[2];
+                else if(ennkyoriWeponDatas.weponDatas[a].epik)
+                    ennkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.ennkyoriWeponReadoIcon[3];
+                else if(ennkyoriWeponDatas.weponDatas[a].legendary)
+                    ennkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.ennkyoriWeponReadoIcon[4];
+                else if(ennkyoriWeponDatas.weponDatas[a].god)
+                    ennkyoriWeponDatas.weponDatas[a].readoIcon = soubiSaveZone.ennkyoriWeponReadoIcon[5];
+            }
+            for (int a = 0; a < yoroiDatas.weponDatas.Count; a++)
+            {
+                yoroiDatas.weponDatas[a].soubiIcon = soubiSaveZone.yoroiSoubiIcon[yoroiDatas.weponDatas[a].zukannNo];
+
+                if (yoroiDatas.weponDatas[a].nomal)
+                    yoroiDatas.weponDatas[a].readoIcon = soubiSaveZone.yoroiReadoIcon[0];
+                else if (yoroiDatas.weponDatas[a].rea)
+                    yoroiDatas.weponDatas[a].readoIcon = soubiSaveZone.yoroiReadoIcon[1];
+                else if(yoroiDatas.weponDatas[a].superRea)
+                    yoroiDatas.weponDatas[a].readoIcon = soubiSaveZone.yoroiReadoIcon[2];
+                else if(yoroiDatas.weponDatas[a].epik)
+                    yoroiDatas.weponDatas[a].readoIcon = soubiSaveZone.yoroiReadoIcon[3];
+                else if(yoroiDatas.weponDatas[a].legendary)
+                    yoroiDatas.weponDatas[a].readoIcon = soubiSaveZone.yoroiReadoIcon[4];
+                else if(yoroiDatas.weponDatas[a].god)
+                    yoroiDatas.weponDatas[a].readoIcon = soubiSaveZone.yoroiReadoIcon[5];
+            }
+            for (int a = 0; a < sonotaDatas.weponDatas.Count; a++)
+            {
+                sonotaDatas.weponDatas[a].soubiIcon = soubiSaveZone.sonotaSoubiIcon[sonotaDatas.weponDatas[a].zukannNo];
+
+                if (sonotaDatas.weponDatas[a].nomal)
+                    sonotaDatas.weponDatas[a].readoIcon = soubiSaveZone.sonotaReadoIcon[0];
+                else if(sonotaDatas.weponDatas[a].rea)
+                    sonotaDatas.weponDatas[a].readoIcon = soubiSaveZone.sonotaReadoIcon[1];
+                else if(sonotaDatas.weponDatas[a].superRea)
+                    sonotaDatas.weponDatas[a].readoIcon = soubiSaveZone.sonotaReadoIcon[2];
+                else if(sonotaDatas.weponDatas[a].epik)
+                    sonotaDatas.weponDatas[a].readoIcon = soubiSaveZone.sonotaReadoIcon[3];
+                else if(sonotaDatas.weponDatas[a].legendary)
+                    sonotaDatas.weponDatas[a].readoIcon = soubiSaveZone.sonotaReadoIcon[4];
+                else if(sonotaDatas.weponDatas[a].god)
+                    sonotaDatas.weponDatas[a].readoIcon = soubiSaveZone.sonotaReadoIcon[5];
+            }
+            /*
+            kinnkyoriWeponDatas = loadData.kinnkyoriWeponDatas;
+            ennkyoriWeponDatas = loadData.ennkyoriWeponDatas;
+            yoroiDatas = loadData.yoroiDatas;
+            sonotaDatas = loadData.sonotaDatas;
+
+            weponDateBaseManager.weponDataList.weponDatas = kinnkyoriWeponDatas;
+            ennkyoriWeponDataBaseManager.weponDataList.weponDatas = ennkyoriWeponDatas;
+            yoroiDataBaseManager.weponDataList.weponDatas = yoroiDatas;
+            sonotaDataBaseManager.weponDataList.weponDatas = sonotaDatas;
+            */
         }
     }
     public void StatusSyokika()
@@ -691,7 +952,7 @@ public class PlayerStatusDataBase : MonoBehaviour
         statusBougyoryoku = 1;
         statusKaisinnTaisei = 0;
         statusMeityuuritu = 100;
-        statusKaihiritu=100;
+        statusKaihiritu=10;
 
         fireSpireLv = 0;
         rapidGireLv = 0;
@@ -706,7 +967,31 @@ public class PlayerStatusDataBase : MonoBehaviour
         mueisyouLv = 0;
         maryokuUpLv = 0;
         fbCostDownLv = 0;
+
+        kinnkyoriWeponNo = 1;
+        ennkyoriWeponNo = 1;
+        yoroiNo = 1;
+        sonota1No = 1;
+        sonota2No = 2;
+
+        kousekiMazyuuTokkou = 0;
+        kousekiNinngennTokkou = 0;
+        kousekiMazinnTokkou = 0;
+        kousekiHusiTokkou = 0;
+        kousekiAkumaTokkou = 0;
+        kousekiRyuuTokkou = 0;
+        kousekiKamiTokkou = 0;
+        kousekiNomalDropRitu = 0;
+        kousekiReaDropRitu = 0;
+        kousekiSuperReaDropRitu = 0;
+        kousekiEpikReaDropRitu = 0;
+        kousekiLegendaryReaDropRitu = 0;
+        kousekiGodReaDropRitu = 0;
+        kyoukataikaGennsyouritu = 0;
+        kousekiGiftHuyoSoubiDropritu = 0;
+
         StatusSave();
         SkillSave();
+        BairituSave();
     }
 }

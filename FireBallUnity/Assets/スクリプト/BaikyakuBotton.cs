@@ -20,6 +20,7 @@ public class BaikyakuBotton : MonoBehaviour
     public void BaikyakuBottonDown()
     {
         baikyakuPanel.SetActive(true);
+        baikyakuZikkouPanelScript.SoubityuuKakuninnPanel();
         baikyakuZikkouPanelScript.a = false;
         baikyakuZikkouPanelScript.SetActiveTrue();
     }

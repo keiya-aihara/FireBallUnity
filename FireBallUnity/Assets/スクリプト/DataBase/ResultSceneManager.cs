@@ -16,7 +16,7 @@ public class ResultSceneManager : MonoBehaviour
     public List<GameObject> syougous = new List<GameObject>();
     public List<string> kakutokuItemName = new List<string>();
 
-    private GameObject expManager;
+    private GameObject databaseManager;
     private EXPManager expManagerScript;
 
     public string stageName;
@@ -27,6 +27,7 @@ public class ResultSceneManager : MonoBehaviour
     public int kakutokuKeikennti;
     public int boukennmaeLv;
     public int boukenngoLv;
+    public int weponZyukurenndo;
     void Awake()
     {
         if (instance == null)
@@ -42,8 +43,8 @@ public class ResultSceneManager : MonoBehaviour
             kakutokuKyoukasekiDai = 0;
             kakutokuKeikennti = 0;
 
-            expManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
-            expManagerScript = expManager.GetComponent<EXPManager>();
+            databaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
+            expManagerScript = databaseManager.GetComponent<EXPManager>();
             boukennmaeLv = expManagerScript.lv;
             b= false;
         }
@@ -71,6 +72,9 @@ public class ResultSceneManager : MonoBehaviour
 
             }
             b = false;
+            //Debug.Log("熟練度プラス");
+            databaseManager.GetComponent<WeponDateBaseManager>().GetWeponData(databaseManager.GetComponent<PlayerStatusDataBase>().kinnkyoriWeponNo).zyukurenndo += weponZyukurenndo;
+            databaseManager.GetComponent<WeponDateBaseManager>().GetWeponData(databaseManager.GetComponent<PlayerStatusDataBase>().kinnkyoriWeponNo).ZyukurennWepon();
             GameObject.Find("GameManager").GetComponent<GameManager>().a = true;
         }
         

@@ -13,6 +13,16 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     public GameObject kakutokuBotton;
     private KousekiDataBaseManager kousekiDataBaseManager;
     private PlayerStatusDataBase playerStatusDataBase;
+    public bool reasyu1;
+    public bool reasyu2;
+    public bool reasyu3;
+    public bool reasyu4;
+    public bool reasyu5;
+    public bool reasyu6;
+    public bool reasyu7;
+    public bool reasyu8;
+    public bool reasyu9;
+    public bool reasyu10;
     private bool kakutokuzumi;
 
     public GameObject torophyKakutokuPanel;
@@ -29,6 +39,57 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
         kousekiCopyScript = kousekiCopy.GetComponent<KousekiCopy>();
         slider.value = kousekiCopyScript.kousekiDataBaseManager.reaEnemyToubatuSuu;
         countText.GetComponent<CountText>().a = true;
+        if(reasyu1)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 1)
+                kakutokuzumi = true;
+        }
+        else if(reasyu2)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 2)
+                kakutokuzumi = true;
+        }
+        else if (reasyu3)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 3)
+                kakutokuzumi = true;
+        }
+        else if (reasyu4)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 4)
+                kakutokuzumi = true;
+        }
+        else if (reasyu5)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 5)
+                kakutokuzumi = true;
+        }
+        else if (reasyu6)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 6)
+                kakutokuzumi = true;
+        }
+        else if (reasyu7)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 7)
+                kakutokuzumi = true;
+        }
+        else if (reasyu8)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 8)
+                kakutokuzumi = true;
+        }
+        else if (reasyu9)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 9)
+                kakutokuzumi = true;
+        }
+        else if (reasyu10)
+        {
+            if (playerStatusDataBase.kousekiGiftHuyoSoubiDropritu >= 10)
+                kakutokuzumi = true;
+        }
+
         if (kakutokuzumi)
         {
             tyekkuBotton.SetActive(true);
@@ -51,14 +112,17 @@ public class ReasyuToubatuSuuSlider : MonoBehaviour
     }
     public void TorophyKakutoku()
     {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
         kakutokuzumi = true;
         kakutokuBotton.SetActive(false);
+        kousekiDataBaseManager.TrophySave();
         GiftDoropRituBonusAdd();
+        playerStatusDataBase.BairituSave();
         KakutokuTorophyPanel();
     }
     public void GiftDoropRituBonusAdd()
     {
-        playerStatusDataBase.giftHuyoSoubiDropritu += 1;
+        playerStatusDataBase.kousekiGiftHuyoSoubiDropritu += 1;
         kousekiDataBaseManager.reaTorophy += 1;
     }
     public void KakutokuTorophyPanel()

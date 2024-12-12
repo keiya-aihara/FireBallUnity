@@ -8,6 +8,7 @@ public class PlayerStatus : MonoBehaviour
     public PlayerStatusDataBase playerStatusDataBase;
     public EXPManager expManagerScript;
     public BallGenerator ballGenerator;
+    public GameObject firstStageCanvas;
     private int lv;
 
     public int maxHp;
@@ -20,10 +21,11 @@ public class PlayerStatus : MonoBehaviour
     public int maryoku;
     public float ennkyoriKaisinnritu;
     public int bougyoryoku;
+    public float kaisinntaisei;
     public float meityuuritu;
     public float kaihiritu;
     public float nokkubakku;
-    public float destroyTime;
+    //public float destroyTime;
     public float srushSpeed;
     public float kougekiHinndo;
     public float kougekiHanni;
@@ -36,9 +38,9 @@ public class PlayerStatus : MonoBehaviour
 
     public GameObject fireWallSyou;
     public GameObject fireWallDai;
-    private Vector2 fireWall1Vector = new Vector2(0, 2.5f);
-    private Vector2 fireWall2Vector = new Vector2(0, 1f);
-    private Vector2 fireWall3Vector = new Vector2(0, -0.5f);
+    private Vector2 fireWall1Vector = new Vector2(0, 2.732f);
+    private Vector2 fireWall2Vector = new Vector2(-1.548f, 2.732f);
+    private Vector2 fireWall3Vector = new Vector2(1.548f, 2.732f);
     private int fireWallPosition;
 
     public GameObject comboCounterGameObject;
@@ -54,7 +56,15 @@ public class PlayerStatus : MonoBehaviour
     public Rigidbody2D fireBomGravity;
 
     public float rennsyaSpeed;
-    
+
+    private SoubiSkillDatabase soubiSkillDatabase;
+
+    private bool maryokuBousouBool = false;
+    private SoubiSkillDataList.SoubiSkillData maryokuBousouData;
+    private int nowMp;
+    private int modoruMaryoku;
+    private bool hatudou=false;
+
     void Start()
     {
         dataBaseManager = DontDestroyOnloadDataBaseManager.DataBaseManager;
@@ -72,11 +82,12 @@ public class PlayerStatus : MonoBehaviour
         maryoku = playerStatusDataBase.maryoku;
         ennkyoriKaisinnritu = playerStatusDataBase.ennkyoriKaisinnritu;
         bougyoryoku = playerStatusDataBase.bougyoryoku;
+        kaisinntaisei = playerStatusDataBase.kaisinnTaisei;
         meityuuritu = playerStatusDataBase.meityuuritu;
         kaihiritu = playerStatusDataBase.kaihiritu;
 
         nokkubakku = playerStatusDataBase.nokkubakku;
-        destroyTime = playerStatusDataBase.destroyTime;
+        //destroyTime = playerStatusDataBase.destroyTime;
         srushSpeed = playerStatusDataBase.srushSpeed;
         kougekiHinndo = playerStatusDataBase.kougekiHinndo;
         kougekiHanni = playerStatusDataBase.kougekiHanni;
@@ -84,6 +95,7 @@ public class PlayerStatus : MonoBehaviour
         hp = maxHp;
         mp = maxMp;
 
+        SoubiSkillSettei();
         FireSpireBall();
         RapidFireBall();
         BomFireBall();
@@ -110,56 +122,172 @@ public class PlayerStatus : MonoBehaviour
             meityuuritu = playerStatusDataBase.meityuuritu;
             kaihiritu = playerStatusDataBase.kaihiritu;
 
-            hp = maxHp;
-            mp = maxMp;
-
             kougekiryoku = Mathf.CeilToInt(kougekiryoku * (1 + (comboCounter.comboBairitu / 100.00f)));
         }
+
+        if(maryokuBousouBool)
+        {
+            
+            
+            if(nowMp>mp)
+            {
+                if(hatudou)
+                {
+                    hatudou = false;
+                    maryoku = modoruMaryoku;
+                }
+                if (hatudou == false)
+                {
+                    if (Random.Range(0, 100) <= maryokuBousouData.maryokuBousoukakuritu)
+                    {
+                        hatudou = true;
+                        modoruMaryoku = maryoku;
+                        maryoku = maryoku * 2;
+                    }
+                }
+            }
+            nowMp = mp;
+        }
+    }
+
+    private void SoubiSkillSettei()
+    {
+        soubiSkillDatabase = dataBaseManager.GetComponent<SoubiSkillDatabase>();
+        for (int a = 0; a < soubiSkillDatabase.skillNumber.Length; a++)
+        {
+            if (soubiSkillDatabase.skillNumber[a] == 14)//魔力暴走Lv.1
+            {
+                maryokuBousouBool = true;
+                maryokuBousouData = soubiSkillDatabase.GetSoubiSkillData(14);
+            }
+            
+        }
+
     }
     public void FireWall()
     {
         if (playerStatusDataBase.firewallLv >= 1)
         {
-            fireWall1Vector.x = Random.Range(-1.15f, 1.15f);
-            fireWall2Vector.x = Random.Range(-1.15f, 1.15f);
-            fireWall3Vector.x = Random.Range(-1.15f, 1.15f);
             if (playerStatusDataBase.firewallLv == 1)
             {
                 fireWallPosition = Random.Range(0, 3);
-                if(fireWallPosition==0)Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
-                else if(fireWallPosition==1) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
                 else if (fireWallPosition == 2) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
             }
-            else if(playerStatusDataBase.firewallLv==2)
+            else if (playerStatusDataBase.firewallLv == 2)
             {
-                fireWallPosition = Random.Range(0, 2);
-                Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
-                if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
-                else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                fireWallPosition = Random.Range(0, 3);
+                if (fireWallPosition == 0)
+                {
+                    Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 4);
+                    if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    else return;
+                }
+                else if (fireWallPosition == 1)
+                {
+                    Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 4);
+                    if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    else return;
+                }
+                else if (fireWallPosition == 2)
+                {
+                    Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 4);
+                    if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    else return;
+                }
             }
-            else if(playerStatusDataBase.firewallLv==3)
+            else if (playerStatusDataBase.firewallLv == 3)
+            {
+                fireWallPosition = Random.Range(0, 3);
+                if (fireWallPosition == 0)
+                {
+                    Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 2);
+                    if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                }
+                else if (fireWallPosition == 1)
+                {
+                    Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 2);
+                    if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                }
+                else if (fireWallPosition == 2)
+                {
+                    Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 2);
+                    if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    else if (fireWallPosition == 1) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                }
+            }
+            else if (playerStatusDataBase.firewallLv == 4)
+            {
+                fireWallPosition = Random.Range(0, 3);
+                if (fireWallPosition == 0)
+                {
+                    Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 2);
+                    if (fireWallPosition == 0)
+                    {
+                        Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                        fireWallPosition = Random.Range(0, 2);
+                        if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    }
+                    else if (fireWallPosition == 1)
+                    {
+                        Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                        fireWallPosition = Random.Range(0, 2);
+                        if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    }
+                }
+                else if (fireWallPosition == 1)
+                {
+                    Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 2);
+                    if (fireWallPosition == 0)
+                    {
+                        Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                        fireWallPosition = Random.Range(0, 2);
+                        if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    }
+                    else if (fireWallPosition == 1)
+                    {
+                        Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                        fireWallPosition = Random.Range(0, 2);
+                        if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    }
+                }
+                else if (fireWallPosition == 2)
+                {
+                    Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
+                    fireWallPosition = Random.Range(0, 2);
+                    if (fireWallPosition == 0)
+                    {
+                        Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                        fireWallPosition = Random.Range(0, 2);
+                        if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                    }
+                    else if (fireWallPosition == 1)
+                    {
+                        Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
+                        fireWallPosition = Random.Range(0, 2);
+                        if (fireWallPosition == 0) Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
+                    }
+                }
+            }
+            else if (playerStatusDataBase.firewallLv == 5)
             {
                 Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
                 Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
                 Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
-            }
-            else if(playerStatusDataBase.firewallLv==4)
-            {
-                if (Random.Range(0,100)<15) Instantiate(fireWallDai, new Vector2(0,2.5f), transform.rotation);
-                else Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
-                if (Random.Range(0, 100) < 15) Instantiate(fireWallDai, new Vector2(0,1), transform.rotation);
-                else Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
-                if (Random.Range(0, 100) < 15) Instantiate(fireWallDai, new Vector2(0,-0.5f), transform.rotation);
-                else Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
-            }
-            else if (playerStatusDataBase.firewallLv == 5)
-            {
-                if (Random.Range(0, 100) < 30) Instantiate(fireWallDai, new Vector2(0,2.5f), transform.rotation);
-                else Instantiate(fireWallSyou, fireWall1Vector, transform.rotation);
-                if (Random.Range(0, 100) < 30) Instantiate(fireWallDai, new Vector2(0,1), transform.rotation);
-                else Instantiate(fireWallSyou, fireWall2Vector, transform.rotation);
-                if (Random.Range(0, 100) < 30) Instantiate(fireWallDai, new Vector2(0,-0.5f), transform.rotation);
-                else Instantiate(fireWallSyou, fireWall3Vector, transform.rotation);
             }
         }
     }
@@ -169,23 +297,23 @@ public class PlayerStatus : MonoBehaviour
         {
             if(playerStatusDataBase.fireComboLv==1)
             {
-                comboBairitu = 0.01f;
+                comboBairitu = 0.1f;
             }
             else if(playerStatusDataBase.fireComboLv==2)
             {
-                comboBairitu = 0.02f;
+                comboBairitu = 0.2f;
             }
             else if(playerStatusDataBase.fireComboLv==3)
             {
-                comboBairitu = 0.03f;
+                comboBairitu = 0.3f;
             }
             else if (playerStatusDataBase.fireComboLv == 4)
             {
-                comboBairitu = 0.04f;
+                comboBairitu = 0.4f;
             }
             else if (playerStatusDataBase.fireComboLv == 5)
             {
-                comboBairitu = 0.05f;
+                comboBairitu = 0.5f;
             }
         }
     }
@@ -253,6 +381,9 @@ public class PlayerStatus : MonoBehaviour
         else
         {
             fireBallGravity.gravityScale = 1;
+            fireSpireGravity.gravityScale = 1;
+            rapidFireGravity.gravityScale = 1;
+            fireBomGravity.gravityScale = 1;
         }
     }
     public void EisyouTannsyuku()

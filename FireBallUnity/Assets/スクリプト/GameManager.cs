@@ -10,39 +10,85 @@ public class GameManager : MonoBehaviour
 	private PlayerStatus playerStatus;
 	public GameObject player;
 	private float weitTime;
-	public ResultSceneManager dropSoubi;
+	public ResultSceneManager resultSceneManager;
 	public bool a;
 	private bool b;
+    private bool winSEOneShot=true;
 
-	public List<int> numbers = new List<int>();
+    public int stageNo;
+    private int stageKuriaKaisuu;
+    public GameObject reaMonster;
+
+    public List<int> numbers = new List<int>();
 	public List<int> numbers2 = new List<int>();
     void Start()
 	{
 		playerStatus = player.GetComponent<PlayerStatus>();
+
+        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().EnnkyoriBGMStart();//BGM
+
 		a = false;
 		b = true;
-	}
-	void Update()
+        resultSceneManager = GameObject.Find("ResultManager").GetComponent<ResultSceneManager>();
+
+        stageKuriaKaisuu= DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<StageZissekiDatabase>().GetStageKuriaKaisuu(stageNo);
+        if (stageKuriaKaisuu >= 3000)
+        {
+            if (Random.Range(0, 10000) < 3000)
+            {
+                Instantiate(reaMonster, new Vector2(0, -4), transform.rotation);
+                Debug.Log("レアモンスターが現れた");
+            }
+        }
+        else
+        {
+            if (Random.Range(0, 10000) < stageKuriaKaisuu + 100)
+            {
+                Instantiate(reaMonster, new Vector2(0, -4), transform.rotation);
+                Debug.Log("レアモンスターが現れた");
+            }
+        }
+
+    }
+    void Update()
 	{
 
 		enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        //Debug.Log(enemys.Length);
 		if (enemys.Length == 0)
 		{
-			if (player.transform.position.y <= -5.7)
-			{
-				weitTime += Time.deltaTime;
 
-				if (weitTime >= 1.5f)
+			if (player.transform.position.y <= -5f)
+			{
+                if(winSEOneShot)
+                {
+                    DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().WinSEStart();
+                    winSEOneShot = false;
+                }
+                weitTime += Time.deltaTime;
+                //Debug.Log(weitTime);
+
+				if (weitTime >= 4f)
 				{
 					if (b)
 					{
+                        
 						SoubiGet();
 						b = false;
 					}
 					if (a)
 					{
                         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().SoubiScritableSave();
-						SceneManager.LoadScene("Result");
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<PlayerStatusDataBase>().StatusUpdate();
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KousekiDataBaseManager>().TrophySave();
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KyoukasekiManager>().KyoukasekiSave();
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MoneyManager>().MoneySave();
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KakutokuDataBase>().KakutokuSave();
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KakutokuDataBase>().GekihasuuSave();
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<StageZissekiDatabase>().StageKuriaKaisuu(stageNo);
+
+                        SceneManager.LoadScene("Result");
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().WinBGMStart();
                     }
 
 				}
@@ -50,37 +96,43 @@ public class GameManager : MonoBehaviour
 		}
 		if (playerStatus.hp <= 0)
 		{
-			SceneManager.LoadScene("GameOver");
-		}
+
+            DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KyoukasekiManager>().KyoukasekiSave();
+            DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MoneyManager>().MoneySave();
+            SceneManager.LoadScene("GameOver");
+            DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().LoseBGMStart();
+        }
 	}
 	public void SoubiGet()
     {
-		dropSoubi = GameObject.Find("ResultManager").GetComponent<ResultSceneManager>();
-		for (int i = 0; i < dropSoubi.getSoubi.Count; i++)
+
+        for (int i = 0; i < resultSceneManager.getSoubi.Count; i++)
 		{
 			numbers.Add(i);
 		}
-		for (int i = 0; i < dropSoubi.getSoubi.Count; i++)
+		for (int i = 0; i < resultSceneManager.getSoubi.Count; i++)
 		{
 			numbers2.Add(i);
 		}
 
-		for (int a = 0; a < dropSoubi.getSoubi.Count; a++)
+		for (int a = 0; a < resultSceneManager.getSoubi.Count; a++)
 		{
 			int number = Random.Range(0, numbers.Count);
 
-			dropSoubi.getSoubi[a].GetComponent<ItemController>().dropNumber = numbers[number];
+			resultSceneManager.getSoubi[a].GetComponent<ItemController>().dropNumber = numbers[number];
 			numbers.RemoveAt(number);
 		}
-		for (int a = 0; a < dropSoubi.getSoubi.Count; a++)
+		for (int a = 0; a < resultSceneManager.getSoubi.Count; a++)
 		{
 			int number2 = Random.Range(0, numbers2.Count);
 
-			dropSoubi.getSoubi[a].GetComponent<ItemController>().dropNumber2 = numbers2[number2];
+			resultSceneManager.getSoubi[a].GetComponent<ItemController>().dropNumber2 = numbers2[number2];
 			numbers2.RemoveAt(number2);
-			dropSoubi.b = true;
+			
 		}
+        resultSceneManager.b = true;
+        //dropSoubi.getSoubi.RemoveRange(0, dropSoubi.getSoubi.Count);
 
-	}
+    }
 
 }

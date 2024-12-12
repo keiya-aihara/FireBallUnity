@@ -6,14 +6,10 @@ public class StatusPanelSetActive : MonoBehaviour
 {
     public GameObject statusPanelSouko;
     public GameObject statusPanelStatusMenu;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject skillPanel;
+    public void SkillPanelOpen()
     {
-        
+        skillPanel.SetActive(true);
     }
 }

@@ -19,7 +19,7 @@ public class EnemyDataList : ScriptableObject
 	{
 		[Header("敵ステータス")]
 		public int no;
-		public int lebel;
+		//public int lebel;
 		public bool rea;
 		public string enemyName;
 		[Header("種族")]
@@ -31,19 +31,33 @@ public class EnemyDataList : ScriptableObject
 		public bool ryuu;
 		public bool kami;
 		[Header("ステータス")]
-		public int maxHp;
-		public int hp;
-		public int kougekiryoku;
-		public float kaisinnritu;
-		public int bougyoryoku;
-		public float kaisinnTaisei;
-		public int mahouBougyoryoku;
-		public float meityuuritu;
-		public float kaihiritu;
-		public float kougekiHinndo;
-		public float kougekiHanni;
-		public float speed;
-		public float nokkubakkuBougyo;
+        [Header("HP")]
+        public int maxHp;
+		//public int hp;
+        [Header("攻撃力")]
+        public int kougekiryoku;
+        [Header("会心率")]
+        public float kaisinnritu;
+        [Header("防御力")]
+        public int bougyoryoku;
+        [Header("会心耐性")]
+        public float kaisinnTaisei;
+        [Header("魔法防御力")]
+        public int mahouBougyoryoku;
+        [Header("命中率")]
+        public float meityuuritu;
+        [Header("回避率")]
+        public float kaihiritu;
+        [Header("攻撃頻度")]
+        public float kougekiHinndo;
+        //[Header("攻撃範囲")]
+        //public float kougekiHanni;
+        [Header("速度")]
+        public float speed;
+        [Header("緩衝力")]
+        public float nokkubakkuBougyo;
+        [Header("出現ステージ")]
+        public string[] stage;
 		[Header("ドロップ")]
 		public int exp;
 		public int gold;

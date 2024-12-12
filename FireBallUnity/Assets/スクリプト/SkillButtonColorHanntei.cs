@@ -31,6 +31,7 @@ public class SkillButtonColorHanntei : MonoBehaviour
         }
         else
         {
+            GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
             skillBottonColor.SkillButtonDown(number);
         }
     }

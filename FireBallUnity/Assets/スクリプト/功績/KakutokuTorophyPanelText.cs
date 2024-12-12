@@ -73,12 +73,12 @@ public class KakutokuTorophyPanelText : MonoBehaviour
         else if (ninngenntokkou) text.text = "人間特攻+" + kousekiCopy.playerStatusDataBase.kousekiNinngennTokkou + "%";
         else if (ryuutokkkou) text.text = "竜  特攻+" + kousekiCopy.playerStatusDataBase.kousekiRyuuTokkou + "%";
         else if (gottokkou) text.text = "神  特攻+" + kousekiCopy.playerStatusDataBase.kousekiKamiTokkou + "%";
-        else if (nomalItemDrop) text.text = "Nアイテムドロップ率+" + kousekiCopy.playerStatusDataBase.nomalDropRitu + "%";
-        else if (reaItemDrop) text.text = "Rアイテムドロップ率+" + kousekiCopy.playerStatusDataBase.reaDropRitu + "%";
-        else if (superReaItemDrop) text.text = "SRアイテムドロップ率+" + kousekiCopy.playerStatusDataBase.superReaDropRitu + "%";
-        else if (epikReaItemDrop) text.text = "ERアイテムドロップ率+" + kousekiCopy.playerStatusDataBase.epikReaDropRitu + "%";
-        else if (legendaryReaItemDrop) text.text = "LRアイテムドロップ率+" + kousekiCopy.playerStatusDataBase.legendaryReaDropRitu + "%";
-        else if (godReaITemDrop) text.text = "GRアイテムドロップ率+" + kousekiCopy.playerStatusDataBase.godReaDropRitu + "%";
+        else if (nomalItemDrop) text.text = "Nアイテムドロップ倍率+" + kousekiCopy.playerStatusDataBase.nomalDropRitu + "%";
+        else if (reaItemDrop) text.text = "Rアイテムドロップ倍率+" + kousekiCopy.playerStatusDataBase.reaDropRitu + "%";
+        else if (superReaItemDrop) text.text = "SRアイテムドロップ倍率+" + kousekiCopy.playerStatusDataBase.superReaDropRitu + "%";
+        else if (epikReaItemDrop) text.text = "ERアイテムドロップ倍率+" + kousekiCopy.playerStatusDataBase.epikReaDropRitu + "%";
+        else if (legendaryReaItemDrop) text.text = "LRアイテムドロップ倍率+" + kousekiCopy.playerStatusDataBase.legendaryReaDropRitu + "%";
+        else if (godReaITemDrop) text.text = "GRアイテムドロップ倍率+" + kousekiCopy.playerStatusDataBase.godReaDropRitu + "%";
         else if (kyoukazitaikasyouhiryou) text.text = "強化時対価消費量-" + kousekiCopy.playerStatusDataBase.kyoukataikaGennsyouritu + "%";
         else if (giftHuyoritu) text.text = "ギフト付与率+" + kousekiCopy.playerStatusDataBase.giftHuyoSoubiDropritu + "%";
     }

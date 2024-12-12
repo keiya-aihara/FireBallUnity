@@ -31,6 +31,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -146,8 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d05273286172a49b97d9453399e9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 1
+  lockKey: {fileID: 5797165785139480725, guid: 3f1c16e0a90900949acb0a9528e1a44f, type: 3}
+  giftLv: {fileID: 6362189937314382237, guid: d197eeb249c93904cb89b3f900ea6569, type: 3}
+  kyoukaLv: {fileID: 5192181059161467606, guid: 20f280390e45819409495ce556e7d966, type: 3}
+  zyukurenndo: {fileID: 6187080608302797044, guid: 6e868c47328123c4ab3c78fb445d86ed, type: 3}
+  number: 112
   a: 0
+  b: 0
+  reaCircle: {fileID: 511482139073665760, guid: 0cb8ff7c84103c94da8bda244a372bad, type: 3}
+  superReaCircle: {fileID: 3522839978082009216, guid: 2e0fd41b07b03e44cbcfeb414214cf57, type: 3}
+  epikReaCircle: {fileID: 3539714778984284153, guid: efe8b7c1ca777d348ae6c8d18377e3e1, type: 3}
+  tyekku: {fileID: 7846834902461028862, guid: 676ae9150b5d83440b6fa4e2d434cfec, type: 3}
+  soubityuuTyekku: {fileID: 5743383964962091380, guid: a1388633fb1327144842111df0dde80d, type: 3}
 --- !u!114 &6063490623736678850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +172,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusPanel: {fileID: 8219322973130115789, guid: 6cd7bfbb5ac0b314e98839de68be4bd6, type: 3}
+  statusPanelContent: {fileID: 0}
+  soubiIcon: {fileID: 0}
+  skillPanel: {fileID: 0}
+  e: 1
+  soubiName: {fileID: 9089962629167439525, guid: fbf679219767d8b4d95867ac68e0b751, type: 3}
+  syougouGiftHosei: {fileID: 1133304194577301587, guid: 99036429e799bf943b0b05405df69b69, type: 3}
+  nomalSyougouhoseinouryoku: {fileID: 631038825442904775, guid: 480ce23653767ac4a8e1949fdbce32fd, type: 3}
+  reaSyougouhoseinouryoiku: {fileID: 631038825442904775, guid: 9fb181378dc5d534b85b649102bdb520, type: 3}
+  superReaSyougouhoseinouryoku: {fileID: 631038825442904775, guid: 1350572cdf16cd44ca4af04f37c39bdb, type: 3}
+  text: {fileID: 0}
+  statasText: {fileID: 6422643830879143219, guid: 9fdbd5095b07e5e429e347005781c7ae, type: 3}
+  gihutohoseibairitu: {fileID: 3321456344284319149, guid: 9d65e01e4f1728f40991ada1adcbc9b9, type: 3}
+  nouryokuti: {fileID: 5729726323636984384, guid: fa044a221117e664fa72940352c89015, type: 3}
+  sukiru: {fileID: 5280881017444327546, guid: b4d935c94d1136041985fa861ea8f4a7, type: 3}
+  sukiruName: {fileID: 4910090017531768913, guid: 7d9dfd0c0ec258244a2e180486ca72f5, type: 3}
+  color1:
+    serializedVersion: 2
+    rgba: 4294967295
+  color2:
+    serializedVersion: 2
+    rgba: 4284415820
+  color3:
+    serializedVersion: 2
+    rgba: 4294948693
+  color4:
+    serializedVersion: 2
+    rgba: 4283322109
+  color5:
+    serializedVersion: 2
+    rgba: 4294926561
+  color6:
+    serializedVersion: 2
+    rgba: 4280912079

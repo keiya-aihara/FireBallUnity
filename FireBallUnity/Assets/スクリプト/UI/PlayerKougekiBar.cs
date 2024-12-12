@@ -17,6 +17,6 @@ public class PlayerKougekiBar : MonoBehaviour
     void Update()
     {
         slider.maxValue = playerStatus.kougekiHinndo;
-        slider.value = atack.playerKougeki;
+        slider.value = atack.startSrushTime;
     }
 }

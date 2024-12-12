@@ -23,7 +23,8 @@ public class SonotaSoubiIcon : MonoBehaviour
     public GameObject lockKey;
     private Transform lockKeyDelete;
 
-    public GameObject giftLv;
+    public GiftLv giftLv;
+    public KyoukaLv kyoukaLv;
 
     private PlayerStatusDataBase playerStatusDataBase;
     private SoubityuuIcon soubityuuIcon;
@@ -35,6 +36,7 @@ public class SonotaSoubiIcon : MonoBehaviour
     public GameObject soubityuuTyekku;
     public GameObject soubityuuTyekk2;
 
+    private KyoukaLv kyoukaLvUpdate;
 
     public bool a;
     private bool c1;
@@ -72,8 +74,15 @@ public class SonotaSoubiIcon : MonoBehaviour
 
         if (sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu != 0)
         {
-            giftLv.GetComponent<GiftLv>().giftLv = sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu;
+            giftLv.giftLv = sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).bairitu;
             Instantiate(giftLv, transform.position, transform.rotation, gameObject.transform);
+        }
+
+        if (sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv != 0)
+        {
+            kyoukaLv.kyoukaLv = sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv;
+            Instantiate(kyoukaLv, transform.position, transform.rotation, gameObject.transform);
+            kyoukaLvUpdate = transform.Find("強化LV(Clone)").GetComponent<KyoukaLv>();
         }
 
         if (transform.parent.gameObject.name == "Content Select Soubi　ステータス")
@@ -140,76 +149,29 @@ public class SonotaSoubiIcon : MonoBehaviour
             }
         }
 
-            if (transform.parent.gameObject.name == "Content その他装備 ステータス 1")
+        if (transform.parent.gameObject.name == "Content その他装備 ステータス 1")
+        {
+            SoubiTyuu1();
+        }
+        else if (transform.parent.gameObject.name == "Content その他装備 ステータス2")
+        {
+            SoubiTyuu2();
+        }
+        if (sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv != 0)
+        {
+            if (!gameObject.transform.Find("強化LV(Clone)"))
             {
-                if (playerStatusDataBase.sonota1No == number)
-                {
-                    if (!transform.Find("装備中チェック(Clone)"))
-                    {
-                        Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
-                    }
-                }
-                else
-                {
-                    if (transform.Find("装備中チェック(Clone)"))
-                    {
-                        Destroy(GameObject.Find("装備中チェック(Clone)"));
-                    }
-                }
-                if (playerStatusDataBase.sonota2No == number)
-                {
-                    if (!transform.Find("装備中チェック2(Clone)"))
-                    {
-                        Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
-
-                    }
-                }
-                else
-                {
-                    if (transform.Find("装備中チェック2(Clone)"))
-                    {
-                        Destroy(GameObject.Find("装備中チェック2(Clone)"));
-                    }
-                }
+                Instantiate(kyoukaLv, transform.position, transform.rotation, gameObject.transform);
+                kyoukaLvUpdate = transform.Find("強化LV(Clone)").GetComponent<KyoukaLv>();
             }
+            kyoukaLvUpdate.kyoukaLv = sonotaDateBaseManagerScript.weponDataList.weponDatas.Find((x) => x.no == number).kyoukaLv;
+        }
 
-            else if (transform.parent.gameObject.name == "Content その他装備 ステータス2")
-            {
-                if (playerStatusDataBase.sonota1No == number)
-                {
-                    if (!transform.Find("装備中チェック(Clone)"))
-                    {
-                        Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
-
-                    }
-                }
-                else
-                {
-                    if (transform.Find("装備中チェック(Clone)"))
-                    {
-                        Destroy(GameObject.Find("装備中チェック(Clone)"));
-                    }
-                }
-                if (playerStatusDataBase.sonota2No == number)
-                {
-                    if (!transform.Find("装備中チェック2(Clone)"))
-                    {
-                        Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
-
-                    }
-                }
-                else
-                {
-                    if (transform.Find("装備中チェック2(Clone)"))
-                    {
-                        Destroy(GameObject.Find("装備中チェック2(Clone)"));
-                    }
-                }
-            }
-        
     }
     public void selectSonotaSoubi()
     {
+        HaiSEPlay();
+
         if (SceneManager.GetActiveScene().name == "Souko")
         {
             if (GameObject.Find("売却キャンセルBotton"))
@@ -267,22 +229,91 @@ public class SonotaSoubiIcon : MonoBehaviour
 
             if (transform.parent.gameObject.name == "Content その他装備 ステータス 1")
             {
-                    if(playerStatusDataBase.sonota2No!=number)
-                    {
-                        playerStatusDataBase.sonota1No = number;
-                        soubityuuIcon.SoubiHennkou();
-                        soubityuuIcon.StatusTextUpdata();
-                    }
+                if (playerStatusDataBase.sonota2No != number)
+                {
+                    playerStatusDataBase.sonota1No = number;
+                    soubityuuIcon.SoubiHennkou();
+                    soubityuuIcon.StatusTextUpdata();
+                }
             }
-            if (transform.parent.gameObject.name == "Content その他装備 ステータス2")
+            else if (transform.parent.gameObject.name == "Content その他装備 ステータス2")
             {
-                    if (playerStatusDataBase.sonota1No != number)
-                    {
-                        playerStatusDataBase.sonota2No = number;
-                        soubityuuIcon.SoubiHennkou();
-                        soubityuuIcon.StatusTextUpdata();
-                    }
+                if (playerStatusDataBase.sonota1No != number)
+                {
+                    playerStatusDataBase.sonota2No = number;
+                    soubityuuIcon.SoubiHennkou();
+                    soubityuuIcon.StatusTextUpdata();
+                }
             }
         }
+    }
+    public void SoubiTyuu1()
+    {
+        if (playerStatusDataBase.sonota1No == number)
+        {
+            if (!transform.Find("装備中チェック(Clone)"))
+            {
+                Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+            }
+        }
+        else
+        {
+            if (transform.Find("装備中チェック(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック(Clone)"));
+            }
+        }
+        if (playerStatusDataBase.sonota2No == number)
+        {
+            if (!transform.Find("装備中チェック2(Clone)"))
+            {
+                Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
+
+            }
+        }
+        else
+        {
+            if (transform.Find("装備中チェック2(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック2(Clone)"));
+            }
+        }
+    }
+    public void SoubiTyuu2()
+    {
+        if (playerStatusDataBase.sonota1No == number)
+        {
+            if (!transform.Find("装備中チェック(Clone)"))
+            {
+                Instantiate(soubityuuTyekku, transform.position, transform.rotation, gameObject.transform);
+
+            }
+        }
+        else
+        {
+            if (transform.Find("装備中チェック(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック(Clone)"));
+            }
+        }
+        if (playerStatusDataBase.sonota2No == number)
+        {
+            if (!transform.Find("装備中チェック2(Clone)"))
+            {
+                Instantiate(soubityuuTyekk2, transform.position, transform.rotation, gameObject.transform);
+
+            }
+        }
+        else
+        {
+            if (transform.Find("装備中チェック2(Clone)"))
+            {
+                Destroy(GameObject.Find("装備中チェック2(Clone)"));
+            }
+        }
+    }
+    public void HaiSEPlay()
+    {
+        GameObject.Find("SE").GetComponent<HaiIieButtonSE>().HaiButtonSE();
     }
 }

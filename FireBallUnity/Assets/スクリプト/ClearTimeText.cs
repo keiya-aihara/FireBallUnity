@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ClearTimeText : MonoBehaviour
 {
@@ -12,7 +13,14 @@ public class ClearTimeText : MonoBehaviour
 
         resultManager = GameObject.Find("ResultManager");
         resultManager.GetComponent<ResultSceneManager>().a = false;
-        gameObject.GetComponent<Text>().text = "クリアタイム "+resultManager.GetComponent<ResultSceneManager>().time.ToString("F2")+"秒";
+        if (SceneManager.GetActiveScene().name == "Result")
+        {
+            gameObject.GetComponent<Text>().text = "クリアタイム " + resultManager.GetComponent<ResultSceneManager>().time.ToString("F2") + "秒";
+        }
+        else if (SceneManager.GetActiveScene().name == "GameOver")
+        {
+            gameObject.GetComponent<Text>().text = "生存時間 " + resultManager.GetComponent<ResultSceneManager>().time.ToString("F2") + "秒";
+        }
     }
 
     // Update is called once per frame
