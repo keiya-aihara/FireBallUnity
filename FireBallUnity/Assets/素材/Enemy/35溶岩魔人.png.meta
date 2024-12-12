@@ -63,7 +63,11 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+<<<<<<< HEAD:FireBallUnity/Assets/素材/Enemy/スイカモ.png.meta
+  cookieLightType: 1
+=======
   cookieLightType: 0
+>>>>>>> 0d5ef3d1acd0b244548efeb847f8ad19af1708e7:FireBallUnity/Assets/素材/Enemy/35溶岩魔人.png.meta
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -114,7 +118,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< HEAD:FireBallUnity/Assets/素材/Enemy/スイカモ.png.meta
+    buildTarget: Server
+=======
     buildTarget: iPhone
+>>>>>>> 0d5ef3d1acd0b244548efeb847f8ad19af1708e7:FireBallUnity/Assets/素材/Enemy/35溶岩魔人.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -160,7 +168,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD:FireBallUnity/Assets/素材/Enemy/スイカモ.png.meta
+      "\u30B9\u30A4\u30AB\u30E2_1": 1405152325415187438
+=======
       "35\u6EB6\u5CA9\u9B54\u4EBA_0": -1157150977
+>>>>>>> 0d5ef3d1acd0b244548efeb847f8ad19af1708e7:FireBallUnity/Assets/素材/Enemy/35溶岩魔人.png.meta
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

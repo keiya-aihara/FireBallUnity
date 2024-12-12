@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+=== Tue Oct 18 15:05:32 2022
+=======
 === Tue Oct 18 16:43:58 2022
+>>>>>>> 0d5ef3d1acd0b244548efeb847f8ad19af1708e7
 
 Packages were changed.
 Update Mode: updateDependencies
@@ -16,6 +20,8 @@ The following packages were updated:
   com.unity.test-framework from version 1.1.24 to 1.1.31
   com.unity.textmeshpro from version 3.0.4 to 3.0.6
   com.unity.timeline from version 1.4.6 to 1.6.4
+<<<<<<< HEAD
+=======
 
 === Wed Nov  2 14:01:58 2022
 
@@ -63,3 +69,4 @@ The following packages were 追加済:
   com.unity.timeline@1.6.4
   com.unity.ugui@1.0.0
   com.unity.visualscripting@1.7.8
+>>>>>>> 0d5ef3d1acd0b244548efeb847f8ad19af1708e7
