@@ -5,6 +5,7 @@ using UnityEngine;
 public class MAPModoruButton : MonoBehaviour
 {
     public GameObject[] pin;
+    public GameObject[] nannidoHanntei;
     void Start()
     {
         
@@ -20,6 +21,10 @@ public class MAPModoruButton : MonoBehaviour
         for(int a=0;a<pin.Length;a++)
         {
             pin[a].SetActive(false);
+        }
+        for (int a = 0; a < nannidoHanntei.Length; a++)
+        {
+            nannidoHanntei[a].SetActive(false);
         }
     }
 }

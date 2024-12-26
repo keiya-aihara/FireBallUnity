@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public int stageNo;
     private int stageKuriaKaisuu;
+    public int nannidoNo;
     public GameObject reaMonster;
 
     public List<int> numbers = new List<int>();
@@ -85,7 +86,15 @@ public class GameManager : MonoBehaviour
                         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MoneyManager>().MoneySave();
                         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KakutokuDataBase>().KakutokuSave();
                         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<KakutokuDataBase>().GekihasuuSave();
-                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<StageZissekiDatabase>().StageKuriaKaisuu(stageNo);
+
+                        if (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<Nannido>().syosinnsyanoMiti) nannidoNo = 0;
+                        else if (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<Nannido>().boukennsyanoSirenn)nannidoNo = 1;
+                        else if (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<Nannido>().eiyuunoMiti) nannidoNo = 2;
+                        else if (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<Nannido>().yuusyanoTyousenn) nannidoNo = 3;
+                        else if (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<Nannido>().dennsetunoSirenn) nannidoNo = 4;
+                        else if (DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<Nannido>().kamigaminoRyouiki) nannidoNo = 5;
+
+                        DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<StageZissekiDatabase>().StageKuriaKaisuu(stageNo,nannidoNo);
 
                         SceneManager.LoadScene("Result");
                         DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<MenuBGMScript>().WinBGMStart();

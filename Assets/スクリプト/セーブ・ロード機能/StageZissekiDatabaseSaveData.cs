@@ -5,5 +5,5 @@ using UnityEngine;
 public class StageZissekiDatabaseSaveData
 {
     public List<int> stageNo;
-
+    public List<StageZissekiDatabase.StageNannidoZisseki> stageNannidoZissekis;
 }
