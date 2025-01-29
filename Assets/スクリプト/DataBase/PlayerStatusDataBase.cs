@@ -216,7 +216,7 @@ public class PlayerStatusDataBase : MonoBehaviour
     public SkillSaveData skillSaveData;
     public SoubiSaveData soubiSaveData;
 
-    void Start()
+    void Awake()
     {
         StatusLoad();
         SkillLoad();
@@ -230,7 +230,7 @@ public class PlayerStatusDataBase : MonoBehaviour
         expManagerScript.lvUpExp = expManagerScript.GetLvupExp(expManagerScript.lv);
         StatusUpdate();
         //Debug.Log(Application.persistentDataPath);
-DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<SystemDatabase>().StageNameLoad();
+        systemDatabase.StageNameLoad();
     }
     // Update is called once per frame
     void Update()

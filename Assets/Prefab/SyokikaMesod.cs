@@ -22,7 +22,6 @@ public class SyokikaMesod : MonoBehaviour
     public StageZissekiDatabase stageZissekiDatabase;
     public SystemDatabase systemDatabase;
     public KakutokuDataBase soubiKakutokuDataBase;
-
     [ContextMenu("ステータス・スキル初期化")]
     private void StatusSyokikaMesod()
     {
@@ -70,6 +69,7 @@ public class SyokikaMesod : MonoBehaviour
     {
         stageZissekiDatabase.StaziZissekiSyokika();
     }
+
     [ContextMenu("自動売却初期化")]
     private void BaikyakuStageNameSyokika()
     {

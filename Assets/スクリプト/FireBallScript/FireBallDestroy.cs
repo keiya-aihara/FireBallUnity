@@ -210,6 +210,7 @@ public class FireBallDestroy : MonoBehaviour
             Debug.Log("シールドに当たった");
             collision.gameObject.GetComponent<SiildScript>().siildHp--;
             Instantiate(fireBallEffect,collision.transform.position,transform.rotation);
+            GameObject.Find("GameManager").GetComponent<AudioSource>().volume = DontDestroyOnloadDataBaseManager.DataBaseManager.GetComponent<BGMSEVolume>().seVolume;
             GameObject.Find("GameManager").GetComponent<AudioSource>().Play();
             Destroy(gameObject);
         }
