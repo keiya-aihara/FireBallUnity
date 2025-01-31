@@ -30,6 +30,8 @@ public class MapStageSelect : MonoBehaviour
     public GameObject hitogatamazyuuNoSyuuraku;
     public GameObject maborosinoDoukutu;
 
+    public GameObject comingSoon;
+
     public GameObject stage1SyosinnsyanoMiti;
     public GameObject stage1BoukennsyanoSirenn;
     public GameObject stage1EiyuunoMiti;
@@ -110,6 +112,14 @@ public class MapStageSelect : MonoBehaviour
             if(stageZissekiDatabase.stageNo[41]>=1)
             {
                 maborosinoDoukutu.SetActive(true);
+            }
+
+
+
+
+            if(stageZissekiDatabase.stageNo[44]>=1)
+            {
+                comingSoon.SetActive(true);
             }
         }
     }
