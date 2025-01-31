@@ -81,7 +81,7 @@ public class SyokikaMesod : MonoBehaviour
         soubiKakutokuDataBase.KakutokuSuuSyokika();
     }
     [ContextMenu("すべて初期化")]
-    private void AllSaveSyokika()
+    public void AllSaveSyokika()
     {
         StatusSyokikaMesod();
         SoubiSyokika();
